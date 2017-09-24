@@ -1,5 +1,5 @@
 import BaseButton from './BaseButton.vue'
-import Button from './Button.vue'
+// import Button from './Button.vue'
 // import ActionButton from './ActionButton/ActionButton.vue'
 // import BarButton from './CommandBarButton/CommandBarButton.vue'
 // import CommandButton from './CommandButton/CommandButton.vue'
@@ -10,7 +10,7 @@ import DefaultButton from './DefaultButton/DefaultButton.vue'
 
 export {
   BaseButton,
-  Button,
+  // Button,
   // ActionButton,
   // BarButton,
   // CommandButton,
