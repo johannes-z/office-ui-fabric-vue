@@ -3,8 +3,6 @@
 > Office UI Fabric (https://github.com/OfficeDev/office-ui-fabric)
 > implementation for Vue.js
 
-Hosted on npm: https://www.npmjs.com/package/office-fabric-vue
-
 ## Installation
 
 ### Production
