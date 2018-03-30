@@ -3,6 +3,12 @@
 > Office UI Fabric (https://github.com/OfficeDev/office-ui-fabric)
 > implementation for Vue.js
 
+## Requirements
+
+The components provided by this library require the official [Office UI Fabric
+Core](https://github.com/OfficeDev/office-ui-fabric-core) CSS files. See [Get
+started with Fabric Core](https://developer.microsoft.com/en-us/fabric#/get-started).
+
 ## Installation
 
 ### Production
