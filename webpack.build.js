@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist/'),
     publicPath: '/dist/',
-    filename: 'office-ui-fabric.vue.js',
+    filename: 'office-ui-fabric-vue.js',
     library: 'office-ui-fabric-vue',
     libraryTarget: 'umd',
   },
