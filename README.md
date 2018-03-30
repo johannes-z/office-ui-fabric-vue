@@ -5,12 +5,24 @@
 
 ## Installation
 
+### Production
+
 ```sh
 npm install --save-dev johannes-z/office-ui-fabric-vue
 ```
 
 ```sh
 yarn add -D johannes-z/office-ui-fabric-vue
+```
+
+### Dev builds
+
+```sh
+npm install --save-dev johannes-z/office-ui-fabric-vue#dev
+```
+
+```sh
+yarn add -D johannes-z/office-ui-fabric-vue#dev
 ```
 
 ## Contributing
