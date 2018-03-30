@@ -10,10 +10,10 @@
       <div v-else
            class="ms-Persona-imageArea">
 
-        <persona-initials v-if="!person.avatar" :name="person.name"/>
+        <persona-initials v-if="!imageUrl" :name="primaryText"/>
 
         <div v-else class="ms-Image ms-Persona-image">
-          <img :src="person.avatar" class="ms-Image-image" alt="">
+          <img :src="imageUrl" class="ms-Image-image" alt="">
         </div>
       </div>
 
@@ -22,7 +22,7 @@
     <div class="ms-Persona-details">
 
       <div class="ms-Persona-primaryText">
-        <span :title="person.name">{{ person.name }}</span>
+        <span>{{ primaryText }}</span>
       </div>
 
       <slot />
@@ -39,6 +39,10 @@ let size72 = 14
 export default {
   components: { PersonaInitials },
   props: {
+    imageUrl: {
+      type: String,
+      default: '',
+    },
     primaryText: {
       type: String,
       default: '',
