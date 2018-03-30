@@ -5,8 +5,9 @@
 
 ## Requirements
 
-The components provided by this library require the official [Office UI Fabric
-Core](https://github.com/OfficeDev/office-ui-fabric-core) CSS files. See [Get
+### [Office UI Fabric Core](https://github.com/OfficeDev/office-ui-fabric-core)
+
+The components provided by this library require the official CSS files. See [Get
 started with Fabric Core](https://developer.microsoft.com/en-us/fabric#/get-started).
 
 ## Installation
@@ -37,3 +38,14 @@ Any contributions are welcome, as long as they follow the project's file/folder
 structure and styles provided by the `.editorconfig` file and `eslint`.
 
 **Important:** Keep dependencies of external libraries to a minimum.
+
+### Showcase
+
+Showcasing components is done using https://github.com/vue-play/vue-play.
+
+Create a file `<component>.play.js` in `./src/components/<component>/` to
+automatically add the showcase.
+
+```sh
+yarn play
+```
