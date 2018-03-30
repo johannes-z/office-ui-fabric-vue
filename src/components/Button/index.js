@@ -15,7 +15,7 @@ export {
   // BarButton,
   // CommandButton,
   // CompoundButton,
-  DefaultButton
+  DefaultButton,
   // PrimaryButton,
   // IconButton
 }
