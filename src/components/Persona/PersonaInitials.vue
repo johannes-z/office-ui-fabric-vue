@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { initialsColorPropToColorCode } from '../js/util/initials.js'
+import { initialsColorPropToColorCode } from './initials.js'
 
 export default {
   props: {
