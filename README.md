@@ -39,6 +39,12 @@ structure and styles provided by the `.editorconfig` file and `eslint`.
 
 **Important:** Keep dependencies of external libraries to a minimum.
 
+### Compatibility
+
+All components should be compatible with IE10 and later. If a component cannot
+be realized without newer CSS features, then mention the earliest version that
+has to be used for compatibility.
+
 ### Showcase
 
 Showcasing components is done using https://github.com/vue-play/vue-play.
