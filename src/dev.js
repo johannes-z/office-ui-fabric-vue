@@ -5,11 +5,20 @@ import * as fabric from './index'
 
 console.log(fabric)
 
+// new Vue({
+//   el: '#app',
+//   render: h => h(fabric.Persona, {
+//     props: {
+//       primaryText: 'Test User',
+//     },
+//   }),
+// })
+
 new Vue({
   el: '#app',
-  render: h => h(fabric.Persona, {
+  render: h => h(fabric.Icon, {
     props: {
-      primaryText: 'Test User',
+      iconName: 'Mail',
     },
   }),
 })
