@@ -1,4 +1,5 @@
-
-export * from './Breadcrumb'
-export * from './Button'
-export * from './Persona'
+export * from './components/Breadcrumb/'
+export * from './components/Button/'
+export * from './components/Icon/'
+export * from './components/Persona/'
+export * from './components/SearchBox/'
