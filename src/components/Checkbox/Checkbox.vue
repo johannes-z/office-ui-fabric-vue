@@ -9,8 +9,7 @@
     <label :for="id"
            class="ms-Checkbox-label">
       <div class="ms-Checkbox-checkbox">
-        <icon :style="{ opacity: isChecked ? 1 : 0 }"
-              icon-name="CheckMark" />
+        <icon icon-name="CheckMark" />
       </div>
       <span class="ms-Checkbox-text">{{ label }}</span>
     </label>
@@ -88,6 +87,7 @@ button.ms-Checkbox {
       background-color: rgb(0, 120, 212);
       & > i {
         color: white;
+        opacity: 1;
       }
     }
   }
@@ -119,6 +119,7 @@ button.ms-Checkbox {
     & > i {
       vertical-align: middle;
       display: inline-block;
+      opacity: 0;
     }
   }
 
