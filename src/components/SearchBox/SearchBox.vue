@@ -82,7 +82,7 @@ export default {
   .ms-SearchBox-iconContainer {
     width: 12px;
     transition: width .167s;
-    .ms-SearchBox-icon {
+    & > i {
       opacity: 0;
     }
   }
