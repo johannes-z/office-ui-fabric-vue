@@ -5,6 +5,6 @@ import { Icon } from './index.js'
 play('Icon')
   .add('Default', h => h(Icon, {
     props: {
-      Icon: 'Mail',
+      iconName: 'Mail',
     },
   }))
