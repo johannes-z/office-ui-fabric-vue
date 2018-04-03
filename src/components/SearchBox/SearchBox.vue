@@ -4,7 +4,8 @@
     <div :class="searchBoxStyle" class="ms-SearchBox">
 
       <div class="ms-SearchBox-iconContainer">
-        <icon icon-name="ms-Icon--Search" />
+        <icon :style="{ opacity: searchBoxStyle['is-active'] ? 0 : 1 }"
+              icon-name="Search" />
       </div>
 
       <input ref="searchInput"
@@ -18,7 +19,7 @@
       <div v-show="searchQuery.length > 0"
            class="ms-SearchBox-clearButton"
            @click="onClear">
-        <icon icon-name="ms-Icon--Clear" />
+        <icon icon-name="Clear" />
         <!-- <i class="ms-SearchBox-icon ms-Icon ms-Icon--Clear"/> -->
       </div>
 
