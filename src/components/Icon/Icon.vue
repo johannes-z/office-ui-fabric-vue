@@ -8,11 +8,14 @@ export default {
     },
   },
   render (h, ctx) {
-    const data = {
+    const data = ctx.data
+    const classes = {
       class: [`ms-Icon--${ctx.props.iconName}`],
     }
     return (
-      <i class="ms-Icon" {...data} aria-hidden="true" />
+      <i class="ms-Icon" {...classes}
+        {...data}
+        aria-hidden="true" />
     )
   },
 }
