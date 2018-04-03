@@ -4,8 +4,7 @@
     <div :class="searchBoxStyle" class="ms-SearchBox">
 
       <div class="ms-SearchBox-iconContainer">
-        <icon :style="{ opacity: searchBoxStyle['is-active'] ? 0 : 1 }"
-              icon-name="Search" />
+        <icon icon-name="Search" />
       </div>
 
       <input ref="searchInput"
