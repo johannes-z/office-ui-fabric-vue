@@ -13,7 +13,9 @@
              class="ms-SearchBox-field"
              type="text"
              @blur="onBlur"
-             @focus="onFocus">
+             @focus="onFocus"
+             @change="onChange"
+             @keyup.enter="onSearch">
 
       <div v-show="searchQuery.length > 0"
            class="ms-SearchBox-clearButton"
@@ -67,9 +69,17 @@ export default {
     },
     onBlur () {
       this.searchBoxStyle['is-active'] = false
+      this.$emit('onBlur', this.searchQuery)
     },
     onFocus () {
       this.searchBoxStyle['is-active'] = true
+      this.$emit('onFocus', this.searchQuery)
+    },
+    onChange () {
+      this.$emit('onChange', this.searchQuery)
+    },
+    onSearch () {
+      this.$emit('onSearch', this.searchQuery)
     },
   },
 }
