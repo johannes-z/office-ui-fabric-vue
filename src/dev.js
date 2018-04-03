@@ -5,7 +5,7 @@ import * as fabric from './index'
 
 console.log(fabric)
 
-// new Vue({
+// let a = new Vue({
 //   el: '#app',
 //   render: h => h(fabric.Persona, {
 //     props: {
@@ -14,11 +14,11 @@ console.log(fabric)
 //   }),
 // })
 
-new Vue({
-  el: '#app',
-  render: h => h(fabric.Icon, {
-    props: {
-      iconName: 'Mail',
-    },
-  }),
-})
+// let b = new Vue({
+//   el: '#app',
+//   render: h => h(fabric.Icon, {
+//     props: {
+//       iconName: 'Mail',
+//     },
+//   }),
+// })

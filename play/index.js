@@ -1,3 +1,5 @@
+import '../src/css/fabric.core.css'
+
 const load = requireContext => requireContext.keys().map(requireContext)
 
 // load files which end with `.play.js` in `../src/components` folder
