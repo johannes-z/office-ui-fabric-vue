@@ -1,21 +1,19 @@
-<template>
-  <i :class="classObj" class="ms-Icon" aria-hidden="true"/>
-</template>
-
 <script>
 export default {
+  functional: true,
   props: {
     iconName: {
       type: String,
       default: '',
     },
   },
-  computed: {
-    classObj () {
-      let obj = {}
-      obj[`ms-Icon--${this.iconName}`] = true
-      return obj
-    },
+  render (h, ctx) {
+    const data = {
+      class: [`ms-Icon--${ctx.props.iconName}`],
+    }
+    return (
+      <i class="ms-Icon" {...data} aria-hidden="true" />
+    )
   },
 }
 </script>
