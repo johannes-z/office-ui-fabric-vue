@@ -100,14 +100,14 @@ $ProgressIndicatorTextHeight: 18px;
     background: linear-gradient(to right, transparent 0%, $ms-color-themePrimary 50%, transparent 100%);
     animation: indeterminateProgress 3s infinite;
   }
-  // @include high-contrast {
-  //   background-color: WindowText;
-  // }
-  // @include RTL {
-  //   &.indeterminate {
-  //     animation: indeterminateProgressRTL 3s infinite;
-  //   }
-  // }
+  @include high-contrast {
+    background-color: WindowText;
+  }
+  @include RTL {
+    &.indeterminate {
+      animation: indeterminateProgressRTL 3s infinite;
+    }
+  }
 }
 
 .smoothTransition {
