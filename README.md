@@ -55,3 +55,12 @@ automatically add the showcase.
 ```sh
 yarn play
 ```
+
+## License
+
+All files on the Office UI Fabric Vue GitHub repository are subject to the MIT
+license, unless otherwise noted. Please read the License file at the root of the
+project.
+
+Usage of the fonts and icons referenced in Office UI Fabric is subject to the
+terms of the assets license agreement.

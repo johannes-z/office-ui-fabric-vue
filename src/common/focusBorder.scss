@@ -1,0 +1,58 @@
+/* Copied from https://github.com/OfficeDev/office-ui-fabric-react/tree/master/packages/office-ui-fabric-react */
+
+@import './semanticSlots.scss';
+
+@mixin focus-clear() {
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  & {
+    outline: transparent;
+  }
+}
+
+@mixin focus($onFocus: true) {
+  @if $onFocus {
+    :global(.ms-Fabric.is-focusVisible) &:focus {
+      @content;
+    }
+  }
+  @else {
+    @content;
+  }
+}
+
+@mixin focus-border($padding: 0, $color: $focusBorderColor, $thickness: 1px, $onFocus: true, $position: relative) {
+  @include focus-clear();
+
+  & {
+    position: $position;
+  }
+
+  @include focus($onFocus) {
+    &:after {
+      @include after-outline($padding, $color, $thickness);
+    }
+  }
+}
+
+@mixin after-outline ($padding: 0, $color: $focusBorderColor, $thickness: 1px) {
+    content: '';
+    position: absolute;
+    top: $padding;
+    right: $padding;
+    bottom: $padding;
+    left: $padding;
+
+    pointer-events: none;
+
+    border: $thickness solid $color;
+}
+
+
+@mixin focus-outline {
+  :global(.ms-Fabric.is-focusVisible) &:focus {
+    outline: 1px solid $focusBorderColor;
+  }
+}
