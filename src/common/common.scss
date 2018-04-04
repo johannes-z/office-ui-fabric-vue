@@ -1,14 +1,12 @@
-
-// test
-
-// @import '~office-ui-fabric-core/dist/sass/_References.scss';
+@import '~office-ui-fabric-core/dist/sass/_References';
 
 /* Copied from https://github.com/OfficeDev/office-ui-fabric-react/tree/master/packages/office-ui-fabric-react */
 
-@import './i18n.scss';
-@import './themeOverrides.scss';
-@import './focusBorder.scss';
-@import './semanticSlots.scss';
+@import './i18n';
+// @import './themeOverrides';
+@import './focusBorder';
+@import './semanticSlots';
+@import './highContrast';
 
 // Screen sizes that align with UHF breakpoints for the website
 $uhf-screen-min-mobile: 768px;

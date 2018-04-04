@@ -44,15 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('../../common/common.scss');
-
-$ms-font-weight-regular: 400;
-$ms-font-size-m: 14px;
-$ms-font-size-xs: 11px;
-$ms-color-neutralPrimary: #333333;
-$ms-color-neutralSecondaryAlt: #767676;
-$ms-color-neutralLight: #eaeaea;
-$ms-color-themePrimary: #0078d4;
+@import '../../common/common.scss';
 
 // ProgressIndicator Styles
 $ProgressIndicatorMarginBetweenText: 8px;
@@ -91,9 +83,9 @@ $ProgressIndicatorTextHeight: 18px;
   width: 100%;
   height: 2px;
   background-color: $ms-color-neutralLight;
-  // @include high-contrast {
-  //   border-bottom: 1px solid WindowText;
-  // }
+  @include high-contrast {
+    border-bottom: 1px solid WindowText;
+  }
 }
 
 .progressBar {
