@@ -3,8 +3,19 @@ import { play } from 'vue-play'
 import { ProgressIndicator } from './index.js'
 
 play('ProgressIndicator')
-  .add('plain', h => h(ProgressIndicator, {
+  .add('Default', h => h(ProgressIndicator, {
     props: {
-      primaryText: 'Show Case',
+      percentComplete: 0,
+    },
+  }))
+
+play('ProgressIndicator')
+  .add('Indeterminate', h => h(ProgressIndicator))
+
+play('ProgressIndicator')
+  .add('Labels', h => h(ProgressIndicator, {
+    props: {
+      label: 'Example title',
+      description: 'Example description',
     },
   }))
