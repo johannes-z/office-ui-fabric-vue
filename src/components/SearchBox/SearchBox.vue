@@ -1,27 +1,25 @@
 <template>
-  <div :class="className" class="ms-Fabric ms-SearchBox-container">
+  <div :class="className" class="ms-SearchBox-container">
 
-    <div :class="searchBoxStyle" class="ms-SearchBox">
+    <div :class="classObj" class="ms-SearchBox root">
 
-      <div class="ms-SearchBox-iconContainer">
+      <div class="ms-SearchBox-iconContainer iconContainer">
         <icon icon-name="Search" />
       </div>
 
       <input ref="searchInput"
              v-model="searchQuery"
              :placeholder="placeholder"
-             class="ms-SearchBox-field"
+             class="ms-SearchBox-field field"
              type="text"
              @blur="onBlur"
              @focus="onFocus"
-             @change="onChange"
              @keyup.enter="onSearch">
 
-      <div v-show="searchQuery.length > 0"
-           class="ms-SearchBox-clearButton"
+      <div v-show="hasText"
+           class="ms-SearchBox-clearButton clearButton"
            @click="onClear">
         <icon icon-name="Clear" />
-        <!-- <i class="ms-SearchBox-icon ms-Icon ms-Icon--Clear"/> -->
       </div>
 
     </div>
@@ -50,16 +48,24 @@ export default {
   },
   data () {
     return {
+      isActive: false,
       searchQuery: this.value,
-      searchBoxStyle: {
-        'has-text': false,
-        'is-active': false,
-      },
     }
+  },
+  computed: {
+    hasText () {
+      return this.searchQuery && this.searchQuery.length > 0
+    },
+    classObj () {
+      let obj = {}
+      obj['has-text'] = this.hasText
+      obj['is-active'] = this.isActive
+      return obj
+    },
   },
   watch: {
     searchQuery () {
-      this.searchBoxStyle['has-text'] = this.searchQuery.length > 0
+      this.onChange()
     },
   },
   methods: {
@@ -68,11 +74,11 @@ export default {
       this.$refs.searchInput.focus()
     },
     onBlur () {
-      this.searchBoxStyle['is-active'] = false
+      this.isActive = false
       this.$emit('onBlur', this.searchQuery)
     },
     onFocus () {
-      this.searchBoxStyle['is-active'] = true
+      this.isActive = true
       this.$emit('onFocus', this.searchQuery)
     },
     onChange () {
@@ -85,10 +91,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '../../common/common.scss';
+
 // Active styles
-.ms-SearchBox.is-active {
-  .ms-SearchBox-iconContainer {
+.root.is-active {
+  .iconContainer {
     width: 12px;
     transition: width .167s;
     & > i {
@@ -96,6 +104,7 @@ export default {
     }
   }
 }
+
 // Static styles
 .ms-SearchBox-container {
   display: table;
@@ -104,16 +113,18 @@ export default {
   border-collapse: collapse;
   box-sizing: border-box;
 }
-.ms-SearchBox {
+.root {
   display: table-row;
   font-size: 0px;
   font-weight: 400;
   color: #333;
   border: 1px solid #a6a6a6;
+  background-color: #ffffff;
+
   input::-ms-clear{
     display:none;
   }
-  > .ms-SearchBox-iconContainer {
+  > .iconContainer {
     font-size: 16px;
     padding-left: 8px;
     width: 40px;
@@ -123,7 +134,7 @@ export default {
       transition: opacity .167s 0s;
     }
   }
-  > .ms-SearchBox-field {
+  > .field {
     font-size: 14px;
     height: 30px;
     margin: 0;
@@ -135,24 +146,24 @@ export default {
     outline: 1px solid transparent;
     padding-bottom: 0.5px;
   }
-  > .ms-SearchBox-field,
-  > .ms-SearchBox-iconContainer,
-  > .ms-SearchBox-clearButton {
+  > .field,
+  > .iconContainer,
+  > .clearButton {
     display: table-cell;
     vertical-align: middle;
     box-sizing: border-box;
     position: relative;
   }
 
-  > .ms-SearchBox-iconContainer,
-  > .ms-SearchBox-clearButton {
+  > .iconContainer,
+  > .clearButton {
     color: #106ebe;
     text-align: center;
     > .ms-Icon {
       line-height: 30px;
     }
   }
-  > .ms-SearchBox-clearButton {
+  > .clearButton {
     width: 32px;
     font-size: 12px;
     &:hover {

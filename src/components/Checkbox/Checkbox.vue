@@ -117,7 +117,7 @@ button.ms-Checkbox {
     transition-timing-function: cubic-bezier(0.4, 0, 0.23, 1);
 
     & > i {
-      vertical-align: middle;
+      vertical-align: top;
       display: inline-block;
       opacity: 0;
     }
