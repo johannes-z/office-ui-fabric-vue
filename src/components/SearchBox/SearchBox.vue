@@ -62,8 +62,12 @@ export default {
     hasText () {
       return this.searchQuery && this.searchQuery.length > 0
     },
+    isDisabled () {
+      return this.$attrs.disabled
+    },
     classObj () {
       let obj = {}
+      obj['is-disabled'] = this.isDisabled
       obj['is-underlined'] = this.underlined
       obj['has-text'] = this.hasText
       obj['can-clear'] = this.hasText
@@ -86,7 +90,7 @@ export default {
       this.$emit('onBlur', this.searchQuery)
     },
     onFocus () {
-      this.isActive = true
+      this.isActive = !this.isDisabled
       this.$emit('onFocus', this.searchQuery)
     },
     onChange () {
@@ -117,6 +121,38 @@ $SearchBoxTransitionDuration: .167s;
       width: calc(100% - 36px);
     }
   }
+  &.can-clear:not(.is-active) {
+    > .field {
+      width: calc(100% - 64px);
+    }
+  }
+}
+
+// Disabled
+.root.is-disabled {
+  background-color: $ms-color-neutralLighterAlt;
+  border-color: $ms-color-neutralLighterAlt;
+  color: $ms-color-neutralTertiary;
+
+  &, > * {
+    cursor: default;
+  }
+
+  > .iconContainer {
+    color: $ms-color-neutralTertiary;
+  }
+  > .field {
+    color: $ms-color-white;
+    background-color: $ms-color-white;
+  }
+  > .clearButton {
+    background-color: $ms-color-neutralLighterAlt;
+  }
+}
+
+.root.is-underlined.is-disabled {
+  background-color: $ms-color-white;
+  border-bottom-color: $ms-color-neutralLighterAlt;
 }
 
 // Static styles
@@ -167,7 +203,7 @@ $SearchBoxTransitionDuration: .167s;
     text-overflow: ellipsis;
     overflow: hidden;
     border: none;
-    width: calc(100% - 64px);
+    width: calc(100% - 32px);
     outline: 1px solid transparent;
     transition: width $SearchBoxTransitionDuration 0s;
   }

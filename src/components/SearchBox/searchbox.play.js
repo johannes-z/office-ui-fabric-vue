@@ -11,3 +11,20 @@ play('SearchBox')
       underlined: true,
     },
   }))
+
+play('SearchBox')
+  .add('Disabled', h => h(SearchBox, {
+    attrs: {
+      disabled: true,
+    },
+  }))
+
+play('SearchBox')
+  .add('Disabled Underliend', h => h(SearchBox, {
+    attrs: {
+      disabled: true,
+    },
+    props: {
+      underlined: true,
+    },
+  }))
