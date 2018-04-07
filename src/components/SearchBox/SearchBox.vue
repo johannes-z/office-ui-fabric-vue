@@ -179,7 +179,6 @@ $SearchBoxTransitionDuration: .167s;
   &.is-underlined {
     border: 0;
     border-bottom: 1px solid $ms-color-neutralTertiary;
-    height: 31px;
   }
 
   > .iconContainer {
