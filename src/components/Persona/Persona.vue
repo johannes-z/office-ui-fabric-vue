@@ -3,29 +3,39 @@
 
     <div class="ms-Persona-coin">
 
-      <i v-if="size === 9"
-         class="ms-Icon ms-Icon--Contact"
-         aria-hidden="true"/>
+      <slot name="coin">
 
-      <div v-else
-           class="ms-Persona-imageArea">
+        <i v-if="size === 9"
+           class="ms-Icon ms-Icon--Contact"
+           aria-hidden="true"/>
 
-        <persona-initials v-if="!imageUrl" :name="primaryText"/>
+        <div v-else
+             class="ms-Persona-imageArea">
 
-        <div v-else class="ms-Image ms-Persona-image">
-          <img :src="imageUrl" class="ms-Image-image" alt="">
+          <div v-if="presence" class="ms-Persona-presence">
+            <!-- TODO: add presence icon -->
+          </div>
+
+          <persona-initials v-if="!imageUrl" :name="primaryText"/>
+
+          <div v-else class="ms-Image ms-Persona-image">
+            <img :src="imageUrl" class="ms-Image-image" alt="">
+          </div>
         </div>
-      </div>
+
+      </slot>
 
     </div>
 
     <div class="ms-Persona-details">
 
-      <div class="ms-Persona-primaryText">
-        <span>{{ primaryText }}</span>
-      </div>
+      <slot name="details">
 
-      <slot />
+        <div class="ms-Persona-primaryText">
+          <span>{{ primaryText }}</span>
+        </div>
+
+      </slot>
 
     </div>
   </div>
@@ -88,6 +98,7 @@ export default {
   height: initial !important;
 
   > .ms-Persona-coin {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     font-size: 10px;
@@ -103,6 +114,21 @@ export default {
       width: 72px;
 
       text-align: center;
+
+      .ms-Persona-presence {
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+
+        border-radius: 50%;
+
+        height: 28px;
+        width: 28px;
+
+        border: 2px solid #ffffff;
+
+        background-color: green;
+      }
 
       > .ms-Persona-initials {
         height: 72px;
