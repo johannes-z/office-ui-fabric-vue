@@ -47,6 +47,10 @@ export default {
       type: String,
       default: '',
     },
+    underlined: {
+      type: Boolean,
+      default: false,
+    },
   },
   data () {
     return {
@@ -60,6 +64,7 @@ export default {
     },
     classObj () {
       let obj = {}
+      obj['is-underlined'] = this.underlined
       obj['has-text'] = this.hasText
       obj['can-clear'] = this.hasText
       obj['is-active'] = this.isActive
@@ -133,6 +138,12 @@ $SearchBoxTransitionDuration: .167s;
 
   input::-ms-clear{
     display:none;
+  }
+
+  &.is-underlined {
+    border: 0;
+    border-bottom: 1px solid $ms-color-neutralTertiary;
+    height: 31px;
   }
 
   > .iconContainer {
