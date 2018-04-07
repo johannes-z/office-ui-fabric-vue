@@ -22,6 +22,8 @@
         <icon icon-name="Clear" />
       </div>
 
+      <div style="clear: both;"/>
+
     </div>
 
   </div>
@@ -59,6 +61,7 @@ export default {
     classObj () {
       let obj = {}
       obj['has-text'] = this.hasText
+      obj['can-clear'] = this.hasText
       obj['is-active'] = this.isActive
       return obj
     },
@@ -94,47 +97,58 @@ export default {
 <style lang="scss" scoped>
 @import '../../common/common.scss';
 
+$SearchBoxTransitionDuration: .167s;
+
 // Active styles
-.root.is-active {
-  .iconContainer {
-    width: 12px;
-    transition: width .167s;
-    & > i {
-      opacity: 0;
+.root {
+  &.is-active {
+    > .iconContainer {
+      width: 4px;
+      & > i {
+        opacity: 0;
+      }
+    }
+    > .field {
+      width: calc(100% - 36px);
     }
   }
 }
 
 // Static styles
 .ms-SearchBox-container {
-  display: table;
   width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  box-sizing: border-box;
 }
+
 .root {
-  display: table-row;
+  padding-left: 8px;
+
+  font-weight: $ms-font-weight-regular;
+  color: $ms-color-neutralPrimary;
+
+  border: 1px solid $ms-color-neutralTertiary;
+  background-color: #ffffff;
+
   font-size: 0px;
   font-weight: 400;
-  color: #333;
-  border: 1px solid #a6a6a6;
-  background-color: #ffffff;
 
   input::-ms-clear{
     display:none;
   }
+
   > .iconContainer {
+    float: left;
     font-size: 16px;
-    padding-left: 8px;
-    width: 40px;
-    transition: width .167s;
-    .ms-SearchBox-icon {
+    transition: width $SearchBoxTransitionDuration;
+
+    & > i {
       opacity: 1;
-      transition: opacity .167s 0s;
+      transition: opacity $SearchBoxTransitionDuration 0s;
     }
   }
   > .field {
+    color: $ms-color-neutralPrimary;
+
+    float: left;
     font-size: 14px;
     height: 30px;
     margin: 0;
@@ -142,29 +156,24 @@ export default {
     text-overflow: ellipsis;
     overflow: hidden;
     border: none;
-    width: 100%;
+    width: calc(100% - 64px);
     outline: 1px solid transparent;
-    padding-bottom: 0.5px;
-  }
-  > .field,
-  > .iconContainer,
-  > .clearButton {
-    display: table-cell;
-    vertical-align: middle;
-    box-sizing: border-box;
-    position: relative;
+    transition: width $SearchBoxTransitionDuration 0s;
   }
 
   > .iconContainer,
   > .clearButton {
-    color: #106ebe;
+    color: $ms-color-themePrimary;
     text-align: center;
+    width: 32px;
+
     > .ms-Icon {
       line-height: 30px;
     }
   }
+
   > .clearButton {
-    width: 32px;
+    float: right;
     font-size: 12px;
     &:hover {
       cursor: pointer;
