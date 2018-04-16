@@ -14,7 +14,7 @@
              type="text"
              @blur="onBlur"
              @focus="onFocus"
-             @keyup.enter="onSearch">
+             @keyup.enter.prevent="onSearch">
 
       <div v-show="hasText"
            class="ms-SearchBox-clearButton clearButton"
