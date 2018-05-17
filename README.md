@@ -56,6 +56,25 @@ automatically add the showcase.
 yarn play
 ```
 
+## Components
+
+This library and the components are still in WIP, as shown in the list below.
+If a component is missing in the list, development of it has not started yet.
+Checked components are *mostly* done and implement most of the features of their
+React counter-part.
+
+- [ ] Breadcrumb
+- [ ] Button
+- [ ] Checkbox
+- [ ] CommandBar
+- [ ] Icon
+- [x] Label
+- [ ] Persona
+- [ ] ProgressIndicator
+- [ ] SearchBox
+- [x] Spinner
+- [ ] Toggle
+
 ## License
 
 All files on the Office UI Fabric Vue GitHub repository are subject to the MIT

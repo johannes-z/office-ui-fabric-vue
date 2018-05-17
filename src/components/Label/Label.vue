@@ -28,15 +28,9 @@ export default {
   color: $ms-color-neutralPrimary;
   box-sizing: border-box;
   box-shadow: none;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
+  margin: 0;
   display: block;
-  padding-top: 5px;
-  padding-right: 0px;
-  padding-bottom: 5px;
-  padding-left: 0px;
+  padding: 5px 0 5px 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
 
