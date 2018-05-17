@@ -23,7 +23,7 @@
         <icon icon-name="Clear" />
       </div>
 
-      <div style="clear: both;"/>
+      <div v-if="clear" style="clear: both;"/>
 
     </div>
 
@@ -51,6 +51,10 @@ export default {
     underlined: {
       type: Boolean,
       default: false,
+    },
+    clear: {
+      type: Boolean,
+      default: true,
     },
   },
   data () {
@@ -221,9 +225,11 @@ $SearchBoxTransitionDuration: .167s;
 
   > .clearButton {
     float: right;
-    font-size: 12px;
     &:hover {
       cursor: pointer;
+    }
+    & > i, & > i:before {
+      font-size: 12px;
     }
   }
 }

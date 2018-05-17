@@ -2,16 +2,11 @@
   <div class="ms-CommandBar root">
 
     <!-- search -->
-    <div v-if="isSearchBoxVisible" class="ms-CommandBarSearch">
-      <div class="ms-CommandBarSearch search">
-        <input :placeholder="searchPlaceholderText" type="text" class="ms-CommandBarSearch-input searchInput">
-        <div class="ms-CommandBarSearch-iconWrapper ms-CommandBarSearch-iconSearchWrapper searchIconWrapper searchIconSearchWrapper">
-          <icon icon-name="Search" />
-        </div>
-        <div class="ms-CommandBarSearch-iconWrapper ms-CommandBarSearch-iconClearWrapper css-65 searchIconWrapper searchIconClearWrapper">
-          <icon icon-name="Cancel" />
-        </div>
-      </div>
+    <div v-if="isSearchBoxVisible" class="ms-CommandBarSearch search">
+      <slot :searchPlaceholderText="searchPlaceholderText" name="searchBox">
+        <SearchBox :underlined="true"
+                   style="display: inline-block; width: 208px; max-width: 208px;"/>
+      </slot>
     </div>
     <!-- /search -->
 
@@ -24,7 +19,8 @@
         <div v-for="(item, index) in items" :key="item.key || index"
              class="ms-CommandBarItem item" >
           <a :href="item.href"
-             class="ms-CommandBarItem-link itemLink">
+             class="ms-CommandBarItem-link itemLink"
+             @click="onClick($event, item)">
             <icon :icon-name="item.icon" class="itemIconColor" />
             <span class="ms-CommandBarItem-commandText itemCommandText">
               {{ item.name }}
@@ -39,7 +35,8 @@
         <div v-for="(item, index) in farItems" :key="item.key || index"
              class="ms-CommandBarItem item" >
           <a :href="item.href"
-             class="ms-CommandBarItem-link itemLink">
+             class="ms-CommandBarItem-link itemLink"
+             @click="onClick($event, item)">
             <icon :icon-name="item.icon" class="itemIconColor" />
             <span class="ms-CommandBarItem-commandText itemCommandText">
               {{ item.name }}
@@ -54,10 +51,11 @@
 </template>
 
 <script>
+import { SearchBox } from '../SearchBox'
 import { Icon } from '../Icon'
 
 export default {
-  components: { Icon },
+  components: { Icon, SearchBox },
   props: {
     items: {
       type: Array,
@@ -90,6 +88,17 @@ export default {
     searchPlaceholderText: {
       type: String,
       default: 'Search...',
+    },
+  },
+  created () {
+    console.log(this.$scopedSlots)
+    console.log(this.$slots)
+    console.log(this)
+  },
+  methods: {
+    onClick (event, item) {
+      if (!item.onClick) return
+      item.onClick(event)
     },
   },
 
@@ -399,5 +408,24 @@ $SearchBox-sidePadding: 8px; // padding in input on left and right sides without
 .searchInput,
 .searchInput::-webkit-input-placeholder {
   font-size: $ms-font-size-m;
+}
+
+</style>
+
+<style lang="scss">
+.ms-CommandBarSearch {
+  .ms-SearchBox {
+    border: 0 !important;
+    outline: 0 !important;
+  }
+  .ms-SearchBox:last-child {
+    border-right: 1px solid #eaeaea !important;
+  }
+
+  .ms-SearchBox > input,
+  .ms-SearchBox > div > * {
+    height: 40px !important;
+    line-height: 40px !important;
+  }
 }
 </style>
