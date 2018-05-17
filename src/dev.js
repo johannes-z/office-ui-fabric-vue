@@ -1,9 +1,22 @@
 import Vue from 'vue'
 import * as fabric from './index'
 
-/* eslint no-new: 0 */
-
 console.log(fabric)
+
+var tmp = new Vue({
+  el: '#app',
+  render: h => h(fabric.CommandBar, {
+    props: {
+      items: [{
+        key: 'new',
+        name: 'New Button',
+        icon: 'Add',
+        href: '#',
+        onClick: () => {},
+      }],
+    },
+  }),
+})
 
 // let a = new Vue({
 //   el: '#app',
