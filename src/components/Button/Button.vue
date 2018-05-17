@@ -1,14 +1,14 @@
 <template>
-  <component :is="tag" class="ms-Button" :class="buttonStyle">
-    <span class="ms-Button-icon" v-if="icon">
-      <i class="ms-Icon" :class="iconClass"></i>
+  <component :is="tag" :class="buttonStyle" class="ms-Button">
+    <span v-if="icon" class="ms-Button-icon">
+      <i :class="iconClass" class="ms-Icon"/>
     </span>
     <span class="ms-Button-label">{{ label }}</span>
-    <span class="ms-Button-description" v-if="description">
+    <span v-if="description" class="ms-Button-description">
       {{ description }}
     </span>
-    <span class="ms-Button-dropdownIcon" v-if="dropdownIcon">
-      <i class="ms-Icon" :class="dropdownIconClass"></i>
+    <span v-if="dropdownIcon" class="ms-Button-dropdownIcon">
+      <i :class="dropdownIconClass" class="ms-Icon"/>
     </span>
   </component>
 </template>
@@ -19,17 +19,17 @@ export default {
     tag: {
       type: String,
       default: 'button',
-      validator: value => value === 'a' || value === 'button'
+      validator: value => value === 'a' || value === 'button',
     },
     customClasses: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     modifier: null,
     label: String,
     icon: String,
     description: String,
-    dropdownIcon: String
-  }
+    dropdownIcon: String,
+  },
 }
 </script>

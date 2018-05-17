@@ -1,0 +1,403 @@
+<template>
+  <div class="ms-CommandBar root">
+
+    <!-- search -->
+    <div v-if="isSearchBoxVisible" class="ms-CommandBarSearch">
+      <div class="ms-CommandBarSearch search">
+        <input :placeholder="searchPlaceholderText" type="text" class="ms-CommandBarSearch-input searchInput">
+        <div class="ms-CommandBarSearch-iconWrapper ms-CommandBarSearch-iconSearchWrapper searchIconWrapper searchIconSearchWrapper">
+          <icon icon-name="Search" />
+        </div>
+        <div class="ms-CommandBarSearch-iconWrapper ms-CommandBarSearch-iconClearWrapper css-65 searchIconWrapper searchIconClearWrapper">
+          <icon icon-name="Cancel" />
+        </div>
+      </div>
+    </div>
+    <!-- /search -->
+
+    <div role="menubar"
+         class="ms-FocusZone container"
+         data-focuszone-id="FocusZone21">
+
+      <!-- items -->
+      <div class="ms-CommandBar-primaryCommands primaryCommands">
+        <div v-for="(item, index) in items" :key="item.key || index"
+             class="ms-CommandBarItem item" >
+          <a :href="item.href"
+             class="ms-CommandBarItem-link itemLink">
+            <icon :icon-name="item.icon" class="itemIconColor" />
+            <span class="ms-CommandBarItem-commandText itemCommandText">
+              {{ item.name }}
+            </span>
+          </a>
+        </div>
+      </div>
+      <!-- /items -->
+
+      <!-- farItems -->
+      <div class="ms-CommandBar-sideCommands sideCommands">
+        <div v-for="(item, index) in farItems" :key="item.key || index"
+             class="ms-CommandBarItem item" >
+          <a :href="item.href"
+             class="ms-CommandBarItem-link itemLink">
+            <icon :icon-name="item.icon" class="itemIconColor" />
+            <span class="ms-CommandBarItem-commandText itemCommandText">
+              {{ item.name }}
+            </span>
+          </a>
+        </div>
+      </div>
+      <!-- /farItems -->
+
+    </div>
+  </div>
+</template>
+
+<script>
+import { Icon } from '../Icon'
+
+export default {
+  components: { Icon },
+  props: {
+    items: {
+      type: Array,
+      required: true,
+      default: () => [],
+      dummy: () => [{
+        key: 'new',
+        name: 'New',
+        icon: 'Add',
+        href: '#',
+        onClick: () => {},
+      }],
+    },
+
+    farItems: {
+      type: Array,
+      default: () => [],
+      dummy: () => [{
+        key: 'sort',
+        name: 'Sort',
+        icon: 'SortLines',
+        href: '#',
+        onClick: () => {},
+      }],
+    },
+    isSearchBoxVisible: {
+      type: Boolean,
+      default: false,
+    },
+    searchPlaceholderText: {
+      type: String,
+      default: 'Search...',
+    },
+  },
+
+}
+</script>
+
+<style lang="scss" scoped>
+@import '../../common/common';
+@import '../../common/focusBorder';
+
+$CommandBar-height: 40px;
+$CommandBar-mobileHeight: 48px;
+$CommandBar-iconSize: 18px;
+$CommandBar-smallLeft: 44px;
+$CommandBar-largeLeft: 48px;
+$CommandBar-xLargeLeft: 232px;
+$CommandBar-sideAreaWidthsm: 128px;
+$CommandBar-sideAreaWidthlg: 260px;
+$CommandBar-sideAreaWidthxlg: 345px;
+
+$CommandBarItem-height: $CommandBar-height;
+$CommandBarItem-marginTop: 13px;
+$CommandBarItem-textHeight: 16px;
+$CommandBarItem-fontSize: 16px;
+$CommandBarItem-chevronDown-fontSize: 12px;
+$CommandBarItem-overflow-fontSize: 18px;
+$CommandBarItem-iconLabelMargin: 8px;
+$CommandBarItem-flippedLineHeight: 32px;
+
+$SearchBox-height: 40px;
+$SearchBox-widthLgCollapsed: 50px;
+$SearchBox-widthMdDownCollapsed: 36px;
+$SearchBox-widthXLarge: 208px;
+$SearchBox-iconSize: 16px;
+$SearchBox-sidePadding: 8px; // padding in input on left and right sides without icons
+
+.root {
+  @include ms-font-m;
+  color: $ms-color-neutralPrimary;
+
+  position: relative;
+  background-color: $ms-color-neutralLighter;
+  height: $CommandBar-height;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.container{
+  display: flex;
+}
+
+.primaryCommands {
+  overflow: hidden;
+  display: flex;
+  flex: 1 1 auto;
+  vertical-align: top;
+  line-height: $CommandBar-height;
+  max-width: 100%;
+  margin: 0 20px;
+}
+
+.sideCommands {
+  display: flex;
+  flex: 0 0 auto;
+  @include ms-right(0px);
+  @include text-align(right);
+  @include padding-right(20px);
+}
+
+// Command Bar Item
+.item {
+  display: inline-block;
+  color: $ms-color-themePrimary;
+  height: $CommandBarItem-height;
+  outline: transparent;
+  vertical-align: top;
+
+  &:hover {
+    background-color: $ms-color-neutralLight;
+    color: $ms-color-neutralPrimary;
+  }
+}
+
+.itemChevronDown,
+.itemCommandText {
+  display: inline-block;
+  padding: 0 4px;
+  vertical-align: top;
+}
+
+@mixin CommandBarItem-text {
+  @include focus-border(2px);
+  @include ms-font-m;
+  color: $ms-color-neutralPrimary;
+
+  position: relative;
+  background: none;
+  background-color: transparent;
+  border: none;
+  line-height: $CommandBarItem-height;
+  min-width: 20px;
+  text-align: center;
+  padding: 0 4px;
+  display: block;
+  height: 100%;
+
+  &.itemLinkIsNoName {
+    padding: 0 8px;
+  }
+
+  &[disabled] {
+    color: $ms-color-neutralTertiaryAlt;
+    cursor: default;
+    pointer-events: none;
+    .itemIcon,
+    .itemChevronDown {
+      color: $ms-color-neutralTertiaryAlt;
+    }
+  }
+}
+
+.itemText {
+  @include CommandBarItem-text;
+}
+
+.itemLink {
+  @include CommandBarItem-text;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover,
+  &.itemLinkIsExpanded {
+    @include high-contrast {
+      @include focus-border(0px, WindowText, 1px, false);
+    }
+  }
+
+  &:hover:not([disabled]) {
+    color: $ms-color-neutralDark;
+    background-color: $ms-color-neutralLight;
+
+    .itemIcon {
+      color: $ms-color-themeDark;
+    }
+
+    .itemChevronDown {
+      color: $ms-color-neutralPrimaryAlt;
+    }
+
+    .itemOverflow {
+      color: $ms-color-neutralDark;
+    }
+  }
+
+  &.itemLinkIsExpanded {
+    background-color: $ms-color-neutralQuaternaryAlt;
+    color: $ms-color-black;
+
+    .itemIcon {
+      color: $ms-color-themeDarker;
+    }
+
+    .itemChevronDown {
+      color: $ms-color-neutralDark;
+    }
+
+    .itemOverflow {
+      color: $ms-color-black;
+    }
+  }
+
+  &.itemLinkIsExpanded:hover {
+    background-color: $ms-color-neutralQuaternary;
+  }
+
+  &.inactive {
+    color: $ms-color-neutralTertiaryAlt;
+    cursor: default;
+    pointer-events: none;
+    .itemIcon {
+      color: $ms-color-neutralTertiaryAlt;
+    }
+  }
+}
+
+.itemIcon {
+  font-size: $CommandBarItem-fontSize;
+  padding: 0 4px;
+}
+
+.itemIconColor {
+  color: $ms-color-themeDarkAlt;
+}
+
+.itemChevronDown  {
+  color: $ms-color-neutralSecondary;
+  font-size: $CommandBarItem-chevronDown-fontSize;
+}
+
+.itemOverflow {
+  font-size: $CommandBarItem-overflow-fontSize;
+  color: $ms-color-neutralPrimary;
+  padding: 0 7px;
+}
+
+// CommandBarSearch needs to replaced with SearchBox component, and hence following styles revisited/cleaned.
+.search {
+  @include float(left);
+  width: 208px;
+  max-width: 208px;
+  background-color: $ms-color-white;
+  color: $ms-color-neutralPrimary;
+  height: $SearchBox-height;
+  position: relative;
+  box-sizing: border-box;
+  border-color: transparent; // give a base state for animation
+  @include border-right(1px, solid, $ms-color-neutralLight);
+
+  @include high-contrast {
+    @include border-right(1px, solid, WindowText);
+    z-index: 10;
+  }
+
+  &:before {
+    position: absolute;
+    content: ' ';
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 8px;
+    border-bottom: 1px solid $ms-color-neutralLight;
+  }
+
+  &:hover {
+    color: $ms-color-themePrimary;
+
+    @include high-contrast {
+      @include focus-border(0px, WindowText, 1px, false);
+    }
+  }
+}
+
+.searchInput {
+  height: $SearchBox-height;
+  // Due to a bug in IE9, we have to use a transparent left border instead of left padding
+  padding: $SearchBox-sidePadding $SearchBox-sidePadding $SearchBox-sidePadding 0;
+  border: none;
+  @include border-left($SearchBox-height + 2, solid, transparent);
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+  font-size: $ms-font-size-m;
+
+  @include high-contrast {
+    @include border-left($SearchBox-height, solid, Window);
+  }
+
+  // remove default iOS styles on input boxes
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+
+  // hide IE's X button for clearing the input (we have our own)
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+// default styles for icons, show the search icon and hide X (and arrow) until focused
+.searchIconSearchWrapper {
+  display: block;
+}
+
+.searchIconArrowWrapper {
+  display: none;
+}
+
+.searchIconSearchWrapper,
+.searchIconArrowWrapper {
+  top: 0;
+  @include ms-padding-left(17px);
+  @include padding-right(8px);
+}
+
+.searchIconClearWrapper {
+  display: none;
+  top: 1px;
+  @include ms-right(0px);
+  z-index: $ms-zIndex-front;
+}
+
+.searchIconWrapper {
+  height: $SearchBox-height;
+  line-height: $SearchBox-height;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  -ms-high-contrast-adjust: none;
+}
+
+// New rules
+.search :global(.ms-Icon:before) {
+  font-size: $SearchBox-iconSize;
+  color: $ms-color-themePrimary;
+}
+
+.searchInput,
+.searchInput::-webkit-input-placeholder {
+  font-size: $ms-font-size-m;
+}
+</style>
