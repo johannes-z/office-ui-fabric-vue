@@ -61,10 +61,7 @@ export default {
 }
 
 .circle {
-  margin-top: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  margin-left: auto;
+  margin: auto;
   box-sizing: border-box;
 
   animation-name: spinAnimation;
