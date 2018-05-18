@@ -2,18 +2,21 @@
   <div :class="classObj"
        class="ms-Toggle root">
 
-    <Label :for="id">
+    <Label v-if="label"
+           :for="id">
       {{ label }}
     </Label>
 
-    <div class="ms-Toggle-innerContainer container"
-         @click="onClick">
+    <div class="ms-Toggle-innerContainer container">
       <button :id="id"
-              class="ms-Toggle-background pill">
+              class="ms-Toggle-background pill"
+              @click="onClick">
         <div class="ms-Toggle-thumb thumb"/>
       </button>
 
-      <Label :for="id" class="ms-Toggle-stateText text">
+      <Label v-if="onText || offText"
+             :for="id"
+             class="ms-Toggle-stateText text">
         {{ isActive ? onText : offText }}
       </Label>
     </div>
