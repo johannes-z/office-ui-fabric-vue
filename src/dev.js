@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import * as fabric from './index'
 
 import PageLabel from './pages/Label.vue'
+import PageProgressIndicator from './pages/ProgressIndicator.vue'
 import PageSpinner from './pages/Spinner.vue'
 import PageToggle from './pages/Toggle.vue'
 
@@ -11,6 +12,7 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/label', component: PageLabel },
+  { path: '/progressIndicator', component: PageProgressIndicator },
   { path: '/spinner', component: PageSpinner },
   { path: '/toggle', component: PageToggle },
 ]

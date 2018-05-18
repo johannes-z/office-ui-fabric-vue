@@ -6,7 +6,8 @@
 
     <div class="ms-ProgressIndicator-itemProgress itemProgress">
       <div class="ms-ProgressIndicator-progressTrack progressTrack"/>
-      <div :class="{ indeterminate: percentComplete == null }"
+      <div :class="classObj"
+           :style="{ width: `${percentComplete < 0 ? 0 : percentComplete}%` }"
            class="ms-ProgressIndicator-progressBar progressBar"/>
     </div>
 
