@@ -70,10 +70,10 @@ React counter-part.
 - [ ] Icon
 - [x] Label
 - [ ] Persona
-- [ ] ProgressIndicator
+- [x] ProgressIndicator
 - [ ] SearchBox
 - [x] Spinner
-- [ ] Toggle
+- [x] Toggle
 
 ## License
 
