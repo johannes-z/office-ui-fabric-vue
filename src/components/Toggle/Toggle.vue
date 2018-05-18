@@ -1,20 +1,30 @@
 <template>
   <div :class="classObj"
        class="ms-Toggle root">
-    <label :for="id" class="ms-Label ms-Toggle-label label"/>
-    <div class="ms-Toggle-innerContainer"
+
+    <Label :for="id">
+      {{ label }}
+    </Label>
+
+    <div class="ms-Toggle-innerContainer container"
          @click="onClick">
       <button :id="id"
               class="ms-Toggle-background pill">
         <div class="ms-Toggle-thumb thumb"/>
       </button>
-      <label :for="id" class="ms-Label ms-Toggle-stateText text"/>
+
+      <Label :for="id" class="ms-Toggle-stateText text">
+        {{ isActive ? onText : offText }}
+      </Label>
     </div>
+
   </div>
 </template>
 
 <script>
+import { Label } from '../Label'
 export default {
+  components: { Label },
   props: {
     checked: {
       type: Boolean,
@@ -25,6 +35,14 @@ export default {
       default: false,
     },
     label: {
+      type: String,
+      default: '',
+    },
+    onText: {
+      type: String,
+      default: '',
+    },
+    offText: {
       type: String,
       default: '',
     },
@@ -41,11 +59,13 @@ export default {
     classObj () {
       let obj = {}
       obj['is-active'] = this.isActive
+      obj['is-disabled'] = this.disabled
       return obj
     },
   },
   methods: {
     onClick () {
+      if (this.disabled) return
       this.isActive = !this.isActive
     },
   },
@@ -78,6 +98,40 @@ export default {
     }
   }
 
+  &.is-disabled {
+    .pill {
+      background: $ms-color-neutralTertiaryAlt;
+      cursor: default;
+    }
+    .ms-Label, .text {
+      color: $ms-color-neutralTertiary
+    }
+  }
+
+  &.is-disabled.is-active {
+    .ms-Label, .text {
+      color: $ms-color-neutralTertiary
+    }
+  }
+
+  &.is-disabled:not(.is-active) {
+    .pill {
+      background: $ms-color-white;
+      border-color: $ms-color-neutralTertiary;
+    }
+    .thumb {
+      background: $ms-color-neutralTertiary;
+    }
+  }
+
+  .label {
+    display: block;
+  }
+
+  .container {
+    display: inline-block;
+  }
+
   .pill {
     position: relative;
     font-size: 20px;
@@ -108,6 +162,17 @@ export default {
     border-color: transparent;
     border-width: 0.28em;
     border-style: solid;
+  }
+
+  .text, .pill {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .text {
+    margin: 0 10px 0 10px;
+  }
+  .text, .root {
+    user-select: none;
   }
 }
 </style>
