@@ -1,20 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import * as fabric from './index'
-
-import PageLabel from './pages/Label.vue'
-import PageProgressIndicator from './pages/ProgressIndicator.vue'
-import PageSpinner from './pages/Spinner.vue'
-import PageToggle from './pages/Toggle.vue'
+import Breadcrumb from './pages/Breadcrumb.vue'
+import Label from './pages/Label.vue'
+import ProgressIndicator from './pages/ProgressIndicator.vue'
+import Spinner from './pages/Spinner.vue'
+import Toggle from './pages/Toggle.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/label', component: PageLabel },
-  { path: '/progressIndicator', component: PageProgressIndicator },
-  { path: '/spinner', component: PageSpinner },
-  { path: '/toggle', component: PageToggle },
+  { path: '/breadcrumb', component: Breadcrumb },
+  { path: '/label', component: Label },
+  { path: '/progressIndicator', component: ProgressIndicator },
+  { path: '/spinner', component: Spinner },
+  { path: '/toggle', component: Toggle },
 ]
 
 const router = new VueRouter({
@@ -24,25 +24,3 @@ const router = new VueRouter({
 const app = new Vue({
   router,
 }).$mount('#app')
-
-// console.log(fabric)
-
-// var {
-//   Label,
-//   Spinner,
-// } = fabric
-
-// var tmp = new Vue({
-//   el: '#app',
-//   render: h => {
-//     var commandBar = h(fabric.CommandBar, {
-//       props: {
-//         items: [{
-//           key: 'new',
-//           name: 'New Button',
-//           icon: 'Add',
-//           href: '#',
-//           onClick: () => {},
-//         }],
-//       },
-//     })
