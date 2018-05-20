@@ -30,7 +30,7 @@ export default {
   box-shadow: none;
   margin: 0;
   display: block;
-  padding: 5px 0 5px 0;
+  padding: 5px 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
 

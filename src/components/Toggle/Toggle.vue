@@ -143,10 +143,7 @@ export default {
     height: 1em;
     cursor: pointer;
     align-items: center;
-    padding-top: 0px;
-    padding-right: 0.2em;
-    padding-bottom: 0px;
-    padding-left: 0.2em;
+    padding: 0 0.2em;
     outline: transparent;
     border-radius: 1em;
     transition: all 0.1s ease;
@@ -172,7 +169,7 @@ export default {
     vertical-align: middle;
   }
   .text {
-    margin: 0 10px 0 10px;
+    margin: 0 10px;
   }
   .text, .root {
     user-select: none;
