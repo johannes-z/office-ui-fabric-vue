@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Breadcrumb from './pages/Breadcrumb.vue'
+import Checkbox from './pages/Checkbox.vue'
 import Label from './pages/Label.vue'
 import ProgressIndicator from './pages/ProgressIndicator.vue'
 import Spinner from './pages/Spinner.vue'
@@ -11,6 +12,7 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/breadcrumb', component: Breadcrumb },
+  { path: '/checkbox', component: Checkbox },
   { path: '/label', component: Label },
   { path: '/progressIndicator', component: ProgressIndicator },
   { path: '/spinner', component: Spinner },
