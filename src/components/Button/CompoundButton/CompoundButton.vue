@@ -31,25 +31,29 @@ export default {
 @import "../../../common/common";
 
 .root {
-  background-color: $ms-color-neutralLighterAlt;
   max-width: 280px;
   min-height: 72px;
+
+  .textContainer {
+    text-align: left;
+
+    .label {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+
+    .description {
+      font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 100%;
+      color: rgb(102, 102, 102);
+    }
+  }
 }
 
-.textContainer {
-  text-align: left;
-}
-
-.description {
-  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 100%;
-  color: rgb(102, 102, 102);
-}
-
-.ms-Button--primary .description {
+.ms-Button--primary .textContainer .description {
   color: $ms-color-white;
 }
 </style>
