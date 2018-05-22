@@ -8,6 +8,7 @@ import Link from './pages/Link.vue'
 import ProgressIndicator from './pages/ProgressIndicator.vue'
 import SearchBox from './pages/SearchBox.vue'
 import Spinner from './pages/Spinner.vue'
+import Slider from './pages/Slider.vue'
 import Toggle from './pages/Toggle.vue'
 
 Vue.use(VueRouter)
@@ -20,6 +21,7 @@ const routes = [
   { path: '/progressIndicator', component: ProgressIndicator },
   { path: '/searchBox', component: SearchBox },
   { path: '/spinner', component: Spinner },
+  { path: '/slider', component: Slider },
   { path: '/toggle', component: Toggle },
 ]
 

@@ -1,0 +1,75 @@
+<template>
+  <div>
+    <h1 class="ms-font-xxl">SearchBox</h1>
+
+    <div class="ms-basicSlider">
+      <div class="ms-SliderBasicExample">
+        <Slider :min="1"
+                :max="3"
+                :step="1"
+                :default-value="2"
+                label="Basic example:" />
+
+        <Slider :min="50"
+                :max="500"
+                :step="50"
+                :default-value="300"
+                :disabled="true"
+                label="Disabled example:" />
+      </div>
+
+      <div class="ms-SliderVertical">
+        <div class="ms-verticalBox">
+          <Slider :min="1"
+                  :max="3"
+                  :step="1"
+                  :default-value="2"
+                  :vertical="true"
+                  label="Basic example:" />
+
+          <Slider :min="50"
+                  :max="500"
+                  :step="50"
+                  :default-value="300"
+                  :disabled="true"
+                  :vertical="true"
+                  label="Disabled example:" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { Label, Slider } from '../index'
+
+export default {
+  components: { Label, Slider },
+}
+</script>
+
+<style lang="scss">
+.ms-basicSlider {
+  max-width: 500px;
+}
+.ms-SliderBasicExample {
+  max-width: 300px;
+}
+
+.ms-SliderVertical {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 200px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.ms-verticalBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+</style>
