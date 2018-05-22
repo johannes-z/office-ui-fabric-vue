@@ -18,17 +18,22 @@
     <CompoundButton :primary="true"
                     text="Create account"
                     secondary-text="You can create a new account here." />
+
+    <h2 class="ms-font-xl">Action Button</h2>
+    <ActionButton>Create account</ActionButton>
   </div>
 </template>
 
 <script>
 import {
+  ActionButton,
   CompoundButton,
   DefaultButton,
   Label,
 } from '../index'
 export default {
   components: {
+    ActionButton,
     CompoundButton,
     DefaultButton,
     Label,
