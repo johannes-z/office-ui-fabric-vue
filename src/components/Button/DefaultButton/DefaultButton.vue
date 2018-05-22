@@ -31,8 +31,7 @@ $DEFAULT_BUTTON_MINWIDTH: 80px;
 
 .label {
   font-weight: $ms-font-weight-semibold;
-  margin: 0;
-  margin-bottom: 5px;
+  margin: 0 4px;
   line-height: 100%;
 }
 </style>
