@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import Button from './pages/Button.vue'
 import Breadcrumb from './pages/Breadcrumb.vue'
 import Checkbox from './pages/Checkbox.vue'
 import Label from './pages/Label.vue'
@@ -14,6 +15,7 @@ import Toggle from './pages/Toggle.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  { path: '/button', component: Button },
   { path: '/breadcrumb', component: Breadcrumb },
   { path: '/checkbox', component: Checkbox },
   { path: '/label', component: Label },
