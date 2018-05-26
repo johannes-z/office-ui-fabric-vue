@@ -40,10 +40,16 @@ export default {
   padding: 0 16px;
   border-radius: 0;
 
+  height: 40px;
+
   background-color: $ms-color-neutralLighterAlt;
 
-  &:hover,
   &:focus {
+    // background-color: $ms-color-neutralLighterAlt;
+    outline: transparent;
+  }
+
+  &:hover {
     background-color: $ms-color-neutralLight;
     outline: transparent;
   }
