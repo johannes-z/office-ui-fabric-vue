@@ -7,7 +7,7 @@ import CommandBarButton from './CommandBarButton/CommandBarButton.vue'
 import CompoundButton from './CompoundButton/CompoundButton.vue'
 import SplitButton from './SplitButton/SplitButton.vue'
 // import PrimaryButton from './PrimaryButton/PrimaryButton.vue'
-// import IconButton from './IconButton/IconButton.vue'
+import IconButton from './IconButton/IconButton.vue'
 
 export {
   // BaseButton,
@@ -19,5 +19,5 @@ export {
   CommandBarButton,
   SplitButton,
   // PrimaryButton,
-  // IconButton
+  IconButton,
 }

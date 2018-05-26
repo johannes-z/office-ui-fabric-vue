@@ -1,16 +1,22 @@
 <template>
-  <button :class="{ 'ms-Button--primary': primary }"
-          class="ms-Button root"
-          type="button">
+  <component :is="href ? 'a' : 'button'"
+             :class="classObj"
+             :disabled="disabled"
+             class="ms-Button root"
+             type="button">
     <div class="ms-Button-flexContainer flexContainer">
       <slot/>
     </div>
-  </button>
+  </component>
 </template>
 
 <script>
 export default {
   props: {
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
     primary: {
       type: Boolean,
       default: false,
@@ -19,12 +25,30 @@ export default {
       type: String,
       default: '',
     },
+    href: {
+      type: String,
+      default: null,
+    },
+  },
+  computed: {
+    classObj () {
+      return {
+        'ms-Button--primary': this.primary,
+        'is-disabled': this.disabled,
+      }
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
 @import "../../common/common";
+
+.is-disabled {
+  .label {
+    color: $ms-color-neutralTertiary;
+  }
+}
 
 .root {
   font-weight: $ms-font-weight-regular;
@@ -59,6 +83,17 @@ export default {
     color: $ms-color-white;
     &:hover {
       background-color: $ms-color-themeDarkAlt;
+    }
+    &.is-disabled:hover {
+      background-color: $ms-color-neutralLighterAlt;
+    }
+  }
+
+  &.is-disabled {
+    background-color: $ms-color-neutralLighterAlt;
+
+    &:hover {
+      cursor: default;
     }
   }
 }
