@@ -20,7 +20,7 @@
                     secondary-text="You can create a new account here." />
 
     <h2 class="ms-font-xl">Action Button</h2>
-    <ActionButton>Create account</ActionButton>
+    <ActionButton icon-name="AddFriend">Create account</ActionButton>
   </div>
 </template>
 
