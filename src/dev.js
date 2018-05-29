@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import { ActionButton } from './'
+
 import Button from './pages/Button.vue'
 import Breadcrumb from './pages/Breadcrumb.vue'
 import Checkbox from './pages/Checkbox.vue'
@@ -15,16 +17,16 @@ import Toggle from './pages/Toggle.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/button', component: Button },
-  { path: '/breadcrumb', component: Breadcrumb },
-  { path: '/checkbox', component: Checkbox },
-  { path: '/label', component: Label },
-  { path: '/link', component: Link },
-  { path: '/progressIndicator', component: ProgressIndicator },
-  { path: '/searchBox', component: SearchBox },
-  { path: '/spinner', component: Spinner },
-  { path: '/slider', component: Slider },
-  { path: '/toggle', component: Toggle },
+  { name: 'Button', path: '/button', component: Button },
+  { name: 'Breadcrumb', path: '/breadcrumb', component: Breadcrumb },
+  { name: 'Checkbox', path: '/checkbox', component: Checkbox },
+  { name: 'Label', path: '/label', component: Label },
+  { name: 'Link', path: '/link', component: Link },
+  { name: 'ProgressIndicator', path: '/progressIndicator', component: ProgressIndicator },
+  { name: 'SearchBox', path: '/searchBox', component: SearchBox },
+  { name: 'Spinner', path: '/spinner', component: Spinner },
+  { name: 'Slider', path: '/slider', component: Slider },
+  { name: 'Toggle', path: '/toggle', component: Toggle },
 ]
 
 const router = new VueRouter({
@@ -33,4 +35,24 @@ const router = new VueRouter({
 
 const app = new Vue({
   router,
+  components: { ActionButton },
+  render: h => {
+    var navItems = routes.map(route => (
+      <router-link tag="div" to={route.path}>
+        <action-button>{route.name}</action-button>
+      </router-link>
+    ))
+    console.log(navItems)
+    return (
+      <div class="ms-Fabric-Examples">
+        <div id="navbar" style="width: 200px; padding-right: 20px; float: left;">
+          {navItems}
+        </div>
+
+        <div style="width: calc(100% - 220px); float: left;">
+          <router-view></router-view>
+        </div>
+      </div>
+    )
+  },
 }).$mount('#app')

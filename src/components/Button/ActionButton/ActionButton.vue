@@ -1,7 +1,7 @@
 <template>
   <base-button v-bind="$props"
                class="ms-Button--action ms-Button-command">
-    <icon :icon-name="iconName" class="icon" />
+    <icon v-if="iconName" :icon-name="iconName" class="icon" />
     <div class="ms-Button-textContainer textContainer">
       <div class="ms-Button-label label">
         <slot>{{ text }}</slot>
@@ -20,7 +20,7 @@ export default {
   props: {
     iconName: {
       type: String,
-      required: true,
+      default: null,
     },
   },
 }
