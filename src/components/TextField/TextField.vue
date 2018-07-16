@@ -7,16 +7,29 @@
         {{ label }}
       </Label>
 
-      <div class="ms-TextField-fieldGroup fieldGroup">
-        <input id="TextField"
-               :value="value"
-               :disabled="disabled"
-               :readonly="readOnly"
-               :required="required"
-               type="text"
-               class="ms-TextField-field field"
-               aria-invalid="false">
+      <div :class="{ 'invalid': errorMessage }"
+           class="ms-TextField-fieldGroup fieldGroup">
+        <component id="TextField"
+                   :is="component"
+                   :value="multiline ? '' : value"
+                   :disabled="disabled"
+                   :placeholder="placeholder"
+                   :readonly="readOnly"
+                   :required="required"
+                   rows="4"
+                   type="text"
+                   class="ms-TextField-field field"
+                   aria-invalid="false"
+                   v-text="multiline ? value : ''" />
       </div>
+
+      <span>
+        <div aria-live="assertive">
+          <p class="ms-TextField-errorMessage errorMessage">
+            <span>{{ errorMessage }}</span>
+          </p>
+        </div>
+      </span>
     </div>
   </div>
 </template>
@@ -39,6 +52,18 @@ export default {
       type: Boolean,
       default: false,
     },
+    errorMessage: {
+      type: String,
+      default: '',
+    },
+    placeholder: {
+      type: String,
+      default: '',
+    },
+    multiline: {
+      type: Boolean,
+      default: false,
+    },
     label: {
       type: String,
       default: '',
@@ -49,12 +74,17 @@ export default {
     },
   },
   computed: {
+    component () {
+      return this.multiline ? 'textarea' : 'input'
+    },
     rootClass () {
       return {
         'is-disabled': this.disabled,
         'rootIsDisabled': this.disabled,
         'is-required': this.required,
         'rootIsRequiredLabel': this.required,
+        'multiline': this.multiline,
+        'rootIsMultiline': this.multiline,
       }
     },
   },
