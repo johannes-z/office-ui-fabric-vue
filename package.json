@@ -38,7 +38,6 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.9.2",
     "office-ui-fabric-core": "^9.6.0",
-    "poi": "^10.2.9",
     "sass-loader": "^7.0.3",
     "vue-loader": "^15.2.4",
     "vue-template-compiler": "^2.5.16",

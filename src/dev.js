@@ -12,6 +12,7 @@ import ProgressIndicator from './pages/ProgressIndicator.vue'
 import SearchBox from './pages/SearchBox.vue'
 import Spinner from './pages/Spinner.vue'
 import Slider from './pages/Slider.vue'
+import TextField from './pages/TextField.vue'
 import Toggle from './pages/Toggle.vue'
 
 Vue.use(VueRouter)
@@ -26,6 +27,7 @@ const routes = [
   { name: 'SearchBox', path: '/searchBox', component: SearchBox },
   { name: 'Spinner', path: '/spinner', component: Spinner },
   { name: 'Slider', path: '/slider', component: Slider },
+  { name: 'TextField', path: '/textfield', component: TextField },
   { name: 'Toggle', path: '/toggle', component: Toggle },
 ]
 
@@ -42,7 +44,7 @@ const app = new Vue({
         <action-button>{route.name}</action-button>
       </router-link>
     ))
-    console.log(navItems)
+
     return (
       <div class="ms-Fabric-Examples">
         <div id="navbar" style="width: 200px; padding-right: 20px; float: left;">
