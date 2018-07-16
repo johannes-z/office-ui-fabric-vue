@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   entry: './src/index.js',
@@ -10,6 +11,9 @@ module.exports = {
     library: 'office-ui-fabric-vue',
     libraryTarget: 'umd',
   },
+  plugins: [
+    new VueLoaderPlugin(),
+  ],
   module: {
     rules: [
       {
