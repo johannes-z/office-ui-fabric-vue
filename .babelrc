@@ -3,7 +3,7 @@
     ["env", {
       "modules": false,
       "targets": {
-        "browsers": ["last 2 versions", "safari >= 7"]
+        "browsers": ["last 2 versions", "safari >= 7", "not ie <= 8"]
         }
     }],
     "stage-3"
