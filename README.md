@@ -65,13 +65,16 @@ React counter-part.
 
 - [ ] Breadcrumb
 - [ ] Button
-- [ ] Checkbox
+- [x] Checkbox
+  - missing extra styles like Persona checkboxes etc.
 - [ ] CommandBar
 - [ ] Icon
 - [x] Label
+- [x] Link
 - [ ] Persona
 - [x] ProgressIndicator
-- [ ] SearchBox
+- [x] SearchBox
+  - missing 'no animation' option.
 - [x] Spinner
 - [x] Toggle
 

@@ -1,20 +1,32 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import * as fabric from './index'
+import { ActionButton } from './'
 
-import PageLabel from './pages/Label.vue'
-import PageProgressIndicator from './pages/ProgressIndicator.vue'
-import PageSpinner from './pages/Spinner.vue'
-import PageToggle from './pages/Toggle.vue'
+import Button from './pages/Button.vue'
+import Breadcrumb from './pages/Breadcrumb.vue'
+import Checkbox from './pages/Checkbox.vue'
+import Label from './pages/Label.vue'
+import Link from './pages/Link.vue'
+import ProgressIndicator from './pages/ProgressIndicator.vue'
+import SearchBox from './pages/SearchBox.vue'
+import Spinner from './pages/Spinner.vue'
+import Slider from './pages/Slider.vue'
+import Toggle from './pages/Toggle.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/label', component: PageLabel },
-  { path: '/progressIndicator', component: PageProgressIndicator },
-  { path: '/spinner', component: PageSpinner },
-  { path: '/toggle', component: PageToggle },
+  { name: 'Button', path: '/button', component: Button },
+  { name: 'Breadcrumb', path: '/breadcrumb', component: Breadcrumb },
+  { name: 'Checkbox', path: '/checkbox', component: Checkbox },
+  { name: 'Label', path: '/label', component: Label },
+  { name: 'Link', path: '/link', component: Link },
+  { name: 'ProgressIndicator', path: '/progressIndicator', component: ProgressIndicator },
+  { name: 'SearchBox', path: '/searchBox', component: SearchBox },
+  { name: 'Spinner', path: '/spinner', component: Spinner },
+  { name: 'Slider', path: '/slider', component: Slider },
+  { name: 'Toggle', path: '/toggle', component: Toggle },
 ]
 
 const router = new VueRouter({
@@ -23,26 +35,24 @@ const router = new VueRouter({
 
 const app = new Vue({
   router,
+  components: { ActionButton },
+  render: h => {
+    var navItems = routes.map(route => (
+      <router-link tag="div" to={route.path}>
+        <action-button>{route.name}</action-button>
+      </router-link>
+    ))
+    console.log(navItems)
+    return (
+      <div class="ms-Fabric-Examples">
+        <div id="navbar" style="width: 200px; padding-right: 20px; float: left;">
+          {navItems}
+        </div>
+
+        <div style="width: calc(100% - 220px); float: left;">
+          <router-view></router-view>
+        </div>
+      </div>
+    )
+  },
 }).$mount('#app')
-
-// console.log(fabric)
-
-// var {
-//   Label,
-//   Spinner,
-// } = fabric
-
-// var tmp = new Vue({
-//   el: '#app',
-//   render: h => {
-//     var commandBar = h(fabric.CommandBar, {
-//       props: {
-//         items: [{
-//           key: 'new',
-//           name: 'New Button',
-//           icon: 'Add',
-//           href: '#',
-//           onClick: () => {},
-//         }],
-//       },
-//     })

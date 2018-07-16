@@ -68,7 +68,7 @@ export default {
       return this.searchQuery && this.searchQuery.length > 0
     },
     isDisabled () {
-      return this.$attrs.disabled
+      return this.$attrs.disabled != null
     },
     classObj () {
       let obj = {}
