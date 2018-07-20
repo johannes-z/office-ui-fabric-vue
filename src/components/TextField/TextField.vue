@@ -1,6 +1,7 @@
 <template>
   <div :class="rootClass"
        class="ms-TextField root">
+
     <div class="ms-TextField-wrapper wrapper">
       <Label v-if="label"
              :required="required">
@@ -31,6 +32,7 @@
         </div>
       </span>
     </div>
+
   </div>
 </template>
 
@@ -64,6 +66,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    underlined: {
+      type: Boolean,
+      default: false,
+    },
     label: {
       type: String,
       default: '',
@@ -85,6 +91,8 @@ export default {
         'rootIsRequiredLabel': this.required,
         'multiline': this.multiline,
         'rootIsMultiline': this.multiline,
+        'underlined': this.underlined,
+        'rootIsUnderlined': this.underlined,
       }
     },
   },
@@ -101,7 +109,7 @@ export default {
 // Office UI Fabric
 // --------------------------------------------------
 // Single line (input) and multiline (textarea) form field styles
-// @import '../Label/LabelMixins.scss';
+@import "../Label/LabelMixins.scss";
 
 // component slots
 $field-background-color: $inputBackgroundColor;
@@ -134,7 +142,8 @@ $field-error-color: $errorTextColor;
 }
 
 // the box containing the label and input field
-.root {
+input.root,
+textarea.root {
   @include ms-normalize;
   position: relative; /* Needed to position icon */
 }
@@ -249,7 +258,7 @@ $field-error-color: $errorTextColor;
 //= State: A required textfield
 .root.rootIsRequiredLabel {
   :global(.ms-Label) {
-    // @include ms-Label-is-required;
+    @include ms-Label-is-required;
   }
 }
 
@@ -327,7 +336,7 @@ $field-error-color: $errorTextColor;
     border-color: $field-border-disabled-color;
 
     :global(.ms-Label) {
-      // @include ms-Label-is-disabled;
+      @include ms-Label-is-disabled;
     }
 
     .field {

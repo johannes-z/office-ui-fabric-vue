@@ -22,9 +22,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../common/common.scss';
+@import "../../common/common.scss";
 
-.root {
+label.root {
   color: $ms-color-neutralPrimary;
   box-sizing: border-box;
   box-shadow: none;
@@ -34,10 +34,12 @@ export default {
   word-wrap: break-word;
   overflow-wrap: break-word;
 
-  &[disabled], &:disabled {
+  &[disabled],
+  &:disabled {
     color: $ms-color-neutralTertiaryAlt;
   }
-  &[required], &:required {
+  &[required],
+  &:required {
     &:after {
       content: " *";
       color: $ms-color-redDark;
@@ -45,5 +47,4 @@ export default {
     }
   }
 }
-
 </style>

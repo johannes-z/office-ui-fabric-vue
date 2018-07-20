@@ -68,6 +68,7 @@ React counter-part.
 - [x] Checkbox
   - missing extra styles like Persona checkboxes etc.
 - [ ] CommandBar
+- [ ] Dropdown
 - [ ] Icon
 - [x] Label
 - [x] Link
@@ -75,7 +76,9 @@ React counter-part.
 - [x] ProgressIndicator
 - [x] SearchBox
   - missing 'no animation' option.
+- [ ] Shimmer
 - [x] Spinner
+- [ ] TextField
 - [x] Toggle
 
 ## License

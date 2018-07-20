@@ -6,9 +6,11 @@ import { ActionButton } from './'
 import Button from './pages/Button.vue'
 import Breadcrumb from './pages/Breadcrumb.vue'
 import Checkbox from './pages/Checkbox.vue'
+import Dropdown from './pages/Dropdown.vue'
 import Label from './pages/Label.vue'
 import Link from './pages/Link.vue'
 import ProgressIndicator from './pages/ProgressIndicator.vue'
+import Shimmer from './pages/Shimmer.vue'
 import SearchBox from './pages/SearchBox.vue'
 import Spinner from './pages/Spinner.vue'
 import Slider from './pages/Slider.vue'
@@ -21,9 +23,11 @@ const routes = [
   { name: 'Button', path: '/button', component: Button },
   { name: 'Breadcrumb', path: '/breadcrumb', component: Breadcrumb },
   { name: 'Checkbox', path: '/checkbox', component: Checkbox },
+  { name: 'Dropdown', path: '/dropdown', component: Dropdown },
   { name: 'Label', path: '/label', component: Label },
   { name: 'Link', path: '/link', component: Link },
   { name: 'ProgressIndicator', path: '/progressIndicator', component: ProgressIndicator },
+  { name: 'Shimmer', path: '/shimmer', component: Shimmer },
   { name: 'SearchBox', path: '/searchBox', component: SearchBox },
   { name: 'Spinner', path: '/spinner', component: Spinner },
   { name: 'Slider', path: '/slider', component: Slider },
