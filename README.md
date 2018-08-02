@@ -3,6 +3,8 @@
 > Office UI Fabric (https://github.com/OfficeDev/office-ui-fabric)
 > implementation for Vue.js
 
+This is a **WIP**!
+
 ## Requirements
 
 ### [Office UI Fabric Core](https://github.com/OfficeDev/office-ui-fabric-core)
@@ -41,19 +43,21 @@ structure and styles provided by the `.editorconfig` file and `eslint`.
 
 ### Compatibility
 
-All components should be compatible with IE10 and later. If a component cannot
-be realized without newer CSS features, then mention the earliest version that
-has to be used for compatibility.
+All components should be compatible with at least IE11.
 
 ### Showcase
 
-Showcasing components is done using https://github.com/vue-play/vue-play.
+Showcasing components is done using [https://github.com/vuejs/vue-router](vue-router).
 
-Create a file `<component>.play.js` in `./src/components/<component>/` to
-automatically add the showcase.
+1. Create a file `<component>.vue` in `./src/pages/`.
+2. Add the page to `./src/dev.js`.
 
 ```sh
-yarn play
+npm run dev
+```
+
+```sh
+yarn dev
 ```
 
 ## Components
