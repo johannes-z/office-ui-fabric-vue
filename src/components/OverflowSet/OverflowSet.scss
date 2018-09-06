@@ -1,0 +1,29 @@
+@import '../../common/common';
+
+.ms-OverflowSet {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.rootVertical {
+  flex-direction: column;
+}
+
+.ms-OverflowSet-item {
+  flex-shrink: 0;
+  display: inherit;
+}
+
+.ms-OverflowSet-overflowButton {
+  flex-shrink: 0;
+  display: inherit;
+
+  button.overflowButton {
+
+  min-width: 0;
+  padding: 0 4px;
+  align-self: stretch;
+  height: auto;
+  }
+}

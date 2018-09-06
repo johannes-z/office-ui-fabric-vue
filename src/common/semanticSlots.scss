@@ -1,0 +1,57 @@
+/* Copied from https://github.com/OfficeDev/office-ui-fabric-react/tree/master/packages/office-ui-fabric-react */
+
+/* Base slots */
+$bodyBackgroundColor: #ffffff;
+$bodyTextColor: #333333;
+$bodyTextCheckedColor: #000000;
+$bodySubtextColor: #666666;
+$bodyDividerColor: #c8c8c8;
+
+$disabledBackgroundColor: #f4f4f4;
+$disabledTextColor: #a6a6a6;
+$disabledBodyTextColor: #c8c8c8;
+$disabledSubtextColor: #dadada;
+
+$focusBorderColor: #000000;
+
+$errorTextColor: #a80000;
+$errorBackgroundColor: rgba(232,17,35,.2);
+$blockingBackgroundColor: rgba(234,67,0,.2);
+$warningBackgroundColor: rgba(255,185,0,.2);
+$warningHighlightColor: #ffb900;
+$successBackgroundColor: rgba(186,216,10,.2);
+
+/* Input controls */
+$inputBackgroundColor: #ffffff;
+$inputBorderColor: #a6a6a6;
+$inputBorderHoveredColor: #212121;
+$inputBackgroundCheckedColor: #0078d4;
+$inputBackgroundCheckedHoveredColor: #106ebe;
+$inputForegroundCheckedColor: #ffffff;
+$inputFocusBorderAltColor: #0078d4;
+$smallInputBorderColor: #666666;
+$inputPlaceholderTextColor: #666666;
+
+/* Buttons */
+$buttonBackgroundColor: #f4f4f4;
+$buttonBackgroundCheckedColor: #c8c8c8;
+$buttonBackgroundHoveredColor: #eaeaea;
+$buttonBackgroundCheckedHoveredColor: #eaeaea;
+$buttonBorderColor: transparent;
+$buttonTextColor: #333333;
+$buttonTextHoveredColor: #000000;
+$buttonTextCheckedColor: #212121;
+$buttonTextCheckedHoveredColor: #000000;
+
+/* Menus */
+$menuItemBackgroundHoveredColor: #f8f8f8;
+$menuItemBackgroundCheckedColor: #eaeaea;
+$menuIconColor: #0078d4;
+$menuHeaderColor: #0078d4;
+
+/* Lists */
+$listBackgroundColor: #ffffff;
+$listTextColor: #333333;
+$listItemBackgroundHoveredColor: #f8f8f8;
+$listItemBackgroundCheckedColor: #eaeaea;
+$listItemBackgroundCheckedHoveredColor: #d0d0d0;
