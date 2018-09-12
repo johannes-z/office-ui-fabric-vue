@@ -25,15 +25,15 @@ export default {
       type: Array,
       default () {
         return []
-      }
+      },
     },
     overflowItems: {
       type: Array,
       default () {
         return []
-      }
-    }
-  }
+      },
+    },
+  },
 }
 </script>
 
