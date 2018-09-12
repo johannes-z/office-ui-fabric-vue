@@ -12,13 +12,13 @@ export default {
   data () {
     return {
       items: [
-        { icon: 'Add', href: '#', name: 'Neu' },
-        { icon: 'Edit', href: '#', name: 'Bearbeiten' }
+        { icon: 'Add', name: 'Neu' },
+        { icon: 'Edit', name: 'Bearbeiten' },
       ],
       farItems: [
-        { icon: 'Info', href: '#' }
-      ]
+        { icon: 'Cancel', name: 'Schließen' },
+      ],
     }
-  }
+  },
 }
 </script>
