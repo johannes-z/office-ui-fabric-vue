@@ -18,7 +18,7 @@
            :key="item.key || index"
            class="ms-CommandBarItem item">
         <action-button :icon-name="item.icon"
-                       @click="onClick($event, item)">
+                       @click.native="onClick($event, item)">
           {{ item.name }}
         </action-button>
       </div>
@@ -31,7 +31,7 @@
            :key="item.key || index"
            class="ms-CommandBarItem item">
         <action-button :icon-name="item.icon"
-                       @click="onClick($event, item)">
+                       @click.native="onClick($event, item)">
           {{ item.name }}
         </action-button>
       </div>
@@ -51,7 +51,6 @@ export default {
   props: {
     items: {
       type: Array,
-      required: true,
       default: () => [],
       dummy: () => [{
         key: 'new',

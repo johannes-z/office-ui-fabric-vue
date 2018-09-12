@@ -16,7 +16,7 @@ export default {
         { icon: 'Edit', name: 'Bearbeiten' },
       ],
       farItems: [
-        { icon: 'Cancel', name: 'Schließen' },
+        { icon: 'Cancel', name: 'Schließen', onClick: () => console.log('Close') },
       ],
     }
   },
