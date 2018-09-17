@@ -1,7 +1,8 @@
 <template>
   <label :disabled="disabled"
          :required="required"
-         class="ms-Label root">
+         :class="[ $style.root ]"
+         class="ms-Label">
     <slot />
   </label>
 </template>
@@ -11,20 +12,20 @@ export default {
   props: {
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     required: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @import "../../common/common.scss";
 
-label.root {
+.root {
   color: $ms-color-neutralPrimary;
   box-sizing: border-box;
   box-shadow: none;
@@ -33,7 +34,13 @@ label.root {
   padding: 5px 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+</style>
 
+<style lang="scss" scoped>
+@import "../../common/common.scss";
+
+.root {
   &[disabled],
   &:disabled {
     color: $ms-color-neutralTertiaryAlt;

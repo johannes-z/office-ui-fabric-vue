@@ -1,21 +1,23 @@
 <template>
-  <base-button v-bind="$props"
-               class="ms-Button--action ms-Button-command">
-    <icon v-if="iconName" :icon-name="iconName" class="icon" />
+  <BaseButton v-bind="$props"
+              class="ms-Button--action ms-Button-command">
+    <VIcon v-if="iconName"
+           :icon-name="iconName"
+           class="icon" />
     <div class="ms-Button-textContainer textContainer">
       <div class="ms-Button-label label">
         <slot>{{ text }}</slot>
       </div>
     </div>
-  </base-button>
+  </BaseButton>
 </template>
 
 <script>
 import BaseButton from '../BaseButton.vue'
-import { Icon } from '../../Icon'
+import { VIcon } from '../../Icon'
 
 export default {
-  components: { BaseButton, Icon },
+  components: { BaseButton, VIcon },
   extends: BaseButton,
   props: {
     iconName: {
@@ -29,11 +31,11 @@ export default {
 <style lang="scss" scoped>
 @import "../../../common/common";
 
-.root {
+.ms-Button--action {
   background-color: transparent;
   font-weight: $ms-font-weight-regular;
 
-  .icon {
+  .ms-Icon {
     color: $ms-color-themeDarkAlt;
   }
 
@@ -41,7 +43,7 @@ export default {
     background-color: transparent;
     color: $ms-color-themePrimary;
 
-    .icon {
+    .ms-Icon {
       color: $ms-color-themePrimary;
     }
   }
@@ -50,5 +52,4 @@ export default {
     font-weight: $ms-font-weight-regular;
   }
 }
-
 </style>

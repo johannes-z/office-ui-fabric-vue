@@ -3,21 +3,21 @@
     <h1 class="ms-font-xxl">Link</h1>
 
     <span>When a link has an href, </span>
-    <Link href="http://dev.office.com/fabric/components/link"> it renders as an anchor tag.
-    </Link>
+    <VLink href="http://dev.office.com/fabric/components/link"> it renders as an anchor tag.
+    </VLink>
     <span> Without an href, </span>
-    <Link>the link is rendered as a button</Link>.
+    <VLink>the link is rendered as a button</VLink>.
     <span> You can also use the disabled attribute to create a </span>
-    <Link :disabled="true"
-          href="http://dev.office.com/fabric/components/link"> disabled link
-    </Link>.
+    <VLink :disabled="true"
+           href="http://dev.office.com/fabric/components/link"> disabled link
+    </VLink>.
   </div>
 </template>
 
 <script>
-import { Link } from '../index'
+import { VLink } from '../index'
 
 export default {
-  components: { Link }
+  components: { VLink },
 }
 </script>

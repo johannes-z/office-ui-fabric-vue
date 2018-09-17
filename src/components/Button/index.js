@@ -1,23 +1,23 @@
 // import BaseButton from './BaseButton.vue'
-import DefaultButton from './DefaultButton/DefaultButton.vue'
+import VDefaultButton from './DefaultButton/DefaultButton.vue'
 // import Button from './Button.vue'
-import ActionButton from './ActionButton/ActionButton.vue'
+import VActionButton from './ActionButton/ActionButton.vue'
 // import BarButton from './CommandBarButton/CommandBarButton.vue'
-import CommandBarButton from './CommandBarButton/CommandBarButton.vue'
-import CompoundButton from './CompoundButton/CompoundButton.vue'
-import SplitButton from './SplitButton/SplitButton.vue'
+import VCommandBarButton from './CommandBarButton/CommandBarButton.vue'
+import VCompoundButton from './CompoundButton/CompoundButton.vue'
+import VSplitButton from './SplitButton/SplitButton.vue'
 // import PrimaryButton from './PrimaryButton/PrimaryButton.vue'
-import IconButton from './IconButton/IconButton.vue'
+import VIconButton from './IconButton/IconButton.vue'
 
 export {
   // BaseButton,
   // Button,
-  ActionButton,
+  VActionButton,
   // BarButton,
-  DefaultButton,
-  CompoundButton,
-  CommandBarButton,
-  SplitButton,
+  VDefaultButton,
+  VCompoundButton,
+  VCommandBarButton,
+  VSplitButton,
   // PrimaryButton,
-  IconButton
+  VIconButton,
 }

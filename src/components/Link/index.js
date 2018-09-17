@@ -1,5 +1,5 @@
-import Link from './Link.vue'
+import VLink from './Link.vue'
 
 export {
-  Link
+  VLink,
 }
