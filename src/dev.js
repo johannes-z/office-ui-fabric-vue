@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import { ActionButton } from './'
+import { VActionButton } from './'
 
 import Button from './pages/Button.vue'
 import Breadcrumb from './pages/Breadcrumb.vue'
@@ -10,8 +10,10 @@ import CommandBar from './pages/CommandBar.vue'
 import ContextualMenu from './pages/ContextualMenu.vue'
 import Dropdown from './pages/Dropdown.vue'
 import Label from './pages/Label.vue'
+import Layer from './pages/Layer.vue'
 import Link from './pages/Link.vue'
 import OverflowSet from './pages/OverflowSet.vue'
+import Panel from './pages/Panel.vue'
 import ProgressIndicator from './pages/ProgressIndicator.vue'
 import Shimmer from './pages/Shimmer.vue'
 import SearchBox from './pages/SearchBox.vue'
@@ -30,8 +32,10 @@ const routes = [
   { name: 'ContextualMenu', path: '/contextualMenu', component: ContextualMenu },
   { name: 'Dropdown', path: '/dropdown', component: Dropdown },
   { name: 'Label', path: '/label', component: Label },
+  { name: 'Layer', path: '/layer', component: Layer },
   { name: 'Link', path: '/link', component: Link },
   { name: 'OverflowSet', path: '/overflowSet', component: OverflowSet },
+  { name: 'Panel', path: '/panel', component: Panel },
   { name: 'ProgressIndicator', path: '/progressIndicator', component: ProgressIndicator },
   { name: 'Shimmer', path: '/shimmer', component: Shimmer },
   { name: 'SearchBox', path: '/searchBox', component: SearchBox },
@@ -47,11 +51,11 @@ const router = new VueRouter({
 
 const app = new Vue({
   router,
-  components: { ActionButton },
+  components: { VActionButton },
   render (h) {
     var navItems = routes.map(route => (
       <router-link tag="div" to={route.path}>
-        <action-button>{route.name}</action-button>
+        <VActionButton>{route.name}</VActionButton>
       </router-link>
     ))
 

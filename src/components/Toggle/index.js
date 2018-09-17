@@ -1,5 +1,5 @@
-import Toggle from './Toggle.vue'
+import VToggle from './Toggle.vue'
 
 export {
-  Toggle
+  VToggle,
 }

@@ -1,30 +1,30 @@
 <template>
   <base-button v-bind="$props"
                class="ms-Button--action ms-Button-command">
-    <icon :icon-name="iconName" class="icon" />
+    <VIcon :icon-name="iconName" />
   </base-button>
 </template>
 
 <script>
 import BaseButton from '../BaseButton.vue'
-import { Icon } from '../../Icon'
+import { VIcon } from '../../Icon'
 
 export default {
-  components: { BaseButton, Icon },
+  components: { BaseButton, VIcon },
   extends: BaseButton,
   props: {
     iconName: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 @import "../../../common/common";
 
-.root {
+.ms-Button {
   background-color: transparent;
 
   padding: 0 4px;
@@ -32,5 +32,4 @@ export default {
   width: 32px;
   height: 32px;
 }
-
 </style>

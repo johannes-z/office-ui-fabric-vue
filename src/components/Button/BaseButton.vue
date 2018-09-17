@@ -2,9 +2,9 @@
   <component :is="href ? 'a' : 'button'"
              :class="classObj"
              :disabled="disabled"
-             class="ms-Button root"
+             class="ms-Button"
              type="button">
-    <div class="ms-Button-flexContainer flexContainer">
+    <div class="ms-Button-flexContainer">
       <slot/>
     </div>
   </component>
@@ -15,29 +15,29 @@ export default {
   props: {
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     primary: {
       type: Boolean,
-      default: false
+      default: false,
     },
     text: {
       type: String,
-      default: ''
+      default: '',
     },
     href: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     classObj () {
       return {
         'ms-Button--primary': this.primary,
-        'is-disabled': this.disabled
+        'is-disabled': this.disabled,
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -50,7 +50,7 @@ export default {
   }
 }
 
-.root {
+.ms-Button {
   font-weight: $ms-font-weight-regular;
   font-size: $ms-font-size-m;
   box-sizing: border-box;
@@ -98,7 +98,7 @@ export default {
   }
 }
 
-.flexContainer {
+.ms-Button-flexContainer {
   display: flex;
   height: 100%;
   flex-wrap: nowrap;
@@ -106,11 +106,11 @@ export default {
   align-items: center;
 }
 
-.textContainer {
+.ms-Button-textContainer {
   flex-grow: 1;
 }
 
-.label {
+.ms-Button-label {
   font-weight: $ms-font-weight-semibold;
   margin: 0 4px;
   line-height: 100%;

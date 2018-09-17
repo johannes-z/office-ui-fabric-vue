@@ -1,5 +1,5 @@
-import Label from './Label.vue'
+import VLabel from './Label.vue'
 
 export {
-  Label
+  VLabel,
 }

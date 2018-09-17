@@ -8,7 +8,8 @@
 
     <Label :for="id"
            class="ms-Checkbox-label label">
-      <span v-if="boxSide === 'end'" class="ms-Checkbox-text text">
+      <span v-if="boxSide === 'end'"
+            class="ms-Checkbox-text text">
         {{ label }}
       </span>
 
@@ -16,8 +17,9 @@
         <icon icon-name="CheckMark" />
       </div>
 
-      <span v-if="boxSide === 'start'" class="ms-Checkbox-text text">
-        {{ label }}
+      <span v-if="boxSide === 'start'"
+            class="ms-Checkbox-text text">
+        <slot>{{ label }}</slot>
       </span>
     </Label>
 
@@ -33,26 +35,26 @@ export default {
   props: {
     label: {
       type: String,
-      default: ''
+      default: '',
     },
     boxSide: {
       type: String,
       default: 'start',
-      validator: v => v === 'start' || v === 'end'
+      validator: v => v === 'start' || v === 'end',
     },
     checked: {
       type: Boolean,
-      default: false
+      default: false,
     },
     disabled: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data () {
     return {
       isChecked: this.checked,
-      isDisabled: this.disabled
+      isDisabled: this.disabled,
     }
   },
   computed: {
@@ -65,20 +67,20 @@ export default {
       obj['is-enabled'] = !this.isDisabled
       obj['is-disabled'] = this.isDisabled
       return obj
-    }
+    },
   },
   methods: {
     toggleChecked () {
       if (this.isDisabled) return
       this.isChecked = !this.isChecked
       this.$emit('onChange', this.isChecked)
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../../common/common.scss';
+@import "../../common/common.scss";
 
 .ms-Checkbox.root {
   display: block;
