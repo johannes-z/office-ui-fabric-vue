@@ -5,6 +5,7 @@ import { VLink } from './'
 
 import Button from './pages/Button.vue'
 import Breadcrumb from './pages/Breadcrumb.vue'
+import Callout from './pages/Callout.vue'
 import Checkbox from './pages/Checkbox.vue'
 import CommandBar from './pages/CommandBar.vue'
 import ContextualMenu from './pages/ContextualMenu.vue'
@@ -27,6 +28,7 @@ Vue.use(VueRouter)
 const routes = [
   { name: 'Button', path: '/button', component: Button },
   { name: 'Breadcrumb', path: '/breadcrumb', component: Breadcrumb },
+  { name: 'Callout', path: '/callout', component: Callout },
   { name: 'Checkbox', path: '/checkbox', component: Checkbox },
   { name: 'CommandBar', path: '/commandBar', component: CommandBar },
   { name: 'ContextualMenu', path: '/contextualMenu', component: ContextualMenu },

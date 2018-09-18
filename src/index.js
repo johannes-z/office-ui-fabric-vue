@@ -1,5 +1,6 @@
 export * from './components/Breadcrumb/'
 export * from './components/Button/'
+export * from './components/Callout/'
 export * from './components/Checkbox/'
 export * from './components/CommandBar/'
 export * from './components/ContextualMenu/'
