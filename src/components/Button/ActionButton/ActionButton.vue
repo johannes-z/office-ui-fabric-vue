@@ -2,10 +2,9 @@
   <BaseButton v-bind="$props"
               class="ms-Button--action ms-Button-command">
     <VIcon v-if="iconName"
-           :icon-name="iconName"
-           class="icon" />
-    <div class="ms-Button-textContainer textContainer">
-      <div class="ms-Button-label label">
+           :icon-name="iconName" />
+    <div class="ms-Button-textContainer">
+      <div class="ms-Button-label">
         <slot>{{ text }}</slot>
       </div>
     </div>
@@ -28,15 +27,19 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../../common/common";
 
 .ms-Button--action {
   background-color: transparent;
   font-weight: $ms-font-weight-regular;
+  padding: 0 4px;
 
   .ms-Icon {
     color: $ms-color-themeDarkAlt;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0 4px;
   }
 
   &:hover {
@@ -48,7 +51,7 @@ export default {
     }
   }
 
-  .label {
+  .ms-Button-label {
     font-weight: $ms-font-weight-regular;
   }
 }

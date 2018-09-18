@@ -41,11 +41,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../common/common";
 
-.is-disabled {
-  .label {
+$DEFAULT_BUTTON_HEIGHT: 32px;
+
+.ms-Button.is-disabled {
+  .ms-Button-label,
+  .ms-Button-description {
     color: $ms-color-neutralTertiary;
   }
 }
@@ -64,7 +67,7 @@ export default {
   padding: 0 16px;
   border-radius: 0;
 
-  height: 40px;
+  height: $DEFAULT_BUTTON_HEIGHT;
 
   background-color: $ms-color-neutralLighterAlt;
 

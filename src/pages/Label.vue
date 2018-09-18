@@ -1,15 +1,15 @@
 <template>
   <div>
     <h1 class="ms-font-xxl">Label</h1>
-    <Label>I'm a Label</Label>
-    <Label :disabled="true">I'm a disabled Label</Label>
-    <Label :required="true">I'm a required Label</Label>
+    <VLabel>I'm a Label</VLabel>
+    <VLabel :disabled="true">I'm a disabled Label</VLabel>
+    <VLabel :required="true">I'm a required Label</VLabel>
   </div>
 </template>
 
 <script>
-import { Label } from '../index'
+import { VLabel } from '../index'
 export default {
-  components: { Label }
+  components: { VLabel },
 }
 </script>

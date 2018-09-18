@@ -2,57 +2,58 @@
   <div :class="classObj"
        class="ms-Toggle root">
 
-    <Label v-if="label"
-           :for="id">
-      {{ label }}
-    </Label>
+    <VLabel v-if="label || $slots.default"
+            :for="id">
+      <slot>{{ label }}</slot>
+    </VLabel>
 
     <div class="ms-Toggle-innerContainer container">
       <button :id="id"
               class="ms-Toggle-background pill"
               @click="onClick">
-        <div class="ms-Toggle-thumb thumb"/>
+        <div class="ms-Toggle-thumb thumb" />
       </button>
 
-      <Label v-if="onText || offText"
-             :for="id"
-             class="ms-Toggle-stateText text">
+      <VLabel v-if="onText || offText"
+              :for="id"
+              class="ms-Toggle-stateText text">
         {{ isActive ? onText : offText }}
-      </Label>
+      </VLabel>
     </div>
 
   </div>
 </template>
 
 <script>
-import { Label } from '../Label'
+import { VLabel } from '../Label'
 export default {
-  components: { Label },
+  components: { VLabel },
   props: {
     checked: {
       type: Boolean,
-      default: false
+      default: false,
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     label: {
       type: String,
-      default: ''
+      default: '',
     },
     onText: {
       type: String,
-      default: ''
+      default: '',
     },
     offText: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
   data () {
+    console.log(this)
     return {
-      isActive: this.checked
+      isActive: this.checked,
     }
   },
   computed: {
@@ -64,22 +65,22 @@ export default {
       obj['is-active'] = this.isActive
       obj['is-disabled'] = this.disabled
       return obj
-    }
+    },
   },
   methods: {
     onClick () {
       if (this.disabled) return
       this.isActive = !this.isActive
-    }
-  }
+      this.$emit('update:checked', this.isActive)
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../../common/common.scss';
+@import "../../common/common.scss";
 
 .root {
-
   &.is-active {
     .pill {
       background: $ms-color-themePrimary;
@@ -106,14 +107,16 @@ export default {
       background: $ms-color-neutralTertiaryAlt;
       cursor: default;
     }
-    .ms-Label, .text {
-      color: $ms-color-neutralTertiary
+    .ms-Label,
+    .text {
+      color: $ms-color-neutralTertiary;
     }
   }
 
   &.is-disabled.is-active {
-    .ms-Label, .text {
-      color: $ms-color-neutralTertiary
+    .ms-Label,
+    .text {
+      color: $ms-color-neutralTertiary;
     }
   }
 
@@ -164,14 +167,16 @@ export default {
     border-style: solid;
   }
 
-  .text, .pill {
+  .text,
+  .pill {
     display: inline-block;
     vertical-align: middle;
   }
   .text {
     margin: 0 10px;
   }
-  .text, .root {
+  .text,
+  .root {
     user-select: none;
   }
 }

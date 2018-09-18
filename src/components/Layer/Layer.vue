@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ ['ms-Layer--fixed']: isFixed }"
+  <div :class="{ ['ms-Layer--fixed']: !hostId }"
        class="ms-Layer">
     <div class="ms-Fabric ms-Layer-content content">
       <slot/>
@@ -29,14 +29,14 @@ export default {
     },
   },
   created () {
-    if (this.hostId) {
-      registerLayer(this.hostId, this)
-    }
+    // if (this.hostId) {
+    //   registerLayer(this.hostId, this)
+    // }
   },
   beforeDestroy () {
-    if (this.hostId) {
-      unregisterLayer(this.hostId, this)
-    }
+    // if (this.hostId) {
+    //   unregisterLayer(this.hostId, this)
+    // }
 
     const parentNode = this.node.parentNode
     if (parentNode) {
@@ -67,7 +67,6 @@ export default {
 
 <style lang="scss" scoped>
 .ms-Layer {
-  position: fixed;
   z-index: 1000000;
   top: 0;
   left: 0;
@@ -78,5 +77,9 @@ export default {
   > * {
     visibility: visible;
   }
+}
+
+.ms-Layer--fixed {
+  position: fixed;
 }
 </style>
