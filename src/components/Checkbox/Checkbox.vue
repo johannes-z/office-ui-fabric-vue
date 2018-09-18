@@ -3,22 +3,23 @@
           :class="classObj"
           role="checkbox"
           type="button"
-          class="ms-Checkbox root"
+          class="ms-Checkbox"
           @click.prevent.stop="toggleChecked">
 
     <Label :for="id"
-           class="ms-Checkbox-label label">
+           class="ms-Checkbox-label">
       <span v-if="boxSide === 'end'"
-            class="ms-Checkbox-text text">
+            class="ms-Checkbox-text">
         {{ label }}
       </span>
 
-      <div class="ms-Checkbox-checkbox checkbox">
-        <VIcon icon-name="CheckMark" />
+      <div class="ms-Checkbox-checkbox">
+        <VIcon icon-name="CheckMark"
+               class="ms-Checkbox-checkmark" />
       </div>
 
       <span v-if="boxSide === 'start'"
-            class="ms-Checkbox-text text">
+            class="ms-Checkbox-text">
         <slot>{{ label }}</slot>
       </span>
     </Label>
@@ -51,38 +52,31 @@ export default {
       default: false,
     },
   },
-  data () {
-    return {
-      isChecked: this.checked,
-      isDisabled: this.disabled,
-    }
-  },
   computed: {
     id () {
       return 'Checkbox' + this._uid
     },
     classObj () {
       let obj = {}
-      obj['is-checked'] = this.isChecked
-      obj['is-enabled'] = !this.isDisabled
-      obj['is-disabled'] = this.isDisabled
+      obj['is-checked'] = this.checked
+      obj['is-enabled'] = !this.disabled
+      obj['is-disabled'] = this.disabled
       return obj
     },
   },
   methods: {
     toggleChecked () {
-      if (this.isDisabled) return
-      this.isChecked = !this.isChecked
-      this.$emit('onChange', this.isChecked)
+      if (this.disabled) return
+      this.$emit('update:checked', !this.checked)
     },
   },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../common/common.scss";
 
-.ms-Checkbox.root {
+.ms-Checkbox {
   display: block;
 
   position: relative;
@@ -99,43 +93,51 @@ export default {
   line-height: 21px;
   font-size: 14px;
 
-  &.is-checked .checkbox {
+  &.is-checked .ms-Checkbox-checkbox {
     & > i {
       color: white;
       opacity: 1;
     }
   }
-  &:not(.is-checked) .checkbox {
+
+  &:not(.is-checked) .ms-Checkbox-checkbox {
     & > i {
       opacity: 0;
     }
   }
 
+  &:not(.is-checked):hover .ms-Checkbox-checkbox {
+    & > i {
+      color: $ms-color-neutralSecondary;
+      opacity: 1;
+    }
+  }
+
   &.is-checked.is-disabled {
-    .checkbox {
+    .ms-Checkbox-checkbox {
       border-color: $ms-color-neutralTertiaryAlt;
       background-color: $ms-color-neutralTertiaryAlt;
     }
   }
   &.is-checked:not(.is-disabled) {
-    .checkbox {
+    .ms-Checkbox-checkbox {
       border-color: rgb(0, 120, 212);
       background-color: rgb(0, 120, 212);
     }
   }
   &.is-disabled:not(.is-checked) {
-    .checkbox {
+    .ms-Checkbox-checkbox {
       border-color: $ms-color-neutralTertiaryAlt;
     }
   }
 
-  .label {
+  .ms-Checkbox-label {
     height: 22px;
     display: inline-block;
     cursor: pointer;
   }
 
-  .checkbox {
+  .ms-Checkbox-checkbox {
     display: inline-block;
     vertical-align: baseline;
 
@@ -156,7 +158,7 @@ export default {
     }
   }
 
-  .text {
+  .ms-Checkbox-text {
     display: inline-block;
     vertical-align: baseline;
 
