@@ -68,6 +68,7 @@ export default {
     toggleChecked () {
       if (this.disabled) return
       this.$emit('update:checked', !this.checked)
+      this.$emit('onChange', !this.checked)
     },
   },
 }
@@ -106,7 +107,7 @@ export default {
     }
   }
 
-  &:not(.is-checked):hover .ms-Checkbox-checkbox {
+  &:not(.is-checked):not(.is-disabled):hover .ms-Checkbox-checkbox {
     & > i {
       color: $ms-color-neutralSecondary;
       opacity: 1;
