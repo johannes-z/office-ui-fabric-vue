@@ -3,34 +3,72 @@
     <h1 class="ms-font-xxl">Button</h1>
 
     <h2 class="ms-font-xl">Default Button</h2>
-    <VLabel>Standard</VLabel>
-    <VDefaultButton text="Button" />
+    <div class="ms-Grid"
+         dir="ltr">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
 
-    <VLabel>Primary</VLabel>
-    <VDefaultButton :primary="true"
-                    text="Button" />
-
-    <VLabel>Disabled Standard</VLabel>
-    <VDefaultButton :disabled="true"
-                    text="Button" />
-
-    <VLabel>Disabled Primary</VLabel>
-    <VDefaultButton :disabled="true"
-                    :primary="true"
-                    text="Button" />
+          <VLabel>Standard</VLabel>
+          <VDefaultButton text="Button" />
+        </div>
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
+          <VLabel>Primary</VLabel>
+          <VDefaultButton :primary="true"
+                          text="Button" />
+        </div>
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
+          <VLabel>Disabled Standard</VLabel>
+          <VDefaultButton :disabled="true"
+                          text="Button" />
+        </div>
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
+          <VLabel>Disabled Primary</VLabel>
+          <VDefaultButton :disabled="true"
+                          :primary="true"
+                          text="Button" />
+        </div>
+      </div>
+    </div>
 
     <h2 class="ms-font-xl">Compound Button</h2>
-    <VLabel>Standard</VLabel>
-    <VCompoundButton text="Create account"
-                     secondary-text="You can create a new account here." />
 
-    <VLabel>Primary</VLabel>
-    <VCompoundButton :primary="true"
-                     text="Create account"
-                     secondary-text="You can create a new account here." />
+    <div class="ms-Grid"
+         dir="ltr">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
+          <VLabel>Standard</VLabel>
+          <VCompoundButton text="Create account"
+                           secondary-text="You can create a new account here." />
+        </div>
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
+          <VLabel>Primary</VLabel>
+          <VCompoundButton :primary="true"
+                           text="Create account"
+                           secondary-text="You can create a new account here." />
+        </div>
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
+          <VLabel>Disabled Standard</VLabel>
+          <VCompoundButton :disabled="true"
+                           text="Create account"
+                           secondary-text="You can create a new account here." />
+        </div>
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
+          <VLabel>Disabled Primary</VLabel>
+          <VCompoundButton :disabled="true"
+                           :primary="true"
+                           text="Create account"
+                           secondary-text="You can create a new account here." />
+        </div>
+      </div>
+    </div>
+
+    <h2 class="ms-font-xl">Command Bar Button</h2>
+    <h2 class="ms-font-xl">Split Button</h2>
 
     <h2 class="ms-font-xl">Icon Button</h2>
-    <VIconButton icon-name="Emoji" />
+    <VIconButton icon-name="Emoji2" />
+
+    <h2 class="ms-font-xl">Contextual Menu Button</h2>
 
     <h2 class="ms-font-xl">Action Button</h2>
     <VActionButton icon-name="AddFriend">Create account</VActionButton>

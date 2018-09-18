@@ -14,7 +14,7 @@
       </span>
 
       <div class="ms-Checkbox-checkbox checkbox">
-        <icon icon-name="CheckMark" />
+        <VIcon icon-name="CheckMark" />
       </div>
 
       <span v-if="boxSide === 'start'"
@@ -27,11 +27,11 @@
 </template>
 
 <script>
-import { Icon } from '../Icon'
+import { VIcon } from '../Icon'
 import { Label } from '../Label'
 
 export default {
-  components: { Icon, Label },
+  components: { VIcon, Label },
   props: {
     label: {
       type: String,

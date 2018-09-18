@@ -1,6 +1,6 @@
 <template>
   <base-button v-bind="$props"
-               class="ms-Button--action ms-Button-command">
+               class="ms-Button--icon">
     <VIcon :icon-name="iconName" />
   </base-button>
 </template>
@@ -21,15 +21,25 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../../common/common";
 
-.ms-Button {
+.ms-Button--icon {
   background-color: transparent;
 
   padding: 0 4px;
 
   width: 32px;
   height: 32px;
+
+  &:hover {
+    background-color: transparent;
+    color: $ms-color-themeDarker;
+  }
+
+  .ms-Icon {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 </style>

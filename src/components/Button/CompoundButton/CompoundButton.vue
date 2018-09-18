@@ -1,11 +1,11 @@
 <template>
   <base-button v-bind="$props"
                class="ms-Button--compound">
-    <div class="ms-Button-textContainer textContainer">
-      <div class="ms-Button-label label">
+    <div class="ms-Button-textContainer">
+      <div class="ms-Button-label">
         {{ text }}
       </div>
-      <div class="ms-Button-description description">
+      <div class="ms-Button-description">
         {{ secondaryText }}
       </div>
     </div>
@@ -21,39 +21,44 @@ export default {
   props: {
     secondaryText: {
       type: String,
-      default: ''
-    }
-  }
+      default: '',
+    },
+  },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../../common/common";
 
-.root {
+.ms-Button--compound {
   max-width: 280px;
   min-height: 72px;
 
-  .textContainer {
+  padding: 20px;
+  max-width: 280px;
+  min-height: 72px;
+  height: auto;
+
+  .ms-Button-textContainer {
     text-align: left;
+  }
 
-    .label {
-      margin: 0;
-      margin-bottom: 5px;
-    }
+  .ms-Button-label {
+    margin: 0 0 5px 0;
+  }
 
-    .description {
-      font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-      -webkit-font-smoothing: antialiased;
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 100%;
-      color: rgb(102, 102, 102);
-    }
+  .ms-Button-description {
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+      -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 100%;
+    color: rgb(102, 102, 102);
   }
 }
 
-.ms-Button--primary .textContainer .description {
+.ms-Button--primary .ms-Button-description {
   color: $ms-color-white;
 }
 </style>

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import { VActionButton } from './'
+import { VLink } from './'
 
 import Button from './pages/Button.vue'
 import Breadcrumb from './pages/Breadcrumb.vue'
@@ -51,11 +51,13 @@ const router = new VueRouter({
 
 const app = new Vue({
   router,
-  components: { VActionButton },
+  components: { VLink },
   render (h) {
     var navItems = routes.map(route => (
-      <router-link tag="div" to={route.path}>
-        <VActionButton>{route.name}</VActionButton>
+      <router-link tag="div"
+        to={route.path}
+        style="margin-bottom: 6px;">
+        <VLink>{route.name}</VLink>
       </router-link>
     ))
 

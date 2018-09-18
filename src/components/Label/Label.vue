@@ -1,7 +1,6 @@
 <template>
   <label :disabled="disabled"
          :required="required"
-         :class="[ $style.root ]"
          class="ms-Label">
     <slot />
   </label>
@@ -22,10 +21,10 @@ export default {
 }
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import "../../common/common.scss";
 
-.root {
+.ms-Label {
   color: $ms-color-neutralPrimary;
   box-sizing: border-box;
   box-shadow: none;
@@ -34,13 +33,7 @@ export default {
   padding: 5px 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
-}
-</style>
 
-<style lang="scss" scoped>
-@import "../../common/common.scss";
-
-.root {
   &[disabled],
   &:disabled {
     color: $ms-color-neutralTertiaryAlt;
