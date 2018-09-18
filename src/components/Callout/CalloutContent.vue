@@ -24,10 +24,9 @@ export default {
   computed: {
     styleContainer () {
       const rect = this.target.getBoundingClientRect()
-      console.log(rect)
       return {
-        left: `0px`,
-        top: `11px`,
+        left: `${rect.left}px`,
+        top: `${rect.top + rect.height + 11.3}px`,
       }
     },
   },
