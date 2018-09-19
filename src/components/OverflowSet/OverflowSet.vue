@@ -3,23 +3,23 @@
     <div v-for="(item, index) in items"
          :key="item.key"
          class="ms-OverflowSet-item item">
-      <Link :href="item.href"
-            class="overflowLinks">{{ item.name }}</Link>
+      <VLink :href="item.href"
+             class="overflowLinks">{{ item.name }}</VLink>
     </div>
 
     <div class="ms-OverflowSet-overflowButton overflowButton">
-      <icon-button icon-name="More"
+      <VIconButton icon-name="More"
                    class="overflowButton" />
     </div>
   </div>
 </template>
 
 <script>
-import { IconButton } from '../Button'
-import { Link } from '../Link'
+import { VIconButton } from '../Button'
+import { VLink } from '../Link'
 
 export default {
-  components: { IconButton, Link },
+  components: { VIconButton, VLink },
   props: {
     items: {
       type: Array,
@@ -40,13 +40,13 @@ export default {
 <style lang="scss">
 @import "./OverflowSet";
 
-html[dir='ltr'] {
+html[dir="ltr"] {
   .overflowLinks {
     margin-right: 10px;
   }
 }
 
-html[dir='rtl'] {
+html[dir="rtl"] {
   .overflowLinks {
     margin-left: 10px;
   }
