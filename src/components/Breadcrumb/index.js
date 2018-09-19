@@ -1,2 +1,2 @@
-import Breadcrumb from './Breadcrumb.vue'
-export { Breadcrumb }
+import VBreadcrumb from './Breadcrumb.vue'
+export { VBreadcrumb }

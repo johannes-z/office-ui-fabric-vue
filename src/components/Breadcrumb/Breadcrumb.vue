@@ -1,53 +1,96 @@
 <template>
-  <div :class="customClasses" class="ms-Breadcrumb root">
+  <div :class="customClasses"
+       class="ms-Breadcrumb root">
 
     <ol class="ms-Breadcrumb-list list">
-      <!-- <li class="ms-Breadcrumb-overflow overflow">
-        <button class="ms-Button ms-Breadcrumb-overflowButton ms-Button--icon
-        overflowButton">
-          <icon icon-name="More"/>
-        </button>
 
-        <icon icon-name="ChevronRight"
-              class="ms-Breadcrumb-chevron chevron" />
-      </li> -->
+      <template v-for="(item, index) in renderedItems">
 
-      <li v-for="(item, index) in items"
-          :key="index"
-          class="ms-Breadcrumb-listItem listItem" >
-        <button class="ms-Link ms-Breadcrumb-itemLink itemLink">
-          {{ item.text }}
-        </button>
+        <li v-if="hasOverflowItems && index === overflowIndex"
+            :key="'overflow' + index"
+            class="ms-Breadcrumb-listItem listItem">
+          <VIconButton icon-name="More" />
 
-        <icon v-if="index < items.length - 1"
-              icon-name="ChevronRight"
-              class="ms-Breadcrumb-chevron chevron" />
-      </li>
+          <VIcon icon-name="ChevronRight"
+                 class="ms-Breadcrumb-chevron chevron" />
+        </li>
+
+        <li :key="item.key"
+            class="ms-Breadcrumb-listItem listItem">
+
+          <VLink class="ms-Breadcrumb-itemLink itemLink">
+            {{ item.text }}
+          </VLink>
+
+          <VIcon v-if="index < renderedItems.length - 1"
+                 icon-name="ChevronRight"
+                 class="ms-Breadcrumb-chevron chevron" />
+        </li>
+
+      </template>
     </ol>
 
   </div>
 </template>
 
 <script>
-import { Icon } from '../Icon'
+import { VIconButton } from '../Button/'
+import { VLink } from '../Link/'
+import { VIcon } from '../Icon/'
 
 export default {
-  components: { Icon },
+  components: { VIcon, VIconButton, VLink },
   props: {
     items: {
       type: Array,
-      required: true
+      required: true,
     },
     customClasses: {
       type: Array,
-      default: () => []
+      default: () => [],
+    },
+    maxDisplayedItems: {
+      type: Number,
+      default: 999,
+    },
+    overflowIndex: {
+      type: Number,
+      default: 0,
+    },
+    dividerAs: {
+      type: Function,
+      default: null,
+    },
+  },
+  data () {
+    return {
+      renderedItems: [],
+      renderedOverflowItems: [],
     }
-  }
+  },
+  computed: {
+    hasOverflowItems () {
+      return this.renderedOverflowItems && this.renderedOverflowItems.length > 0
+    },
+  },
+  created () {
+    const { items, overflowIndex, maxDisplayedItems } = this
+    const renderedItems = [...items]
+    const renderedOverflowItems = renderedItems.splice(overflowIndex, renderedItems.length - maxDisplayedItems)
+
+    this.renderedItems = renderedItems
+    this.renderedOverflowItems = renderedOverflowItems
+
+    console.log({
+      renderedItems,
+      renderedOverflowItems,
+    })
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../../common/common.scss';
+@import "../../common/common.scss";
 
 $Breadcrumb-overflowButtonColor: $ms-color-themePrimary;
 $Breadcrumb-overflowButtonSize: 16px;
@@ -91,7 +134,8 @@ $Breadcrumb-chevron-sm: 8px;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 100;
   max-width: 160px;
@@ -103,8 +147,8 @@ $Breadcrumb-chevron-sm: 8px;
   border-color: initial;
   border-image: initial;
   overflow: hidden;
+  border-bottom: 1px solid transparent;
   text-decoration: none;
-  line-height: 31px;
 }
 .itemLink:hover {
   background-color: rgb(244, 244, 244);
