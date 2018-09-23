@@ -134,6 +134,9 @@ export default {
   .ms-Button:hover {
     color: $ms-color-neutralPrimary;
   }
+  .ms-Button {
+    height: 40px;
+  }
 }
 
 </style>
