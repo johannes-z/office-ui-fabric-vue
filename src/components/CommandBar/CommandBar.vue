@@ -17,10 +17,10 @@
       <div v-for="(item, index) in items"
            :key="item.key || index"
            class="ms-CommandBarItem item">
-        <action-button :icon-name="item.icon"
+        <VActionButton :icon-name="item.icon"
                        @click.native="onClick($event, item)">
           {{ item.name }}
-        </action-button>
+        </VActionButton>
       </div>
     </div>
     <!-- /items -->
@@ -30,10 +30,10 @@
       <div v-for="(item, index) in farItems"
            :key="item.key || index"
            class="ms-CommandBarItem item">
-        <action-button :icon-name="item.icon"
+        <VActionButton :icon-name="item.icon"
                        @click.native="onClick($event, item)">
           {{ item.name }}
-        </action-button>
+        </VActionButton>
       </div>
     </div>
     <!-- /farItems -->
@@ -44,10 +44,10 @@
 <script>
 import { SearchBox } from '../SearchBox'
 import { Icon } from '../Icon'
-import { ActionButton } from '../Button'
+import { VActionButton } from '../Button'
 
 export default {
-  components: { ActionButton, Icon, SearchBox },
+  components: { VActionButton, Icon, SearchBox },
   props: {
     items: {
       type: Array,
