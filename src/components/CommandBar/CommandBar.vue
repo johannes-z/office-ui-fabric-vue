@@ -136,6 +136,7 @@ export default {
   }
   .ms-Button {
     height: 40px;
+    text-align: left;
   }
 }
 
