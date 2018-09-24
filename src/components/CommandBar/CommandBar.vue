@@ -1,5 +1,6 @@
 <template>
-  <div role="menubar" class="ms-FocusZone ms-CommandBar root">
+  <div role="menubar"
+       class="ms-FocusZone ms-CommandBar">
 
     <!-- search -->
     <!-- <div v-if="isSearchBoxVisible"
@@ -13,10 +14,10 @@
     <!-- /search -->
 
     <!-- items -->
-    <div class="ms-CommandBar-primaryCommands primarySet">
+    <div class="ms-CommandBar-primaryCommands">
       <div v-for="(item, index) in items"
            :key="item.key || index"
-           class="ms-CommandBarItem item">
+           class="ms-CommandBarItem">
         <VActionButton :icon-name="item.icon"
                        @click.native="onClick($event, item)">
           {{ item.name }}
@@ -26,10 +27,10 @@
     <!-- /items -->
 
     <!-- farItems -->
-    <div class="ms-CommandBar-secondaryCommand secondarySet">
+    <div class="ms-CommandBar-secondaryCommand">
       <div v-for="(item, index) in farItems"
            :key="item.key || index"
-           class="ms-CommandBarItem item">
+           class="ms-CommandBarItem">
         <VActionButton :icon-name="item.icon"
                        @click.native="onClick($event, item)">
           {{ item.name }}
@@ -93,11 +94,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../common/common";
 @import "../../common/focusBorder";
 
-.primarySet {
+.ms-CommandBar-primaryCommands {
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -105,7 +106,7 @@ export default {
   align-items: stretch;
 }
 
-.secondarySet {
+.ms-CommandBar-secondaryCommand {
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -113,12 +114,12 @@ export default {
   align-items: stretch;
 }
 
-.item {
+.ms-CommandBarItem {
   flex-shrink: 0;
   display: inherit;
 }
 
-.root {
+.ms-CommandBar {
   display: flex;
   background-color: $ms-color-neutralLighter;
   padding-top: 0px;
@@ -137,7 +138,10 @@ export default {
   .ms-Button {
     height: 40px;
     text-align: left;
+
+    .ms-Button-label {
+      min-width: 0;
+    }
   }
 }
-
 </style>
