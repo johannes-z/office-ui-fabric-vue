@@ -4,7 +4,7 @@
     <div :class="classObj" class="ms-SearchBox root">
 
       <div class="ms-SearchBox-iconContainer iconContainer">
-        <icon icon-name="Search" />
+        <VIcon icon-name="Search" />
       </div>
 
       <input ref="searchInput"
@@ -20,7 +20,7 @@
       <div v-show="hasText"
            class="ms-SearchBox-clearButton clearButton"
            @click="onClear">
-        <icon icon-name="Clear" />
+        <VIcon icon-name="Clear" />
       </div>
 
       <div v-if="clear" style="clear: both;"/>
@@ -31,36 +31,36 @@
 </template>
 
 <script>
-import { Icon } from '../Icon'
+import { VIcon } from '../Icon'
 
 export default {
-  components: { Icon },
+  components: { VIcon },
   props: {
     className: {
       type: String,
-      default: ''
+      default: '',
     },
     placeholder: {
       type: String,
-      default: 'Search'
+      default: 'Search',
     },
     value: {
       type: String,
-      default: ''
+      default: '',
     },
     underlined: {
       type: Boolean,
-      default: false
+      default: false,
     },
     clear: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   data () {
     return {
       isActive: false,
-      searchQuery: this.value
+      searchQuery: this.value,
     }
   },
   computed: {
@@ -78,12 +78,12 @@ export default {
       obj['can-clear'] = this.hasText
       obj['is-active'] = this.isActive
       return obj
-    }
+    },
   },
   watch: {
     searchQuery () {
       this.onChange()
-    }
+    },
   },
   methods: {
     onClear () {
@@ -103,8 +103,8 @@ export default {
     },
     onSearch () {
       this.$emit('onSearch', this.searchQuery)
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -114,7 +114,7 @@ export default {
 $SearchBoxTransitionDuration: .167s;
 
 // Active styles
-.root {
+.ms-SearchBox {
   &.is-active {
     > .iconContainer {
       width: 4px;
@@ -134,7 +134,7 @@ $SearchBoxTransitionDuration: .167s;
 }
 
 // Disabled
-.root.is-disabled {
+.ms-SearchBox.is-disabled {
   background-color: $ms-color-neutralLighterAlt;
   border-color: $ms-color-neutralLighterAlt;
   color: $ms-color-neutralTertiary;
