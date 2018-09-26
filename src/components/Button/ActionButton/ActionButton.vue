@@ -42,7 +42,7 @@ export default {
     margin: 0 4px;
   }
 
-  &:hover {
+  &:not(.ms-Button--primary):hover {
     background-color: transparent;
     color: $ms-color-themePrimary;
 

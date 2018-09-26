@@ -84,11 +84,16 @@ $DEFAULT_BUTTON_HEIGHT: 32px;
   &.ms-Button--primary {
     background-color: $ms-color-themePrimary;
     color: $ms-color-white;
+
     &:hover {
       background-color: $ms-color-themeDarkAlt;
     }
     &.is-disabled:hover {
       background-color: $ms-color-neutralLighterAlt;
+    }
+
+    .ms-Icon {
+      color: $ms-color-white;
     }
   }
 

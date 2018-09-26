@@ -71,6 +71,9 @@
     <h2 class="ms-font-xl">Contextual Menu Button</h2>
 
     <h2 class="ms-font-xl">Action Button</h2>
+    <VActionButton :primary="true"
+                   icon-name="AddFriend">Create account</VActionButton>
+
     <VActionButton icon-name="AddFriend">Create account</VActionButton>
   </div>
 </template>
