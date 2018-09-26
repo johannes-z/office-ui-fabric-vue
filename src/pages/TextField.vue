@@ -4,7 +4,7 @@
 
     <h2 class="ms-font-l">Default TextField with Label</h2>
 
-    <TextField label="Standard" />
+    <TextField v-model="value" label="Standard" />
 
     <TextField :disabled="true"
                label="Disabled" />
@@ -90,6 +90,11 @@
 import { Label, TextField } from '../index'
 export default {
   components: { Label, TextField },
+  data () {
+    return {
+      value: 'Test',
+    }
+  },
 }
 
 </script>

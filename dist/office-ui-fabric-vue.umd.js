@@ -388,21 +388,6 @@ var update = add("103a0080", content, true, {"sourceMap":false,"shadowMode":fals
 
 /***/ }),
 
-/***/ "2c80":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("cbdb");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("38b98bc0", content, true, {"sourceMap":false,"shadowMode":false});
-
-/***/ }),
-
 /***/ "3104":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -501,6 +486,21 @@ exports.push([module.i, "\n.ms-Pivot{box-shadow:none;margin:0;padding:0;box-sizi
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Shimmer_vue_vue_type_style_index_0_id_0cff7e00_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Shimmer_vue_vue_type_style_index_0_id_0cff7e00_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
  /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Shimmer_vue_vue_type_style_index_0_id_0cff7e00_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "48e8":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("2350")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\ninput.root[data-v-3cd9e3b6],textarea.root[data-v-3cd9e3b6]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;position:relative\n}\n.screenReaderOnly[data-v-3cd9e3b6]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0\n}\n.fieldGroup[data-v-3cd9e3b6]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;border:1px solid #a6a6a6;background:#fff;height:32px;display:flex;flex-direction:row;align-items:stretch;position:relative\n}\n.fieldGroup[data-v-3cd9e3b6]:hover{border-color:#212121\n}\n.fieldGroup.fieldGroupIsFocused[data-v-3cd9e3b6]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.fieldGroup.fieldGroupIsFocused[data-v-3cd9e3b6]{border-width:2px\n}\n.fieldGroup.fieldGroupIsFocused .field[data-v-3cd9e3b6],[dir=rtl] .fieldGroup.fieldGroupIsFocused .field[data-v-3cd9e3b6]{padding:0 11px 0 11px\n}\n}\n.fieldGroup.fieldGroupIsFocused.invalid[data-v-3cd9e3b6]{border-color:#a80000\n}\n.rootIsDisabled .fieldGroup[data-v-3cd9e3b6]{background-color:#f4f4f4;border-color:#f4f4f4\n}\n@media screen and (-ms-high-contrast:active){\n.fieldGroup.fieldGroupIsFocused[data-v-3cd9e3b6],.fieldGroup[data-v-3cd9e3b6]:hover{border-color:Highlight\n}\n}\n.fieldGroup[data-v-3cd9e3b6]::-ms-clear{display:none\n}\n.fieldGroup[data-v-3cd9e3b6] :-ms-input-placeholder,.fieldGroup[data-v-3cd9e3b6] ::placeholder{color:#666;opacity:1\n}\n.root.rootIsDisabled[data-v-3cd9e3b6] .field{background-color:#f4f4f4;border-color:#f4f4f4\n}\n.fieldPrefixSuffix[data-v-3cd9e3b6]{align-items:center;background:#f4f4f4;color:#666;display:flex;line-height:1;padding:0 10px;white-space:nowrap\n}\n.field[data-v-3cd9e3b6]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;font-size:14px;border-radius:0;border:none;background:none;background-color:initial;color:#333;padding:0 12px 0 12px;width:100%;min-width:0;text-overflow:ellipsis;outline:0\n}\n[dir=rtl] .field[data-v-3cd9e3b6]{padding:0 12px 0 12px\n}\n.field[data-v-3cd9e3b6]:active,.field[data-v-3cd9e3b6]:focus,.field[data-v-3cd9e3b6]:hover{outline:0\n}\n[dir=ltr] .field.hasIcon[data-v-3cd9e3b6]{padding-right:24px\n}\n[dir=rtl] .field.hasIcon[data-v-3cd9e3b6]{padding-left:24px\n}\n.field[disabled][data-v-3cd9e3b6]{background-color:initial;border-color:transparent\n}\n.field[data-v-3cd9e3b6]::placeholder{color:#666\n}\n.root.rootIsRequiredLabel[data-v-3cd9e3b6] .ms-Label:after{content:\" *\";color:#a80000\n}\n.root.rootIsRequiredPlaceholderOnly[data-v-3cd9e3b6] .ms-TextField-fieldGroup:after{content:\"*\";color:#a80000;position:absolute;top:-5px\n}\n[dir=ltr] .root.rootIsRequiredPlaceholderOnly[data-v-3cd9e3b6] .ms-TextField-fieldGroup:after{right:-10px\n}\n[dir=rtl] .root.rootIsRequiredPlaceholderOnly[data-v-3cd9e3b6] .ms-TextField-fieldGroup:after{left:-10px\n}\n.root.rootIsActive[data-v-3cd9e3b6]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.root.rootIsActive[data-v-3cd9e3b6]{border-width:2px\n}\n.root.rootIsActive .field[data-v-3cd9e3b6],[dir=rtl] .root.rootIsActive .field[data-v-3cd9e3b6]{padding:0 11px 0 11px\n}\n}\n.icon[data-v-3cd9e3b6]{pointer-events:none;position:absolute;bottom:5px;top:auto;font-size:16px;line-height:18px\n}\nhtml[dir=ltr] .icon[data-v-3cd9e3b6]{right:8px\n}\nhtml[dir=rtl] .icon[data-v-3cd9e3b6]{left:8px\n}\n.description[data-v-3cd9e3b6]{color:#666;font-size:11px\n}\n.rootIsBorderless .fieldGroup[data-v-3cd9e3b6]{border-color:transparent;border-width:0\n}\n.root.rootIsUnderlined[data-v-3cd9e3b6]{border:0 solid #a6a6a6\n}\n.root.rootIsUnderlined .wrapper[data-v-3cd9e3b6]{display:flex;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:inherit;width:100%\n}\n.root.rootIsUnderlined .wrapper.invalid[data-v-3cd9e3b6],.root.rootIsUnderlined .wrapper.invalid[data-v-3cd9e3b6]:focus,.root.rootIsUnderlined .wrapper.invalid[data-v-3cd9e3b6]:hover{border-bottom:1px solid #a80000\n}\n.root.rootIsUnderlined[data-v-3cd9e3b6] .ms-Label{font-size:14px;line-height:22px;height:32px\n}\n[dir=ltr] .root.rootIsUnderlined[data-v-3cd9e3b6] .ms-Label{margin-right:8px\n}\n[dir=rtl] .root.rootIsUnderlined[data-v-3cd9e3b6] .ms-Label{margin-left:8px\n}\n.root.rootIsUnderlined .fieldGroup[data-v-3cd9e3b6]{flex:1 1 0px;border-width:0\n}\n[dir=ltr] .root.rootIsUnderlined .fieldGroup[data-v-3cd9e3b6]{text-align:left\n}\n[dir=rtl] .root.rootIsUnderlined .fieldGroup[data-v-3cd9e3b6]{text-align:right\n}\n.root.rootIsUnderlined.rootIsDisabled[data-v-3cd9e3b6]{border-color:#f4f4f4\n}\n.root.rootIsUnderlined.rootIsDisabled[data-v-3cd9e3b6] .ms-Label{color:#a6a6a6\n}\n.root.rootIsUnderlined.rootIsDisabled .field[data-v-3cd9e3b6]{background-color:initial;color:#a6a6a6\n}\n.root.rootIsUnderlined.rootIsDisabled .fieldGroup[data-v-3cd9e3b6]{background-color:initial\n}\n.root.rootIsUnderlined[data-v-3cd9e3b6]:hover:not(.rootIsActive):not(.rootIsDisabled){border-color:#212121\n}\n.root.rootIsUnderlined.rootIsActive[data-v-3cd9e3b6]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.root.rootIsUnderlined.rootIsActive[data-v-3cd9e3b6]{border-width:2px\n}\n.root.rootIsUnderlined.rootIsActive .field[data-v-3cd9e3b6],[dir=rtl] .root.rootIsUnderlined.rootIsActive .field[data-v-3cd9e3b6]{padding:0 11px 0 11px\n}\n}\n@media screen and (-ms-high-contrast:active){\n.root.rootIsUnderlined.rootIsActive .wrapper[data-v-3cd9e3b6],.root.rootIsUnderlined:hover:not(.rootIsDisabled) .wrapper[data-v-3cd9e3b6]{border-color:Highlight\n}\n}\n.root.rootIsMultiline .fieldGroup[data-v-3cd9e3b6]{min-height:60px;height:auto;display:flex\n}\n.root.rootIsMultiline .field[data-v-3cd9e3b6]{line-height:17px;flex-grow:1;padding-top:6px;overflow:auto;width:100%\n}\n[dir=ltr] .root.rootIsMultiline .field.hasIcon[data-v-3cd9e3b6]{padding-right:40px\n}\n[dir=rtl] .root.rootIsMultiline .field.hasIcon[data-v-3cd9e3b6]{padding-left:40px\n}\n.errorMessage[data-v-3cd9e3b6]{font-size:12px;font-weight:400;color:#a80000;margin:0;padding-top:5px;display:flex;align-items:center\n}\n.invalid[data-v-3cd9e3b6],.invalid[data-v-3cd9e3b6]:focus,.invalid[data-v-3cd9e3b6]:hover{border-color:#a80000\n}\n[dir=ltr] .root.rootIsUnderlined[data-v-3cd9e3b6] .ms-Label{padding-left:12px\n}\n[dir=rtl] .root.rootIsUnderlined[data-v-3cd9e3b6] .ms-Label{padding-right:12px\n}\n[dir=ltr] .root.rootIsUnderlined[data-v-3cd9e3b6] .ms-Label{padding-right:0\n}\n[dir=rtl] .root.rootIsUnderlined[data-v-3cd9e3b6] .ms-Label{padding-left:0\n}\nhtml[dir=ltr] .root.rootIsUnderlined .field[data-v-3cd9e3b6]{text-align:left\n}\nhtml[dir=rtl] .root.rootIsUnderlined .field[data-v-3cd9e3b6]{text-align:right\n}\n.root.rootIsMultiline .icon[data-v-3cd9e3b6]{padding-bottom:8px;align-items:flex-end\n}\n[dir=ltr] .root.rootIsMultiline .icon[data-v-3cd9e3b6]{padding-right:24px\n}\n[dir=rtl] .root.rootIsMultiline .icon[data-v-3cd9e3b6]{padding-left:24px\n}\n.root.rootIsMultiline .field.fieldIsUnresizable[data-v-3cd9e3b6]{resize:none\n}\n.hidden[data-v-3cd9e3b6]{display:none\n}", ""]);
+
+// exports
+
 
 /***/ }),
 
@@ -991,6 +991,21 @@ var update = add("08db661a", content, true, {"sourceMap":false,"shadowMode":fals
 
 /***/ }),
 
+/***/ "697f":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("48e8");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("aeb88c68", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "6b13":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1211,17 +1226,6 @@ exports.push([module.i, "\n@keyframes spinAnimation-data-v-0189b692{\n0%{transfo
 
 /***/ }),
 
-/***/ "a9ce":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_028a003c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("2c80");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_028a003c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_028a003c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_028a003c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "aab1":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1279,6 +1283,17 @@ if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__("499e").default
 var update = add("1269636e", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
+/***/ "b074":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_3cd9e3b6_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("697f");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_3cd9e3b6_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_3cd9e3b6_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_3cd9e3b6_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -1462,21 +1477,6 @@ exports = module.exports = __webpack_require__("2350")(false);
 
 // module
 exports.push([module.i, "\n.root[data-v-3cb0d6b0]{color:#0078d4;margin:0;overflow:inherit;padding:0;text-overflow:inherit\n}\n.isEnabled[data-v-3cb0d6b0]:focus,.isEnabled[data-v-3cb0d6b0]:hover{color:#004578\n}\n.isEnabled[data-v-3cb0d6b0]:active{color:#0078d4\n}\n.isDisabled[data-v-3cb0d6b0]{color:#a6a6a6;pointer-events:none;cursor:default\n}\nbutton.root[data-v-3cb0d6b0]{background:none;border:none;cursor:pointer;display:inline;font-size:inherit\n}\nbutton.root[data-v-3cb0d6b0]::-moz-focus-inner{border:0\n}\nbutton.root[data-v-3cb0d6b0]{outline:transparent;position:relative\n}\n.ms-Fabric.is-focusVisible button.root[data-v-3cb0d6b0]:focus:after{content:\"\";position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;border:1px solid #000\n}\nhtml[dir=ltr] button.root[data-v-3cb0d6b0]{text-align:left\n}\nhtml[dir=rtl] button.root[data-v-3cb0d6b0]{text-align:right\n}\n@media screen and (-ms-high-contrast:active){\nbutton.root[data-v-3cb0d6b0]{color:Highlight\n}\n}\na.root[data-v-3cb0d6b0]{text-decoration:none\n}\n.ms-Fabric.is-focusVisible a.root[data-v-3cb0d6b0]:focus{outline:1px solid #000\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "cbdb":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("2350")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\ninput.root[data-v-028a003c],textarea.root[data-v-028a003c]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;position:relative\n}\n.screenReaderOnly[data-v-028a003c]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0\n}\n.fieldGroup[data-v-028a003c]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;border:1px solid #a6a6a6;background:#fff;height:32px;display:flex;flex-direction:row;align-items:stretch;position:relative\n}\n.fieldGroup[data-v-028a003c]:hover{border-color:#212121\n}\n.fieldGroup.fieldGroupIsFocused[data-v-028a003c]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.fieldGroup.fieldGroupIsFocused[data-v-028a003c]{border-width:2px\n}\n.fieldGroup.fieldGroupIsFocused .field[data-v-028a003c],[dir=rtl] .fieldGroup.fieldGroupIsFocused .field[data-v-028a003c]{padding:0 11px 0 11px\n}\n}\n.fieldGroup.fieldGroupIsFocused.invalid[data-v-028a003c]{border-color:#a80000\n}\n.rootIsDisabled .fieldGroup[data-v-028a003c]{background-color:#f4f4f4;border-color:#f4f4f4\n}\n@media screen and (-ms-high-contrast:active){\n.fieldGroup.fieldGroupIsFocused[data-v-028a003c],.fieldGroup[data-v-028a003c]:hover{border-color:Highlight\n}\n}\n.fieldGroup[data-v-028a003c]::-ms-clear{display:none\n}\n.fieldGroup[data-v-028a003c] :-ms-input-placeholder,.fieldGroup[data-v-028a003c] ::placeholder{color:#666;opacity:1\n}\n.root.rootIsDisabled[data-v-028a003c] .field{background-color:#f4f4f4;border-color:#f4f4f4\n}\n.fieldPrefixSuffix[data-v-028a003c]{align-items:center;background:#f4f4f4;color:#666;display:flex;line-height:1;padding:0 10px;white-space:nowrap\n}\n.field[data-v-028a003c]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;font-size:14px;border-radius:0;border:none;background:none;background-color:initial;color:#333;padding:0 12px 0 12px;width:100%;min-width:0;text-overflow:ellipsis;outline:0\n}\n[dir=rtl] .field[data-v-028a003c]{padding:0 12px 0 12px\n}\n.field[data-v-028a003c]:active,.field[data-v-028a003c]:focus,.field[data-v-028a003c]:hover{outline:0\n}\n[dir=ltr] .field.hasIcon[data-v-028a003c]{padding-right:24px\n}\n[dir=rtl] .field.hasIcon[data-v-028a003c]{padding-left:24px\n}\n.field[disabled][data-v-028a003c]{background-color:initial;border-color:transparent\n}\n.field[data-v-028a003c]::placeholder{color:#666\n}\n.root.rootIsRequiredLabel[data-v-028a003c] .ms-Label:after{content:\" *\";color:#a80000\n}\n.root.rootIsRequiredPlaceholderOnly[data-v-028a003c] .ms-TextField-fieldGroup:after{content:\"*\";color:#a80000;position:absolute;top:-5px\n}\n[dir=ltr] .root.rootIsRequiredPlaceholderOnly[data-v-028a003c] .ms-TextField-fieldGroup:after{right:-10px\n}\n[dir=rtl] .root.rootIsRequiredPlaceholderOnly[data-v-028a003c] .ms-TextField-fieldGroup:after{left:-10px\n}\n.root.rootIsActive[data-v-028a003c]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.root.rootIsActive[data-v-028a003c]{border-width:2px\n}\n.root.rootIsActive .field[data-v-028a003c],[dir=rtl] .root.rootIsActive .field[data-v-028a003c]{padding:0 11px 0 11px\n}\n}\n.icon[data-v-028a003c]{pointer-events:none;position:absolute;bottom:5px;top:auto;font-size:16px;line-height:18px\n}\nhtml[dir=ltr] .icon[data-v-028a003c]{right:8px\n}\nhtml[dir=rtl] .icon[data-v-028a003c]{left:8px\n}\n.description[data-v-028a003c]{color:#666;font-size:11px\n}\n.rootIsBorderless .fieldGroup[data-v-028a003c]{border-color:transparent;border-width:0\n}\n.root.rootIsUnderlined[data-v-028a003c]{border:0 solid #a6a6a6\n}\n.root.rootIsUnderlined .wrapper[data-v-028a003c]{display:flex;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:inherit;width:100%\n}\n.root.rootIsUnderlined .wrapper.invalid[data-v-028a003c],.root.rootIsUnderlined .wrapper.invalid[data-v-028a003c]:focus,.root.rootIsUnderlined .wrapper.invalid[data-v-028a003c]:hover{border-bottom:1px solid #a80000\n}\n.root.rootIsUnderlined[data-v-028a003c] .ms-Label{font-size:14px;line-height:22px;height:32px\n}\n[dir=ltr] .root.rootIsUnderlined[data-v-028a003c] .ms-Label{margin-right:8px\n}\n[dir=rtl] .root.rootIsUnderlined[data-v-028a003c] .ms-Label{margin-left:8px\n}\n.root.rootIsUnderlined .fieldGroup[data-v-028a003c]{flex:1 1 0px;border-width:0\n}\n[dir=ltr] .root.rootIsUnderlined .fieldGroup[data-v-028a003c]{text-align:left\n}\n[dir=rtl] .root.rootIsUnderlined .fieldGroup[data-v-028a003c]{text-align:right\n}\n.root.rootIsUnderlined.rootIsDisabled[data-v-028a003c]{border-color:#f4f4f4\n}\n.root.rootIsUnderlined.rootIsDisabled[data-v-028a003c] .ms-Label{color:#a6a6a6\n}\n.root.rootIsUnderlined.rootIsDisabled .field[data-v-028a003c]{background-color:initial;color:#a6a6a6\n}\n.root.rootIsUnderlined.rootIsDisabled .fieldGroup[data-v-028a003c]{background-color:initial\n}\n.root.rootIsUnderlined[data-v-028a003c]:hover:not(.rootIsActive):not(.rootIsDisabled){border-color:#212121\n}\n.root.rootIsUnderlined.rootIsActive[data-v-028a003c]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.root.rootIsUnderlined.rootIsActive[data-v-028a003c]{border-width:2px\n}\n.root.rootIsUnderlined.rootIsActive .field[data-v-028a003c],[dir=rtl] .root.rootIsUnderlined.rootIsActive .field[data-v-028a003c]{padding:0 11px 0 11px\n}\n}\n@media screen and (-ms-high-contrast:active){\n.root.rootIsUnderlined.rootIsActive .wrapper[data-v-028a003c],.root.rootIsUnderlined:hover:not(.rootIsDisabled) .wrapper[data-v-028a003c]{border-color:Highlight\n}\n}\n.root.rootIsMultiline .fieldGroup[data-v-028a003c]{min-height:60px;height:auto;display:flex\n}\n.root.rootIsMultiline .field[data-v-028a003c]{line-height:17px;flex-grow:1;padding-top:6px;overflow:auto;width:100%\n}\n[dir=ltr] .root.rootIsMultiline .field.hasIcon[data-v-028a003c]{padding-right:40px\n}\n[dir=rtl] .root.rootIsMultiline .field.hasIcon[data-v-028a003c]{padding-left:40px\n}\n.errorMessage[data-v-028a003c]{font-size:12px;font-weight:400;color:#a80000;margin:0;padding-top:5px;display:flex;align-items:center\n}\n.invalid[data-v-028a003c],.invalid[data-v-028a003c]:focus,.invalid[data-v-028a003c]:hover{border-color:#a80000\n}\n[dir=ltr] .root.rootIsUnderlined[data-v-028a003c] .ms-Label{padding-left:12px\n}\n[dir=rtl] .root.rootIsUnderlined[data-v-028a003c] .ms-Label{padding-right:12px\n}\n[dir=ltr] .root.rootIsUnderlined[data-v-028a003c] .ms-Label{padding-right:0\n}\n[dir=rtl] .root.rootIsUnderlined[data-v-028a003c] .ms-Label{padding-left:0\n}\nhtml[dir=ltr] .root.rootIsUnderlined .field[data-v-028a003c]{text-align:left\n}\nhtml[dir=rtl] .root.rootIsUnderlined .field[data-v-028a003c]{text-align:right\n}\n.root.rootIsMultiline .icon[data-v-028a003c]{padding-bottom:8px;align-items:flex-end\n}\n[dir=ltr] .root.rootIsMultiline .icon[data-v-028a003c]{padding-right:24px\n}\n[dir=rtl] .root.rootIsMultiline .icon[data-v-028a003c]{padding-left:24px\n}\n.root.rootIsMultiline .field.fieldIsUnresizable[data-v-028a003c]{resize:none\n}\n.hidden[data-v-028a003c]{display:none\n}", ""]);
 
 // exports
 
@@ -4803,12 +4803,12 @@ Slider_component.options.__file = "Slider.vue"
 // CONCATENATED MODULE: ./src/components/Slider/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/TextField/TextField.vue?vue&type=template&id=028a003c&scoped=true&
-var TextFieldvue_type_template_id_028a003c_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-TextField root",class:_vm.rootClass},[_c('div',{staticClass:"ms-TextField-wrapper wrapper"},[(_vm.label)?_c('Label',{attrs:{"required":_vm.required}},[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]):_vm._e(),_c('div',{staticClass:"ms-TextField-fieldGroup fieldGroup",class:{ 'invalid': _vm.errorMessage }},[_c(_vm.component,{tag:"component",staticClass:"ms-TextField-field field",attrs:{"id":"TextField","value":_vm.multiline ? '' : _vm.value,"disabled":_vm.disabled,"placeholder":_vm.placeholder,"readonly":_vm.readOnly,"required":_vm.required,"rows":"4","type":"text","aria-invalid":"false"},domProps:{"textContent":_vm._s(_vm.multiline ? _vm.value : '')}})],1),_c('span',[_c('div',{attrs:{"aria-live":"assertive"}},[_c('p',{staticClass:"ms-TextField-errorMessage errorMessage"},[_c('span',[_vm._v(_vm._s(_vm.errorMessage))])])])])],1)])}
-var TextFieldvue_type_template_id_028a003c_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/TextField/TextField.vue?vue&type=template&id=3cd9e3b6&scoped=true&
+var TextFieldvue_type_template_id_3cd9e3b6_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-TextField root",class:_vm.rootClass},[_c('div',{staticClass:"ms-TextField-wrapper wrapper"},[(_vm.label)?_c('Label',{attrs:{"required":_vm.required}},[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]):_vm._e(),_c('div',{staticClass:"ms-TextField-fieldGroup fieldGroup",class:{ 'invalid': _vm.errorMessage }},[_c(_vm.component,{tag:"component",staticClass:"ms-TextField-field field",attrs:{"id":"TextField","value":_vm.value,"disabled":_vm.disabled,"placeholder":_vm.placeholder,"readonly":_vm.readOnly,"required":_vm.required,"rows":"4","type":"text","aria-invalid":"false"},on:{"input":function($event){_vm.$emit('input', $event.target.value)}}})],1),_c('span',[_c('div',{attrs:{"aria-live":"assertive"}},[_c('p',{staticClass:"ms-TextField-errorMessage errorMessage"},[_c('span',[_vm._v(_vm._s(_vm.errorMessage))])])])])],1)])}
+var TextFieldvue_type_template_id_3cd9e3b6_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/TextField/TextField.vue?vue&type=template&id=028a003c&scoped=true&
+// CONCATENATED MODULE: ./src/components/TextField/TextField.vue?vue&type=template&id=3cd9e3b6&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/TextField/TextField.vue?vue&type=script&lang=js&
 //
@@ -4910,18 +4910,12 @@ var TextFieldvue_type_template_id_028a003c_scoped_true_staticRenderFns = []
       };
     }
 
-  },
-  watch: {
-    value(newVal, oldVal) {
-      this.$emit('update:value', newVal);
-    }
-
   }
 });
 // CONCATENATED MODULE: ./src/components/TextField/TextField.vue?vue&type=script&lang=js&
  /* harmony default export */ var TextField_TextFieldvue_type_script_lang_js_ = (TextFieldvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/TextField/TextField.vue?vue&type=style&index=0&id=028a003c&lang=scss&scoped=true&
-var TextFieldvue_type_style_index_0_id_028a003c_lang_scss_scoped_true_ = __webpack_require__("a9ce");
+// EXTERNAL MODULE: ./src/components/TextField/TextField.vue?vue&type=style&index=0&id=3cd9e3b6&lang=scss&scoped=true&
+var TextFieldvue_type_style_index_0_id_3cd9e3b6_lang_scss_scoped_true_ = __webpack_require__("b074");
 
 // CONCATENATED MODULE: ./src/components/TextField/TextField.vue
 
@@ -4934,11 +4928,11 @@ var TextFieldvue_type_style_index_0_id_028a003c_lang_scss_scoped_true_ = __webpa
 
 var TextField_component = normalizeComponent(
   TextField_TextFieldvue_type_script_lang_js_,
-  TextFieldvue_type_template_id_028a003c_scoped_true_render,
-  TextFieldvue_type_template_id_028a003c_scoped_true_staticRenderFns,
+  TextFieldvue_type_template_id_3cd9e3b6_scoped_true_render,
+  TextFieldvue_type_template_id_3cd9e3b6_scoped_true_staticRenderFns,
   false,
   null,
-  "028a003c",
+  "3cd9e3b6",
   null
   
 )

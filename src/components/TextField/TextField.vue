@@ -11,8 +11,8 @@
       <div :class="{ 'invalid': errorMessage }"
            class="ms-TextField-fieldGroup fieldGroup">
         <component id="TextField"
+                   :value="value"
                    :is="component"
-                   :value="multiline ? '' : value"
                    :disabled="disabled"
                    :placeholder="placeholder"
                    :readonly="readOnly"
@@ -21,7 +21,7 @@
                    type="text"
                    class="ms-TextField-field field"
                    aria-invalid="false"
-                   v-text="multiline ? value : ''" />
+                   @input="$emit('input', $event.target.value)" />
       </div>
 
       <span>
@@ -94,11 +94,6 @@ export default {
         'underlined': this.underlined,
         'rootIsUnderlined': this.underlined,
       }
-    },
-  },
-  watch: {
-    value (newVal, oldVal) {
-      this.$emit('update:value', newVal)
     },
   },
 }
