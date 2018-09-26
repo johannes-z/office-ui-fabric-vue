@@ -46,42 +46,42 @@ export default {
   props: {
     label: {
       type: String,
-      default: null
+      default: null,
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     defaultValue: {
       type: Number,
-      default: 5
+      default: 5,
     },
     min: {
       type: Number,
-      default: 0
+      default: 0,
     },
     max: {
       type: Number,
-      default: 10
+      default: 10,
     },
     step: {
       type: Number,
-      default: 1
+      default: 1,
     },
     showValue: {
       type: Boolean,
-      default: true
+      default: true,
     },
     vertical: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data () {
     return {
       isDragging: false,
       value: this.defaultValue,
-      renderedValue: this.defaultValue
+      renderedValue: this.defaultValue,
     }
   },
   computed: {
@@ -95,7 +95,7 @@ export default {
         'ms-Slider-column': this.vertical,
         'rootIsVertical': this.vertical,
         'rootIsEnabled': !this.disabled,
-        'rootIsDisabled': this.disabled
+        'rootIsDisabled': this.disabled,
       }
       return obj
     },
@@ -117,7 +117,7 @@ export default {
       var obj = {}
       obj[this.vertical ? 'bottom' : 'left'] = this.thumbOffsetPercent + '%'
       return obj
-    }
+    },
   },
   methods: {
     onMouseDown () {
@@ -195,17 +195,24 @@ export default {
     setValue (diff, value = this.value) {
       var newValue = Math.min(this.max, Math.max(this.min, value + diff))
       this.value = newValue
-    }
-  }
+    },
+  },
 }
 </script>
 
+<style lang="scss">
+
+.ms-Slider {
+  user-select: none;
+
+  .ms-Slider-slideBox:hover {
+    cursor: pointer;
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 @import "../../common/common";
-
-.root {
-  user-select: none;
-}
 
 .titleLabel {
   padding: 0;
