@@ -15,6 +15,7 @@ import Layer from './pages/Layer.vue'
 import Link from './pages/Link.vue'
 import OverflowSet from './pages/OverflowSet.vue'
 import Panel from './pages/Panel.vue'
+import Pivot from './pages/Pivot.vue'
 import ProgressIndicator from './pages/ProgressIndicator.vue'
 import Shimmer from './pages/Shimmer.vue'
 import SearchBox from './pages/SearchBox.vue'
@@ -38,6 +39,7 @@ const routes = [
   { name: 'Link', path: '/link', component: Link },
   { name: 'OverflowSet', path: '/overflowSet', component: OverflowSet },
   { name: 'Panel', path: '/panel', component: Panel },
+  { name: 'Pivot', path: '/pivot', component: Pivot },
   { name: 'ProgressIndicator', path: '/progressIndicator', component: ProgressIndicator },
   { name: 'Shimmer', path: '/shimmer', component: Shimmer },
   { name: 'SearchBox', path: '/searchBox', component: SearchBox },
