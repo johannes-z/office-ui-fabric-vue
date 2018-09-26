@@ -89,7 +89,7 @@
 <script>
 import { Label, TextField } from '../index'
 export default {
-  components: { Label, TextField }
+  components: { Label, TextField },
 }
 
 </script>

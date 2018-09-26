@@ -16,20 +16,20 @@ export default {
   props: {
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     href: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     classObj () {
       var obj = {}
       obj['isDisabled'] = this.disabled
       return obj
-    }
-  }
+    },
+  },
 }
 </script>
 

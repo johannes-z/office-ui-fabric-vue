@@ -21,7 +21,7 @@ export default {
   components: { Label, ProgressIndicator },
   data () {
     return {
-      percentComplete: 0
+      percentComplete: 0,
     }
   },
   created () {
@@ -29,7 +29,7 @@ export default {
       this.percentComplete += 1
       if (this.percentComplete >= 110) this.percentComplete = -10
     }, 200)
-  }
+  },
 }
 
 </script>

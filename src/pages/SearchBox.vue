@@ -22,6 +22,6 @@
 import { Label, SearchBox } from '../index'
 
 export default {
-  components: { Label, SearchBox }
+  components: { Label, SearchBox },
 }
 </script>

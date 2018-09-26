@@ -12,7 +12,7 @@ const COLOR_SWATCHES_LOOKUP = [
   'blue',
   'darkBlue',
   'orange',
-  'darkRed'
+  'darkRed',
 ]
 
 const COLOR_SWATCHES_NUM_ENTRIES = COLOR_SWATCHES_LOOKUP.length

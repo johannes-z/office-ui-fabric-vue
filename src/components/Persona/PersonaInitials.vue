@@ -12,13 +12,13 @@ export default {
   props: {
     name: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     initialsColor () {
       return initialsColorPropToColorCode({
-        primaryText: this.name
+        primaryText: this.name,
       })
     },
     initials () {
@@ -30,7 +30,7 @@ export default {
         return first[0] + last[0]
       }
       return first[0]
-    }
-  }
+    },
+  },
 }
 </script>
