@@ -4,9 +4,12 @@
   "main": "dist/office-ui-fabric-vue.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve ./src/dev.js",
-    "build": "vue-cli-service build --target lib ./src/index.js",
+    "build": "yarn build:lib && yarn build:components",
+    "build:lib": "vue-cli-service build --target lib ./src/index.js",
+    "build:components": "cross-env UI_ENV=components vue-cli-service build --report --no-clean",
     "lint": "vue-cli-service lint"
   },
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johannes-z/office-ui-fabric-vue.git"
@@ -26,6 +29,7 @@
     "@vue/cli-plugin-eslint": "^3.0.1",
     "@vue/cli-service": "^3.0.1",
     "@vue/eslint-config-standard": "^3.0.1",
+    "cross-env": "^5.2.0",
     "node-sass": "^4.9.3",
     "office-ui-fabric-core": "^9.6.0",
     "sass-loader": "^7.1.0",

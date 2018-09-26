@@ -44,11 +44,10 @@
 
 <script>
 import { SearchBox } from '../SearchBox'
-import { Icon } from '../Icon'
 import { VActionButton } from '../Button'
 
 export default {
-  components: { VActionButton, Icon, SearchBox },
+  components: { VActionButton, SearchBox },
   props: {
     items: {
       type: Array,

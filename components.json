@@ -1,0 +1,12 @@
+{
+  "breadcrumb": "./src/components/Breadcrumb/index.js",
+  "button": "./src/components/Button/index.js",
+  "callout": "./src/components/Callout/index.js",
+  "checkbox": "./src/components/Checkbox/index.js",
+  "command-bar": "./src/components/CommandBar/index.js",
+  "icon": "./src/components/Icon/index.js",
+  "label": "./src/components/Label/index.js",
+  "layer": "./src/components/Layer/index.js",
+  "link": "./src/components/Link/index.js",
+  "panel": "./src/components/Panel/index.js"
+}
