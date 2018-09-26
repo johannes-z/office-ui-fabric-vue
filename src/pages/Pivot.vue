@@ -1,23 +1,33 @@
 <template>
   <div>
-    <Pivot link-size="{PivotLinkSize.large}">
-      <PivotItem link-text="My Files">
-        <Label>Pivot #1</Label>
-      </PivotItem>
-      <PivotItem link-text="Recent">
-        <Label>Pivot #2</Label>
-      </PivotItem>
-      <PivotItem link-text="Shared with me">
-        <Label>Pivot #3</Label>
-      </PivotItem>
-    </Pivot>
+    <VPivot :link-texts="linkTexts"
+            link-size="{PivotLinkSize.large}">
+      <VPivotItem link-text="My Files">
+        <VLabel>VPivot #1</VLabel>
+      </VPivotItem>
+      <VPivotItem link-text="Recent">
+        <VLabel>VPivot #2</VLabel>
+      </VPivotItem>
+      <VPivotItem link-text="Shared with me">
+        <VLabel>VPivot #3</VLabel>
+      </VPivotItem>
+    </VPivot>
   </div>
 </template>
 
 <script>
-import { VPivot, VPivotItem } from '../index.js'
+import { VLabel, VPivot, VPivotItem } from '../index.js'
 export default {
-  components: { VPivot, VPivotItem },
+  components: { VLabel, VPivot, VPivotItem },
+  data () {
+    return {
+      linkTexts: [
+        'My Files',
+        'Recent',
+        'Shared with me',
+      ],
+    }
+  },
 
 }
 </script>
