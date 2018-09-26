@@ -30,7 +30,10 @@
 </template>
 
 <script>
-import { VIconButton, VIcon, VLayer } from '../../index.js'
+import { VIconButton } from '../Button/'
+import { VIcon } from '../Icon'
+import { VLayer } from '../Layer'
+
 export default {
   components: { VIconButton, VIcon, VLayer },
   props: {
