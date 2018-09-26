@@ -9,6 +9,9 @@
     "build:components": "cross-env UI_ENV=components vue-cli-service build --report --no-clean",
     "lint": "vue-cli-service lint"
   },
+  "sideEffects": [
+    "*.vue"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johannes-z/office-ui-fabric-vue.git"

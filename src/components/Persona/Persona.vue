@@ -51,29 +51,29 @@ export default {
   props: {
     imageUrl: {
       type: String,
-      default: ''
+      default: '',
     },
     primaryText: {
       type: String,
-      default: ''
+      default: '',
     },
     secondaryText: {
       type: String,
-      default: ''
+      default: '',
     },
     tertiaryText: {
       type: String,
-      default: ''
+      default: '',
     },
     size: {
       type: Number,
-      default: size72
+      default: size72,
     },
     presence: {
       type: String,
-      default: ''
-    }
-  }
+      default: '',
+    },
+  },
 }
 </script>
 

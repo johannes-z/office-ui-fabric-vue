@@ -25,7 +25,7 @@
 <script>
 import { Label, Spinner } from '../index'
 export default {
-  components: { Label, Spinner }
+  components: { Label, Spinner },
 }
 
 </script>

@@ -44,40 +44,40 @@ export default {
   props: {
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     readOnly: {
       type: Boolean,
-      default: false
+      default: false,
     },
     required: {
       type: Boolean,
-      default: false
+      default: false,
     },
     errorMessage: {
       type: String,
-      default: ''
+      default: '',
     },
     placeholder: {
       type: String,
-      default: ''
+      default: '',
     },
     multiline: {
       type: Boolean,
-      default: false
+      default: false,
     },
     underlined: {
       type: Boolean,
-      default: false
+      default: false,
     },
     label: {
       type: String,
-      default: ''
+      default: '',
     },
     value: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
   computed: {
     component () {
@@ -92,10 +92,10 @@ export default {
         'multiline': this.multiline,
         'rootIsMultiline': this.multiline,
         'underlined': this.underlined,
-        'rootIsUnderlined': this.underlined
+        'rootIsUnderlined': this.underlined,
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

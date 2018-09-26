@@ -22,25 +22,25 @@ export default {
   props: {
     label: {
       type: String,
-      default: ''
+      default: '',
     },
     description: {
       type: String,
-      default: ''
+      default: '',
     },
     percentComplete: {
       type: Number,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     classObj () {
       return {
         indeterminate: this.percentComplete == null,
-        smoothTransition: this.percentComplete != null
+        smoothTransition: this.percentComplete != null,
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

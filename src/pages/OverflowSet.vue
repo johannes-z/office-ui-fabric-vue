@@ -26,7 +26,7 @@
           }
         }
       ]"
-      :overflowItems="[
+      :overflow-items="[
         {
           key: 'item4',
           name: 'Overflow Link 1',
@@ -49,6 +49,6 @@
 <script>
 import { OverflowSet } from '../index'
 export default {
-  components: { OverflowSet }
+  components: { OverflowSet },
 }
 </script>

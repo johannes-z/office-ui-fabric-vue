@@ -44,7 +44,7 @@
 import { Label, Slider } from '../index'
 
 export default {
-  components: { Label, Slider }
+  components: { Label, Slider },
 }
 </script>
 

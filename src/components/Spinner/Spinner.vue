@@ -15,20 +15,20 @@ const SPINNER_SIZE = {
   0: { size: '12px', name: 'xSmall' },
   1: { size: '16px', name: 'small' },
   2: { size: '20px', name: 'Medium' },
-  3: { size: '28px', name: 'Large' }
+  3: { size: '28px', name: 'Large' },
 }
 
 export default {
   props: {
     label: {
       type: String,
-      default: null
+      default: null,
     },
     size: {
       type: Number,
       default: 2,
-      validator: value => SPINNER_SIZE[value] != null
-    }
+      validator: value => SPINNER_SIZE[value] != null,
+    },
   },
   computed: {
     classObj () {
@@ -43,8 +43,8 @@ export default {
       style.width = size.size
       style.height = size.size
       return style
-    }
-  }
+    },
+  },
 }
 </script>
 

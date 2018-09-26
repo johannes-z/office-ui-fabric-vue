@@ -7,7 +7,7 @@
 <script>
 import { Label, Shimmer } from '../index'
 export default {
-  components: { Label, Shimmer }
+  components: { Label, Shimmer },
 }
 
 </script>
