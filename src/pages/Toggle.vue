@@ -1,7 +1,10 @@
 <template>
   <div>
 
-    <h1 class="ms-font-xxl">VToggle</h1>
+    <h1 class="ms-font-xxl">Toggle</h1>
+
+    <h2 class="ms-font-xl">Default Toggles</h2>
+
     <VToggle :checked="true"
              label="Enabled and checked"
              on-text="On"
