@@ -21,7 +21,7 @@
                    type="text"
                    class="ms-TextField-field field"
                    aria-invalid="false"
-                   @input="$emit('input', $event.target.value)" />
+                   @input="$emit('update:value', $event.target.value)" />
       </div>
 
       <span>

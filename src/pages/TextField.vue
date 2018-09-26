@@ -4,7 +4,7 @@
 
     <h2 class="ms-font-l">Default TextField with Label</h2>
 
-    <TextField v-model="value" label="Standard" />
+    <TextField label="Standard" />
 
     <TextField :disabled="true"
                label="Disabled" />
