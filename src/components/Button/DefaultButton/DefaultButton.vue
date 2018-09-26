@@ -21,12 +21,17 @@ export default {
 <style lang="scss">
 @import "../../../common/common";
 
-$DEFAULT_BUTTON_MINWIDTH: 80px;
-
 .ms-Button-label {
   font-weight: $ms-font-weight-semibold;
-  min-width: $DEFAULT_BUTTON_MINWIDTH;
   margin: 0 4px;
   line-height: 100%;
+}
+</style>
+
+<style lang="scss" scoped>
+
+$DEFAULT_BUTTON_MINWIDTH: 80px;
+.ms-Button-label {
+  min-width: $DEFAULT_BUTTON_MINWIDTH;
 }
 </style>
