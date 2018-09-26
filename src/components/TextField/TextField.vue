@@ -96,6 +96,11 @@ export default {
       }
     },
   },
+  watch: {
+    value (newVal, oldVal) {
+      this.$emit('update:value', newVal)
+    },
+  },
 }
 </script>
 
