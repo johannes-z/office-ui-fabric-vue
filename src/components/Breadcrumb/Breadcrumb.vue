@@ -1,30 +1,30 @@
 <template>
   <div :class="customClasses"
-       class="ms-Breadcrumb root">
+       class="ms-Breadcrumb">
 
-    <ol class="ms-Breadcrumb-list list">
+    <ol class="ms-Breadcrumb-list">
 
       <template v-for="(item, index) in renderedItems">
 
         <li v-if="hasOverflowItems && index === overflowIndex"
             :key="'overflow' + index"
-            class="ms-Breadcrumb-listItem listItem">
+            class="ms-Breadcrumb-listItem">
           <VIconButton icon-name="More" />
 
           <VIcon icon-name="ChevronRight"
-                 class="ms-Breadcrumb-chevron chevron" />
+                 class="ms-Breadcrumb-chevron" />
         </li>
 
         <li :key="item.key"
-            class="ms-Breadcrumb-listItem listItem">
+            class="ms-Breadcrumb-listItem">
 
-          <VLink class="ms-Breadcrumb-itemLink itemLink">
+          <VLink class="ms-Breadcrumb-itemLink">
             {{ item.text }}
           </VLink>
 
           <VIcon v-if="index < renderedItems.length - 1"
                  icon-name="ChevronRight"
-                 class="ms-Breadcrumb-chevron chevron" />
+                 class="ms-Breadcrumb-chevron" />
         </li>
 
       </template>
@@ -89,7 +89,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../common/common.scss";
 
 $Breadcrumb-overflowButtonColor: $ms-color-themePrimary;
@@ -99,107 +99,107 @@ $Breadcrumb-itemMaxWidth: 160px;
 $Breadcrumb-itemMaxWidth-sm: 116px;
 $Breadcrumb-chevron-sm: 8px;
 
-.root {
+div.ms-Breadcrumb {
   margin-top: 23px;
   margin-right: 0px;
   margin-bottom: 1px;
   margin-left: 0px;
-}
 
-.list {
-  white-space: nowrap;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: stretch;
-}
+  .ms-Breadcrumb-list {
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+  }
 
-.listItem {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  position: relative;
-  align-items: center;
-}
+  .ms-Breadcrumb-listItem {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
 
-.itemLink {
-  position: relative;
-  color: rgb(51, 51, 51);
-  cursor: pointer;
-  display: inline;
-  font-size: 21px;
-  margin: 0;
-  padding: 0 8px;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
-    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 100;
-  max-width: 160px;
-  user-select: text;
-  outline: transparent;
-  background: none transparent;
-  border-width: initial;
-  border-style: none;
-  border-color: initial;
-  border-image: initial;
-  overflow: hidden;
-  border-bottom: 1px solid transparent;
-  text-decoration: none;
-}
-.itemLink:hover {
-  background-color: rgb(244, 244, 244);
-  color: initial;
-  cursor: pointer;
-}
+  .ms-Breadcrumb-itemLink {
+    position: relative;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    display: inline;
+    font-size: 21px;
+    margin: 0;
+    padding: 0 8px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+      -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 100;
+    max-width: 160px;
+    user-select: text;
+    outline: transparent;
+    background: none transparent;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    overflow: hidden;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+  }
+  .ms-Breadcrumb-itemLink:hover {
+    background-color: rgb(244, 244, 244);
+    color: initial;
+    cursor: pointer;
+  }
 
-.chevron {
-  display: inline-block;
-  -webkit-font-smoothing: antialiased;
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  font-family: FabricMDL2Icons;
-  color: rgb(102, 102, 102);
-  font-size: 12px;
-}
+  .ms-Breadcrumb-chevron {
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    font-family: FabricMDL2Icons;
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+  }
 
-.overflow {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
+  .ms-Breadcrumb-overflow {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
 
-.overflowButton {
-  position: relative;
-  font-size: 16px;
-  font-weight: 400;
-  box-sizing: border-box;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  vertical-align: top;
-  padding-top: 0px;
-  padding-right: 4px;
-  padding-bottom: 0px;
-  padding-left: 4px;
-  width: 32px;
-  height: 100%;
-  background-color: transparent;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  user-select: none;
-  outline: transparent;
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
-  border-image: initial;
-  text-decoration: none;
-  border-radius: 0px;
-  overflow: hidden;
+  .ms-Breadcrumb-overflowButton {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: top;
+    padding-top: 0px;
+    padding-right: 4px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    width: 32px;
+    height: 100%;
+    background-color: transparent;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    user-select: none;
+    outline: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: initial;
+    text-decoration: none;
+    border-radius: 0px;
+    overflow: hidden;
+  }
 }
 
 // .ms-Breadcrumb-root {
