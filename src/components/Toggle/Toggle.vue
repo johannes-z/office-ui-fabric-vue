@@ -17,7 +17,7 @@
       <VLabel v-if="onText || offText"
               :for="id"
               class="ms-Toggle-stateText text">
-        {{ isActive ? onText : offText }}
+        {{ value ? onText : offText }}
       </VLabel>
     </div>
 
@@ -29,10 +29,6 @@ import { VLabel } from '../Label'
 export default {
   components: { VLabel },
   props: {
-    checked: {
-      type: Boolean,
-      default: false,
-    },
     disabled: {
       type: Boolean,
       default: false,
@@ -49,12 +45,10 @@ export default {
       type: String,
       default: '',
     },
-  },
-  data () {
-    console.log(this)
-    return {
-      isActive: this.checked,
-    }
+    value: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     id () {
@@ -62,7 +56,7 @@ export default {
     },
     classObj () {
       let obj = {}
-      obj['is-active'] = this.isActive
+      obj['is-active'] = this.value
       obj['is-disabled'] = this.disabled
       return obj
     },
@@ -70,8 +64,8 @@ export default {
   methods: {
     onClick () {
       if (this.disabled) return
-      this.isActive = !this.isActive
-      this.$emit('update:checked', this.isActive)
+      this.value = !this.value
+      this.$emit('input', this.value)
     },
   },
 }

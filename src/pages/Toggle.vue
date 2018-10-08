@@ -5,7 +5,7 @@
 
     <h2 class="ms-font-xl">Default Toggles</h2>
 
-    <VToggle :checked="true"
+    <VToggle v-model="toggle1"
              label="Enabled and checked"
              on-text="On"
              off-text="Off" />
@@ -14,7 +14,7 @@
              on-text="On"
              off-text="Off" />
 
-    <VToggle :checked="true"
+    <VToggle v-model="toggle2"
              :disabled="true"
              label="Disabled and checked"
              on-text="On"
@@ -32,5 +32,11 @@
 import { VToggle } from '../index'
 export default {
   components: { VToggle },
+  data () {
+    return {
+      toggle1: true,
+      toggle2: true,
+    }
+  },
 }
 </script>

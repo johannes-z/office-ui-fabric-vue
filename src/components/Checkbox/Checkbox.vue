@@ -43,7 +43,7 @@ export default {
       default: 'start',
       validator: v => v === 'start' || v === 'end',
     },
-    checked: {
+    value: {
       type: Boolean,
       default: false,
     },
@@ -58,7 +58,7 @@ export default {
     },
     classObj () {
       let obj = {}
-      obj['is-checked'] = this.checked
+      obj['is-checked'] = this.value
       obj['is-enabled'] = !this.disabled
       obj['is-disabled'] = this.disabled
       return obj
@@ -67,8 +67,8 @@ export default {
   methods: {
     toggleChecked () {
       if (this.disabled) return
-      this.$emit('update:checked', !this.checked)
-      this.$emit('onChange', !this.checked)
+      this.$emit('onChange', !this.value)
+      this.$emit('input', !this.value)
     },
   },
 }

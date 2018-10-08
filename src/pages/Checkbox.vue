@@ -3,29 +3,29 @@
     <h1 class="ms-font-xxl">Checkbox</h1>
 
     <p>
-      <VCheckbox :checked.sync="checkbox1"
+      <VCheckbox v-model="checkbox1"
                  label="Uncontrolled checkbox" />
     </p>
 
     <p>
-      <VCheckbox :checked.sync="checkbox2"
+      <VCheckbox v-model="checkbox2"
                  label="Uncontrolled checkbox with defaultChecked true" />
     </p>
 
     <p>
-      <VCheckbox :checked.sync="checkbox3"
+      <VCheckbox v-model="checkbox3"
                  :disabled="true"
                  label="Disabled uncontrolled checkbox" />
     </p>
 
     <p>
-      <VCheckbox :checked.sync="checkbox4"
+      <VCheckbox v-model="checkbox4"
                  :disabled="true"
                  label="Disabled uncontrolled checkbox with defaultChecked true" />
     </p>
 
     <p>
-      <VCheckbox :checked.sync="checkbox5"
+      <VCheckbox v-model="checkbox5"
                  label="Checkbox rendered with boxSide 'end'"
                  box-side="end" />
     </p>
