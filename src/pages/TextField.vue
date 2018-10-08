@@ -6,8 +6,6 @@
 
     <VTextField v-model="text1" label="Standard" />
 
-    {{ text1 }}
-
     <VTextField :disabled="true"
                 label="Disabled" />
 
