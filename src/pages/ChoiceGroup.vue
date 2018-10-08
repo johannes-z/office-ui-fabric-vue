@@ -4,7 +4,7 @@
 
     <h2 class="ms-font-xl">Default ChoiceGroup</h2>
 
-    <VChoiceGroup :options="options"
+    <VChoiceGroup v-model="options"
                   :label="label"
                   :required="required"
                   :on-change="onChange"/>

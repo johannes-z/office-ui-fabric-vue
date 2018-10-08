@@ -27,7 +27,7 @@ export default {
       type: Number,
       required: true,
     },
-    selectedIndex: {
+    value: {
       type: Number,
       required: true,
     },
@@ -37,7 +37,7 @@ export default {
       return this.option.disabled
     },
     isSelected () {
-      return this.index === this.selectedIndex
+      return this.index === this.value
     },
     key () {
       return `ChoiceGroup-${this._uid}`
@@ -46,7 +46,7 @@ export default {
   methods: {
     selectChoice () {
       if (this.option.disabled) return
-      this.$emit('update:selectedIndex', this.index)
+      this.$emit('input', this.index)
     },
   },
 }

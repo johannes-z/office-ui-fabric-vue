@@ -4,10 +4,10 @@
             :required="required">{{ label }}</VLabel>
 
     <div class="ms-ChoiceFieldGroup-flexContainer">
-      <VChoiceField v-for="(option, index) in options"
+      <VChoiceField v-for="(option, index) in value"
                     :key="index"
                     :index="index"
-                    :selected-index.sync="selectedIndex"
+                    v-model="selectedIndex"
                     :option="option" />
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    options: {
+    value: {
       type: Array,
       default () {
         return []
@@ -46,7 +46,7 @@ export default {
   },
   watch: {
     selectedIndex (newVal, oldVal) {
-      this.onChange(this.options[newVal])
+      this.onChange(this.value[newVal])
     },
   },
 }

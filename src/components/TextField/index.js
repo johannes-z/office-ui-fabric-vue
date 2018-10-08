@@ -1,5 +1,5 @@
-import TextField from './TextField.vue'
+import VTextField from './TextField.vue'
 
 export {
-  TextField,
+  VTextField,
 }

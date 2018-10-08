@@ -44,6 +44,10 @@
 <script>
 export default {
   props: {
+    value: {
+      type: Number,
+      required: true,
+    },
     label: {
       type: String,
       default: null,
@@ -80,7 +84,6 @@ export default {
   data () {
     return {
       isDragging: false,
-      value: this.defaultValue,
       renderedValue: this.defaultValue,
     }
   },
@@ -172,8 +175,9 @@ export default {
         currentValue = this.min + this.step * Math.round(currentSteps)
       }
 
-      this.value = currentValue
       this.renderedValue = renderedValue
+
+      this.$emit('input', currentValue)
 
       event.preventDefault()
       event.stopPropagation()
@@ -194,7 +198,7 @@ export default {
     },
     setValue (diff, value = this.value) {
       var newValue = Math.min(this.max, Math.max(this.min, value + diff))
-      this.value = newValue
+      this.$emit('input', newValue)
     },
   },
 }

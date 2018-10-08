@@ -1,5 +1,5 @@
-import Slider from './Slider.vue'
+import VSlider from './Slider.vue'
 
 export {
-  Slider,
+  VSlider,
 }
