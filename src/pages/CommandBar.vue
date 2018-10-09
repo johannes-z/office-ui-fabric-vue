@@ -6,9 +6,7 @@
 </template>
 
 <script>
-import { CommandBar } from '../index'
 export default {
-  components: { CommandBar },
   data () {
     return {
       items: [

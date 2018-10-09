@@ -75,10 +75,7 @@
 </template>
 
 <script>
-import { VLayer, VCheckbox, VToggle } from '../index'
-
 export default {
-  components: { VLayer, VCheckbox, VToggle },
   data () {
     return {
       showHost: true,

@@ -17,10 +17,7 @@
 </template>
 
 <script>
-import { VDefaultButton, VPanel } from '../index'
-
 export default {
-  components: { VDefaultButton, VPanel },
   data () {
     return {
       isOpen: false,

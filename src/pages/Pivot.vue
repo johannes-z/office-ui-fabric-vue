@@ -16,9 +16,7 @@
 </template>
 
 <script>
-import { VLabel, VPivot, VPivotItem } from '../index.js'
 export default {
-  components: { VLabel, VPivot, VPivotItem },
   data () {
     return {
       linkTexts: [

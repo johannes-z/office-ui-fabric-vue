@@ -45,10 +45,7 @@
 </template>
 
 <script>
-import { Label, VSlider } from '../index'
-
 export default {
-  components: { Label, VSlider },
   data () {
     return {
       slider1: 2,

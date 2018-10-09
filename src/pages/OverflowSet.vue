@@ -47,8 +47,6 @@
 </template>
 
 <script>
-import { OverflowSet } from '../index'
 export default {
-  components: { OverflowSet },
 }
 </script>

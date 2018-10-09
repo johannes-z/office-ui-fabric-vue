@@ -87,9 +87,7 @@
 </template>
 
 <script>
-import { Label, VTextField } from '../index'
 export default {
-  components: { Label, VTextField },
   data () {
     return {
       text1: 'Lorem ipsum',

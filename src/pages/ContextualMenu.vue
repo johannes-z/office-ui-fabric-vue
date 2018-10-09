@@ -7,9 +7,7 @@
 </template>
 
 <script>
-import { ContextualMenu, DefaultButton } from '../index'
 export default {
-  components: { ContextualMenu, DefaultButton },
   data () {
     return {
       items: [

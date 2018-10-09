@@ -15,9 +15,6 @@
 </template>
 
 <script>
-import { VLink } from '../index'
-
 export default {
-  components: { VLink },
 }
 </script>

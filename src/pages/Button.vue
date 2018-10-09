@@ -79,21 +79,6 @@
 </template>
 
 <script>
-import {
-  VActionButton,
-  VCompoundButton,
-  VDefaultButton,
-  VIconButton,
-  VLabel,
-} from '../index'
-
 export default {
-  components: {
-    VActionButton,
-    VCompoundButton,
-    VDefaultButton,
-    VIconButton,
-    VLabel,
-  },
 }
 </script>
