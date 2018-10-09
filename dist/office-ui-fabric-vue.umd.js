@@ -107,6 +107,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 
+/***/ "04ef":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("74bf");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("1c77b34b", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "07f3":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1073,6 +1088,21 @@ exports.push([module.i, "\n.ms-Button--icon{background-color:initial;padding:0 4
 
 /***/ }),
 
+/***/ "74bf":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("2350")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.ms-SpinButton{font-size:14px;width:100%;min-width:86px;outline:none\n}\n.ms-SpinButton .ms-SpinButton-label{display:inline-flex;float:left;margin-right:10px\n}\n.ms-SpinButton .ms-SpinButton-container{display:flex;box-sizing:border-box;height:32px;min-width:86px;border-width:1px;border-style:solid;border-color:#a6a6a6\n}\n.ms-SpinButton .ms-SpinButton-container:hover{border-color:#212121;outline:2px dashed transparent\n}\n.ms-SpinButton .ms-SpinButton-container .ms-SpinButton-input{box-sizing:border-box;box-shadow:none;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;font-size:14px;color:#333;height:100%;padding-top:0;padding-right:12px;padding-bottom:0;padding-left:12px;text-overflow:ellipsis;display:block;float:left;width:calc(100% - 14px);min-width:72px;cursor:text;user-select:text;border-style:none;outline:0;overflow:hidden\n}\n.ms-SpinButton .ms-SpinButton-container .ms-SpinButton-icons{font-size:12px;display:block;float:left;height:100%;cursor:default;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;box-sizing:border-box;outline:none\n}\n.ms-SpinButton .ms-SpinButton-container .ms-SpinButton-icons .ms-SpinButton-button{position:relative;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;box-sizing:border-box;display:block;text-align:center;cursor:default;vertical-align:top;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;width:14px;height:50%;background-color:initial;color:#333;user-select:none;outline:none;border-width:1px;border-style:solid;border-color:transparent;border-image:initial;text-decoration:none;border-radius:0\n}\n.ms-SpinButton .ms-SpinButton-container .ms-SpinButton-icons .ms-SpinButton-button:hover{color:#000;background-color:#eaeaea\n}\n.ms-SpinButton .ms-SpinButton-container .ms-SpinButton-icons .ms-SpinButton-button .ms-Icon{font-size:6px\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "7598":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1580,6 +1610,17 @@ var update = add("119943e9", content, true, {"sourceMap":false,"shadowMode":fals
 
 /***/ }),
 
+/***/ "dede":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SpinButton_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("04ef");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SpinButton_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SpinButton_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SpinButton_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
 /***/ "df55":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1789,6 +1830,7 @@ __webpack_require__.d(components_namespaceObject, "VProgressIndicator", function
 __webpack_require__.d(components_namespaceObject, "SearchBox", function() { return SearchBox; });
 __webpack_require__.d(components_namespaceObject, "Shimmer", function() { return Shimmer; });
 __webpack_require__.d(components_namespaceObject, "Spinner", function() { return Spinner; });
+__webpack_require__.d(components_namespaceObject, "VSpinButton", function() { return SpinButton; });
 __webpack_require__.d(components_namespaceObject, "VSlider", function() { return Slider; });
 __webpack_require__.d(components_namespaceObject, "VTextField", function() { return TextField; });
 __webpack_require__.d(components_namespaceObject, "VToggle", function() { return Toggle; });
@@ -3468,12 +3510,12 @@ ContextualMenuItem_component.options.__file = "ContextualMenuItem.vue"
 
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Dropdown/Dropdown.vue?vue&type=template&id=6cd94458&
-var Dropdownvue_type_template_id_6cd94458_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-Dropdown-container"},[(_vm.label)?_c('VLabel',{staticClass:"ms-Dropdown-label"},[_vm._v("\n    "+_vm._s(_vm.label)+":\n  ")]):_vm._e(),_c('div',{ref:"dropdown",staticClass:"ms-Dropdown",attrs:{"tabindex":"0","role":"listbox"},on:{"click":function($event){_vm.showCallout = !_vm.showCallout}}},[(!_vm.selectedOption)?_c('span',{staticClass:"ms-Dropdown-title ms-Dropdown-titleIsPlaceHolder ms-Dropdown-title"},[_c('span',[_vm._v("Select an option")])]):_c('span',{staticClass:"ms-Dropdown-title",attrs:{"role":"option"}},[_c('span',[_vm._v("\n        "+_vm._s(_vm.selectedOption.text)+"\n      ")])]),_c('span',{staticClass:"ms-Dropdown-caretDownWrapper"},[_c('VIcon',{attrs:{"icon-name":"ChevronDown"}})],1)]),(_vm.showCallout)?_c('VCallout',{attrs:{"do-not-layer":false,"is-beak-visible":false,"target":_vm.$refs.dropdown},on:{"onBlur":function($event){_vm.showCallout = false}}},[_c('div',{staticClass:"ms-Dropdown-dropdownItemsWrapper"},[_c('div',{staticClass:"ms-FocusZone ms-Dropdown-items",attrs:{"role":"listbox"}},_vm._l((_vm.options),function(option,index){return _c('VActionButton',{key:'dropdownItem-' + index,staticClass:"ms-Dropdown-item",attrs:{"title":option.title,"role":"option"},nativeOn:{"click":function($event){_vm.selectOption(option)}}},[_c('span',{staticClass:"ms-Dropdown-optionText"},[_vm._v("\n            "+_vm._s(option.text)+"\n          ")])])}))])]):_vm._e()],1)}
-var Dropdownvue_type_template_id_6cd94458_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Dropdown/Dropdown.vue?vue&type=template&id=e9a3b9dc&
+var Dropdownvue_type_template_id_e9a3b9dc_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-Dropdown-container"},[(_vm.label)?_c('VLabel',{staticClass:"ms-Dropdown-label"},[_vm._v("\n    "+_vm._s(_vm.label)+"\n  ")]):_vm._e(),_c('div',{ref:"dropdown",staticClass:"ms-Dropdown",attrs:{"tabindex":"0","role":"listbox"},on:{"click":function($event){_vm.showCallout = !_vm.showCallout}}},[(!_vm.selectedOption)?_c('span',{staticClass:"ms-Dropdown-title ms-Dropdown-titleIsPlaceHolder ms-Dropdown-title"},[_c('span',[_vm._v("Select an option")])]):_c('span',{staticClass:"ms-Dropdown-title",attrs:{"role":"option"}},[_c('span',[_vm._v("\n        "+_vm._s(_vm.selectedOption.text)+"\n      ")])]),_c('span',{staticClass:"ms-Dropdown-caretDownWrapper"},[_c('VIcon',{attrs:{"icon-name":"ChevronDown"}})],1)]),(_vm.showCallout)?_c('VCallout',{attrs:{"do-not-layer":false,"is-beak-visible":false,"target":_vm.$refs.dropdown},on:{"onBlur":function($event){_vm.showCallout = false}}},[_c('div',{staticClass:"ms-Dropdown-dropdownItemsWrapper"},[_c('div',{staticClass:"ms-FocusZone ms-Dropdown-items",attrs:{"role":"listbox"}},_vm._l((_vm.options),function(option,index){return _c('VActionButton',{key:'dropdownItem-' + index,staticClass:"ms-Dropdown-item",attrs:{"title":option.title,"role":"option"},nativeOn:{"click":function($event){_vm.selectOption(option)}}},[_c('span',{staticClass:"ms-Dropdown-optionText"},[_vm._v("\n            "+_vm._s(option.text)+"\n          ")])])}))])]):_vm._e()],1)}
+var Dropdownvue_type_template_id_e9a3b9dc_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Dropdown/Dropdown.vue?vue&type=template&id=6cd94458&
+// CONCATENATED MODULE: ./src/components/Dropdown/Dropdown.vue?vue&type=template&id=e9a3b9dc&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Dropdown/Dropdown.vue?vue&type=script&lang=js&
 //
@@ -3601,8 +3643,8 @@ var Dropdownvue_type_style_index_0_lang_scss_ = __webpack_require__("5a62");
 
 var Dropdown_component = normalizeComponent(
   Dropdown_Dropdownvue_type_script_lang_js_,
-  Dropdownvue_type_template_id_6cd94458_render,
-  Dropdownvue_type_template_id_6cd94458_staticRenderFns,
+  Dropdownvue_type_template_id_e9a3b9dc_render,
+  Dropdownvue_type_template_id_e9a3b9dc_staticRenderFns,
   false,
   null,
   null,
@@ -4678,6 +4720,135 @@ Spinner_component.options.__file = "Spinner.vue"
 // CONCATENATED MODULE: ./src/components/Spinner/index.js
 
 
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpinButton/SpinButton.vue?vue&type=template&id=5070be8e&
+var SpinButtonvue_type_template_id_5070be8e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-SpinButton"},[(_vm.label)?_c('VLabel',{staticClass:"ms-SpinButton-label"},[_vm._v("\n    "+_vm._s(_vm.label)+"\n  ")]):_vm._e(),_c('div',{staticClass:"ms-SpinButton-container"},[_c('input',{staticClass:"ms-SpinButton-input",attrs:{"type":"text"},domProps:{"value":_vm.value},on:{"blur":_vm.onBlur}}),_c('div',{staticClass:"ms-SpinButton-icons"},[_c('VIconButton',{staticClass:"ms-SpinButton-button",attrs:{"icon-name":"ChevronUpSmall"},nativeOn:{"click":function($event){return _vm.onIncrement($event)}}}),_c('VIconButton',{staticClass:"ms-SpinButton-button",attrs:{"icon-name":"ChevronDownSmall"},nativeOn:{"click":function($event){return _vm.onDecrement($event)}}})],1)])],1)}
+var SpinButtonvue_type_template_id_5070be8e_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/SpinButton/SpinButton.vue?vue&type=template&id=5070be8e&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpinButton/SpinButton.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var SpinButtonvue_type_script_lang_js_ = ({
+  props: {
+    label: {
+      type: String,
+      default: null
+    },
+    min: {
+      type: Number,
+      default: null
+    },
+    max: {
+      type: Number,
+      default: null
+    },
+    step: {
+      type: Number,
+      default: 1
+    },
+    value: {
+      type: Number,
+      default: null
+    }
+  },
+  methods: {
+    onBlur(event) {
+      let value = Number(event.target.value);
+      let newValue = this.validate(value);
+      this.$emit('input', newValue);
+      event.target.value = newValue;
+    },
+
+    validate(value) {
+      const {
+        min,
+        max
+      } = this;
+      if (min && value < min) return min;
+      if (max && value > max) return max;
+      return value;
+    },
+
+    onIncrement() {
+      const {
+        step,
+        max,
+        value
+      } = this;
+      let newValue = Math.min(value + step, max);
+      this.$emit('input', newValue);
+    },
+
+    onDecrement() {
+      const {
+        step,
+        min,
+        value
+      } = this;
+      let newValue = Math.max(value - step, min);
+      this.$emit('input', newValue);
+    }
+
+  }
+});
+// CONCATENATED MODULE: ./src/components/SpinButton/SpinButton.vue?vue&type=script&lang=js&
+ /* harmony default export */ var SpinButton_SpinButtonvue_type_script_lang_js_ = (SpinButtonvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/SpinButton/SpinButton.vue?vue&type=style&index=0&lang=scss&
+var SpinButtonvue_type_style_index_0_lang_scss_ = __webpack_require__("dede");
+
+// CONCATENATED MODULE: ./src/components/SpinButton/SpinButton.vue
+
+
+
+
+
+
+/* normalize component */
+
+var SpinButton_component = normalizeComponent(
+  SpinButton_SpinButtonvue_type_script_lang_js_,
+  SpinButtonvue_type_template_id_5070be8e_render,
+  SpinButtonvue_type_template_id_5070be8e_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+SpinButton_component.options.__file = "SpinButton.vue"
+/* harmony default export */ var SpinButton = (SpinButton_component.exports);
+// CONCATENATED MODULE: ./src/components/SpinButton/index.js
+
+
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Slider/Slider.vue?vue&type=template&id=572224c6&scoped=true&
 var Slidervue_type_template_id_572224c6_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-Slider root ms-Slider-enabled",class:_vm.rootClass},[(_vm.label)?_c('label',{staticClass:"ms-Label titleLabel root",attrs:{"for":_vm.id}},[_vm._v("\n    "+_vm._s(_vm.label)+"\n  ")]):_vm._e(),_c('div',{staticClass:"ms-Slider-container container"},[_c('button',{staticClass:"ms-Slider-slideBox slideBox ms-Slider-showValue ms-Slider-showTransitions showTransitions",attrs:{"id":_vm.id,"type":"button","role":"slider"},on:{"mousedown":_vm.onMouseDown,"touchstart":_vm.onTouchStart,"mouseup":_vm.onMouseUp,"touchend":_vm.onTouchEnd,"keydown":[function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"up",38,$event.key,["Up","ArrowUp"])){ return null; }_vm.setValue(1)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"right",39,$event.key,["Right","ArrowRight"])){ return null; }if('button' in $event && $event.button !== 2){ return null; }_vm.setValue(1)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"down",40,$event.key,["Down","ArrowDown"])){ return null; }_vm.setValue(-1)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"left",37,$event.key,["Left","ArrowLeft"])){ return null; }if('button' in $event && $event.button !== 0){ return null; }_vm.setValue(-1)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"home",undefined,$event.key,undefined)){ return null; }_vm.setValue(0, _vm.min)},function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"end",undefined,$event.key,undefined)){ return null; }_vm.setValue(0, _vm.max)}]}},[_c('div',{ref:"sliderLine",staticClass:"ms-Slider-line line"},[_c('span',{staticClass:"ms-Slider-thumb thumb",style:(_vm.thumbStyle)}),_c('span',{staticClass:"ms-Slider-active lineContainer activeSection",style:(_vm.activeStyle)}),_c('span',{staticClass:"ms-Slider-inactive lineContainer inactiveSection",style:(_vm.inactiveStyle)})])]),(_vm.showValue)?_c('label',{staticClass:"ms-Label ms-Slider-value valueLabel root"},[_vm._v("\n      "+_vm._s(_vm.value)+"\n    ")]):_vm._e()])])}
 var Slidervue_type_template_id_572224c6_scoped_true_staticRenderFns = []
@@ -5191,6 +5362,7 @@ Toggle_component.options.__file = "Toggle.vue"
 
 
 // CONCATENATED MODULE: ./src/components.js
+
 
 
 

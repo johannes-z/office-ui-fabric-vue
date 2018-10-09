@@ -3,7 +3,7 @@
     <!-- Label -->
     <VLabel v-if="label"
             class="ms-Dropdown-label">
-      {{ label }}:
+      {{ label }}
     </VLabel>
 
     <!-- Dropdown input -->
