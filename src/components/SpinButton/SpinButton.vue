@@ -65,12 +65,12 @@ export default {
     },
     onIncrement () {
       const { step, max, value } = this
-      let newValue = Math.min(value + step, max)
+      let newValue = Math.min(value + step, max || Infinity)
       this.$emit('input', newValue)
     },
     onDecrement () {
       const { step, min, value } = this
-      let newValue = Math.max(value - step, min)
+      let newValue = Math.max(value - step, min || -Infinity)
       this.$emit('input', newValue)
     },
   },

@@ -4711,12 +4711,12 @@ Spinner_component.options.__file = "Spinner.vue"
 // CONCATENATED MODULE: ./src/components/Spinner/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpinButton/SpinButton.vue?vue&type=template&id=5070be8e&
-var SpinButtonvue_type_template_id_5070be8e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-SpinButton"},[(_vm.label)?_c('VLabel',{staticClass:"ms-SpinButton-label"},[_vm._v("\n    "+_vm._s(_vm.label)+"\n  ")]):_vm._e(),_c('div',{staticClass:"ms-SpinButton-container"},[_c('input',{staticClass:"ms-SpinButton-input",attrs:{"type":"text"},domProps:{"value":_vm.value},on:{"blur":_vm.onBlur}}),_c('div',{staticClass:"ms-SpinButton-icons"},[_c('VIconButton',{staticClass:"ms-SpinButton-button",attrs:{"icon-name":"ChevronUpSmall"},nativeOn:{"click":function($event){return _vm.onIncrement($event)}}}),_c('VIconButton',{staticClass:"ms-SpinButton-button",attrs:{"icon-name":"ChevronDownSmall"},nativeOn:{"click":function($event){return _vm.onDecrement($event)}}})],1)])],1)}
-var SpinButtonvue_type_template_id_5070be8e_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpinButton/SpinButton.vue?vue&type=template&id=5edbc928&
+var SpinButtonvue_type_template_id_5edbc928_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-SpinButton"},[(_vm.label)?_c('VLabel',{staticClass:"ms-SpinButton-label"},[_vm._v("\n    "+_vm._s(_vm.label)+"\n  ")]):_vm._e(),_c('div',{staticClass:"ms-SpinButton-container"},[_c('input',{staticClass:"ms-SpinButton-input",attrs:{"type":"text"},domProps:{"value":_vm.value},on:{"blur":_vm.onBlur}}),_c('div',{staticClass:"ms-SpinButton-icons"},[_c('VIconButton',{staticClass:"ms-SpinButton-button",attrs:{"icon-name":"ChevronUpSmall"},nativeOn:{"click":function($event){return _vm.onIncrement($event)}}}),_c('VIconButton',{staticClass:"ms-SpinButton-button",attrs:{"icon-name":"ChevronDownSmall"},nativeOn:{"click":function($event){return _vm.onDecrement($event)}}})],1)])],1)}
+var SpinButtonvue_type_template_id_5edbc928_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/SpinButton/SpinButton.vue?vue&type=template&id=5070be8e&
+// CONCATENATED MODULE: ./src/components/SpinButton/SpinButton.vue?vue&type=template&id=5edbc928&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpinButton/SpinButton.vue?vue&type=script&lang=js&
 //
@@ -4794,7 +4794,7 @@ var SpinButtonvue_type_template_id_5070be8e_staticRenderFns = []
         max,
         value
       } = this;
-      let newValue = Math.min(value + step, max);
+      let newValue = Math.min(value + step, max || Infinity);
       this.$emit('input', newValue);
     },
 
@@ -4804,7 +4804,7 @@ var SpinButtonvue_type_template_id_5070be8e_staticRenderFns = []
         min,
         value
       } = this;
-      let newValue = Math.max(value - step, min);
+      let newValue = Math.max(value - step, min || -Infinity);
       this.$emit('input', newValue);
     }
 
@@ -4826,8 +4826,8 @@ var SpinButtonvue_type_style_index_0_lang_scss_ = __webpack_require__("dede");
 
 var SpinButton_component = normalizeComponent(
   SpinButton_SpinButtonvue_type_script_lang_js_,
-  SpinButtonvue_type_template_id_5070be8e_render,
-  SpinButtonvue_type_template_id_5070be8e_staticRenderFns,
+  SpinButtonvue_type_template_id_5edbc928_render,
+  SpinButtonvue_type_template_id_5edbc928_staticRenderFns,
   false,
   null,
   null,
