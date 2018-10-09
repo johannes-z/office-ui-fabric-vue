@@ -6,8 +6,8 @@
           class="ms-Checkbox"
           @click.prevent.stop="toggleChecked">
 
-    <Label :for="id"
-           class="ms-Checkbox-label">
+    <VLabel :for="id"
+            class="ms-Checkbox-label">
       <span v-if="boxSide === 'end'"
             class="ms-Checkbox-text">
         {{ label }}
@@ -22,17 +22,13 @@
             class="ms-Checkbox-text">
         <slot>{{ label }}</slot>
       </span>
-    </Label>
+    </VLabel>
 
   </button>
 </template>
 
 <script>
-import { VIcon } from '../Icon'
-import { Label } from '../Label'
-
 export default {
-  components: { VIcon, Label },
   props: {
     label: {
       type: String,
@@ -86,7 +82,7 @@ export default {
   cursor: pointer !important;
   outline: none;
   border-width: initial;
-  border-style: none;
+  border-style: initial;
   border-color: initial;
   border-image: initial;
   background: none;

@@ -19,9 +19,6 @@
 </template>
 
 <script>
-import { Label, SearchBox } from '../index'
-
 export default {
-  components: { Label, SearchBox },
 }
 </script>

@@ -14,10 +14,7 @@
 </template>
 
 <script>
-import { VChoiceGroup } from '../index.js'
-
 export default {
-  components: { VChoiceGroup },
   data () {
     return {
       label: 'Pick one',

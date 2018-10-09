@@ -29,9 +29,7 @@
 </template>
 
 <script>
-import { VToggle } from '../index'
 export default {
-  components: { VToggle },
   data () {
     return {
       toggle1: true,

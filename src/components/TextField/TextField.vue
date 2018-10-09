@@ -3,10 +3,10 @@
        class="ms-TextField root">
 
     <div class="ms-TextField-wrapper wrapper">
-      <Label v-if="label"
-             :required="required">
+      <VLabel v-if="label"
+              :required="required">
         {{ label }}
-      </Label>
+      </VLabel>
 
       <div :class="{ 'invalid': errorMessage }"
            class="ms-TextField-fieldGroup fieldGroup">
@@ -23,24 +23,24 @@
                    aria-invalid="false"
                    @input="$emit('input', $event.target.value)" />
       </div>
-
-      <span>
-        <div aria-live="assertive">
-          <p class="ms-TextField-errorMessage errorMessage">
-            <span>{{ errorMessage }}</span>
-          </p>
-        </div>
-      </span>
     </div>
+
+    <span v-if="errorMessage">
+      <div aria-live="assertive">
+        <p class="ms-TextField-errorMessage errorMessage">
+          <span>{{ errorMessage }}</span>
+        </p>
+      </div>
+    </span>
 
   </div>
 </template>
 
 <script>
-import { Label } from '../Label'
+import { VLabel } from '../Label'
 
 export default {
-  components: { Label },
+  components: { VLabel },
   props: {
     disabled: {
       type: Boolean,
@@ -142,8 +142,8 @@ $field-error-color: $errorTextColor;
 }
 
 // the box containing the label and input field
-input.root,
-textarea.root {
+input.ms-TextField,
+textarea.ms-TextField {
   @include ms-normalize;
   position: relative; /* Needed to position icon */
 }
@@ -201,7 +201,7 @@ textarea.root {
 }
 
 //= State: A disabled textfield
-.root.rootIsDisabled {
+.ms-TextField.rootIsDisabled {
   :global(.field) {
     background-color: $field-background-disabled-color;
     border-color: $field-border-disabled-color;
@@ -256,13 +256,13 @@ textarea.root {
 }
 
 //= State: A required textfield
-.root.rootIsRequiredLabel {
+.ms-TextField.rootIsRequiredLabel {
   :global(.ms-Label) {
     @include ms-Label-is-required;
   }
 }
 
-.root.rootIsRequiredPlaceholderOnly {
+.ms-TextField.rootIsRequiredPlaceholderOnly {
   :global(.ms-TextField-fieldGroup) {
     &::after {
       content: "*";
@@ -275,7 +275,7 @@ textarea.root {
 }
 
 //= State: An active textfield
-.root.rootIsActive {
+.ms-TextField.rootIsActive {
   @include fieldFocusBorder();
 }
 
@@ -300,7 +300,7 @@ textarea.root {
 }
 
 //== Modifier: Single line (default), underlined
-.root.rootIsUnderlined {
+.ms-TextField.rootIsUnderlined {
   border: 0px solid $field-border-color;
 
   .wrapper {
@@ -369,7 +369,7 @@ textarea.root {
 
 //== Modifier: Multiline textfield
 //
-.root.rootIsMultiline {
+.ms-TextField.rootIsMultiline {
   .fieldGroup {
     min-height: 60px;
     height: auto;
@@ -416,7 +416,7 @@ textarea.root {
   }
 }
 
-.root.rootIsMultiline {
+.ms-TextField.rootIsMultiline {
   .icon {
     @include ms-padding-right(24px);
     padding-bottom: 8px;

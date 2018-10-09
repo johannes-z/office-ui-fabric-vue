@@ -33,9 +33,7 @@
 </template>
 
 <script>
-import { VCheckbox } from '../index'
 export default {
-  components: { VCheckbox },
   data () {
     return {
       checkbox1: false,

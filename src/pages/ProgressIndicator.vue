@@ -4,21 +4,19 @@
 
     <h2 class="ms-font-l">Default ProgressIndicator</h2>
 
-    <progress-indicator :percent-complete="percentComplete"
+    <VProgressIndicator :percent-complete="percentComplete"
                         label="Example title"
                         description="Example description" />
 
     <h2 class="ms-font-l">Indeterminate ProgressIndicator</h2>
 
-    <progress-indicator label="Example title"
+    <VProgressIndicator label="Example title"
                         description="Example description" />
   </div>
 </template>
 
 <script>
-import { Label, ProgressIndicator } from '../index'
 export default {
-  components: { Label, ProgressIndicator },
   data () {
     return {
       percentComplete: 0,

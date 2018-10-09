@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import { VLabel } from '../index'
 export default {
-  components: { VLabel },
 }
 </script>

@@ -1,17 +1,17 @@
 <template>
-  <div class="ms-ProgressIndicator root">
-    <div class="ms-ProgressIndicator-itemName itemName">
+  <div class="ms-ProgressIndicator">
+    <div class="ms-ProgressIndicator-itemName">
       {{ label }}
     </div>
 
-    <div class="ms-ProgressIndicator-itemProgress itemProgress">
-      <div class="ms-ProgressIndicator-progressTrack progressTrack"/>
+    <div class="ms-ProgressIndicator-itemProgress">
+      <div class="ms-ProgressIndicator-progressTrack"/>
       <div :class="classObj"
            :style="{ width: `${percentComplete < 0 ? 0 : percentComplete}%` }"
-           class="ms-ProgressIndicator-progressBar progressBar"/>
+           class="ms-ProgressIndicator-progressBar"/>
     </div>
 
-    <div class="ms-ProgressIndicator-itemDescription itemDescription">
+    <div class="ms-ProgressIndicator-itemDescription">
       {{ description }}
     </div>
   </div>
@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../common/common.scss';
 
 // ProgressIndicator Styles
@@ -52,11 +52,11 @@ $ProgressIndicatorMarginBetweenText: 8px;
 $ProgressIndicatorButtonsWidth: 218px;
 $ProgressIndicatorTextHeight: 18px;
 
-.root {
+.ms-ProgressIndicator {
   font-weight: $ms-font-weight-regular;
 }
 
-.itemName {
+.ms-ProgressIndicator-itemName {
   color: $ms-color-neutralPrimary;
   font-size: $ms-font-size-m;
   text-overflow: ellipsis;
@@ -66,20 +66,20 @@ $ProgressIndicatorTextHeight: 18px;
   line-height: $ProgressIndicatorTextHeight + 2;
 }
 
-.itemDescription {
+.ms-ProgressIndicator-itemDescription {
   color: $ms-color-neutralSecondaryAlt;
   font-size: $ms-font-size-xs;
   line-height: $ProgressIndicatorTextHeight;
 }
 
-.itemProgress {
+.ms-ProgressIndicator-itemProgress {
   position: relative;
   overflow: hidden;
   height: 2px;
   padding: $ProgressIndicatorMarginBetweenText 0;
 }
 
-.progressTrack {
+.ms-ProgressIndicator-progressTrack {
   position: absolute;
   width: 100%;
   height: 2px;
@@ -89,7 +89,7 @@ $ProgressIndicatorTextHeight: 18px;
   }
 }
 
-.progressBar {
+.ms-ProgressIndicator-progressBar {
   background-color: $ms-color-themePrimary;
   height: 2px;
   position: absolute;
@@ -101,6 +101,12 @@ $ProgressIndicatorTextHeight: 18px;
     background: linear-gradient(to right, transparent 0%, $ms-color-themePrimary 50%, transparent 100%);
     animation: indeterminateProgress 3s infinite;
   }
+  &.smoothTransition {
+    transition-property: width;
+    transition-timing-function: linear;
+    transition-duration: 150ms;
+  }
+
   @include high-contrast {
     background-color: WindowText;
   }
@@ -109,12 +115,6 @@ $ProgressIndicatorTextHeight: 18px;
       animation: indeterminateProgressRTL 3s infinite;
     }
   }
-}
-
-.smoothTransition {
-  transition-property: width;
-  transition-timing-function: linear;
-  transition-duration: 150ms;
 }
 
 @keyframes indeterminateProgress {

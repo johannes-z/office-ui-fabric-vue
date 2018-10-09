@@ -20,9 +20,7 @@
 </template>
 
 <script>
-import { VBreadcrumb, VLabel } from '../index'
 export default {
-  components: { VBreadcrumb, VLabel },
   data () {
     return {
       items: [

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import { VLink } from './'
+import Fabric from './'
 
 import Button from './pages/Button.vue'
 import Breadcrumb from './pages/Breadcrumb.vue'
@@ -25,6 +25,7 @@ import Slider from './pages/Slider.vue'
 import TextField from './pages/TextField.vue'
 import Toggle from './pages/Toggle.vue'
 
+Vue.use(Fabric)
 Vue.use(VueRouter)
 
 const routes = [
@@ -82,14 +83,13 @@ const router = new VueRouter({
 
 const app = new Vue({
   router,
-  components: { VLink },
   render (h) {
     var navItems = routes.map(category => {
       var links = category.children.map(route => (
         <router-link tag="li"
           to={route.path}
           style="margin-bottom: 6px;">
-          <VLink>{route.name}</VLink>
+          <v-link>{route.name}</v-link>
         </router-link>
       ))
       return (

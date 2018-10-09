@@ -2,30 +2,28 @@
   <div style="max-width: 300px;">
     <h1 class="ms-font-xxl">Spinner</h1>
 
-    <Label>Extra Small Spinner</Label>
+    <VLabel>Extra Small Spinner</VLabel>
     <Spinner :size="0" />
 
-    <Label>Small Spinner</Label>
+    <VLabel>Small Spinner</VLabel>
     <Spinner :size="1" />
 
-    <Label>Medium Spinner</Label>
+    <VLabel>Medium Spinner</VLabel>
     <Spinner />
 
-    <Label>Large Spinner</Label>
+    <VLabel>Large Spinner</VLabel>
     <Spinner :size="3"/>
 
-    <Label>Spinner with Label</Label>
+    <VLabel>Spinner with Label</VLabel>
     <Spinner label="I am definitely loading..." />
 
-    <Label>Large Spinner with Label</Label>
+    <VLabel>Large Spinner with Label</VLabel>
     <Spinner :size="3" label="Seriously, still loading..." />
   </div>
 </template>
 
 <script>
-import { Label, Spinner } from '../index'
 export default {
-  components: { Label, Spinner },
 }
 
 </script>

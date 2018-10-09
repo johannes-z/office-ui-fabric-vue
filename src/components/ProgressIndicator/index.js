@@ -1,5 +1,5 @@
-import ProgressIndicator from './ProgressIndicator.vue'
+import VProgressIndicator from './ProgressIndicator.vue'
 
 export {
-  ProgressIndicator,
+  VProgressIndicator,
 }

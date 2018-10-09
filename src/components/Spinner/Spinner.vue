@@ -1,10 +1,10 @@
 <template>
-  <div class="ms-Spinner root">
+  <div class="ms-Spinner">
     <div :class="classObj"
          :style="styleObj"
-         class="ms-Spinner-circle circle"/>
+         class="ms-Spinner-circle"/>
 
-    <div v-if="size >= 2" class="ms-Spinner-label label">
+    <div v-if="size >= 2" class="ms-Spinner-label">
       {{ label }}
     </div>
   </div>
@@ -48,7 +48,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../common/common.scss';
 
 @keyframes spinAnimation {
@@ -60,26 +60,29 @@ export default {
     }
 }
 
-.circle {
-  margin: auto;
-  box-sizing: border-box;
+.ms-Spinner {
+  .ms-Spinner-circle {
+    margin: auto;
+    box-sizing: border-box;
 
-  animation-name: spinAnimation;
-  animation-duration: 1.3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(0.53, 0.21, 0.29, 0.67);
-  border-radius: 50%;
-  border-width: 1.5px;
-  border-style: solid;
-  border-color: $ms-color-themePrimary
-                $ms-color-themeLight
-                $ms-color-themeLight;
-  border-image: initial;
+    animation-name: spinAnimation;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.53, 0.21, 0.29, 0.67);
+    border-radius: 50%;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: $ms-color-themePrimary
+                  $ms-color-themeLight
+                  $ms-color-themeLight;
+    border-image: initial;
+  }
+
+  .ms-Spinner-label {
+    color: $ms-color-themePrimary;
+    margin-top: 10px;
+    text-align: center;
+  }
 }
 
-.label {
-  color: $ms-color-themePrimary;
-  margin-top: 10px;
-  text-align: center;
-}
 </style>

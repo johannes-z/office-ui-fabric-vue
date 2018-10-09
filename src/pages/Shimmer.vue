@@ -5,9 +5,7 @@
 </template>
 
 <script>
-import { Label, Shimmer } from '../index'
 export default {
-  components: { Label, Shimmer },
 }
 
 </script>
