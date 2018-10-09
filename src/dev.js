@@ -20,6 +20,7 @@ import Pivot from './pages/Pivot.vue'
 import ProgressIndicator from './pages/ProgressIndicator.vue'
 import Shimmer from './pages/Shimmer.vue'
 import SearchBox from './pages/SearchBox.vue'
+import SpinButton from './pages/SpinButton.vue'
 import Spinner from './pages/Spinner.vue'
 import Slider from './pages/Slider.vue'
 import TextField from './pages/TextField.vue'
@@ -40,6 +41,7 @@ const routes = [
       { name: 'Label', path: '/label', component: Label },
       { name: 'Link', path: '/link', component: Link },
       { name: 'Slider', path: '/slider', component: Slider },
+      { name: 'SpinButton', path: '/spinButton', component: SpinButton },
       { name: 'TextField', path: '/textfield', component: TextField },
       { name: 'Toggle', path: '/toggle', component: Toggle },
     ] },
