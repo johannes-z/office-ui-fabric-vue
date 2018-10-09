@@ -43,11 +43,7 @@
 </template>
 
 <script>
-import { SearchBox } from '../SearchBox'
-import { VActionButton } from '../../index.js'
-
 export default {
-  components: { VActionButton, SearchBox },
   props: {
     items: {
       type: Array,

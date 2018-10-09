@@ -29,14 +29,14 @@ export default {
     },
   },
   created () {
-    // if (this.hostId) {
-    //   registerLayer(this.hostId, this)
-    // }
+    if (this.hostId) {
+      registerLayer(this.hostId, this)
+    }
   },
   beforeDestroy () {
-    // if (this.hostId) {
-    //   unregisterLayer(this.hostId, this)
-    // }
+    if (this.hostId) {
+      unregisterLayer(this.hostId, this)
+    }
 
     const parentNode = this.node.parentNode
     if (parentNode) {
