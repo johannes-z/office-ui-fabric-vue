@@ -4,11 +4,12 @@
             :required="required">{{ label }}</VLabel>
 
     <div class="ms-ChoiceFieldGroup-flexContainer">
-      <VChoiceField v-for="(option, index) in value"
+      <VChoiceField v-for="(option, index) in options"
                     :key="index"
                     :index="index"
                     v-model="selectedIndex"
-                    :option="option" />
+                    :option="option"
+                    @input="onChange" />
     </div>
   </div>
 </template>
@@ -29,24 +30,27 @@ export default {
       default: false,
     },
     value: {
+      type: String,
+      default: null,
+    },
+    options: {
       type: Array,
       default () {
         return []
       },
     },
-    onChange: {
-      type: Function,
-      default () {},
-    },
   },
   data () {
     return {
-      selectedIndex: -1,
+      selectedIndex: this.options.findIndex(o => o.key === this.value),
     }
   },
-  watch: {
-    selectedIndex (newVal, oldVal) {
-      this.onChange(this.value[newVal])
+  methods: {
+    onChange (index) {
+      const option = this.options[index]
+      const { key, text } = option
+      this.$emit('input', key || text)
+      this.$emit('onChange', option)
     },
   },
 }

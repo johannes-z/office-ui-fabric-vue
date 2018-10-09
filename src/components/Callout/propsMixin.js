@@ -12,5 +12,9 @@ export default {
       type: HTMLElement,
       required: true,
     },
+    isBeakVisible: {
+      type: Boolean,
+      default: true,
+    },
   },
 }

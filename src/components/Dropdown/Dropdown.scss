@@ -24,7 +24,7 @@ $DropDown-item-height: 32px;
   }
 }
 
-.root {
+.ms-Dropdown-container {
   @include ms-normalize;
   @include ms-font-m;
   color: $ms-color-neutralPrimary;
@@ -34,48 +34,48 @@ $DropDown-item-height: 32px;
   &:hover,
   &:focus,
   &:active {
-    .title,
-    .caretDown {
+    .ms-Dropdown-title,
+    .ms-Dropdown-caretDown {
       color: $ms-color-neutralDark;
     }
-    .titleIsPlaceHolder {
+    .ms-Dropdown-titleIsPlaceHolder {
       color: $ms-color-neutralSecondary;
     }
   }
   &:hover {
-    .title {
+    .ms-Dropdown-title {
       border-color: $ms-color-neutralDark;
       @include highContrastBorderState();
     }
-    .titleIsError {
+    .ms-Dropdown-titleIsError {
       border-color: $ms-color-error;
     }
   }
   &:active {
-    .title {
+    .ms-Dropdown-title {
       border-color: $ms-color-themeDark;
       @include highContrastBorderState();
     }
-    .titleIsError {
+    .ms-Dropdown-titleIsError {
       border-color: $ms-color-error;
     }
   }
   &:focus {
-    .title {
+    .ms-Dropdown-title {
       border-color: $ms-color-themePrimary;
       @include highContrastItemAndTitleState();
     }
-    .caretDown {
+    .ms-Dropdown-caretDown {
       @include high-contrast {
         color: HighlightText;
       }
       @include highContrastAdjust();
     }
-    .titleIsError {
+    .ms-Dropdown-titleIsError {
       border-color: $ms-color-error;
     }
   }
-  .titleIsError {
+  .ms-Dropdown-titleIsError {
     border-color: $ms-color-error;
   }
   :global(.ms-Label) {
@@ -85,8 +85,8 @@ $DropDown-item-height: 32px;
 }
 
 //== State: A disabled dropdown
-.root.rootIsDisabled {
-  .title {
+.ms-Dropdown-container.rootIsDisabled {
+  .ms-Dropdown-title {
     background-color: $ms-color-neutralLighter;
     border: none;
     color: $ms-color-neutralTertiary;
@@ -95,11 +95,11 @@ $DropDown-item-height: 32px;
       border: 1px solid GrayText;
       color: GrayText;
     }
-    &.titleIsError {
+    &.ms-Dropdown-titleIsError {
       border-color: $ms-color-error;
     }
   }
-  .caretDown {
+  .ms-Dropdown-caretDown {
     color: $ms-color-neutralTertiary;
     @include high-contrast {
       color: GrayText;
@@ -107,13 +107,13 @@ $DropDown-item-height: 32px;
   }
 }
 
-.listWrapper {
+.ms-Dropdown-listWrapper {
   &:focus {
     outline: 0;
   }
 }
 
-.caretDownWrapper {
+.ms-Dropdown-caretDownWrapper {
   position: absolute;
   top: 1px; // border
   @include ms-right(12px);
@@ -121,14 +121,14 @@ $DropDown-item-height: 32px;
   line-height: $DropDown-height - 2px; // height minus the border
 }
 
-.caretDown {
+.ms-Dropdown-caretDown {
   color: $ms-color-neutralSecondary;
   font-size: $ms-icon-size-s;
   pointer-events: none;
 }
 
 // Style the new, replacement component
-.title {
+.ms-Dropdown-title {
   @include ms-normalize;
   background: $ms-color-white;
   border: 1px solid $ms-color-neutralTertiary;
@@ -141,12 +141,12 @@ $DropDown-item-height: 32px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  &.titleIsPlaceHolder {
+  &.ms-Dropdown-titleIsPlaceHolder {
     color: $ms-color-neutralSecondary;
   }
 }
 
-.panel {
+.ms-Dropdown-panel {
   // Force drop shadow even under medium breakpoint
   :global(.ms-Panel-main) {
     @include ms-drop-shadow(-30px, 0px, 30px, -30px, 0.2);
@@ -156,23 +156,23 @@ $DropDown-item-height: 32px;
   }
 }
 
-.callout.callout {
+.ms-Dropdown-callout.callout {
   box-shadow: 0 0px 2px 0px rgba(0, 0, 0, 0.2);
   border: 1px solid $ms-color-neutralLight;
 }
 
-.errorMessage {
+.ms-Dropdown-errorMessage {
   color: $ms-color-error;
   @include ms-font-s;
   padding-top: 5px;
 }
 
-.items {
+.ms-Dropdown-items {
   display: block;
 }
 
 // Container for the dropdown items, displayed as a panel on small screens.
-.item {
+.ms-Dropdown-item {
   background: transparent;
   box-sizing: border-box;
   cursor: pointer;
@@ -192,7 +192,7 @@ $DropDown-item-height: 32px;
     border-color: Window;
   }
   &:hover {
-    color: inherit;
+    background-color: $ms-color-neutralLighter !important;
   }
   &:focus {
     background-color: $ms-color-neutralLighter;
@@ -212,7 +212,7 @@ $DropDown-item-height: 32px;
 }
 
 //== State: A selected dropdown item
-.item.itemIsSelected {
+.ms-Dropdown-item.itemIsSelected {
   background-color: $Dropdown-selectedItem-bg;
   color: $ms-color-black;
   @include highContrastItemAndTitleState;
@@ -222,7 +222,7 @@ $DropDown-item-height: 32px;
   }
 }
 
-.header {
+.ms-Dropdown-header {
   @include ms-font-m;
   font-weight: $ms-font-weight-semibold;
   color: $ms-color-themePrimary;
@@ -237,12 +237,12 @@ $DropDown-item-height: 32px;
   @include text-align(left);
 }
 
-.divider {
+.ms-Dropdown-divider {
   height: 1px;
   background-color: $bodyDividerColor;
 }
 
-.optionText {
+.ms-Dropdown-optionText {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -251,4 +251,25 @@ $DropDown-item-height: 32px;
   word-wrap: break-word;
   overflow-wrap: break-word;
   margin: 1px;
+}
+
+.ms-Dropdown {
+  box-shadow: none;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  position: relative;
+  user-select: none;
+  outline: 0px;
 }

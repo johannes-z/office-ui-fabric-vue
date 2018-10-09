@@ -5,7 +5,9 @@
     <h2 class="ms-font-xl">Default Callout</h2>
     <VDefaultButton ref="calloutButton"
                     @click.native="showCallout = !showCallout">
+
       {{ showCallout ? 'Hide callout' : 'Show callout' }}
+
     </VDefaultButton>
     <VCallout v-if="showCallout"
               :do-not-layer="false"
@@ -14,10 +16,7 @@
 </template>
 
 <script>
-import { VDefaultButton, VCallout } from '../index'
-
 export default {
-  components: { VDefaultButton, VCallout },
   data () {
     return {
       showCallout: false,

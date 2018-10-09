@@ -1,15 +1,19 @@
 <template>
-  <div class="ms-Callout-container">
+  <div ref="container"
+       class="ms-Callout-container">
     <div :style="styleContainer"
-         style="max-width: 300px;"
          class="ms-Callout">
-      <div class="ms-Callout-beak"
+      <div v-if="isBeakVisible"
+           class="ms-Callout-beak"
            style="left: 51.2344px; top: -8px;" />
       <div class="ms-Callout-beakCurtain" />
       <div class="ms-Callout-main">
-        <p class="ms-font-xl">All of your favorite people</p>
 
-        <p>Message body is optional. If help documentation is available, consider adding a link to learn more at the bottom.</p>
+        <slot>
+          <p class="ms-font-xl">All of your favorite people</p>
+
+          <p>Message body is optional. If help documentation is available, consider adding a link to learn more at the bottom.</p>
+        </slot>
 
       </div>
     </div>
@@ -25,13 +29,24 @@ export default {
     styleContainer () {
       const rect = this.target.getBoundingClientRect()
       return {
+        width: `${rect.width}px`,
         left: `${rect.left}px`,
-        top: `${rect.top + rect.height + 11.3}px`,
+        top: `${rect.top + rect.height}px`,
       }
     },
   },
+  beforeDestroy () {
+    document.removeEventListener('click', this.onClick)
+  },
   mounted () {
-
+    document.addEventListener('click', this.onClick)
+  },
+  methods: {
+    onClick (event) {
+      var index = event.path.indexOf(this.$refs.container)
+      if (index > -1) return
+      this.$emit('onBlur', event)
+    },
   },
 }
 </script>

@@ -64,8 +64,7 @@ export default {
   methods: {
     onClick () {
       if (this.disabled) return
-      this.value = !this.value
-      this.$emit('input', this.value)
+      this.$emit('input', !this.value)
     },
   },
 }

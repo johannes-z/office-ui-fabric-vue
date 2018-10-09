@@ -4,10 +4,11 @@
 
     <h2 class="ms-font-xl">Default ChoiceGroup</h2>
 
-    <VChoiceGroup v-model="options"
+    <VChoiceGroup v-model="selected"
+                  :options="options"
                   :label="label"
                   :required="required"
-                  :on-change="onChange"/>
+                  @onChange="onChange"/>
 
     <h2 class="ms-font-xl">ChoiceGroup with dropdown</h2>
   </div>
@@ -19,9 +20,7 @@ export default {
     return {
       label: 'Pick one',
       required: true,
-      onChange (option) {
-        console.dir(option)
-      },
+      selected: 'B',
       options: [
         {
           key: 'A',
@@ -43,6 +42,11 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    onChange (option) {
+      console.log(option)
+    },
   },
 }
 </script>
