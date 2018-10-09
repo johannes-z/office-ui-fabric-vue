@@ -1,5 +1,5 @@
-import Dropdown from './Dropdown.vue'
+import VDropdown from './Dropdown.vue'
 
 export {
-  Dropdown,
+  VDropdown,
 }

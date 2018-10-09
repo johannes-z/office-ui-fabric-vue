@@ -1,5 +1,7 @@
-import ContextualMenu from './ContextualMenu.vue'
+import VContextualMenu from './ContextualMenu.vue'
+import VContextualMenuItem from './ContextualMenuItem.vue'
 
 export {
-  ContextualMenu,
+  VContextualMenu,
+  VContextualMenuItem,
 }

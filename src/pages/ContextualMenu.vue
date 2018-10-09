@@ -1,8 +1,8 @@
 <template>
   <div>
-    <default-button text="Click for ContextualMenu">
-      <contextual-menu :items="items" />
-    </default-button>
+    <VDefaultButton text="Click for ContextualMenu">
+      <VContextualMenu :items="items" />
+    </VDefaultButton>
   </div>
 </template>
 

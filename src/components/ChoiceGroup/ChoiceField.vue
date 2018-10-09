@@ -1,7 +1,7 @@
 <template>
   <div :class="{ isDisabled, isSelected }"
        class="ms-ChoiceField"
-       @click="selectChoice">
+       @click.prevent.stop="selectChoice">
     <div class="ms-ChoiceField-wrapper">
       <input :id="key"
              :disabled="option.disabled"

@@ -1,10 +1,16 @@
 <template>
 
   <VCalloutContent v-if="doNotLayer"
-                   v-bind="$props" />
+                   v-bind="$props"
+                   @onBlur="$emit('onBlur', $event)" />
+
   <VLayer v-else>
-    <VCalloutContent v-bind="$props" />
+    <VCalloutContent v-bind="$props"
+                     @onBlur="$emit('onBlur', $event)" >
+      <slot />
+    </VCalloutContent>
   </VLayer>
+
 </template>
 
 <script>
