@@ -7,10 +7,7 @@
 </template>
 
 <script>
-import { VActionButton } from '../../index.js'
-
 export default {
-  components: { VActionButton },
   props: {
     linkText: {
       type: String,

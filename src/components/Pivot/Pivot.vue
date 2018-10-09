@@ -1,27 +1,6 @@
 
 <script>
-// <template>
-//   <div>
-//     <div class="ms-FocusZone">
-//       <ul class="ms-Pivot" role="tablist">
-//         <!-- <VPivotItem v-for="(linkText, index) in linkTexts"
-//                     :key="index"
-//                     :index="index"
-//                     :selected-index.sync="selectedIndex"
-//                     :link-text="linkText">
-//           {{ linkText }}
-//         </VPivotItem> -->
-//       </ul>
-//     </div>
-//     <div role="tabpanel">
-//       test
-//     </div>
-//   </div>
-// </template>
-import VPivotItem from './PivotItem.vue'
-
 export default {
-  components: { VPivotItem },
   props: {
     linkTexts: {
       type: Array,

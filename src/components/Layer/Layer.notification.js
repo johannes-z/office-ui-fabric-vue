@@ -38,9 +38,9 @@ export function unregisterLayer (hostId, layer) {
  */
 export function notifyHostChanged (id) {
   console.log('notifyHostChanged')
-  // if (_layersByHostId[id]) {
-  //   _layersByHostId[id].forEach(layer => layer.forceUpdate())
-  // }
+  if (_layersByHostId[id]) {
+    _layersByHostId[id].forEach(layer => layer.forceUpdate())
+  }
 }
 
 /**
