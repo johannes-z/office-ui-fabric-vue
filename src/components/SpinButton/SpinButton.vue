@@ -52,15 +52,17 @@ export default {
   },
   methods: {
     onBlur (event) {
-      let value = Number(event.target.value)
+      let value = event.target.value ? Number(event.target.value) : null
       let newValue = this.validate(value)
+      if (isNaN(newValue)) newValue = null
       this.$emit('input', newValue)
       event.target.value = newValue
     },
     validate (value) {
+      if (value == null) return value
       const { min, max } = this
-      if (min && (value < min)) return min
-      if (max && (value > max)) return max
+      if (min != null && (value < min)) return min
+      if (max != null && (value > max)) return max
       return value
     },
     onIncrement () {
