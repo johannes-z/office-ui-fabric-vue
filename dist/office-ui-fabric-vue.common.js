@@ -165,21 +165,6 @@ exports.push([module.i, "\n.ms-Persona[size=\"14\"]>.ms-Persona-details[data-v-e
 
 /***/ }),
 
-/***/ "0bc9":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("2350")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\ninput.ms-TextField[data-v-51675226],textarea.ms-TextField[data-v-51675226]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;position:relative\n}\n.screenReaderOnly[data-v-51675226]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0\n}\n.fieldGroup[data-v-51675226]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;border:1px solid #a6a6a6;background:#fff;height:32px;display:flex;flex-direction:row;align-items:stretch;position:relative\n}\n.fieldGroup[data-v-51675226]:hover{border-color:#212121\n}\n.fieldGroup.fieldGroupIsFocused[data-v-51675226]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.fieldGroup.fieldGroupIsFocused[data-v-51675226]{border-width:2px\n}\n.fieldGroup.fieldGroupIsFocused .field[data-v-51675226],[dir=rtl] .fieldGroup.fieldGroupIsFocused .field[data-v-51675226]{padding:0 11px 0 11px\n}\n}\n.fieldGroup.fieldGroupIsFocused.invalid[data-v-51675226]{border-color:#a80000\n}\n.rootIsDisabled .fieldGroup[data-v-51675226]{background-color:#f4f4f4;border-color:#f4f4f4\n}\n@media screen and (-ms-high-contrast:active){\n.fieldGroup.fieldGroupIsFocused[data-v-51675226],.fieldGroup[data-v-51675226]:hover{border-color:Highlight\n}\n}\n.fieldGroup[data-v-51675226]::-ms-clear{display:none\n}\n.fieldGroup[data-v-51675226] :-ms-input-placeholder,.fieldGroup[data-v-51675226] ::placeholder{color:#666;opacity:1\n}\n.ms-TextField.rootIsDisabled[data-v-51675226] .field{background-color:#f4f4f4;border-color:#f4f4f4\n}\n.fieldPrefixSuffix[data-v-51675226]{align-items:center;background:#f4f4f4;color:#666;display:flex;line-height:1;padding:0 10px;white-space:nowrap\n}\n.field[data-v-51675226]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;font-size:14px;border-radius:0;border:none;background:none;background-color:initial;color:#333;padding:0 12px 0 12px;width:100%;min-width:0;text-overflow:ellipsis;outline:0\n}\n[dir=rtl] .field[data-v-51675226]{padding:0 12px 0 12px\n}\n.field[data-v-51675226]:active,.field[data-v-51675226]:focus,.field[data-v-51675226]:hover{outline:0\n}\n[dir=ltr] .field.hasIcon[data-v-51675226]{padding-right:24px\n}\n[dir=rtl] .field.hasIcon[data-v-51675226]{padding-left:24px\n}\n.field[disabled][data-v-51675226]{background-color:initial;border-color:transparent\n}\n.field[data-v-51675226]::placeholder{color:#666\n}\n.ms-TextField.rootIsRequiredLabel[data-v-51675226] .ms-Label:after{content:\" *\";color:#a80000\n}\n.ms-TextField.rootIsRequiredPlaceholderOnly[data-v-51675226] .ms-TextField-fieldGroup:after{content:\"*\";color:#a80000;position:absolute;top:-5px\n}\n[dir=ltr] .ms-TextField.rootIsRequiredPlaceholderOnly[data-v-51675226] .ms-TextField-fieldGroup:after{right:-10px\n}\n[dir=rtl] .ms-TextField.rootIsRequiredPlaceholderOnly[data-v-51675226] .ms-TextField-fieldGroup:after{left:-10px\n}\n.ms-TextField.rootIsActive[data-v-51675226]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.ms-TextField.rootIsActive[data-v-51675226]{border-width:2px\n}\n.ms-TextField.rootIsActive .field[data-v-51675226],[dir=rtl] .ms-TextField.rootIsActive .field[data-v-51675226]{padding:0 11px 0 11px\n}\n}\n.icon[data-v-51675226]{pointer-events:none;position:absolute;bottom:5px;top:auto;font-size:16px;line-height:18px\n}\nhtml[dir=ltr] .icon[data-v-51675226]{right:8px\n}\nhtml[dir=rtl] .icon[data-v-51675226]{left:8px\n}\n.description[data-v-51675226]{color:#666;font-size:11px\n}\n.rootIsBorderless .fieldGroup[data-v-51675226]{border-color:transparent;border-width:0\n}\n.ms-TextField.rootIsUnderlined[data-v-51675226]{border:0 solid #a6a6a6\n}\n.ms-TextField.rootIsUnderlined .wrapper[data-v-51675226]{display:flex;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:inherit;width:100%\n}\n.ms-TextField.rootIsUnderlined .wrapper.invalid[data-v-51675226],.ms-TextField.rootIsUnderlined .wrapper.invalid[data-v-51675226]:focus,.ms-TextField.rootIsUnderlined .wrapper.invalid[data-v-51675226]:hover{border-bottom:1px solid #a80000\n}\n.ms-TextField.rootIsUnderlined[data-v-51675226] .ms-Label{font-size:14px;line-height:22px;height:32px\n}\n[dir=ltr] .ms-TextField.rootIsUnderlined[data-v-51675226] .ms-Label{margin-right:8px\n}\n[dir=rtl] .ms-TextField.rootIsUnderlined[data-v-51675226] .ms-Label{margin-left:8px\n}\n[dir=ltr] .ms-TextField.rootIsUnderlined[data-v-51675226] .ms-Label{padding-left:12px\n}\n[dir=rtl] .ms-TextField.rootIsUnderlined[data-v-51675226] .ms-Label{padding-right:12px\n}\n.ms-TextField.rootIsUnderlined .fieldGroup[data-v-51675226]{flex:1 1 0px;border-width:0\n}\n[dir=ltr] .ms-TextField.rootIsUnderlined .fieldGroup[data-v-51675226]{text-align:left\n}\n[dir=rtl] .ms-TextField.rootIsUnderlined .fieldGroup[data-v-51675226]{text-align:right\n}\n.ms-TextField.rootIsUnderlined.rootIsDisabled[data-v-51675226]{border-color:#f4f4f4\n}\n.ms-TextField.rootIsUnderlined.rootIsDisabled[data-v-51675226] .ms-Label{color:#a6a6a6\n}\n.ms-TextField.rootIsUnderlined.rootIsDisabled .field[data-v-51675226]{background-color:initial;color:#a6a6a6\n}\n.ms-TextField.rootIsUnderlined.rootIsDisabled .fieldGroup[data-v-51675226]{background-color:initial\n}\n.ms-TextField.rootIsUnderlined[data-v-51675226]:hover:not(.rootIsActive):not(.rootIsDisabled){border-color:#212121\n}\n.ms-TextField.rootIsUnderlined.rootIsActive[data-v-51675226]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.ms-TextField.rootIsUnderlined.rootIsActive[data-v-51675226]{border-width:2px\n}\n.ms-TextField.rootIsUnderlined.rootIsActive .field[data-v-51675226],[dir=rtl] .ms-TextField.rootIsUnderlined.rootIsActive .field[data-v-51675226]{padding:0 11px 0 11px\n}\n}\n@media screen and (-ms-high-contrast:active){\n.ms-TextField.rootIsUnderlined.rootIsActive .wrapper[data-v-51675226],.ms-TextField.rootIsUnderlined:hover:not(.rootIsDisabled) .wrapper[data-v-51675226]{border-color:Highlight\n}\n}\n.ms-TextField.rootIsMultiline .fieldGroup[data-v-51675226]{min-height:60px;height:auto;display:flex\n}\n.ms-TextField.rootIsMultiline .field[data-v-51675226]{line-height:17px;flex-grow:1;padding-top:6px;overflow:auto;width:100%\n}\n[dir=ltr] .ms-TextField.rootIsMultiline .field.hasIcon[data-v-51675226]{padding-right:40px\n}\n[dir=rtl] .ms-TextField.rootIsMultiline .field.hasIcon[data-v-51675226]{padding-left:40px\n}\n.errorMessage[data-v-51675226]{font-size:12px;font-weight:400;color:#a80000;margin:0;padding-top:5px;display:flex;align-items:center\n}\n.invalid[data-v-51675226],.invalid[data-v-51675226]:focus,.invalid[data-v-51675226]:hover{border-color:#a80000\n}\n[dir=ltr] .root.rootIsUnderlined[data-v-51675226] .ms-Label{padding-left:12px\n}\n[dir=rtl] .root.rootIsUnderlined[data-v-51675226] .ms-Label{padding-right:12px\n}\n[dir=ltr] .root.rootIsUnderlined[data-v-51675226] .ms-Label{padding-right:0\n}\n[dir=rtl] .root.rootIsUnderlined[data-v-51675226] .ms-Label{padding-left:0\n}\nhtml[dir=ltr] .root.rootIsUnderlined .field[data-v-51675226]{text-align:left\n}\nhtml[dir=rtl] .root.rootIsUnderlined .field[data-v-51675226]{text-align:right\n}\n.ms-TextField.rootIsMultiline .icon[data-v-51675226]{padding-bottom:8px;align-items:flex-end\n}\n[dir=ltr] .ms-TextField.rootIsMultiline .icon[data-v-51675226]{padding-right:24px\n}\n[dir=rtl] .ms-TextField.rootIsMultiline .icon[data-v-51675226]{padding-left:24px\n}\n.ms-TextField.rootIsMultiline .field.fieldIsUnresizable[data-v-51675226]{resize:none\n}\n.hidden[data-v-51675226]{display:none\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "1248":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -274,21 +259,6 @@ if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__("499e").default
 var update = add("6d0529a6", content, true, {"sourceMap":false,"shadowMode":false});
-
-/***/ }),
-
-/***/ "1b0b":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("0bc9");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("69ad233a", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -417,6 +387,17 @@ function toComment(sourceMap) {
 	return '/*# ' + data + ' */';
 }
 
+
+/***/ }),
+
+/***/ "2b2b":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_59ff20cd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("5274");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_59ff20cd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_59ff20cd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_59ff20cd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -866,6 +847,21 @@ var update = add("603f34c7", content, true, {"sourceMap":false,"shadowMode":fals
 
 /***/ }),
 
+/***/ "5274":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("d268");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("4948b430", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "55a9":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1284,17 +1280,6 @@ var update = add("68cdaf54", content, true, {"sourceMap":false,"shadowMode":fals
 
 /***/ }),
 
-/***/ "a942":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_51675226_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("1b0b");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_51675226_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_51675226_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TextField_vue_vue_type_style_index_0_id_51675226_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "aab1":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1538,6 +1523,21 @@ var update = add("9b00382e", content, true, {"sourceMap":false,"shadowMode":fals
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DefaultButton_vue_vue_type_style_index_1_id_db57977e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DefaultButton_vue_vue_type_style_index_1_id_db57977e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
  /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_lib_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DefaultButton_vue_vue_type_style_index_1_id_db57977e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "d268":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("2350")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\ninput.ms-TextField[data-v-59ff20cd],textarea.ms-TextField[data-v-59ff20cd]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;position:relative\n}\n.screenReaderOnly[data-v-59ff20cd]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0\n}\n.fieldGroup[data-v-59ff20cd]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;border:1px solid #a6a6a6;background:#fff;height:32px;display:flex;flex-direction:row;align-items:stretch;position:relative\n}\n.fieldGroup[data-v-59ff20cd]:hover{border-color:#212121\n}\n.fieldGroup.fieldGroupIsFocused[data-v-59ff20cd]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.fieldGroup.fieldGroupIsFocused[data-v-59ff20cd]{border-width:2px\n}\n.fieldGroup.fieldGroupIsFocused .field[data-v-59ff20cd],[dir=rtl] .fieldGroup.fieldGroupIsFocused .field[data-v-59ff20cd]{padding:0 11px 0 11px\n}\n}\n.fieldGroup.fieldGroupIsFocused.invalid[data-v-59ff20cd]{border-color:#a80000\n}\n.rootIsDisabled .fieldGroup[data-v-59ff20cd]{background-color:#f4f4f4;border-color:#f4f4f4\n}\n@media screen and (-ms-high-contrast:active){\n.fieldGroup.fieldGroupIsFocused[data-v-59ff20cd],.fieldGroup[data-v-59ff20cd]:hover{border-color:Highlight\n}\n}\n.fieldGroup[data-v-59ff20cd]::-ms-clear{display:none\n}\n.fieldGroup[data-v-59ff20cd] :-ms-input-placeholder,.fieldGroup[data-v-59ff20cd] ::placeholder{color:#666;opacity:1\n}\n.ms-TextField.rootIsDisabled[data-v-59ff20cd] .field{background-color:#f4f4f4;border-color:#f4f4f4\n}\n.fieldPrefixSuffix[data-v-59ff20cd]{align-items:center;background:#f4f4f4;color:#666;display:flex;line-height:1;padding:0 10px;white-space:nowrap\n}\n.field[data-v-59ff20cd]{box-sizing:border-box;box-shadow:none;margin:0;padding:0;font-size:14px;border-radius:0;border:none;background:none;background-color:initial;color:#333;padding:0 12px 0 12px;width:100%;min-width:0;text-overflow:ellipsis;outline:0\n}\n[dir=rtl] .field[data-v-59ff20cd]{padding:0 12px 0 12px\n}\n.field[data-v-59ff20cd]:active,.field[data-v-59ff20cd]:focus,.field[data-v-59ff20cd]:hover{outline:0\n}\n[dir=ltr] .field.hasIcon[data-v-59ff20cd]{padding-right:24px\n}\n[dir=rtl] .field.hasIcon[data-v-59ff20cd]{padding-left:24px\n}\n.field[disabled][data-v-59ff20cd]{background-color:initial;border-color:transparent\n}\n.field[data-v-59ff20cd]::placeholder{color:#666\n}\n.ms-TextField.rootIsRequiredLabel[data-v-59ff20cd] .ms-Label:after{content:\" *\";color:#a80000\n}\n.ms-TextField.rootIsRequiredPlaceholderOnly[data-v-59ff20cd] .ms-TextField-fieldGroup:after{content:\"*\";color:#a80000;position:absolute;top:-5px\n}\n[dir=ltr] .ms-TextField.rootIsRequiredPlaceholderOnly[data-v-59ff20cd] .ms-TextField-fieldGroup:after{right:-10px\n}\n[dir=rtl] .ms-TextField.rootIsRequiredPlaceholderOnly[data-v-59ff20cd] .ms-TextField-fieldGroup:after{left:-10px\n}\n.ms-TextField.rootIsActive[data-v-59ff20cd]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.ms-TextField.rootIsActive[data-v-59ff20cd]{border-width:2px\n}\n.ms-TextField.rootIsActive .field[data-v-59ff20cd],[dir=rtl] .ms-TextField.rootIsActive .field[data-v-59ff20cd]{padding:0 11px 0 11px\n}\n}\n.icon[data-v-59ff20cd]{pointer-events:none;position:absolute;bottom:5px;top:auto;font-size:16px;line-height:18px\n}\nhtml[dir=ltr] .icon[data-v-59ff20cd]{right:8px\n}\nhtml[dir=rtl] .icon[data-v-59ff20cd]{left:8px\n}\n.description[data-v-59ff20cd]{color:#666;font-size:11px\n}\n.rootIsBorderless .fieldGroup[data-v-59ff20cd]{border-color:transparent;border-width:0\n}\n.ms-TextField.rootIsUnderlined[data-v-59ff20cd]{border:0 solid #a6a6a6\n}\n.ms-TextField.rootIsUnderlined .wrapper[data-v-59ff20cd]{display:flex;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:inherit;width:100%\n}\n.ms-TextField.rootIsUnderlined .wrapper.invalid[data-v-59ff20cd],.ms-TextField.rootIsUnderlined .wrapper.invalid[data-v-59ff20cd]:focus,.ms-TextField.rootIsUnderlined .wrapper.invalid[data-v-59ff20cd]:hover{border-bottom:1px solid #a80000\n}\n.ms-TextField.rootIsUnderlined[data-v-59ff20cd] .ms-Label{font-size:14px;line-height:22px;height:32px\n}\n[dir=ltr] .ms-TextField.rootIsUnderlined[data-v-59ff20cd] .ms-Label{margin-right:8px\n}\n[dir=rtl] .ms-TextField.rootIsUnderlined[data-v-59ff20cd] .ms-Label{margin-left:8px\n}\n[dir=ltr] .ms-TextField.rootIsUnderlined[data-v-59ff20cd] .ms-Label{padding-left:12px\n}\n[dir=rtl] .ms-TextField.rootIsUnderlined[data-v-59ff20cd] .ms-Label{padding-right:12px\n}\n.ms-TextField.rootIsUnderlined .fieldGroup[data-v-59ff20cd]{flex:1 1 0px;border-width:0\n}\n[dir=ltr] .ms-TextField.rootIsUnderlined .fieldGroup[data-v-59ff20cd]{text-align:left\n}\n[dir=rtl] .ms-TextField.rootIsUnderlined .fieldGroup[data-v-59ff20cd]{text-align:right\n}\n.ms-TextField.rootIsUnderlined.rootIsDisabled[data-v-59ff20cd]{border-color:#f4f4f4\n}\n.ms-TextField.rootIsUnderlined.rootIsDisabled[data-v-59ff20cd] .ms-Label{color:#a6a6a6\n}\n.ms-TextField.rootIsUnderlined.rootIsDisabled .field[data-v-59ff20cd]{background-color:initial;color:#a6a6a6\n}\n.ms-TextField.rootIsUnderlined.rootIsDisabled .fieldGroup[data-v-59ff20cd]{background-color:initial\n}\n.ms-TextField.rootIsUnderlined[data-v-59ff20cd]:hover:not(.rootIsActive):not(.rootIsDisabled){border-color:#212121\n}\n.ms-TextField.rootIsUnderlined.rootIsActive[data-v-59ff20cd]{border-color:#0078d4\n}\n@media screen and (-ms-high-contrast:active){\n.ms-TextField.rootIsUnderlined.rootIsActive[data-v-59ff20cd]{border-width:2px\n}\n.ms-TextField.rootIsUnderlined.rootIsActive .field[data-v-59ff20cd],[dir=rtl] .ms-TextField.rootIsUnderlined.rootIsActive .field[data-v-59ff20cd]{padding:0 11px 0 11px\n}\n}\n@media screen and (-ms-high-contrast:active){\n.ms-TextField.rootIsUnderlined.rootIsActive .wrapper[data-v-59ff20cd],.ms-TextField.rootIsUnderlined:hover:not(.rootIsDisabled) .wrapper[data-v-59ff20cd]{border-color:Highlight\n}\n}\n.ms-TextField.rootIsMultiline .fieldGroup[data-v-59ff20cd]{min-height:60px;height:auto;display:flex\n}\n.ms-TextField.rootIsMultiline .field[data-v-59ff20cd]{line-height:17px;flex-grow:1;padding-top:6px;overflow:auto;width:100%\n}\n[dir=ltr] .ms-TextField.rootIsMultiline .field.hasIcon[data-v-59ff20cd]{padding-right:40px\n}\n[dir=rtl] .ms-TextField.rootIsMultiline .field.hasIcon[data-v-59ff20cd]{padding-left:40px\n}\n.errorMessage[data-v-59ff20cd]{font-size:12px;font-weight:400;color:#a80000;margin:0;padding-top:5px;display:flex;align-items:center\n}\n.invalid[data-v-59ff20cd],.invalid[data-v-59ff20cd]:focus,.invalid[data-v-59ff20cd]:hover{border-color:#a80000\n}\n[dir=ltr] .root.rootIsUnderlined[data-v-59ff20cd] .ms-Label{padding-left:12px\n}\n[dir=rtl] .root.rootIsUnderlined[data-v-59ff20cd] .ms-Label{padding-right:12px\n}\n[dir=ltr] .root.rootIsUnderlined[data-v-59ff20cd] .ms-Label{padding-right:0\n}\n[dir=rtl] .root.rootIsUnderlined[data-v-59ff20cd] .ms-Label{padding-left:0\n}\nhtml[dir=ltr] .root.rootIsUnderlined .field[data-v-59ff20cd]{text-align:left\n}\nhtml[dir=rtl] .root.rootIsUnderlined .field[data-v-59ff20cd]{text-align:right\n}\n.ms-TextField.rootIsMultiline .icon[data-v-59ff20cd]{padding-bottom:8px;align-items:flex-end\n}\n[dir=ltr] .ms-TextField.rootIsMultiline .icon[data-v-59ff20cd]{padding-right:24px\n}\n[dir=rtl] .ms-TextField.rootIsMultiline .icon[data-v-59ff20cd]{padding-left:24px\n}\n.ms-TextField.rootIsMultiline .field.fieldIsUnresizable[data-v-59ff20cd]{resize:none\n}\n.hidden[data-v-59ff20cd]{display:none\n}", ""]);
+
+// exports
+
 
 /***/ }),
 
@@ -4711,12 +4711,12 @@ Spinner_component.options.__file = "Spinner.vue"
 // CONCATENATED MODULE: ./src/components/Spinner/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpinButton/SpinButton.vue?vue&type=template&id=5edbc928&
-var SpinButtonvue_type_template_id_5edbc928_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-SpinButton"},[(_vm.label)?_c('VLabel',{staticClass:"ms-SpinButton-label"},[_vm._v("\n    "+_vm._s(_vm.label)+"\n  ")]):_vm._e(),_c('div',{staticClass:"ms-SpinButton-container"},[_c('input',{staticClass:"ms-SpinButton-input",attrs:{"type":"text"},domProps:{"value":_vm.value},on:{"blur":_vm.onBlur}}),_c('div',{staticClass:"ms-SpinButton-icons"},[_c('VIconButton',{staticClass:"ms-SpinButton-button",attrs:{"icon-name":"ChevronUpSmall"},nativeOn:{"click":function($event){return _vm.onIncrement($event)}}}),_c('VIconButton',{staticClass:"ms-SpinButton-button",attrs:{"icon-name":"ChevronDownSmall"},nativeOn:{"click":function($event){return _vm.onDecrement($event)}}})],1)])],1)}
-var SpinButtonvue_type_template_id_5edbc928_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpinButton/SpinButton.vue?vue&type=template&id=74bd183f&
+var SpinButtonvue_type_template_id_74bd183f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-SpinButton"},[(_vm.label)?_c('VLabel',{staticClass:"ms-SpinButton-label"},[_vm._v("\n    "+_vm._s(_vm.label)+"\n  ")]):_vm._e(),_c('div',{staticClass:"ms-SpinButton-container"},[_c('input',{staticClass:"ms-SpinButton-input",attrs:{"type":"text"},domProps:{"value":_vm.value},on:{"blur":_vm.onBlur}}),_c('div',{staticClass:"ms-SpinButton-icons"},[_c('VIconButton',{staticClass:"ms-SpinButton-button",attrs:{"icon-name":"ChevronUpSmall"},nativeOn:{"click":function($event){return _vm.onIncrement($event)}}}),_c('VIconButton',{staticClass:"ms-SpinButton-button",attrs:{"icon-name":"ChevronDownSmall"},nativeOn:{"click":function($event){return _vm.onDecrement($event)}}})],1)])],1)}
+var SpinButtonvue_type_template_id_74bd183f_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/SpinButton/SpinButton.vue?vue&type=template&id=5edbc928&
+// CONCATENATED MODULE: ./src/components/SpinButton/SpinButton.vue?vue&type=template&id=74bd183f&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SpinButton/SpinButton.vue?vue&type=script&lang=js&
 //
@@ -4772,19 +4772,21 @@ var SpinButtonvue_type_template_id_5edbc928_staticRenderFns = []
   },
   methods: {
     onBlur(event) {
-      let value = Number(event.target.value);
+      let value = event.target.value ? Number(event.target.value) : null;
       let newValue = this.validate(value);
+      if (isNaN(newValue)) newValue = null;
       this.$emit('input', newValue);
       event.target.value = newValue;
     },
 
     validate(value) {
+      if (value == null) return value;
       const {
         min,
         max
       } = this;
-      if (min && value < min) return min;
-      if (max && value > max) return max;
+      if (min != null && value < min) return min;
+      if (max != null && value > max) return max;
       return value;
     },
 
@@ -4826,8 +4828,8 @@ var SpinButtonvue_type_style_index_0_lang_scss_ = __webpack_require__("dede");
 
 var SpinButton_component = normalizeComponent(
   SpinButton_SpinButtonvue_type_script_lang_js_,
-  SpinButtonvue_type_template_id_5edbc928_render,
-  SpinButtonvue_type_template_id_5edbc928_staticRenderFns,
+  SpinButtonvue_type_template_id_74bd183f_render,
+  SpinButtonvue_type_template_id_74bd183f_staticRenderFns,
   false,
   null,
   null,
@@ -5101,12 +5103,12 @@ Slider_component.options.__file = "Slider.vue"
 // CONCATENATED MODULE: ./src/components/Slider/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/TextField/TextField.vue?vue&type=template&id=51675226&scoped=true&
-var TextFieldvue_type_template_id_51675226_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-TextField root",class:_vm.rootClass},[_c('div',{staticClass:"ms-TextField-wrapper wrapper"},[(_vm.label)?_c('VLabel',{attrs:{"required":_vm.required}},[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]):_vm._e(),_c('div',{staticClass:"ms-TextField-fieldGroup fieldGroup",class:{ 'invalid': _vm.errorMessage }},[_c(_vm.component,{tag:"component",staticClass:"ms-TextField-field field",attrs:{"id":"TextField","value":_vm.value,"disabled":_vm.disabled,"placeholder":_vm.placeholder,"readonly":_vm.readOnly,"required":_vm.required,"rows":"4","type":"text","aria-invalid":"false"},on:{"input":function($event){_vm.$emit('input', $event.target.value)}}})],1)],1),(_vm.errorMessage)?_c('span',[_c('div',{attrs:{"aria-live":"assertive"}},[_c('p',{staticClass:"ms-TextField-errorMessage errorMessage"},[_c('span',[_vm._v(_vm._s(_vm.errorMessage))])])])]):_vm._e()])}
-var TextFieldvue_type_template_id_51675226_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"ef1a2e16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/TextField/TextField.vue?vue&type=template&id=59ff20cd&scoped=true&
+var TextFieldvue_type_template_id_59ff20cd_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-TextField root",class:_vm.rootClass},[_c('div',{staticClass:"ms-TextField-wrapper wrapper"},[(_vm.label)?_c('VLabel',{attrs:{"required":_vm.required}},[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]):_vm._e(),_c('div',{staticClass:"ms-TextField-fieldGroup fieldGroup",class:{ 'invalid': _vm.errorMessage }},[_c(_vm.component,{tag:"component",staticClass:"ms-TextField-field field",attrs:{"id":"TextField","value":_vm.value,"disabled":_vm.disabled,"placeholder":_vm.placeholder,"readonly":_vm.readOnly,"required":_vm.required,"rows":"4","type":"text","aria-invalid":"false"},on:{"input":function($event){_vm.$emit('input', $event.target.value || '')}}})],1)],1),(_vm.errorMessage)?_c('span',[_c('div',{attrs:{"aria-live":"assertive"}},[_c('p',{staticClass:"ms-TextField-errorMessage errorMessage"},[_c('span',[_vm._v(_vm._s(_vm.errorMessage))])])])]):_vm._e()])}
+var TextFieldvue_type_template_id_59ff20cd_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/TextField/TextField.vue?vue&type=template&id=51675226&scoped=true&
+// CONCATENATED MODULE: ./src/components/TextField/TextField.vue?vue&type=template&id=59ff20cd&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/TextField/TextField.vue?vue&type=script&lang=js&
 //
@@ -5212,8 +5214,8 @@ var TextFieldvue_type_template_id_51675226_scoped_true_staticRenderFns = []
 });
 // CONCATENATED MODULE: ./src/components/TextField/TextField.vue?vue&type=script&lang=js&
  /* harmony default export */ var TextField_TextFieldvue_type_script_lang_js_ = (TextFieldvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/TextField/TextField.vue?vue&type=style&index=0&id=51675226&lang=scss&scoped=true&
-var TextFieldvue_type_style_index_0_id_51675226_lang_scss_scoped_true_ = __webpack_require__("a942");
+// EXTERNAL MODULE: ./src/components/TextField/TextField.vue?vue&type=style&index=0&id=59ff20cd&lang=scss&scoped=true&
+var TextFieldvue_type_style_index_0_id_59ff20cd_lang_scss_scoped_true_ = __webpack_require__("2b2b");
 
 // CONCATENATED MODULE: ./src/components/TextField/TextField.vue
 
@@ -5226,11 +5228,11 @@ var TextFieldvue_type_style_index_0_id_51675226_lang_scss_scoped_true_ = __webpa
 
 var TextField_component = normalizeComponent(
   TextField_TextFieldvue_type_script_lang_js_,
-  TextFieldvue_type_template_id_51675226_scoped_true_render,
-  TextFieldvue_type_template_id_51675226_scoped_true_staticRenderFns,
+  TextFieldvue_type_template_id_59ff20cd_scoped_true_render,
+  TextFieldvue_type_template_id_59ff20cd_scoped_true_staticRenderFns,
   false,
   null,
-  "51675226",
+  "59ff20cd",
   null
   
 )
