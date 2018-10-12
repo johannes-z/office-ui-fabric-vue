@@ -2,6 +2,6 @@
 pageClass: ms-Fabric
 ---
 
-# Checkbox
+# TextField
 
-<page-checkbox />
+<page-text-field />

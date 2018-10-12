@@ -1,0 +1,3 @@
+# SearchBox
+
+<page-search-box />
