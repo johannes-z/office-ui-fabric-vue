@@ -99,6 +99,7 @@ export default {
       this.$emit('onFocus', this.searchQuery)
     },
     onChange () {
+      this.$emit('input', this.searchQuery)
       this.$emit('onChange', this.searchQuery)
     },
     onSearch () {
@@ -148,7 +149,7 @@ $SearchBoxTransitionDuration: .167s;
   }
   > .field {
     color: $ms-color-white;
-    background-color: $ms-color-white;
+    background-color: $ms-color-neutralLighterAlt;
   }
   > .clearButton {
     background-color: $ms-color-neutralLighterAlt;
@@ -158,6 +159,10 @@ $SearchBoxTransitionDuration: .167s;
 .root.is-underlined.is-disabled {
   background-color: $ms-color-white;
   border-bottom-color: $ms-color-neutralLighterAlt;
+
+  > .field {
+    background-color: $ms-color-white;
+  }
 }
 
 // Static styles

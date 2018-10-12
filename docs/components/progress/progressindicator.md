@@ -1,0 +1,3 @@
+# ProgressIndicator
+
+<page-progress-indicator />

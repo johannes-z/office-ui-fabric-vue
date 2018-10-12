@@ -2,7 +2,6 @@
 pageClass: ms-Fabric
 ---
 
-# Button
+# Toggle
 
-
-<page-button />
+<page-toggle />
