@@ -80,7 +80,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes: routes.map(category => category.children).flat(),
+  routes: [].concat(...routes.map(category => category.children)),
 })
 
 const app = new Vue({

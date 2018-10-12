@@ -1,8 +1,13 @@
+// module.exports = {
+//   presets: [[
+//     '@vue/app',
+//     {
+//       useBuiltIns: false,
+//     },
+//   ]],
+// }
 module.exports = {
-  presets: [[
+  presets: [
     '@vue/app',
-    {
-      useBuiltIns: false,
-    },
-  ]],
+  ],
 }
