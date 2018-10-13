@@ -1,7 +1,7 @@
 <template>
   <div :class="{ ['ms-Layer--fixed']: !hostId }"
        class="ms-Layer">
-    <div class="ms-Fabric ms-Layer-content content">
+    <div class="ms-Fabric ms-Layer-content">
       <slot/>
     </div>
   </div>
@@ -65,12 +65,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .ms-Layer {
   z-index: 1000000;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   visibility: hidden;
 
