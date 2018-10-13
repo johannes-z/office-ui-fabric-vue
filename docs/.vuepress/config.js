@@ -67,6 +67,8 @@ module.exports = {
           title: 'Surfaces',
           collapsable: false,
           children: [
+            'surfaces/layer',
+            'surfaces/panel',
           ]
         },
         {

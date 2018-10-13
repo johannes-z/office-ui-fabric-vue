@@ -66,6 +66,13 @@
     <h2 class="ms-font-xl">Icon Button</h2>
     <VIconButton icon-name="Emoji2" />
 
+    <p>
+      For a list of Icons, visit the
+      <a href="https://developer.microsoft.com/en-us/fabric#/styles/icons">
+        Office UI Fabric Icon Documentation
+      </a>.
+    </p>
+
     <h2 class="ms-font-xl">Contextual Menu Button</h2>
 
     <h2 class="ms-font-xl">Action Button</h2>
