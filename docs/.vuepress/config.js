@@ -2,6 +2,8 @@ module.exports = {
   title: 'Office UI Fabric Vue',
   description: 'The front-end framework for building experiences that fit seamlessly into Office and Office 365 - now for Vue.',
 
+  base: '/office-ui-fabric-vue/',
+
   head: [
     ['link', { rel: 'stylesheet', href: 'https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.0/css/fabric.min.css' }]
   ],
