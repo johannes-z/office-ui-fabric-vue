@@ -17,7 +17,12 @@
       <VLabel v-if="onText || offText"
               :for="id"
               class="ms-Toggle-stateText text">
-        {{ value ? onText : offText }}
+        <slot v-if="value" name="onText">
+          {{ onText }}
+        </slot>
+        <slot v-else name="offText">
+          {{ offText }}
+        </slot>
       </VLabel>
     </div>
 
