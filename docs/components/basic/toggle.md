@@ -20,18 +20,14 @@ control to use.
 
 ```vue
 <VToggle v-model="toggle1"
-         label=""
-         on-text="On"
-         off-text="Off">
+         label="">
     Enabled and checked
     <span name="onText">On</span>
     <span name="offText">Off</span>
 </VToggle>
 
 <VToggle v-model="toggle2"
-         label="Enabled and unchecked"
-         on-text="On"
-         off-text="Off">
+         label="Enabled and unchecked">
     Enabled and unchecked
     <span name="onText">On</span>
     <span name="offText">Off</span>
