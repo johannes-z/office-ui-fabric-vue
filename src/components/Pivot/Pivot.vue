@@ -18,6 +18,7 @@ export default {
 
       var links = this.$slots.default.map((item, index) => {
         const { componentOptions } = item
+        if (!componentOptions) return
 
         return h(componentOptions.tag, {
           props: {

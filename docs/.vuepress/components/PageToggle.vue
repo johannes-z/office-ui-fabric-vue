@@ -3,14 +3,22 @@
     <h2 class="ms-font-xl">Default Toggles</h2>
 
     <VToggle v-model="toggle1"
-             label="Enabled and checked"
+             label=""
              on-text="On"
-             off-text="Off" />
+             off-text="Off">
+      Enabled and checked
+      <span name="onText">On</span>
+      <span name="offText">Off</span>
+    </VToggle>
 
     <VToggle v-model="toggle2"
              label="Enabled and unchecked"
              on-text="On"
-             off-text="Off" />
+             off-text="Off">
+      Enabled and unchecked
+      <span name="onText">On</span>
+      <span name="offText">Off</span>
+    </VToggle>
 
     <VToggle v-model="toggle3"
              :disabled="true"
