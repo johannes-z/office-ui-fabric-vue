@@ -14,13 +14,51 @@ use a Toggle to turn services or hardware components on or off. In other words,
 if a physical switch would work for the action, a Toggle is probably the best
 control to use.
 
+### Choosing between Toggle and Checkbox
+
+For some actions, either a Toggle or a Checkbox might work. To decide which
+control would work better, follow these tips:
+
+* Use a Toggle for binary settings when changes become effective immediately
+  after the user changes them.
+
+* In the above example, it's clear with the Toggle that the wireless is set to
+  "On." But with the Checkbox, the user needs to think about whether the
+  wireless is on now or whether they need to check the box to turn wireless on.
+
+* Use a Checkbox when the user has to perform extra steps for changes to be
+  effective. For example, if the user must click a "Submit", "Next", "Ok" button
+  to apply changes, use a Checkbox.
+
 ## Variants
 
-<page-toggle />
+### Default Toggles
+
+<v-toggle v-model="toggle1"
+          label="Enabled and checked"
+          on-text="On"
+          off-text="Off" />
+
+<v-toggle v-model="toggle2"
+          label="Enabled and unchecked"
+          on-text="On"
+          off-text="Off" />
+
+<v-toggle v-model="toggle3"
+          :disabled="true"
+          label="Disabled and checked"
+          on-text="On"
+          off-text="Off" />
+
+<v-toggle v-model="toggle4"
+          :disabled="true"
+          label="Disabled and unchecked"
+          on-text="On"
+          off-text="Off" />
+
 
 ```vue
-<VToggle v-model="toggle1"
-         label="">
+<VToggle v-model="toggle1">
     Enabled and checked
     <span name="onText">On</span>
     <span name="offText">Off</span>
@@ -28,7 +66,6 @@ control to use.
 
 <VToggle v-model="toggle2"
          label="Enabled and unchecked">
-    Enabled and unchecked
     <span name="onText">On</span>
     <span name="offText">Off</span>
 </VToggle>
@@ -45,6 +82,19 @@ control to use.
          on-text="On"
          off-text="Off" />
 ```
+
+<script>
+export default {
+  data () {
+    return {
+      toggle1: true,
+      toggle2: false,
+      toggle3: true,
+      toggle4: false,
+    }
+  },
+}
+</script>
 
 ## API
 

@@ -8,6 +8,10 @@ module.exports = {
     ['link', { rel: 'stylesheet', href: 'https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.0/css/fabric.min.css' }]
   ],
 
+  markdown: {
+    lineNumbers: true
+  },
+
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
@@ -17,7 +21,7 @@ module.exports = {
         items: [
           { text: 'Office UI Fabric', link: 'https://developer.microsoft.com/en-us/fabric' },
           { text: 'Office UI Fabric Core - GitHub', link: 'https://github.com/OfficeDev/office-ui-fabric-core' },
-          { text: 'Office UI Fabric React - GitHub', link: 'https://github.com/OfficeDev/office-ui-fabric-react/tree/master/packages/office-ui-fabric-react/' },
+          { text: 'Office UI Fabric React - GitHub', link: 'https://github.com/OfficeDev/office-ui-fabric-react' },
         ]
       },
       { text: 'GitHub', link: 'https://github.com/johannes-z/office-ui-fabric-vue' },
