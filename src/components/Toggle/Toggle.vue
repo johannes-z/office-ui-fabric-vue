@@ -14,8 +14,7 @@
         <div class="ms-Toggle-thumb thumb" />
       </button>
 
-      <VLabel v-if="onText || offText"
-              :for="id"
+      <VLabel :for="id"
               class="ms-Toggle-stateText text">
         <slot v-if="value" name="onText">
           {{ onText }}
