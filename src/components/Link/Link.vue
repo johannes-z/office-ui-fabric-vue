@@ -1,14 +1,10 @@
 <template>
-  <a v-if="href"
-     :href="href"
-     :class="classObj"
-     class="ms-Link root">
+  <component :is="href ? 'a' : 'button'"
+             :href="href"
+             :class="{ isDisabled }"
+             class="ms-Link">
     <slot/>
-  </a>
-  <button v-else
-          class="ms-Link root">
-    <slot/>
-  </button>
+  </component>
 </template>
 
 <script>
@@ -24,37 +20,40 @@ export default {
     },
   },
   computed: {
-    classObj () {
-      var obj = {}
-      obj['isDisabled'] = this.disabled
-      return obj
+    isDisabled () {
+      return this.disabled
     },
   },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../common/common.scss';
 
 // Element: ms-Link root component
-.root {
+.ms-Link {
   color: $ms-color-themePrimary;
   margin: 0;
   overflow: inherit;
   padding: 0;
   text-overflow: inherit;
+  font-size: 12px;
+
+  &:not(.isDisabled) {
+    &:hover,
+    &:focus {
+      color: $ms-color-themeDarker;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: $ms-color-themePrimary;
+    }
+  }
 }
 
 // State: The button is not disabled.
 .isEnabled {
-  &:hover,
-  &:focus {
-    color: $ms-color-themeDarker;
-  }
-
-  &:active {
-    color: $ms-color-themePrimary;
-  }
 }
 
 // State: The button is disabled.
@@ -65,14 +64,13 @@ export default {
 }
 
 // Link implemented as a button.
-button.root {
+button.ms-Link {
   @include focus-border;
   @include text-align(left);
   background: none;
   border: none;
   cursor: pointer;
   display: inline;
-  font-size: inherit; // Ensure that we inherit font size, rather than the browser's default.
 
   @include high-contrast {
     // Using Highlight here so we still have a themeable system color that is different from both window text and link text.
@@ -81,7 +79,7 @@ button.root {
 }
 
 // Link implemented as an anchor.
-a.root {
+a.ms-Link {
   @include focus-outline;
   text-decoration: none;
 }
