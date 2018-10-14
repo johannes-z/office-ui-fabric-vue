@@ -21,15 +21,33 @@ visual complexity of a design.
 
 <div>
   <span>When a link has an href, </span>
-  <VLink href="http://localhost:8080/office-ui-fabric-vue/components/basic/link.html"> it renders as an anchor tag.
+  <VLink href="https://johannes-z.github.io/office-ui-fabric-vue/components/">
+    it renders as an anchor tag.
   </VLink>
   <span> Without an href, </span>
   <VLink>the link is rendered as a button</VLink>.
   <span> You can also use the disabled attribute to create a </span>
   <VLink :disabled="true"
-         href="http://localhost:8080/office-ui-fabric-vue/components/basic/link.html"> disabled link
+         href="https://johannes-z.github.io/office-ui-fabric-vue/components/">
+    disabled link
   </VLink>.
 </div>
+
+```vue
+<div>
+  <span>When a link has an href, </span>
+  <VLink href="https://johannes-z.github.io/office-ui-fabric-vue/components/">
+    it renders as an anchor tag.
+  </VLink>
+  <span> Without an href, </span>
+  <VLink>the link is rendered as a button</VLink>.
+  <span> You can also use the disabled attribute to create a </span>
+  <VLink :disabled="true"
+         href="https://johannes-z.github.io/office-ui-fabric-vue/components/">
+    disabled link
+  </VLink>.
+</div>
+```
 
 
 ## API
