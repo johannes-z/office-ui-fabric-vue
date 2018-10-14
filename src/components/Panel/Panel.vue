@@ -21,7 +21,9 @@
             <slot name="body" />
           </div>
           <div class="ms-Panel-footer">
-            <slot name="footer" />
+            <div class="ms-Panel-footerInner">
+              <slot name="footer" />
+            </div>
           </div>
         </div>
       </div>
@@ -77,7 +79,7 @@ export default {
 }
 </style>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../common/common";
 
 .ms-Panel {
@@ -95,6 +97,7 @@ export default {
   pointer-events: auto;
 }
 
+*:not([dir="ltr"]) .ms-Panel-main,
 [dir="ltr"] .ms-Panel-main {
   right: 0;
 }
@@ -112,6 +115,12 @@ export default {
 @media (min-width: 480px) {
   .ms-Panel.rootIsSmall .ms-Panel-main {
     width: 340px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ms-Panel-header {
+    margin-top: 30px !important;
   }
 }
 
@@ -142,13 +151,12 @@ export default {
   margin: 0;
 }
 
-@media (min-width: 1024px) {
-  .ms-Panel-header {
-    margin-top: 30px;
-  }
-}
 .ms-Panel-header {
   margin: 14px 0;
+  flex-grow: 0;
+}
+
+.ms-Panel-footer {
   flex-grow: 0;
 }
 
@@ -161,8 +169,26 @@ export default {
   }
 }
 
+.ms-Panel-contentInner {
+  top: 44px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: hidden;
+}
+
+.ms-Panel-footerInner {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
 @media (min-width: 480px) {
+  *:not([dir="ltr"]) .ms-Panel-main,
   [dir="ltr"] .ms-Panel-main {
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+
     box-shadow: -30px 0px 30px -30px rgba(0, 0, 0, 0.2);
   }
 }

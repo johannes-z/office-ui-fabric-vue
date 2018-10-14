@@ -12,6 +12,12 @@
       <template slot="body">
         Body
       </template>
+      <template slot="footer">
+        <VPrimaryButton @click.native="onClosePanel" style="margin-right: 8px">
+          Save
+        </VPrimaryButton>
+        <VDefaultButton @click.native="onClosePanel">Cancel</VDefaultButton>
+      </template>
     </VPanel>
   </div>
 </template>
@@ -23,5 +29,10 @@ export default {
       isOpen: false,
     }
   },
+  methods: {
+    onClosePanel () {
+      this.isOpen = false
+    }
+  }
 }
 </script>

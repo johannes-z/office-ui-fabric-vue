@@ -86,10 +86,12 @@ export default {
 
 <style lang="scss">
 .LayerExample {
+  position: relative;
   background-color: #0078d4;
   color: #fff;
   line-height: 50px;
   padding: 0 20px;
+  z-index: 3;
 }
 .ms-LayerHost.LayerExample-customHost {
   height: 60px;

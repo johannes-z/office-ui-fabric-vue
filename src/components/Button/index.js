@@ -6,7 +6,7 @@ import VActionButton from './ActionButton/ActionButton.vue'
 import VCommandBarButton from './CommandBarButton/CommandBarButton.vue'
 import VCompoundButton from './CompoundButton/CompoundButton.vue'
 import VSplitButton from './SplitButton/SplitButton.vue'
-// import PrimaryButton from './PrimaryButton/PrimaryButton.vue'
+import VPrimaryButton from './PrimaryButton/PrimaryButton.vue'
 import VIconButton from './IconButton/IconButton.vue'
 
 export {
@@ -18,6 +18,6 @@ export {
   VCompoundButton,
   VCommandBarButton,
   VSplitButton,
-  // PrimaryButton,
+  VPrimaryButton,
   VIconButton,
 }
