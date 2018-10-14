@@ -118,4 +118,4 @@ export default {
 
 ### Events
 
-*This control does not expose any events.*
+*This component does not expose any events.*
