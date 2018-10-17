@@ -6937,11 +6937,15 @@ Toggle_component.options.__file = "Toggle.vue"
 
 // CONCATENATED MODULE: ./src/index.js
 
+
 var Fabric = {
   install: function install(Vue, options) {
     for (var key in components_namespaceObject) {
       Vue.component(key, components_namespaceObject[key]);
     }
+  },
+  Utilities: {
+    setSSR: /* Cannot get final name for export "default" in "./src/utilities/dom.js" (known exports: setSSR getDocument, known reexports: ) */ undefined
   }
 };
 /* harmony default export */ var src = (Fabric);
