@@ -74,6 +74,7 @@ module.exports = {
           collapsable: false,
           children: [
             'surfaces/layer',
+            'surfaces/modal',
             'surfaces/panel',
           ]
         },
