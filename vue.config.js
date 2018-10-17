@@ -37,7 +37,7 @@ if (env === COMPONENTS_ENV) {
       devtool: 'source-map',
     },
     css: {
-      extract: false,
+      // extract: false,
       modules: true,
     },
   }
