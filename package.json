@@ -1,6 +1,6 @@
 {
   "name": "office-fabric-vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/office-ui-fabric-vue.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve ./src/dev.js",
