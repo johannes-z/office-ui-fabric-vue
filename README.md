@@ -16,23 +16,36 @@ started with Fabric Core](https://developer.microsoft.com/en-us/fabric#/get-star
 
 ### Production
 
+1. Installing the package
+
 ```sh
 npm install --save-dev johannes-z/office-ui-fabric-vue
-```
-
-```sh
-yarn add -D johannes-z/office-ui-fabric-vue
-```
-
-### Dev builds
-
-```sh
+# for dev builds install:
 npm install --save-dev johannes-z/office-ui-fabric-vue#dev
 ```
 
 ```sh
+yarn add -D johannes-z/office-ui-fabric-vue
+# for dev builds install:
 yarn add -D johannes-z/office-ui-fabric-vue#dev
 ```
+
+2. Install Plugin
+
+```js
+import Vue from 'vue'
+import Fabric from '../../src/index'
+
+import 'office-fabric-vue/dist/office-ui-fabric-vue.css'
+
+Vue.use(Fabric)
+```
+
+## Showcase
+
+Showcasing components is done using [https://github.com/vuejs/vuepress](vuepress).
+
+See `./docs` for an example how to add new pages.
 
 ## Contributing
 
@@ -44,46 +57,6 @@ structure and styles provided by the `.editorconfig` file and `eslint`.
 ### Compatibility
 
 All components should be compatible with at least IE11.
-
-### Showcase
-
-Showcasing components is done using [https://github.com/vuejs/vue-router](vue-router).
-
-1. Create a file `<component>.vue` in `./src/pages/`.
-2. Add the page to `./src/dev.js`.
-
-```sh
-npm run dev
-```
-
-```sh
-yarn dev
-```
-
-## Components
-
-This library and the components are still in WIP, as shown in the list below.
-If a component is missing in the list, development of it has not started yet.
-Checked components are *mostly* done and implement most of the features of their
-React counter-part.
-
-- [ ] Breadcrumb
-- [ ] Button
-- [x] Checkbox
-  - missing extra styles like Persona checkboxes etc.
-- [ ] CommandBar
-- [ ] Dropdown
-- [ ] Icon
-- [x] Label
-- [x] Link
-- [ ] Persona
-- [x] ProgressIndicator
-- [x] SearchBox
-  - missing 'no animation' option.
-- [ ] Shimmer
-- [x] Spinner
-- [ ] TextField
-- [x] Toggle
 
 ## License
 
