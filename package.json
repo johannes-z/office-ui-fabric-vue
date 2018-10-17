@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "main": "dist/office-ui-fabric-vue.umd.min.js",
   "scripts": {
-    "serve": "vue-cli-service serve ./src/dev.js",
+    "serve": "vuepress dev docs",
     "build": "yarn build:lib && yarn build:components",
     "build:lib": "vue-cli-service build --target lib ./src/index.js",
     "build:components": "cross-env UI_ENV=components vue-cli-service build --report --no-clean",
@@ -25,8 +25,7 @@
   },
   "homepage": "https://github.com/johannes-z/office-ui-fabric-vue#readme",
   "dependencies": {
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1"
+    "vue": "^2.5.17"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.1",
