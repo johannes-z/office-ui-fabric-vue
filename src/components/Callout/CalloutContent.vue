@@ -36,10 +36,10 @@ export default {
     },
   },
   beforeDestroy () {
-    document.removeEventListener('click', this.onClick)
+    window.removeEventListener('click', this.onClick)
   },
   mounted () {
-    document.addEventListener('click', this.onClick)
+    window.addEventListener('click', this.onClick)
   },
   methods: {
     onClick (event) {

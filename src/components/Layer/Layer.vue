@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { getDocument } from '../../utilities'
+import { getDocument } from '../../utilities/dom'
 import { registerLayer, getDefaultTarget, unregisterLayer } from './Layer.notification'
 
 export default {

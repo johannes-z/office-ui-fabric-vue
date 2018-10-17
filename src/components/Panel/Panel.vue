@@ -36,6 +36,8 @@ import { VIconButton } from '../Button/'
 import { VIcon } from '../Icon'
 import { VLayer } from '../Layer'
 
+import { getDocument } from '../../utilities/dom'
+
 export default {
   components: { VIconButton, VIcon, VLayer },
   props: {
@@ -55,15 +57,20 @@ export default {
   },
   watch: {
     isOpen (newVal) {
-      if (newVal) document.body.classList.add(this.$style.css)
-      else document.body.classList.remove(this.$style.css)
+      const doc = getDocument()
+
+      if (newVal) doc.body.classList.add(this.$style.css)
+      else doc.body.classList.remove(this.$style.css)
     },
   },
   mounted () {
-    if (this.isOpen) document.body.classList.add(this.$style.css)
+    if (!this.isOpen) return
+    const doc = getDocument()
+    doc.body.classList.add(this.$style.css)
   },
   beforeDestroy () {
-    document.body.classList.remove(this.$style.css)
+    const doc = getDocument()
+    doc.body.classList.remove(this.$style.css)
   },
   methods: {
     onDismiss (event) {
