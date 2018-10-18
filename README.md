@@ -32,9 +32,9 @@ yarn add -D johannes-z/office-ui-fabric-vue#dev
 
 ```js
 import Vue from 'vue'
-import Fabric from 'office-ui-fabric-vue'
+import Fabric from '@johannes-z/office-ui-fabric-vue'
 
-import 'office-ui-fabric-vue/dist/office-ui-fabric-vue.css'
+import '@johannes-z/office-ui-fabric-vue/dist/office-ui-fabric-vue.css'
 
 Vue.use(Fabric)
 ```
