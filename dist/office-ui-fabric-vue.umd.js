@@ -5831,7 +5831,7 @@ var Fabric = {
     }
   },
   Utilities: {
-    setSSR: /* Cannot get final name for export "default" in "./src/utilities/dom.js" (known exports: setSSR getDocument, known reexports: ) */ undefined
+    setSSR: setSSR
   }
 };
 /* harmony default export */ var src = (Fabric);
