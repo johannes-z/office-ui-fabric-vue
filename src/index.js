@@ -1,5 +1,5 @@
 import * as components from './components.js'
-import setSSR from './utilities/dom.js'
+import { setSSR } from './utilities/dom.js'
 
 const Fabric = {
   install: function (Vue, options) {
