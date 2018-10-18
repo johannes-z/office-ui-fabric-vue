@@ -1,7 +1,7 @@
 <template>
   <div class="ms-ProgressIndicator">
     <div class="ms-ProgressIndicator-itemName">
-      {{ label }}
+      <slot>{{ label }}</slot>
     </div>
 
     <div class="ms-ProgressIndicator-itemProgress">
@@ -12,7 +12,7 @@
     </div>
 
     <div class="ms-ProgressIndicator-itemDescription">
-      {{ description }}
+      <slot name="description">{{ description }}</slot>
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
   props: {
     label: {
       type: String,
-      default: '',
+      default: null,
     },
     description: {
       type: String,

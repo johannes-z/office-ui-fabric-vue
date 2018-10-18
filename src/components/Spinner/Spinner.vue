@@ -5,7 +5,7 @@
          class="ms-Spinner-circle"/>
 
     <div v-if="size >= 2" class="ms-Spinner-label">
-      {{ label }}
+      <slot>{{ label }}</slot>
     </div>
   </div>
 </template>

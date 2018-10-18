@@ -79,7 +79,6 @@ export default {
   position: relative;
   padding: 0;
   margin: 0;
-  cursor: pointer !important;
   outline: none;
   border-width: initial;
   border-style: initial;
@@ -89,6 +88,10 @@ export default {
 
   line-height: 21px;
   font-size: 14px;
+
+  &.is-enabled .ms-Checkbox-label {
+    cursor: pointer !important;
+  }
 
   &.is-checked .ms-Checkbox-checkbox {
     & > i {
@@ -129,25 +132,35 @@ export default {
   }
 
   .ms-Checkbox-label {
-    height: 22px;
-    display: inline-block;
-    cursor: pointer;
+    display: flex;
+    margin-top: 0px;
+    margin-right: -4px;
+    margin-bottom: 0px;
+    margin-left: -4px;
+    align-items: flex-start;
+    position: relative;
+    text-align: left;
+    user-select: none;
   }
 
   .ms-Checkbox-checkbox {
-    display: inline-block;
-    vertical-align: baseline;
-
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
     height: 20px;
     width: 20px;
-    margin: 0 4px;
-
-    border-width: 1px;
-    border-style: solid;
-
+    margin-top: 0px;
+    margin-right: 4px;
+    margin-bottom: 0px;
+    margin-left: 4px;
+    box-sizing: border-box;
     transition-property: background, border, border-color;
     transition-duration: 200ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.23, 1);
+    border-width: 1px;
+    border-style: solid;
+    overflow: hidden;
 
     & > i {
       vertical-align: top;
@@ -156,11 +169,12 @@ export default {
   }
 
   .ms-Checkbox-text {
-    display: inline-block;
-    vertical-align: baseline;
-
-    color: rgb(51, 51, 51);
-    margin: 0 4px;
+    margin-top: 0px;
+    margin-right: 4px;
+    margin-bottom: 0px;
+    margin-left: 4px;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 </style>
