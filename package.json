@@ -1,7 +1,7 @@
 {
   "name": "@johannes-z/office-ui-fabric-vue",
   "version": "0.1.2",
-  "main": "dist/office-fabric-vue.umd.min.js",
+  "main": "dist/office-ui-fabric-vue.umd.min.js",
   "scripts": {
     "serve": "vuepress dev docs",
     "build": "yarn build:lib && yarn build:components",
@@ -34,13 +34,13 @@
     "vue": "^2.5.17"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.1",
-    "@vue/cli-plugin-eslint": "^3.0.1",
-    "@vue/cli-service": "^3.0.1",
-    "@vue/eslint-config-standard": "^3.0.1",
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-standard": "^3.0.5",
     "cross-env": "^5.2.0",
-    "node-sass": "^4.9.3",
-    "office-ui-fabric-core": "^9.6.0",
+    "node-sass": "^4.9.4",
+    "office-ui-fabric-core": "^9.6.1",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.17",
     "vuepress": "^1.0.0-alpha.9"

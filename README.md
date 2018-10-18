@@ -14,8 +14,6 @@ started with Fabric Core](https://developer.microsoft.com/en-us/fabric#/get-star
 
 ## Installation
 
-### Production
-
 1. Installing the package
 
 ```sh
