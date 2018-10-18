@@ -37,7 +37,6 @@ export default {
   overflow: inherit;
   padding: 0;
   text-overflow: inherit;
-  font-size: 12px;
 
   &:not(.isDisabled) {
     &:hover,

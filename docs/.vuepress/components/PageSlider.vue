@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin-bottom: 50px;">
     <div class="ms-basicSlider">
       <div class="ms-SliderBasicExample">
         <VSlider :min="1"

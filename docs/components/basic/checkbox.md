@@ -30,3 +30,58 @@ or more items from a group of choices that are not mutually exclusive.
 ## Variants
 
 <page-checkbox />
+
+```vue
+<div>
+    <p>
+        <VCheckbox v-model="checkbox1"
+                   label="Uncontrolled checkbox" />
+    </p>
+
+    <p>
+        <VCheckbox v-model="checkbox2"
+                   label="Uncontrolled checkbox with defaultChecked true" />
+    </p>
+
+    <p>
+        <VCheckbox v-model="checkbox3"
+                   :disabled="true"
+                   label="Disabled uncontrolled checkbox" />
+    </p>
+
+    <p>
+        <VCheckbox v-model="checkbox4"
+                   :disabled="true"
+                   label="Disabled uncontrolled checkbox with defaultChecked true" />
+    </p>
+
+    <p>
+        <VCheckbox v-model="checkbox5"
+                   label="Checkbox rendered with boxSide 'end'"
+                   box-side="end" />
+    </p>
+</div>
+```
+
+## API
+
+### Properties
+
+| Property | Type      | Required | Default   | Description                                                                                     |
+|----------|-----------|----------|-----------|-------------------------------------------------------------------------------------------------|
+| disabled | `Boolean` | `false`  | `false`   | Controls if the component is disabled.                                                          |
+| label    | `String`  | `false`  | `''`      | Optional label next to the component.                                                           |
+| boxSide  | `String`  | `false`  | `'start'` | Defines if the component is rendered before or after the label. Can be either `start` or `end`. |
+| value    | `Boolean` | `false`  | `false`   | `v-model` to control the component's state.                                                     |
+
+### Slots
+
+| Slot      | Description                    |
+|-----------|--------------------------------|
+| `default` | Replaces the `label` property. |
+
+### Events
+
+| Event      | Payload   | Description            |
+|------------|-----------|------------------------|
+| `onChange` | `Boolean` | Emits the new `value`. |

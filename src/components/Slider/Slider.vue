@@ -4,7 +4,7 @@
     <label v-if="label"
            :for="id"
            class="ms-Label titleLabel root">
-      {{ label }}
+      <slot>{{ label }}</slot>
     </label>
 
     <div class="ms-Slider-container container">

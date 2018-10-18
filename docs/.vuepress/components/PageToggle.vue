@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h2 class="ms-font-xl">Default Toggles</h2>
-
     <VToggle v-model="toggle1"
              label="">
       Enabled and checked
@@ -22,10 +20,11 @@
              on-text="On"
              off-text="Off" />
 
-    <VToggle :disabled="true"
-             label="Disabled and unchecked"
-             on-text="On"
-             off-text="Off" />
+    <v-toggle v-model="toggle4"
+              :disabled="true"
+              label="Disabled and unchecked"
+              on-text="On"
+              off-text="Off" />
 
   </div>
 </template>
@@ -37,6 +36,7 @@ export default {
       toggle1: true,
       toggle2: false,
       toggle3: true,
+      toggle4: false,
     }
   },
 }
