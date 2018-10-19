@@ -10,7 +10,8 @@ This is a **WIP**!
 ### [Office UI Fabric Core](https://github.com/OfficeDev/office-ui-fabric-core)
 
 The components provided by this library require the official CSS files. See [Get
-started with Fabric Core](https://developer.microsoft.com/en-us/fabric#/get-started).
+started with Fabric
+Core](https://developer.microsoft.com/en-us/fabric#/get-started).
 
 ## Installation
 
