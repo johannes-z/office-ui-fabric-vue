@@ -35,10 +35,17 @@ ChoiceGroup buttons for "I agree" and "I don't agree."
 
 | Property | Type      | Required | Default   | Description                                           |
 |----------|-----------|----------|-----------|-------------------------------------------------------|
-| label    | `String`  | `false`  | `''`      | Controls if the component is disabled.                |
+| label    | `String`  | `false`  | `''`      | Descriptive label for the choice group.               |
 | required | `Boolean` | `false`  | `'false'` | Whether the associated form field is required or not. |
-| options  | `Array`   | `false`  | `[]`      | Whether the associated form field is required or not. |
-| value    | `String`  | `true`   | -         | `v-model` for the value of the slider.                |
+| options  | `Array`   | `false`  | `[]`      | The options for the choice group.                     |
+| value    | `String`  | `true`   | -         | `v-model` for the selected option.                    |
+
+#### ChoiceGroup Options
+
+| Property | Type      | Required | Default | Description                            |
+|----------|-----------|----------|---------|----------------------------------------|
+| disabled | `Boolean` | `false`  | `false` | Whether or not the option is disabled. |
+| text     | `String`  | `false`  | `''`    | The text string for the option.        |
 
 ### Slots
 
