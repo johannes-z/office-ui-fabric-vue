@@ -34,6 +34,7 @@ module.exports = {
           children: [
             'basic/button',
             'basic/checkbox',
+            'basic/choicegroup',
             'basic/label',
             'basic/link',
             'basic/slider',
