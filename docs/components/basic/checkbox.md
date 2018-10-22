@@ -1,7 +1,3 @@
----
-pageClass: ms-Fabric
----
-
 # Checkbox
 
 ## Overview
