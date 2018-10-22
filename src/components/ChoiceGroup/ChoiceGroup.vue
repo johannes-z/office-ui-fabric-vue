@@ -1,7 +1,9 @@
 <template>
   <div class="ms-ChoiceFieldGroup">
     <VLabel v-if="label"
-            :required="required">{{ label }}</VLabel>
+            :required="required">
+      {{ label }}
+    </VLabel>
 
     <div class="ms-ChoiceFieldGroup-flexContainer">
       <VChoiceField v-for="(option, index) in options"

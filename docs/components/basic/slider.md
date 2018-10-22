@@ -27,6 +27,7 @@ their audio volume to low or medium—not about setting the value to two or five
                :default-value="2"
                v-model="slider1"
                label="Basic example:" />
+
       <VSlider :min="50"
                :max="500"
                :step="50"
@@ -44,6 +45,7 @@ their audio volume to low or medium—not about setting the value to two or five
                  v-model="slider3"
                  :vertical="true"
                  label="Basic example:" />
+
         <VSlider :min="50"
                  :max="500"
                  :step="50"
