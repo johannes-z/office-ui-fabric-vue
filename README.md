@@ -15,21 +15,46 @@ Core](https://developer.microsoft.com/en-us/fabric#/get-started).
 
 ## Installation
 
-1. Installing the package
-
 ```sh
-npm install --save-dev johannes-z/office-ui-fabric-vue
-# for dev builds install:
-npm install --save-dev johannes-z/office-ui-fabric-vue#dev
+npm install --save-dev @johannes-z/office-ui-fabric-vue
 ```
 
 ```sh
-yarn add -D johannes-z/office-ui-fabric-vue
-# for dev builds install:
-yarn add -D johannes-z/office-ui-fabric-vue#dev
+yarn add -D @johannes-z/office-ui-fabric-vue
 ```
 
-2. Install Plugin
+## Getting Started
+
+### Prepare HTML
+
+Office UI Fabric styles require two things:
+
+1. The `dir` attribute on the container has to be set for some icons and styles,
+   e.g. `dir="ltr"`.
+2. The class `ms-Fabric` has to be set on the container, e.g. `<body
+   class="ms-Fabric"></body>`
+
+The template for the docs looks as follows:
+
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+  </head>
+  <body class="ms-Fabric">
+    <div id="app"></div>
+  </body>
+</html>
+```
+
+### Install Plugin
+
+After this step all components will be registered globally. You can use any of
+the currently available components in your application (see docs for a list of
+available components).
 
 ```js
 import Vue from 'vue'
