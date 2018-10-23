@@ -3395,12 +3395,12 @@ Checkbox_component.options.__file = "Checkbox.vue"
 // CONCATENATED MODULE: ./src/components/Checkbox/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"2caa35d9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ChoiceGroup/ChoiceGroup.vue?vue&type=template&id=17829dca&
-var ChoiceGroupvue_type_template_id_17829dca_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-ChoiceFieldGroup"},[(_vm.label)?_c('VLabel',{attrs:{"required":_vm.required}},[_vm._v(_vm._s(_vm.label))]):_vm._e(),_c('div',{staticClass:"ms-ChoiceFieldGroup-flexContainer"},_vm._l((_vm.options),function(option,index){return _c('VChoiceField',{key:index,attrs:{"index":index,"option":option},on:{"input":_vm.onChange},model:{value:(_vm.selectedIndex),callback:function ($$v) {_vm.selectedIndex=$$v},expression:"selectedIndex"}})}))],1)}
-var ChoiceGroupvue_type_template_id_17829dca_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"2caa35d9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ChoiceGroup/ChoiceGroup.vue?vue&type=template&id=87364b0a&
+var ChoiceGroupvue_type_template_id_87364b0a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-ChoiceFieldGroup"},[(_vm.label)?_c('VLabel',{attrs:{"required":_vm.required}},[_vm._v("\n    "+_vm._s(_vm.label)+"\n  ")]):_vm._e(),_c('div',{staticClass:"ms-ChoiceFieldGroup-flexContainer"},_vm._l((_vm.options),function(option,index){return _c('VChoiceField',{key:index,attrs:{"index":index,"option":option},on:{"input":_vm.onChange},model:{value:(_vm.selectedIndex),callback:function ($$v) {_vm.selectedIndex=$$v},expression:"selectedIndex"}})}))],1)}
+var ChoiceGroupvue_type_template_id_87364b0a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/ChoiceGroup/ChoiceGroup.vue?vue&type=template&id=17829dca&
+// CONCATENATED MODULE: ./src/components/ChoiceGroup/ChoiceGroup.vue?vue&type=template&id=87364b0a&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.find-index.js
 var es6_array_find_index = __webpack_require__("20d6");
@@ -3565,6 +3565,8 @@ ChoiceField_component.options.__file = "ChoiceField.vue"
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ var ChoiceGroupvue_type_script_lang_js_ = ({
@@ -3627,8 +3629,8 @@ var ChoiceGroupvue_type_style_index_0_lang_scss_ = __webpack_require__("0933");
 
 var ChoiceGroup_component = normalizeComponent(
   ChoiceGroup_ChoiceGroupvue_type_script_lang_js_,
-  ChoiceGroupvue_type_template_id_17829dca_render,
-  ChoiceGroupvue_type_template_id_17829dca_staticRenderFns,
+  ChoiceGroupvue_type_template_id_87364b0a_render,
+  ChoiceGroupvue_type_template_id_87364b0a_staticRenderFns,
   false,
   null,
   null,
