@@ -16,4 +16,4 @@ appropriate control.
 
 ### Modal
 
-<page-modal />
+<surfaces-Modal-Example1 />

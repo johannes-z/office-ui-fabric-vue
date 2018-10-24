@@ -3,6 +3,7 @@
   "version": "0.1.5",
   "main": "dist/office-ui-fabric-vue.umd.min.js",
   "scripts": {
+    "dev": "vue-cli-service serve ./src/dev.js",
     "serve": "vuepress dev docs",
     "build": "yarn build:lib && yarn build:components",
     "build:lib": "vue-cli-service build --target lib --name office-ui-fabric-vue ./src/index.js",

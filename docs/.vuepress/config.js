@@ -67,6 +67,7 @@ module.exports = {
           collapsable: false,
           children: [
             'progress/progressindicator',
+            'progress/shimmer',
             'progress/spinner',
           ]
         },

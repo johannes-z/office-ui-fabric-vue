@@ -30,7 +30,7 @@ control would work better, follow these tips:
 
 ### Default Toggles
 
-<page-toggle />
+<basics-Toggle-Example1 />
 
 ```vue
 <VToggle v-model="toggle1">

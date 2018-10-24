@@ -10,7 +10,7 @@ the user of the component’s purpose.
 
 ## Variants
 
-<page-label />
+<basics-Label-Example1 />
 
 ```vue
 <div>

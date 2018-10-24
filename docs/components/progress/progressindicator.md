@@ -32,7 +32,7 @@ backwards reduce confidence in the service.
 
 ## Variants
 
-<page-progress-indicator />
+<progress-ProgressIndicator-Example1 />
 
 ```vue
 <div>

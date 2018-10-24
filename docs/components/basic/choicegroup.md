@@ -19,7 +19,7 @@ ChoiceGroup buttons for "I agree" and "I don't agree."
 
 ### Default ChoiceGroup
 
-<page-choice-group />
+<basics-Choicegroup-Example1 />
 
 ```vue
 <VChoiceGroup v-model="selected"
