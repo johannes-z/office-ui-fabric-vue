@@ -39,6 +39,7 @@ module.exports = {
             'basic/link',
             'basic/slider',
             'basic/spinbutton',
+            'basic/tag',
             'basic/textfield',
             'basic/toggle',
           ]

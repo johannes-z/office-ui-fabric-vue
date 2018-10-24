@@ -174,6 +174,7 @@ then follow the example showing the use of the `styles` prop.
 
 | Property | Type     | Required | Default  | Description                                       |
 |----------|----------|----------|----------|---------------------------------------------------|
+| height   | `Number` | `false`  | `16`     | Sets the height of the `VShimmerLine`.            |
 | width    | `String` | `false`  | `'100%'` | Sets the width value of the shimmer wave wrapper. |
 
 #### VShimmerCircle
@@ -203,7 +204,7 @@ then follow the example showing the use of the `styles` prop.
 | Property | Type      | Required | Default  | Description                 |
 |----------|-----------|----------|----------|-----------------------------|
 | flexWrap | `Boolean` | `false`  | `false`  | Make Shimmer elements wrap. |
-| width    | `String`  | `false`  | `'auto'` | Width of the Element Group.           |
+| width    | `String`  | `false`  | `'auto'` | Width of the Element Group. |
 
 ### Slots
 
