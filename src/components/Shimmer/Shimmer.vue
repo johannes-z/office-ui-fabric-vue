@@ -32,6 +32,10 @@ export default {
   },
   mixins: [ mixin ],
   props: {
+    height: {
+      type: Number,
+      default: 16,
+    },
     width: {
       type: Number | String,
       default: '100%',

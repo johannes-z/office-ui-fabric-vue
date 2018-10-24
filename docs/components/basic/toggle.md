@@ -58,7 +58,6 @@ control would work better, follow these tips:
          off-text="Off" />
 ```
 
-
 ## API
 
 ### Properties
