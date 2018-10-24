@@ -1,3 +1,3 @@
 # SearchBox
 
-<page-search-box />
+<navigation-Searchbox-Example1 />

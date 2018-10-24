@@ -15,7 +15,7 @@ their audio volume to low or medium—not about setting the value to two or five
 
 ## Variants
 
-<page-slider />
+<basics-Slider-Example1 />
 
 ```vue
 <div>

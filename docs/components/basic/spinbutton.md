@@ -1,3 +1,3 @@
 # SpinButton
 
-<page-spin-button />
+<basics-Spinbutton-Example1 />

@@ -22,4 +22,4 @@ type.
 
 ## Variants
 
-<page-button />
+<basics-Button-Example1 />

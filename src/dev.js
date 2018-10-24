@@ -3,29 +3,6 @@ import VueRouter from 'vue-router'
 
 import Fabric from './'
 
-import Button from './pages/Button.vue'
-import Breadcrumb from './pages/Breadcrumb.vue'
-import Callout from './pages/Callout.vue'
-import Checkbox from './pages/Checkbox.vue'
-import ChoiceGroup from './pages/ChoiceGroup.vue'
-import CommandBar from './pages/CommandBar.vue'
-import ContextualMenu from './pages/ContextualMenu.vue'
-import Dropdown from './pages/Dropdown.vue'
-import Label from './pages/Label.vue'
-import Layer from './pages/Layer.vue'
-import Link from './pages/Link.vue'
-import OverflowSet from './pages/OverflowSet.vue'
-import Panel from './pages/Panel.vue'
-import Pivot from './pages/Pivot.vue'
-import ProgressIndicator from './pages/ProgressIndicator.vue'
-import Shimmer from './pages/Shimmer.vue'
-import SearchBox from './pages/SearchBox.vue'
-import SpinButton from './pages/SpinButton.vue'
-import Spinner from './pages/Spinner.vue'
-import Slider from './pages/Slider.vue'
-import TextField from './pages/TextField.vue'
-import Toggle from './pages/Toggle.vue'
-
 Vue.use(Fabric)
 Vue.use(VueRouter)
 
@@ -33,48 +10,44 @@ const routes = [
   {
     name: 'Basic Inputs',
     children: [
-      { name: 'Button', path: '/button', component: Button },
-      { name: 'Checkbox', path: '/checkbox', component: Checkbox },
-      { name: 'ChoiceGroup', path: '/choiceGroup', component: ChoiceGroup },
-      { name: 'ContextualMenu', path: '/contextualMenu', component: ContextualMenu },
-      { name: 'Dropdown', path: '/dropdown', component: Dropdown },
-      { name: 'Label', path: '/label', component: Label },
-      { name: 'Link', path: '/link', component: Link },
-      { name: 'Slider', path: '/slider', component: Slider },
-      { name: 'SpinButton', path: '/spinButton', component: SpinButton },
-      { name: 'TextField', path: '/textfield', component: TextField },
-      { name: 'Toggle', path: '/toggle', component: Toggle },
-    ] },
+      { name: 'Button', path: '/Button', component: () => import(`../docs/.vuepress/components/basics/Button/Example1.vue`) },
+      { name: 'Checkbox', path: '/Checkbox', component: () => import(`../docs/.vuepress/components/basics/Checkbox/Example1.vue`) },
+      { name: 'Choicegroup', path: '/Choicegroup', component: () => import(`../docs/.vuepress/components/basics/Choicegroup/Example1.vue`) },
+      { name: 'Label', path: '/Label', component: () => import(`../docs/.vuepress/components/basics/Label/Example1.vue`) },
+      { name: 'Link', path: '/Link', component: () => import(`../docs/.vuepress/components/basics/Link/Example1.vue`) },
+      { name: 'Rating', path: '/Rating', component: () => import(`../docs/.vuepress/components/basics/Rating/Example1.vue`) },
+      { name: 'Slider', path: '/Slider', component: () => import(`../docs/.vuepress/components/basics/Slider/Example1.vue`) },
+      { name: 'Spinbutton', path: '/Spinbutton', component: () => import(`../docs/.vuepress/components/basics/Spinbutton/Example1.vue`) },
+      { name: 'Textfield', path: '/Textfield', component: () => import(`../docs/.vuepress/components/basics/Textfield/Example1.vue`) },
+      { name: 'Toggle', path: '/Toggle', component: () => import(`../docs/.vuepress/components/basics/Toggle/Example1.vue`) },
+    ],
+  },
   {
     name: 'Navigation',
     children: [
-      { name: 'Breadcrumb', path: '/breadcrumb', component: Breadcrumb },
-      { name: 'CommandBar', path: '/commandBar', component: CommandBar },
-      { name: 'Pivot', path: '/pivot', component: Pivot },
-      { name: 'OverflowSet', path: '/overflowSet', component: OverflowSet },
-      { name: 'SearchBox', path: '/searchBox', component: SearchBox },
+      { name: 'Searchbox', path: '/Searchbox', component: () => import(`../docs/.vuepress/components/navigation/Searchbox/Example1.vue`) },
     ],
   },
   {
     name: 'Content',
     children: [
-
+      { name: 'Tag', path: '/Tag', component: () => import(`../docs/.vuepress/components/content/Tag/Example1.vue`) },
     ],
   },
   {
     name: 'Progress & Validation',
     children: [
-      { name: 'ProgressIndicator', path: '/progressIndicator', component: ProgressIndicator },
-      { name: 'Shimmer', path: '/shimmer', component: Shimmer },
-      { name: 'Spinner', path: '/spinner', component: Spinner },
+      { name: 'ProgressIndicator', path: '/ProgressIndicator', component: () => import(`../docs/.vuepress/components/progress/ProgressIndicator/Example1.vue`) },
+      { name: 'Shimmer', path: '/Shimmer', component: () => import(`../docs/.vuepress/components/progress/Shimmer/Example1.vue`) },
+      { name: 'Spinner', path: '/Spinner', component: () => import(`../docs/.vuepress/components/progress/Spinner/Example1.vue`) },
     ],
   },
   {
     name: 'Surfaces',
     children: [
-      { name: 'Callout', path: '/callout', component: Callout },
-      { name: 'Layer', path: '/layer', component: Layer },
-      { name: 'Panel', path: '/panel', component: Panel },
+      { name: 'Layer', path: '/Layer', component: () => import(`../docs/.vuepress/components/surfaces/Layer/Example1.vue`) },
+      { name: 'Modal', path: '/Modal', component: () => import(`../docs/.vuepress/components/surfaces/Modal/Example1.vue`) },
+      { name: 'Panel', path: '/Panel', component: () => import(`../docs/.vuepress/components/surfaces/Panel/Example1.vue`) },
     ],
   },
 ]

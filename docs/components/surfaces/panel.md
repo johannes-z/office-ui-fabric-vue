@@ -1,3 +1,3 @@
 # Panel
 
-<page-panel />
+<surfaces-Panel-Example1 />

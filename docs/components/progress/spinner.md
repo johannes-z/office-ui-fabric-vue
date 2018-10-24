@@ -12,7 +12,7 @@ from the completed task.
 
 ## Variants
 
-<page-spinner />
+<progress-Spinner-Example1 />
 
 ```vue
 <div style="max-width: 300px;">

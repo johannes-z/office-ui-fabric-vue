@@ -1,53 +1,80 @@
 <template>
-  <div class="ms-Shimmer-container root">
-    <div class="ms-Shimmer-shimmerWrapper shimmerWrapper">
-      <div class="ms-ShimmerElementsGroup root">
-        <div class="ms-ShimmerLine-root root"
-             style="width: 100%; min-width: auto;">
-          <svg width="2"
-               height="2"
-               class="ms-ShimmerLine-topLeftCorner topLeftCorner">
-            <path d="M0 2 A 2 2, 0, 0, 1, 2 0 L 0 0 Z" />
-          </svg>
-          <svg width="2"
-               height="2"
-               class="ms-ShimmerLine-topRightCorner topRightCorner">
-            <path d="M0 0 A 2 2, 0, 0, 1, 2 2 L 2 0 Z" />
-          </svg>
-          <svg width="2"
-               height="2"
-               class="ms-ShimmerLine-bottomRightCorner bottomRightCorner">
-            <path d="M2 0 A 2 2, 0, 0, 1, 0 2 L 2 2 Z" />
-          </svg>
-          <svg width="2"
-               height="2"
-               class="ms-ShimmerLine-bottomLeftCorner bottomLeftCorner">
-            <path d="M2 2 A 2 2, 0, 0, 1, 0 0 L 0 2 Z" />
-          </svg>
-        </div>
-      </div>
+  <div class="ms-Shimmer-container">
+    <div :style="widthStyle"
+         class="ms-Shimmer-shimmerWrapper">
+
+      <slot name="groups">
+        <VShimmerElementsGroup>
+          <slot>
+            <VShimmerLine :height="height" />
+          </slot>
+        </VShimmerElementsGroup>
+      </slot>
+
     </div>
   </div>
 </template>
 
 <script>
-export default {
+import VShimmerElementsGroup from './ShimmerElementsGroup.vue'
+import VShimmerCircle from './ShimmerCircle.vue'
+import VShimmerGap from './ShimmerGap.vue'
+import VShimmerLine from './ShimmerLine.vue'
 
+import mixin from './mixin.js'
+
+export default {
+  components: {
+    VShimmerElementsGroup,
+    VShimmerCircle,
+    VShimmerGap,
+    VShimmerLine,
+  },
+  mixins: [ mixin ],
+  props: {
+    width: {
+      type: Number | String,
+      default: '100%',
+    },
+  },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+$BACKGROUND_OFF_SCREEN_POSITION: 1000%;
+
+@keyframes shimmerAnimation {
+  0% {
+    background-position: -$BACKGROUND_OFF_SCREEN_POSITION;
+  }
+
+  100% {
+    background-position: $BACKGROUND_OFF_SCREEN_POSITION;
+  }
+}
+
 .ms-Shimmer-container {
-  height: auto;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
   position: relative;
+  height: auto;
 }
 
 .ms-Shimmer-shimmerWrapper {
-}
-
-.ms-ShimmerElementsGroup-root {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
+  animation-name: shimmerAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  background: linear-gradient(
+      to right,
+      rgb(244, 244, 244) 0%,
+      rgb(234, 234, 234) 50%,
+      rgb(244, 244, 244) 100%
+    )
+    0px 0px / 90% 100% no-repeat rgb(244, 244, 244);
+  transition: opacity 200ms ease 0s;
 }
 </style>

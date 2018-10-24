@@ -25,7 +25,7 @@ or more items from a group of choices that are not mutually exclusive.
 
 ## Variants
 
-<page-checkbox />
+<basics-Checkbox-Example1 />
 
 ```vue
 <div>
