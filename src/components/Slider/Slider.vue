@@ -279,7 +279,8 @@ export default {
 
   .slideBox .thumb {
     top: -6px;
-    @include transform-translateX(-50%);
+    // @include transform-translateX(-50%);
+    transform: translateX(-8px);
   }
 
   .valueLabel {

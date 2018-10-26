@@ -5,14 +5,13 @@
     <br>
 
     <h2 class="ms-font-xl">Underlined SearchBox</h2>
-    <search-box :underlined="true" />
+    <search-box underlined />
     <br>
 
     <h2 class="ms-font-xl">Disabled SearchBoxes</h2>
     <search-box disabled />
     <br>
-    <search-box :underlined="true" disabled />
-
+    <search-box disabled underlined />
   </div>
 </template>
 

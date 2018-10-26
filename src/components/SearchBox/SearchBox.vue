@@ -1,5 +1,5 @@
 <template>
-  <div :class="className" class="ms-SearchBox-container">
+  <div class="ms-SearchBox-container">
 
     <div :class="classObj" class="ms-SearchBox root">
 
@@ -36,10 +36,6 @@ import { VIcon } from '../Icon'
 export default {
   components: { VIcon },
   props: {
-    className: {
-      type: String,
-      default: '',
-    },
     placeholder: {
       type: String,
       default: 'Search',
@@ -48,13 +44,17 @@ export default {
       type: String,
       default: '',
     },
-    underlined: {
-      type: Boolean,
-      default: false,
-    },
     clear: {
       type: Boolean,
       default: true,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    underlined: {
+      type: Boolean,
+      default: false,
     },
   },
   data () {
@@ -67,12 +67,9 @@ export default {
     hasText () {
       return this.searchQuery && this.searchQuery.length > 0
     },
-    isDisabled () {
-      return this.$attrs.disabled != null
-    },
     classObj () {
       let obj = {}
-      obj['is-disabled'] = this.isDisabled
+      obj['is-disabled'] = this.disabled
       obj['is-underlined'] = this.underlined
       obj['has-text'] = this.hasText
       obj['can-clear'] = this.hasText
@@ -92,18 +89,19 @@ export default {
     },
     onBlur () {
       this.isActive = false
-      this.$emit('onBlur', this.searchQuery)
+      this.$emit('blur', this.searchQuery)
     },
     onFocus () {
-      this.isActive = !this.isDisabled
-      this.$emit('onFocus', this.searchQuery)
+      if (this.disabled) return
+      this.isActive = !this.disabled
+      this.$emit('focus', this.searchQuery)
     },
     onChange () {
       this.$emit('input', this.searchQuery)
-      this.$emit('onChange', this.searchQuery)
+      this.$emit('change', this.searchQuery)
     },
     onSearch () {
-      this.$emit('onSearch', this.searchQuery)
+      this.$emit('search', this.searchQuery)
     },
   },
 }
@@ -139,6 +137,8 @@ $SearchBoxTransitionDuration: .167s;
   background-color: $ms-color-neutralLighterAlt;
   border-color: $ms-color-neutralLighterAlt;
   color: $ms-color-neutralTertiary;
+  user-select: none;
+  pointer-events: none;
 
   &, > * {
     cursor: default;

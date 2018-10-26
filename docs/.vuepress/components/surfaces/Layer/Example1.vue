@@ -32,8 +32,14 @@
          class="ms-LayerHost LayerExample-customHost" />
 
     <p>
+      In some cases, you may need to contain layered content within an area.
+      Create an instance of a LayerHost along with an id, and provide a hostId
+      on the layer to render it within the specific host. (Note that it's
+      important that you don't include children within the LayerHost. It's meant
+      to contain Layered content only.)
+
       <VCheckbox v-model="showLayerId">
-        Wrap the content box belowed in a Layer
+        Wrap the content box below in a Layer
       </VCheckbox>
     </p>
 
