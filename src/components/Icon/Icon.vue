@@ -9,7 +9,7 @@ export default {
   props: {
     iconName: {
       type: String,
-      default: '',
+      required: true,
     },
   },
 }

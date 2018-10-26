@@ -20,7 +20,7 @@ then follow the example showing the use of the `styles` prop.
 
 ## Variants
 
-### Shimmer with basic elements using the 'shimmerElements' prop
+### Shimmer with basic elements using the `default` slot
 
 <progress-Shimmer-Example1 />
 
@@ -96,7 +96,7 @@ then follow the example showing the use of the `styles` prop.
 </div>
 ```
 
-### Shimmer with custom elements using the 'customElementsGroup' prop
+### Shimmer with custom elements using the `groups` slot
 
 <progress-Shimmer-Example2 />
 

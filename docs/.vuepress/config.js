@@ -55,6 +55,7 @@ module.exports = {
           title: 'Content',
           collapsable: false,
           children: [
+            'content/icon',
           ]
         },
         {
