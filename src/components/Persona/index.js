@@ -1,5 +1,5 @@
-import Persona from './Persona.vue'
+import VPersona from './Persona.vue'
 
 export {
-  Persona,
+  VPersona,
 }

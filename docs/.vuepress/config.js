@@ -56,6 +56,7 @@ module.exports = {
           collapsable: false,
           children: [
             'content/icon',
+            'content/persona',
           ]
         },
         {
