@@ -16,7 +16,7 @@
             <!-- TODO: add presence icon -->
           </div>
 
-          <persona-initials v-if="!imageUrl" :name="primaryText"/>
+          <persona-initials v-if="!imageUrl" :name="text"/>
 
           <div v-else class="ms-Image ms-Persona-image">
             <img :src="imageUrl" class="ms-Image-image" alt="">
@@ -31,8 +31,8 @@
 
       <slot name="details">
 
-        <div class="ms-Persona-primaryText">
-          <span>{{ primaryText }}</span>
+        <div class="ms-Persona-text">
+          <span>{{ text }}</span>
         </div>
 
       </slot>
@@ -53,7 +53,7 @@ export default {
       type: String,
       default: '',
     },
-    primaryText: {
+    text: {
       type: String,
       default: '',
     },
@@ -166,7 +166,7 @@ export default {
 
     padding-left: 10px;
 
-    .ms-Persona-primaryText {
+    .ms-Persona-text {
       font-size: 16px;
       padding-bottom: 1px;
     }

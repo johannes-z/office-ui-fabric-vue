@@ -1,14 +1,14 @@
 <template>
   <div>
-    <Label>Default SearchBox</Label>
+    <h2 class="ms-font-xl">Default SearchBox</h2>
     <search-box v-model="searchQuery1" />
     <br>
 
-    <Label>Underlined SearchBox</Label>
+    <h2 class="ms-font-xl">Underlined SearchBox</h2>
     <search-box :underlined="true" />
     <br>
 
-    <Label>Disabled SearchBoxes</Label>
+    <h2 class="ms-font-xl">Disabled SearchBoxes</h2>
     <search-box disabled />
     <br>
     <search-box :underlined="true" disabled />
