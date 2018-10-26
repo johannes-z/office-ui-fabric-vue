@@ -9,25 +9,39 @@ to locate specific items within the website or app.
 
 <navigation-Searchbox-Example1 />
 
+```vue
+<div>
+  <h2 class="ms-font-xl">Default SearchBox</h2>
+  <search-box v-model="searchQuery1" />
+
+  <h2 class="ms-font-xl">Underlined SearchBox</h2>
+  <search-box underlined />
+
+  <h2 class="ms-font-xl">Disabled SearchBoxes</h2>
+  <search-box disabled />
+  <search-box disabled underlined />
+</div>
+```
+
 ## API
 
 ### Properties
 
-| Property        | Type     | Required | Default | Description                                                                                                                 |
-|-----------------|----------|----------|---------|-----------------------------------------------------------------------------------------------------------------------------|
-| label           | `String` | `false`  | `''`    | Optional label above the progress bar.                                                                                      |
-| description     | `String` | `false`  | `''`    | Optional label below the progress bar.                                                                                      |
-| percentComplete | `Number` | `false`  | `null`  | Percentage of the operation's completeness. If this is not set, the indeterminate progress animation will be shown instead. |
+| Property    | Type      | Required | Default | Description                                 |
+|-------------|-----------|----------|---------|---------------------------------------------|
+| placeholder | `String`  | `false`  | `false` | Placeholder for the search box.             |
+| underlined  | `Boolean` | `false`  | `false` | Whether or not the SearchBox is underlined. |
+| value       | `String`  | `false`  | `false` | `v-model` of the text in the SearchBox.     |
 
 ### Slots
 
-| Slot        | Description                          |
-|-------------|--------------------------------------|
-| `default`   | Replaces the `label` property.       |
-| description | Replaces the `description` property. |
+*This component has no slots.*
 
 ### Events
 
-| Event      | Payload   | Description            |
-|------------|-----------|------------------------|
-| `onChange` | `Boolean` | Emits the new `value`. |
+| Event    | Payload  | Description                                                                                     |
+|----------|----------|-------------------------------------------------------------------------------------------------|
+| `change` | `String` | Callback function for when the typed input for the SearchBox has changed.                       |
+| `clear`  | -        | Callback executed when the user clears the search box by either clicking 'X' or hitting escape. |
+| `escape` | -        | Callback executed when the user presses escape in the search box.                               |
+| `search` | `String` | Callback executed when the user presses enter in the search box.                                |
