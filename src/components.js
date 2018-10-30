@@ -1,3 +1,4 @@
+export * from './components/ActivityItem/'
 export * from './components/Breadcrumb/'
 export * from './components/Button/'
 export * from './components/Callout/'

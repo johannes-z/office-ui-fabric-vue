@@ -34,6 +34,10 @@
     "node_modules"
   ],
   "include": [
+    "docs/**/*.js",
+    "docs/**/*.ts",
+    "docs/**/*.tsx",
+    "docs/**/*.vue",
     "src/**/*.js",
     "src/**/*.ts",
     "src/**/*.tsx",

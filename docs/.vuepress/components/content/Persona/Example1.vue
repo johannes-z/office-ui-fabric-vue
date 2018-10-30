@@ -1,13 +1,16 @@
 <template>
   <div>
     <VLabel>Size 10 Persona, with no presence</VLabel>
-    <VPersona v-bind="examplePersona" :size="9" />
+    <VPersona v-bind="examplePersona"
+              :size="9" />
 
     <VLabel>Size 24 Persona, with no presence</VLabel>
-    <VPersona v-bind="examplePersona" :size="11" />
+    <VPersona v-bind="examplePersona"
+              :size="11" />
 
     <VLabel>Size 100 Persona, with no presence</VLabel>
-    <VPersona v-bind="examplePersona" :size="14" />
+    <VPersona v-bind="examplePersona"
+              :size="15" />
   </div>
 </template>
 
@@ -29,5 +32,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>

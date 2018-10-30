@@ -18,6 +18,7 @@ const routes = [
       { name: 'Rating', path: '/Rating', component: () => import(`../docs/.vuepress/components/basics/Rating/Example1.vue`) },
       { name: 'Slider', path: '/Slider', component: () => import(`../docs/.vuepress/components/basics/Slider/Example1.vue`) },
       { name: 'Spinbutton', path: '/Spinbutton', component: () => import(`../docs/.vuepress/components/basics/Spinbutton/Example1.vue`) },
+      { name: 'Tag', path: '/Tag', component: () => import(`../docs/.vuepress/components/basics/Tag/Example1.vue`) },
       { name: 'Textfield', path: '/Textfield', component: () => import(`../docs/.vuepress/components/basics/Textfield/Example1.vue`) },
       { name: 'Toggle', path: '/Toggle', component: () => import(`../docs/.vuepress/components/basics/Toggle/Example1.vue`) },
     ],
@@ -31,7 +32,7 @@ const routes = [
   {
     name: 'Content',
     children: [
-      { name: 'Tag', path: '/Tag', component: () => import(`../docs/.vuepress/components/basics/Tag/Example1.vue`) },
+      { name: 'ActivityItem', path: '/ActivityItem', component: () => import(`../docs/.vuepress/components/content/ActivityItem/Example2.vue`) },
     ],
   },
   {
