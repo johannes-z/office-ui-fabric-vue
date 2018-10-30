@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Fabric from './'
+import Fabric from './main'
 
 Vue.use(Fabric)
 Vue.use(VueRouter)
@@ -31,7 +31,7 @@ const routes = [
   {
     name: 'Content',
     children: [
-      { name: 'Tag', path: '/Tag', component: () => import(`../docs/.vuepress/components/content/Tag/Example1.vue`) },
+      { name: 'Tag', path: '/Tag', component: () => import(`../docs/.vuepress/components/basics/Tag/Example1.vue`) },
     ],
   },
   {
@@ -48,6 +48,12 @@ const routes = [
       { name: 'Layer', path: '/Layer', component: () => import(`../docs/.vuepress/components/surfaces/Layer/Example1.vue`) },
       { name: 'Modal', path: '/Modal', component: () => import(`../docs/.vuepress/components/surfaces/Modal/Example1.vue`) },
       { name: 'Panel', path: '/Panel', component: () => import(`../docs/.vuepress/components/surfaces/Panel/Example1.vue`) },
+    ],
+  },
+  {
+    name: 'Utilities',
+    children: [
+      { name: 'ResizeGroup', path: '/ResizeGroup', component: () => import(`../docs/.vuepress/components/utilities/ResizeGroup/Example1.vue`) },
     ],
   },
 ]

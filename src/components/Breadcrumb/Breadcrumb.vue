@@ -80,11 +80,6 @@ export default {
 
     this.renderedItems = renderedItems
     this.renderedOverflowItems = renderedOverflowItems
-
-    console.log({
-      renderedItems,
-      renderedOverflowItems,
-    })
   },
 }
 </script>

@@ -1,5 +1,5 @@
-import OverflowSet from './OverflowSet.vue'
+import VOverflowSet from './OverflowSet.vue'
 
 export {
-  OverflowSet,
+  VOverflowSet,
 }
