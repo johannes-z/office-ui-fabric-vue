@@ -5,11 +5,11 @@ module.exports = {
   base: '/office-ui-fabric-vue/',
 
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.0/css/fabric.min.css' }]
+    ['link', { rel: 'stylesheet', href: 'https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.0/css/fabric.min.css' }],
   ],
 
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
   },
 
   themeConfig: {
@@ -22,7 +22,7 @@ module.exports = {
           { text: 'Office UI Fabric', link: 'https://developer.microsoft.com/en-us/fabric' },
           { text: 'Office UI Fabric Core - GitHub', link: 'https://github.com/OfficeDev/office-ui-fabric-core' },
           { text: 'Office UI Fabric React - GitHub', link: 'https://github.com/OfficeDev/office-ui-fabric-react' },
-        ]
+        ],
       },
       { text: 'GitHub', link: 'https://github.com/johannes-z/office-ui-fabric-vue' },
     ],
@@ -42,14 +42,14 @@ module.exports = {
             'basic/tag',
             'basic/textfield',
             'basic/toggle',
-          ]
+          ],
         },
         {
           title: 'Navigation',
           collapsable: false,
           children: [
             'navigation/searchbox',
-          ]
+          ],
         },
         {
           title: 'Content',
@@ -58,22 +58,23 @@ module.exports = {
             'content/activityitem',
             'content/icon',
             'content/persona',
-          ]
+          ],
         },
         {
           title: 'Pickers',
           collapsable: false,
           children: [
-          ]
+          ],
         },
         {
           title: 'Progress & Validation',
           collapsable: false,
           children: [
+            'progress/messagebar',
             'progress/progressindicator',
             'progress/shimmer',
             'progress/spinner',
-          ]
+          ],
         },
         {
           title: 'Surfaces',
@@ -82,15 +83,15 @@ module.exports = {
             'surfaces/layer',
             'surfaces/modal',
             'surfaces/panel',
-          ]
+          ],
         },
         {
           title: 'Utilities',
           collapsable: false,
           children: [
-          ]
+          ],
         },
-      ]
-    }
-  }
+      ],
+    },
+  },
 }
