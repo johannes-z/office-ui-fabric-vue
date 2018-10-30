@@ -1,9 +1,3 @@
-<template>
-  <div ref="container">
-    <slot />
-  </div>
-</template>
-
 <script>
 export default {
   props: {
@@ -23,8 +17,9 @@ export default {
   data () {
     return {
       containerWidth: undefined,
-      measureContainer: true,
-      resizeDirection: 'grow',
+      measuredWidth: Infinity,
+      measureContainer: false,
+      previousWidth: -Infinity,
     }
   },
   beforeDestroy () {
@@ -38,20 +33,47 @@ export default {
     this.afterComponentRendered()
   },
   methods: {
-    afterComponentRendered () {
-      if (this.measureContainer) {
-        this.containerWidth = this.$refs.container.getBoundingClientRect().width
-      }
-      if (this.resizeDirection === 'grow') {
+    afterComponentRendered (dir = -1) {
+      this.containerWidth = this.$refs.container.getBoundingClientRect().width
+
+      if (dir === 1) {
+        if (this.measuredWidth < this.containerWidth) {
+          const nextMeasuredData = this.onGrowData(this.data)
+          this.$emit('update:data', nextMeasuredData)
+
+          let ref = this.$refs.hiddenDiv
+          this.measuredWidth = ref.getBoundingClientRect().width
+        }
       } else {
+        if (this.measuredWidth > this.containerWidth) {
+          const nextMeasuredData = this.onReduceData(this.data)
+          this.$emit('update:data', nextMeasuredData)
+
+          let ref = this.$refs.hiddenDiv
+          this.measuredWidth = ref.getBoundingClientRect().width
+        }
       }
     },
     remeasure () {
-      this.measureContainer = true
     },
     onResize (event) {
-      this.measureContainer = true
+      let dir = this.previousWidth < event.target.innerWidth ? 1 : -1
+      this.afterComponentRendered(dir)
+      this.previousWidth = event.target.innerWidth
     },
+  },
+  render (h) {
+    return (
+      <div>
+        <div ref="container">
+          { this.$scopedSlots.default({ data: this.data }) }
+        </div>
+        <div ref="hiddenDiv"
+          style="position: fixed; visibility: hidden;">
+          { this.$scopedSlots.default({ data: this.data }) }
+        </div>
+      </div>
+    )
   },
 }
 </script>
