@@ -1,5 +1,5 @@
-import Spinner from './Spinner.vue'
+import VSpinner from './Spinner.vue'
 
 export {
-  Spinner,
+  VSpinner,
 }
