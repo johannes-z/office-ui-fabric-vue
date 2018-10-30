@@ -6,7 +6,27 @@
 
     <VLabel>Size 24 Persona, with no presence</VLabel>
     <VPersona v-bind="examplePersona"
+              :size="10" />
+
+    <VLabel>Size 28 Persona, with no presence</VLabel>
+    <VPersona v-bind="examplePersona"
+              :size="7" />
+
+    <VLabel>Size 32 Persona, with no presence</VLabel>
+    <VPersona v-bind="examplePersona"
               :size="11" />
+
+    <VLabel>Size 40 Persona, with no presence</VLabel>
+    <VPersona v-bind="examplePersona"
+              :size="12" />
+
+    <VLabel>Size 48 Persona, with no presence</VLabel>
+    <VPersona v-bind="examplePersona"
+              :size="13" />
+
+    <VLabel>Size 72 Persona, with no presence</VLabel>
+    <VPersona v-bind="examplePersona"
+              :size="14" />
 
     <VLabel>Size 100 Persona, with no presence</VLabel>
     <VPersona v-bind="examplePersona"
