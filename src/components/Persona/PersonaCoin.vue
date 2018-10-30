@@ -100,7 +100,6 @@ export default {
 
 .ms-Persona-coin {
   position: relative;
-  display: inline-block;
   vertical-align: middle;
   font-size: 10px;
 

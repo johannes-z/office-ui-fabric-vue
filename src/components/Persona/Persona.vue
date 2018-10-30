@@ -72,11 +72,14 @@ export default {
 }
 
 .ms-Persona {
+  display: flex;
   height: initial !important;
 
   > .ms-Persona-details {
-    display: inline-block;
-    vertical-align: middle;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
     padding-left: 10px;
 
