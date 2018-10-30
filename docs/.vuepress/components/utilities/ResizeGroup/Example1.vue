@@ -1,10 +1,11 @@
 <template>
-  <VResizeGroup :data="data"
+  <VResizeGroup :data.sync="data"
                 :onReduceData="onReduceData"
                 :onGrowData="onGrowData"
                 @reduceData="onReduceData"
                 @growData="onGrowData">
-    <VOverflowSet :items="data.primary"
+    <VOverflowSet slot-scope="props"
+                  :items="data.primary"
                   :overflow-items="data.overflow.length ? data.overflow : null" />
   </VResizeGroup>
 </template>
@@ -42,7 +43,7 @@ function generateData(count, cachingEnabled, checked) {
 export default {
   data () {
     return {
-      data: generateData(10, false, false),
+      data: generateData(20, false, false),
     }
   },
   methods: {

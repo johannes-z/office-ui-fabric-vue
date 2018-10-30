@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Fabric from './main'
+import Fabric from './'
 
 Vue.use(Fabric)
 Vue.use(VueRouter)
@@ -83,11 +83,11 @@ const app = new Vue({
 
     return (
       <div class="ms-Fabric-Examples">
-        <div id="navbar" style="width: 200px; padding-right: 20px; float: left;">
+        <div id="navbar" style="width: 200px; position: absolute; left: 0; top: 0;">
           {navItems}
         </div>
 
-        <div style="width: calc(100% - 220px); float: left;">
+        <div style="position: absolute; left: 220px; top: 0; width: calc(100% - 240px); padding-top: 20px;">
           <router-view></router-view>
         </div>
       </div>
