@@ -22,4 +22,104 @@ type.
 
 ## Variants
 
-<basics-Button-Example1 />
+### Default Button
+
+<basics-Button-DefaultButton />
+
+```vue
+  <div class="ms-Grid"
+       dir="ltr">
+    <div class="ms-Grid-row">
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Standard</VLabel>
+        <VDefaultButton text="Button" />
+      </div>
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Primary</VLabel>
+        <VDefaultButton :primary="true"
+                        text="Button" />
+      </div>
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Disabled Standard</VLabel>
+        <VDefaultButton :disabled="true"
+                        text="Button" />
+      </div>
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Disabled Primary</VLabel>
+        <VDefaultButton :disabled="true"
+                        :primary="true"
+                        text="Button" />
+      </div>
+    </div>
+  </div>
+```
+
+### Compound Button
+
+<basics-Button-CompoundButton />
+
+```vue
+  <div class="ms-Grid"
+       dir="ltr">
+    <div class="ms-Grid-row">
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Standard</VLabel>
+        <VCompoundButton text="Create account"
+                         secondary-text="You can create a new account here." />
+      </div>
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Primary</VLabel>
+        <VCompoundButton :primary="true"
+                         text="Create account"
+                         secondary-text="You can create a new account here." />
+      </div>
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Disabled Standard</VLabel>
+        <VCompoundButton :disabled="true"
+                         text="Create account"
+                         secondary-text="You can create a new account here." />
+      </div>
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Disabled Primary</VLabel>
+        <VCompoundButton :disabled="true"
+                         :primary="true"
+                         text="Create account"
+                         secondary-text="You can create a new account here." />
+      </div>
+    </div>
+  </div>
+```
+
+### Icon Button
+
+<basics-Button-IconButton />
+
+```vue
+  <div>
+    <VIconButton icon-name="Emoji2" />
+  </div>
+```
+
+### Action Button
+
+<basics-Button-ActionButton />
+
+```vue
+  <div class="ms-Grid"
+       dir="ltr">
+    <div class="ms-Grid-row">
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Standard</VLabel>
+        <VActionButton icon-name="AddFriend">Create account</VActionButton>
+      </div>
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Primary</VLabel>
+        <VActionButton :primary="true"
+                       icon-name="AddFriend">Create account</VActionButton>
+      </div>
+    </div>
+  </div>
+```
+
+## API
+
