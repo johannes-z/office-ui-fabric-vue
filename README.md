@@ -5,6 +5,26 @@
 
 This is a **WIP**!
 
+## Browser support
+
+Fabric Vue supports all evergreen browsers, with IE 11 as the min-bar version of
+Internet Explorer.
+
+Fabric Vue supports many commonly used web browsers such as Internet Explorer,
+Google Chrome, Mozilla Firefox, Apple Safari, and Microsoft Edge. For browsers
+outside of this matrix, proper behavior of the components may be good but is not
+guaranteed.
+
+| Browser                             | Supported | Not supported |
+|-------------------------------------|:---------:|:-------------:|
+| Microsoft Edge                      |     X     |               |
+| Internet Explorer 11                |     X     |               |
+| Internet Explorer 10                |           |       X       |
+| Internet Explorer 9                 |           |       X       |
+| Google Chrome (latest 2 versions)   |     X     |               |
+| Mozilla Firefox (latest 2 versions) |     X     |               |
+| Apple Safari (latest 2 versions)    |     X     |               |
+
 ## Requirements
 
 ### [Office UI Fabric Core](https://github.com/OfficeDev/office-ui-fabric-core)
