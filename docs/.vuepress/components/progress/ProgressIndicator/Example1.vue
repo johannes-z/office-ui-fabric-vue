@@ -1,14 +1,7 @@
 <template>
   <div>
-    <h2 class="ms-font-l">Default ProgressIndicator</h2>
-
     <VProgressIndicator :percent-complete="percentComplete"
                         label="Example title"
-                        description="Example description" />
-
-    <h2 class="ms-font-l">Indeterminate ProgressIndicator</h2>
-
-    <VProgressIndicator label="Example title"
                         description="Example description" />
   </div>
 </template>

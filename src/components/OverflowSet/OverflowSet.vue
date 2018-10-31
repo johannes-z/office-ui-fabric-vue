@@ -1,15 +1,19 @@
 <template>
-  <div class="ms-OverflowSet root">
-    <div v-for="(item, index) in items"
-         :key="item.key"
-         class="ms-OverflowSet-item item">
-      <VLink :href="item.href"
-             class="overflowLinks">{{ item.name }}</VLink>
-    </div>
+  <div class="ms-OverflowSet">
+    <slot>
+      <div v-for="item in items"
+           :key="item.key"
+           class="ms-OverflowSet-item">
+        <VLink :href="item.href"
+               class="overflowLinks">{{ item.name }}</VLink>
+      </div>
+    </slot>
 
-    <div class="ms-OverflowSet-overflowButton overflowButton">
-      <VIconButton icon-name="More"
-                   class="overflowButton" />
+    <div class="ms-OverflowSet-overflowButton">
+      <slot name="overflow">
+        <VIconButton icon-name="More"
+                     class="overflowButton" />
+      </slot>
     </div>
   </div>
 </template>
@@ -38,7 +42,22 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./OverflowSet";
+@import "../../common/common";
+
+.ms-OverflowSet {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.rootVertical {
+  flex-direction: column;
+}
+
+.ms-OverflowSet-item {
+  flex-shrink: 0;
+  display: inherit;
+}
 
 html[dir="ltr"] {
   .overflowLinks {

@@ -32,21 +32,24 @@ backwards reduce confidence in the service.
 
 ## Variants
 
+### Default ProgressIndicator
+
 <progress-ProgressIndicator-Example1 />
 
 ```vue
-<div>
-    <h2 class="ms-font-l">Default ProgressIndicator</h2>
+<VProgressIndicator :percent-complete="percentComplete"
+                    label="Example title"
+                    description="Example description" />
+```
 
-    <VProgressIndicator :percent-complete="percentComplete"
-                        label="Example title"
-                        description="Example description" />
+### Indeterminate ProgressIndicator
 
-    <h2 class="ms-font-l">Indeterminate ProgressIndicator</h2>
+<VProgressIndicator label="Example title"
+                    description="Example description" />
 
-    <VProgressIndicator label="Example title"
-                        description="Example description" />
-</div>
+```vue
+<VProgressIndicator label="Example title"
+                    description="Example description" />
 ```
 
 ## API

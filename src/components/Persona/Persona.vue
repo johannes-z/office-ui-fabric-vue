@@ -1,31 +1,11 @@
 <template>
-  <div :size="size" class="ms-Persona">
+  <div :size="size"
+       class="ms-Persona">
 
-    <div class="ms-Persona-coin">
-
-      <slot name="coin">
-
-        <i v-if="size === 9"
-           class="ms-Icon ms-Icon--Contact"
-           aria-hidden="true"/>
-
-        <div v-else
-             class="ms-Persona-imageArea">
-
-          <div v-if="presence" class="ms-Persona-presence">
-            <!-- TODO: add presence icon -->
-          </div>
-
-          <persona-initials v-if="!imageUrl" :name="text"/>
-
-          <div v-else class="ms-Image ms-Persona-image">
-            <img :src="imageUrl" class="ms-Image-image" alt="">
-          </div>
-        </div>
-
-      </slot>
-
-    </div>
+    <VPersonaCoin :size="size"
+                  :presence="presence"
+                  :image-url="imageUrl"
+                  :text="text" />
 
     <div class="ms-Persona-details">
 
@@ -42,12 +22,9 @@
 </template>
 
 <script>
-import PersonaInitials from './PersonaInitials.vue'
-
 let size72 = 14
 
 export default {
-  components: { PersonaInitials },
   props: {
     imageUrl: {
       type: String,
@@ -77,7 +54,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .ms-Persona[size="14"] {
   > .ms-Persona-details {
     width: calc(100% - 87px);
@@ -95,74 +72,14 @@ export default {
 }
 
 .ms-Persona {
+  display: flex;
   height: initial !important;
 
-  > .ms-Persona-coin {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 10px;
-
-    > .ms-Icon {
-      padding-top: 4px;
-    }
-
-    > .ms-Persona-imageArea {
-      position: relative;
-
-      height: 72px;
-      width: 72px;
-
-      text-align: center;
-
-      .ms-Persona-presence {
-        position: absolute;
-        bottom: -2px;
-        right: -2px;
-
-        border-radius: 50%;
-
-        height: 28px;
-        width: 28px;
-
-        border: 2px solid #ffffff;
-
-        background-color: green;
-      }
-
-      > .ms-Persona-initials {
-        height: 72px;
-        line-height: 72px;
-        font-size: 28px;
-
-        color: #ffffff;
-        background-color: rgb(30, 113, 69);
-        border-radius: 50%;
-      }
-
-      > .ms-Persona-image {
-        border-radius: 50%;
-        overflow: hidden;
-      }
-
-      > .ms-Image {
-
-        height: 72px;
-        width: 72px;
-
-        > .ms-Image-image {
-          position: relative;
-
-          width: 100%;
-          height: auto;
-        }
-      }
-    }
-  }
-
   > .ms-Persona-details {
-    display: inline-block;
-    vertical-align: middle;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
     padding-left: 10px;
 
@@ -172,5 +89,4 @@ export default {
     }
   }
 }
-
 </style>
