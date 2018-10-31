@@ -9,7 +9,7 @@ export default {
       default: true,
     },
     target: {
-      type: Object,
+      type: HTMLElement,
       required: true,
     },
     isBeakVisible: {

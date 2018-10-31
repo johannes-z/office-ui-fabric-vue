@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VMessageBar is-multiline>
+    <VMessageBar is-singleline>
       Info lorem ipsum dolor sit amet, a elit sem interdum consectetur
       adipiscing elit.
       <VLink href="https://www.bing.com">Visit our website.</VLink>
@@ -13,7 +13,8 @@
       <VLink href="https://www.bing.com">Visit our website.</VLink>
     </VMessageBar>
 
-    <VMessageBar :type="MessageBarType.blocked">
+    <VMessageBar :type="MessageBarType.blocked"
+                 show-dismiss>
       Info lorem ipsum dolor sit amet, a elit sem interdum consectetur
       adipiscing elit.
       <VLink href="https://www.bing.com">Visit our website.</VLink>
