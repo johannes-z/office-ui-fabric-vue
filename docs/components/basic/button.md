@@ -117,6 +117,17 @@ type.
         <VActionButton :primary="true"
                        icon-name="AddFriend">Create account</VActionButton>
       </div>
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Standard</VLabel>
+        <VActionButton icon-name="AddFriend"
+                       disabled>Create account</VActionButton>
+      </div>
+      <div class="ms-Grid-col ms-sm6 ms-lg3">
+        <VLabel>Primary</VLabel>
+        <VActionButton :primary="true"
+                       icon-name="AddFriend"
+                       disabled>Create account</VActionButton>
+      </div>
     </div>
   </div>
 ```

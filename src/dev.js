@@ -10,9 +10,10 @@ const routes = [
   {
     name: 'Basic Inputs',
     children: [
-      { name: 'Button', path: '/Button', component: () => import(`../docs/.vuepress/components/basics/Button/Example1.vue`) },
+      { name: 'Button', path: '/Button', component: () => import(`../docs/.vuepress/components/basics/Button/ActionButton.vue`) },
       { name: 'Checkbox', path: '/Checkbox', component: () => import(`../docs/.vuepress/components/basics/Checkbox/Example1.vue`) },
       { name: 'Choicegroup', path: '/Choicegroup', component: () => import(`../docs/.vuepress/components/basics/Choicegroup/Example1.vue`) },
+      { name: 'Dropdown', path: '/Dropdown', component: () => import(`../docs/.vuepress/components/basics/Dropdown/Example1.vue`) },
       { name: 'Label', path: '/Label', component: () => import(`../docs/.vuepress/components/basics/Label/Example1.vue`) },
       { name: 'Link', path: '/Link', component: () => import(`../docs/.vuepress/components/basics/Link/Example1.vue`) },
       { name: 'Rating', path: '/Rating', component: () => import(`../docs/.vuepress/components/basics/Rating/Example1.vue`) },

@@ -1,6 +1,8 @@
 <template>
   <div>
     <VIconButton icon-name="Emoji2" />
+    <VIconButton icon-name="Emoji2"
+                 disabled />
 
     <p>
       For a list of Icons, visit the

@@ -38,7 +38,7 @@ export default {
       default: MessageBarType.info,
       validator: value => Object.values(MessageBarType).indexOf(value) > -1,
     },
-    isMultiline: {
+    isSingleline: {
       type: Boolean,
       default: false,
     },
@@ -53,7 +53,7 @@ export default {
     },
     classObj () {
       return {
-        'ms-MessageBar-singleline': !this.isMultiline,
+        'ms-MessageBar-singleline': this.isSingleline,
         'ms-MessageBar--warning': this.type === MessageBarType.warning,
         'ms-MessageBar--success': this.type === MessageBarType.success,
         'ms-MessageBar--severeWarning': this.type === MessageBarType.severeWarning,
