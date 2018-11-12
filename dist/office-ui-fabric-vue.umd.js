@@ -4075,14 +4075,16 @@ ChoiceGroup_component.options.__file = "ChoiceGroup.vue"
 // CONCATENATED MODULE: ./src/components/ChoiceGroup/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"2caa35d9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CommandBar/CommandBar.vue?vue&type=template&id=46b07154&
-var CommandBarvue_type_template_id_46b07154_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-FocusZone ms-CommandBar",attrs:{"role":"menubar"}},[_c('div',{staticClass:"ms-CommandBar-primaryCommands"},_vm._l((_vm.items),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem"},[_c('VActionButton',{attrs:{"icon-name":item.icon},nativeOn:{"click":function($event){_vm.onClick($event, item)}}},[_vm._v("\n        "+_vm._s(item.name)+"\n      ")])],1)})),_c('div',{staticClass:"ms-CommandBar-secondaryCommand"},_vm._l((_vm.farItems),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem"},[_c('VActionButton',{attrs:{"icon-name":item.icon},nativeOn:{"click":function($event){_vm.onClick($event, item)}}},[_vm._v("\n        "+_vm._s(item.name)+"\n      ")])],1)}))])}
-var CommandBarvue_type_template_id_46b07154_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"2caa35d9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CommandBar/CommandBar.vue?vue&type=template&id=8d02633a&
+var CommandBarvue_type_template_id_8d02633a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-FocusZone ms-CommandBar",attrs:{"role":"menubar"}},[_c('div',{staticClass:"ms-CommandBar-primaryCommands"},_vm._l((_vm.items),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem"},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){_vm.onClick($event, item)}}},[_vm._v("\n        "+_vm._s(item.name)+"\n      ")])],1)})),_c('div',{staticClass:"ms-CommandBar-secondaryCommand"},_vm._l((_vm.farItems),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem"},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){_vm.onClick($event, item)}}},[_vm._v("\n        "+_vm._s(item.name)+"\n      ")])],1)}))])}
+var CommandBarvue_type_template_id_8d02633a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/CommandBar/CommandBar.vue?vue&type=template&id=46b07154&
+// CONCATENATED MODULE: ./src/components/CommandBar/CommandBar.vue?vue&type=template&id=8d02633a&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CommandBar/CommandBar.vue?vue&type=script&lang=js&
+//
+//
 //
 //
 //
@@ -4192,8 +4194,8 @@ var CommandBarvue_type_style_index_0_lang_scss_ = __webpack_require__("49a4");
 
 var CommandBar_component = normalizeComponent(
   CommandBar_CommandBarvue_type_script_lang_js_,
-  CommandBarvue_type_template_id_46b07154_render,
-  CommandBarvue_type_template_id_46b07154_staticRenderFns,
+  CommandBarvue_type_template_id_8d02633a_render,
+  CommandBarvue_type_template_id_8d02633a_staticRenderFns,
   false,
   null,
   null,
