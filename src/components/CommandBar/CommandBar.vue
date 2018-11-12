@@ -19,6 +19,7 @@
            :key="item.key || index"
            class="ms-CommandBarItem">
         <VActionButton :icon-name="item.icon"
+                       :disabled="item.disabled"
                        @click.native="onClick($event, item)">
           {{ item.name }}
         </VActionButton>
@@ -32,6 +33,7 @@
            :key="item.key || index"
            class="ms-CommandBarItem">
         <VActionButton :icon-name="item.icon"
+                       :disabled="item.disabled"
                        @click.native="onClick($event, item)">
           {{ item.name }}
         </VActionButton>
@@ -123,7 +125,11 @@ export default {
   padding-left: 16px;
   height: 40px;
 
-  .ms-Button:hover {
+  .ms-Button.is-disabled {
+    background-color: $ms-color-neutralLighter;
+  }
+
+  .ms-Button:not(.is-disabled):hover {
     background-color: $ms-color-neutralLight;
   }
   .ms-Button,
