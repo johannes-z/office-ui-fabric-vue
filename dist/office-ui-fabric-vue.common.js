@@ -2714,12 +2714,12 @@ var IconButtonvue_type_template_id_42b83325_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/Button/IconButton/IconButton.vue?vue&type=template&id=42b83325&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"2caa35d9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/BaseButton.vue?vue&type=template&id=0c9e4614&
-var BaseButtonvue_type_template_id_0c9e4614_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c(_vm.href ? 'a' : 'button',{tag:"component",staticClass:"ms-Button",class:_vm.classObj,attrs:{"disabled":_vm.disabled,"type":"button"}},[_c('div',{staticClass:"ms-Button-flexContainer"},[_vm._t("default")],2)])}
-var BaseButtonvue_type_template_id_0c9e4614_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"2caa35d9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/BaseButton.vue?vue&type=template&id=31c86e6f&
+var BaseButtonvue_type_template_id_31c86e6f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c(_vm.href ? 'a' : 'button',{tag:"component",staticClass:"ms-Button",class:_vm.classObj,attrs:{"disabled":_vm.disabled,"type":"button"}},[_c('div',{staticClass:"ms-Button-flexContainer"},[_vm._t("default")],2)])}
+var BaseButtonvue_type_template_id_31c86e6f_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Button/BaseButton.vue?vue&type=template&id=0c9e4614&
+// CONCATENATED MODULE: ./src/components/Button/BaseButton.vue?vue&type=template&id=31c86e6f&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/BaseButton.vue?vue&type=script&lang=js&
 //
@@ -2778,8 +2778,8 @@ var BaseButtonvue_type_style_index_0_lang_scss_ = __webpack_require__("a8c6");
 
 var BaseButton_component = normalizeComponent(
   Button_BaseButtonvue_type_script_lang_js_,
-  BaseButtonvue_type_template_id_0c9e4614_render,
-  BaseButtonvue_type_template_id_0c9e4614_staticRenderFns,
+  BaseButtonvue_type_template_id_31c86e6f_render,
+  BaseButtonvue_type_template_id_31c86e6f_staticRenderFns,
   false,
   null,
   null,
@@ -3130,12 +3130,12 @@ var DefaultButton_component = normalizeComponent(
 
 DefaultButton_component.options.__file = "DefaultButton.vue"
 /* harmony default export */ var DefaultButton = (DefaultButton_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"2caa35d9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/ActionButton/ActionButton.vue?vue&type=template&id=6f89f894&
-var ActionButtonvue_type_template_id_6f89f894_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('BaseButton',_vm._b({staticClass:"ms-Button--action ms-Button-command"},'BaseButton',_vm.$props,false),[(_vm.iconName)?_c('VIcon',{attrs:{"icon-name":_vm.iconName}}):_vm._e(),_c('div',{staticClass:"ms-Button-textContainer"},[_c('div',{staticClass:"ms-Button-label"},[_vm._t("default",[_vm._v(_vm._s(_vm.text))])],2)])],1)}
-var ActionButtonvue_type_template_id_6f89f894_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"2caa35d9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/ActionButton/ActionButton.vue?vue&type=template&id=760694fd&
+var ActionButtonvue_type_template_id_760694fd_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('BaseButton',_vm._b({staticClass:"ms-Button--action ms-Button-command"},'BaseButton',_vm.$props,false),[(_vm.iconName)?_c('VIcon',{attrs:{"icon-name":_vm.iconName}}):_vm._e(),_c('div',{staticClass:"ms-Button-textContainer"},[_c('div',{staticClass:"ms-Button-label"},[_vm._t("default",[_vm._v(_vm._s(_vm.text))])],2)])],1)}
+var ActionButtonvue_type_template_id_760694fd_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Button/ActionButton/ActionButton.vue?vue&type=template&id=6f89f894&
+// CONCATENATED MODULE: ./src/components/Button/ActionButton/ActionButton.vue?vue&type=template&id=760694fd&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/ActionButton/ActionButton.vue?vue&type=script&lang=js&
 //
@@ -3182,8 +3182,8 @@ var ActionButtonvue_type_style_index_0_lang_scss_ = __webpack_require__("f968");
 
 var ActionButton_component = normalizeComponent(
   ActionButton_ActionButtonvue_type_script_lang_js_,
-  ActionButtonvue_type_template_id_6f89f894_render,
-  ActionButtonvue_type_template_id_6f89f894_staticRenderFns,
+  ActionButtonvue_type_template_id_760694fd_render,
+  ActionButtonvue_type_template_id_760694fd_staticRenderFns,
   false,
   null,
   null,
