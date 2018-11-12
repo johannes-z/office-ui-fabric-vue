@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{315:function(e,n,t){"use strict";t.r(n);var l={},i=t(0),s=Object(i.a)(l,function(){var e=this.$createElement;return(this._self._c||e)("VRating")},[],!1,null,null,null);s.options.__file="Example1.vue";n.default=s.exports}}]);
