@@ -5,7 +5,7 @@
              class="ms-Button"
              type="button">
     <div class="ms-Button-flexContainer">
-      <slot/>
+      <slot />
     </div>
   </component>
 </template>
@@ -47,6 +47,7 @@ export default {
 $DEFAULT_BUTTON_HEIGHT: 32px;
 
 .ms-Button.is-disabled {
+  .ms-Icon,
   .ms-Button-label,
   .ms-Button-description {
     color: $ms-color-neutralTertiary;

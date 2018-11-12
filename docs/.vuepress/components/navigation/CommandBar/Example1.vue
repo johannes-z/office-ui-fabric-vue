@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       items: [
-        { icon: 'Add', name: 'New' },
+        { icon: 'Add', name: 'New', disabled: true },
         { icon: 'Edit', name: 'Edit', disabled: true },
       ],
       farItems: [
