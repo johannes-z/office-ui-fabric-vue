@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1 class="ms-font-xxl">CommandBar</h1>
-    <command-bar :items="items" :far-items="farItems" />
+    <command-bar :items="items"
+                 :far-items="farItems" />
   </div>
 </template>
 
@@ -10,11 +11,11 @@ export default {
   data () {
     return {
       items: [
-        { icon: 'Add', name: 'Neu' },
-        { icon: 'Edit', name: 'Bearbeiten' },
+        { icon: 'Add', name: 'New' },
+        { icon: 'Edit', name: 'Edit', disabled: true },
       ],
       farItems: [
-        { icon: 'Cancel', name: 'Schließen', onClick: () => console.log('Close') },
+        { icon: 'Cancel', name: 'Close', onClick: () => console.log('Close') },
       ],
     }
   },

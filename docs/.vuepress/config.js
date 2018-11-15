@@ -48,6 +48,7 @@ module.exports = {
           title: 'Navigation',
           collapsable: false,
           children: [
+            'navigation/commandbar',
             'navigation/searchbox',
           ],
         },
