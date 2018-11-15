@@ -91,6 +91,36 @@ Showcasing components is done using [https://github.com/vuejs/vuepress](vuepress
 
 See `./docs` for an example how to add new pages.
 
+## Components
+
+This is a list to keep track of the progress of the components:
+
+- Basic inputs
+    - [ ] Button
+    - [ ] Checkbox
+    - [ ] ChoiceGroup
+    - [x] Label
+    - [X] Link
+    - [ ] Slider
+    - [ ] SpinButton
+    - [x] Tag*
+    - [ ] TextField
+    - [x] Toggle
+- Navigation
+    - [ ] SearchBox
+- Content
+    - [ ] ActivityItem
+    - [ ] Icon
+    - [ ] Persona
+- Pickers
+- Progress & Validation
+    - [ ] MessageBar
+    - [x] ProgressIndicator
+    - [ ] Shimmer
+    - [x] Spinner
+- Surfaces
+- Utilities
+
 ## Contributing
 
 Any contributions are welcome, as long as they follow the project's file/folder

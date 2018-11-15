@@ -22,12 +22,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../common/common";
+
 .ms-ShimmerGap-root {
-  background-color: rgb(255, 255, 255);
+  background-color: $ms-color-white;
   height: 16px;
   box-sizing: content-box;
   border-top-style: solid;
   border-bottom-style: solid;
-  border-color: rgb(255, 255, 255);
+  border-color: $ms-color-white;
 }
 </style>

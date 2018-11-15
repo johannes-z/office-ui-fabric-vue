@@ -17,6 +17,8 @@ the user of the component’s purpose.
     <VLabel>I'm a Label</VLabel>
     <VLabel :disabled="true">I'm a disabled Label</VLabel>
     <VLabel :required="true">I'm a required Label</VLabel>
+    <VLabel :for="anInput">A Label for An Input</VLabel>
+    <VTextField id="anInput" />
 </div>
 ```
 
@@ -24,15 +26,16 @@ the user of the component’s purpose.
 
 ### Properties
 
-| Property | Type      | Required | Default   | Description                                           |
-|----------|-----------|----------|-----------|-------------------------------------------------------|
-| disabled | `Boolean` | `false`  | `false`   | Controls if the component is disabled.                |
-| required | `Boolean` | `false`  | `'false'` | Whether the associated form field is required or not. |
+| Property | Type      | Required | Default | Description                                                  |
+|----------|-----------|----------|---------|--------------------------------------------------------------|
+| disabled | `Boolean` | `false`  | `false` | Controls if the component is disabled.                       |
+| required | `Boolean` | `false`  | `false` | Whether the associated form field is required or not.        |
+| htmlFor  | `String`  | `false`  | `null`  | Give the label a `for` attribute to allow focusing an input. |
 
 ### Slots
 
-| Slot      | Description                    |
-|-----------|--------------------------------|
+| Slot      | Description               |
+|-----------|---------------------------|
 | `default` | Renders the label's text. |
 
 ### Events
