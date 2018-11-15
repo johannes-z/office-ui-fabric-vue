@@ -9,7 +9,7 @@ export default {
       default: true,
     },
     target: {
-      type: HTMLElement,
+      type: typeof window === 'undefined' ? Object : window.HTMLElement,
       required: true,
     },
     isBeakVisible: {
