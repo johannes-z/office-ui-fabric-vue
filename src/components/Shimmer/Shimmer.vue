@@ -1,6 +1,11 @@
 <template>
   <div class="ms-Shimmer-container">
-    <div :style="widthStyle"
+
+    <slot v-if="isDataLoaded"
+          name="content" />
+
+    <div v-else
+         :style="widthStyle"
          class="ms-Shimmer-shimmerWrapper">
 
       <slot name="groups">
@@ -12,6 +17,7 @@
       </slot>
 
     </div>
+
   </div>
 </template>
 
@@ -39,6 +45,10 @@ export default {
     width: {
       type: Number | String,
       default: '100%',
+    },
+    isDataLoaded: {
+      type: Boolean,
+      default: false,
     },
   },
 }

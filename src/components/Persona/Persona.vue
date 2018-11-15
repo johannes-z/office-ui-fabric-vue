@@ -11,8 +11,11 @@
 
       <slot name="details">
 
-        <div class="ms-Persona-text">
+        <div class="ms-Persona-primaryText">
           <span>{{ text }}</span>
+        </div>
+        <div class="ms-Persona-secondaryText">
+          <span>{{ secondaryText }}</span>
         </div>
 
       </slot>
@@ -83,9 +86,21 @@ export default {
 
     padding-left: 10px;
 
-    .ms-Persona-text {
-      font-size: 16px;
-      padding-bottom: 1px;
+    .ms-Persona-primaryText {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: rgb(51, 51, 51);
+      font-weight: 400;
+      font-size: 14px;
+      overflow: hidden;
+    }
+    .ms-Persona-secondaryText {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: rgb(102, 102, 102);
+      font-weight: 400;
+      font-size: 14px;
+      overflow: hidden;
     }
   }
 }
