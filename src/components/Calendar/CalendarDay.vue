@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div class="ms-DatePicker-wrap wrap goTodaySpacing">
     <div id="DatePickerDay-dayPicker26"
          class="ms-DatePicker-dayPicker dayPicker">
 
@@ -18,10 +18,12 @@
         <div class="ms-DatePicker-monthComponents monthComponents">
 
           <div class="ms-DatePicker-navContainer">
-            <button class="ms-DatePicker-prevMonth js-prevMonth prevMonth">
+            <button class="ms-DatePicker-prevMonth js-prevMonth prevMonth"
+                    @click="$emit('update:navigatedDate', addMonths(navigatedDate, -1))">
               <v-icon icon-name="Up" />
             </button>
-            <button class="ms-DatePicker-nextMonth js-nextMonth nextMonth">
+            <button class="ms-DatePicker-nextMonth js-nextMonth nextMonth"
+                    @click="$emit('update:navigatedDate', addMonths(navigatedDate, 1))">
               <v-icon icon-name="Down" />
             </button>
           </div>
@@ -64,7 +66,7 @@
                   class="dayWrapper ms-DatePicker-day ms-DatePicker-dayBackground dayBackground ms-DatePicker-day--outfocus dayIsUnfocused daySelection">
                 <button :class="{ ['dayIsToday']: day.isToday }"
                         class="day ms-DatePicker-day-button"
-                        @click.prevent.stop="selectedDate = day.originalDate">
+                        @click.prevent.stop="$emit('update:selectedDate', day.originalDate)">
                   <span>
                     {{ day.originalDate.getDate() }}
                   </span>
@@ -77,6 +79,12 @@
       </div>
 
     </div>
+    <button :disabled="goTodayEnabled"
+            :class="{ goToTodayIsDisabled: goTodayEnabled }"
+            class="ms-DatePicker-goToday js-goToday goToday"
+            @click="$emit('update:navigatedDate', new Date(today))">
+      Go to today
+    </button>
   </div>
 
 </template>
@@ -129,17 +137,38 @@ const DEFAULT_STRINGS = {
 }
 
 export default {
+  props: {
+    selectedDate: {
+      type: Date,
+      required: true,
+    },
+    navigatedDate: {
+      type: Date,
+      required: true,
+    },
+  },
   data () {
     return {
       DAYS_IN_WEEK,
       firstDayOfWeek,
       today,
-      navigatedDate: new Date(),
-      selectedDate: new Date(),
       strings: DEFAULT_STRINGS,
     }
   },
   computed: {
+    goTodayEnabled () {
+      let showGoToToday = true
+      let goTodayEnabled = showGoToToday
+
+      if (goTodayEnabled && today) {
+        goTodayEnabled =
+          this.navigatedDate.getFullYear() !== today.getFullYear() ||
+          this.navigatedDate.getMonth() !== today.getMonth() ||
+          this.navigatedDate.getFullYear() !== today.getFullYear() ||
+          this.navigatedDate.getMonth() !== today.getMonth()
+      }
+      return !goTodayEnabled
+    },
     monthAndYear () {
       let month = DEFAULT_STRINGS.months[this.navigatedDate.getMonth()]
       let year = this.navigatedDate.getFullYear()
@@ -227,6 +256,9 @@ export default {
 
   },
   methods: {
+    addMonths (date, months) {
+      return new Date(date.setMonth(date.getMonth() + months))
+    },
     getBoundedDateRange (dateRange, minDate, maxDate) {
       let boundedDateRange = [...dateRange]
       if (minDate) {
