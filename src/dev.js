@@ -34,6 +34,13 @@ const routes = [
     name: 'Content',
     children: [
       { name: 'ActivityItem', path: '/ActivityItem', component: () => import(`../docs/.vuepress/components/content/ActivityItem/Example2.vue`) },
+      { name: 'Calendar', path: '/Calendar', component: () => import(`../docs/.vuepress/components/content/Calendar/Example1.vue`) },
+    ],
+  },
+  {
+    name: 'Pickers',
+    children: [
+      { name: 'DatePicker', path: '/DatePicker', component: () => import(`../docs/.vuepress/components/pickers/DatePicker/Example1.vue`) },
     ],
   },
   {
@@ -64,6 +71,7 @@ const router = new VueRouter({
   routes: [].concat(...routes.map(category => category.children)),
 })
 
+// eslint-disable-next-line
 const app = new Vue({
   router,
   render (h) {

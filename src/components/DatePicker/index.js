@@ -1,5 +1,5 @@
-import DatePicker from './DatePicker.vue'
+import VDatePicker from './DatePicker.vue'
 
 export {
-  DatePicker,
+  VDatePicker,
 }
