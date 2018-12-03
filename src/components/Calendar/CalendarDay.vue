@@ -62,7 +62,7 @@
                   @click.prevent.stop="$emit('update:selectedDate', day.originalDate)">
                 <button :class="{ ['dayIsToday']: day.isToday }"
                         class="day ms-DatePicker-day-button"
-                        @click.prevent>
+                        @click.prevent.stop>
                   <span>
                     {{ day.originalDate.getDate() }}
                   </span>
