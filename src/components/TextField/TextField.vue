@@ -10,13 +10,13 @@
 
       <div :class="{ 'invalid': errorMessage }"
            class="ms-TextField-fieldGroup fieldGroup">
-        <component id="TextField"
-                   :value="value"
+        <component :value="value"
                    :is="component"
                    :disabled="disabled"
                    :placeholder="placeholder"
                    :readonly="readOnly"
                    :required="required"
+                   v-bind="$attrs"
                    rows="4"
                    type="text"
                    class="ms-TextField-field field"
@@ -41,6 +41,7 @@ import { VLabel } from '../Label'
 
 export default {
   components: { VLabel },
+  inheritAttrs: false,
   props: {
     disabled: {
       type: Boolean,

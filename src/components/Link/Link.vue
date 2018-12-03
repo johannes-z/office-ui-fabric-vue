@@ -3,7 +3,7 @@
              :href="href"
              :class="{ isDisabled }"
              class="ms-Link">
-    <slot/>
+    <slot />
   </component>
 </template>
 
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../common/common.scss';
+@import "../../common/common.scss";
 
 // Element: ms-Link root component
 .ms-Link {
@@ -82,5 +82,4 @@ a.ms-Link {
   @include focus-outline;
   text-decoration: none;
 }
-
 </style>

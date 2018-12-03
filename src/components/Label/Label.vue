@@ -1,6 +1,7 @@
 <template>
   <label :disabled="disabled"
          :required="required"
+         :for="htmlFor"
          class="ms-Label">
     <slot />
   </label>
@@ -16,6 +17,10 @@ export default {
     required: {
       type: Boolean,
       default: false,
+    },
+    htmlFor: {
+      type: String,
+      default: null,
     },
   },
 }
