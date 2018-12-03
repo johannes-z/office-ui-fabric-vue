@@ -3,7 +3,6 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "checkJs": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "importHelpers": true,

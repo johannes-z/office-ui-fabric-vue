@@ -7,7 +7,7 @@ import TimeConstants from '../dateValues/TimeConstants'
  * @param {number} days - The number of days to offset. 'days' can be negative.
  * @return {Date} A new Date object offset from the origin date by the given number of days
  */
-export function addDays (date: Date, days: number): Date {
+export function addDays (date, days) {
   const result = new Date(date.getTime())
   result.setDate(result.getDate() + days)
   return result
@@ -19,7 +19,7 @@ export function addDays (date: Date, days: number): Date {
  * @param {number} weeks - The number of weeks to offset. 'weeks' can be negative.
  * @return {Date} A new Date object offset from the origin date by the given number of weeks
  */
-export function addWeeks (date: Date, weeks: number): Date {
+export function addWeeks (date, weeks) {
   return addDays(date, weeks * TimeConstants.DaysInOneWeek)
 }
 
@@ -31,7 +31,7 @@ export function addWeeks (date: Date, weeks: number): Date {
  * @param {number} months - The number of months to offset. 'months' can be negative.
  * @return {Date} A new Date object offset from the origin date by the given number of months
  */
-export function addMonths (date: Date, months: number): Date {
+export function addMonths (date, months) {
   let result = new Date(date.getTime())
   const newMonth = result.getMonth() + months
   result.setMonth(newMonth)
@@ -53,7 +53,7 @@ export function addMonths (date: Date, months: number): Date {
  * @param {number} years - The number of years to offset. 'years' can be negative.
  * @return {Date} A new Date object offset from the origin date by the given number of years
  */
-export function addYears (date: Date, years: number): Date {
+export function addYears (date, years) {
   let result = new Date(date.getTime())
   result.setFullYear(date.getFullYear() + years)
 
@@ -74,7 +74,7 @@ export function addYears (date: Date, years: number): Date {
  * @param {Date} date - The origin date
  * @return {Date} A new Date object with the day set to the first day of the month.
  */
-export function getMonthStart (date: Date): Date {
+export function getMonthStart (date) {
   return new Date(date.getFullYear(), date.getMonth(), 1, 0, 0, 0, 0)
 }
 
@@ -83,7 +83,7 @@ export function getMonthStart (date: Date): Date {
  * @param {Date} date - The origin date
  * @return {Date} A new Date object with the day set to the last day of the month.
  */
-export function getMonthEnd (date: Date): Date {
+export function getMonthEnd (date) {
   return new Date(date.getFullYear(), date.getMonth() + 1, 0, 0, 0, 0, 0)
 }
 
@@ -92,7 +92,7 @@ export function getMonthEnd (date: Date): Date {
  * @param {Date} date - The origin date
  * @return {Date} A new Date object with the day set to the first day of the year.
  */
-export function getYearStart (date: Date): Date {
+export function getYearStart (date) {
   return new Date(date.getFullYear(), 0, 1, 0, 0, 0, 0)
 }
 
@@ -101,7 +101,7 @@ export function getYearStart (date: Date): Date {
  * @param {Date} date - The origin date
  * @return {Date} A new Date object with the day set to the last day of the year.
  */
-export function getYearEnd (date: Date): Date {
+export function getYearEnd (date) {
   return new Date(date.getFullYear() + 1, 0, 0, 0, 0, 0, 0)
 }
 
@@ -113,7 +113,7 @@ export function getYearEnd (date: Date): Date {
  * @param {number} month - The 0-based index of the month to set on the date.
  * @return {Date} A new Date object with the given month set.
  */
-export function setMonth (date: Date, month: number): Date {
+export function setMonth (date, month) {
   return addMonths(date, month - date.getMonth())
 }
 
@@ -121,7 +121,7 @@ export function setMonth (date: Date, month: number): Date {
  * Compares two dates, and returns true if the two dates (not accounting for time-of-day) are equal.
  * @return {boolean} True if the two dates represent the same date (regardless of time-of-day), false otherwise.
  */
-export function compareDates (date1: Date, date2: Date): boolean {
+export function compareDates (date1, date2) {
   if (!date1 && !date2) {
     return true
   } else if (!date1 || !date2) {
@@ -138,7 +138,7 @@ export function compareDates (date1: Date, date2: Date): boolean {
  * @returns {Number} A negative value if date1 is earlier than date2, 0 if the dates are equal, or a positive value
  * if date1 is later than date2.
  */
-export function compareDatePart (date1: Date, date2: Date): Number {
+export function compareDatePart (date1, date2) {
   return getDatePartHashValue(date1) - getDatePartHashValue(date2)
 }
 
@@ -151,10 +151,11 @@ export function compareDatePart (date1: Date, date2: Date): Number {
  * @param {DayOfWeek[]} workWeekDays - The allowed days in work week. If not provided, assumes all days are allowed.
  * @returns {Date[]} An array of dates representing the date range containing the specified date.
  */
-export function getDateRangeArray (date: Date, dateRangeType: DateRangeType, firstDayOfWeek: DayOfWeek, workWeekDays?: DayOfWeek[]): Date[] {
-  const datesArray = new Array<Date>()
-  let startDate: Date
-  let endDate: Date
+export function getDateRangeArray (date, dateRangeType, firstDayOfWeek, workWeekDays) {
+  // eslint-disable-next-line
+  const datesArray = []
+  let startDate
+  let endDate
 
   if (!workWeekDays) {
     workWeekDays = [DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday]
@@ -203,7 +204,7 @@ export function getDateRangeArray (date: Date, dateRangeType: DateRangeType, fir
  * @param {Date[]} dateRange - An array of dates to do the lookup on
  * @returns {bool} True if the date matches one of the dates in the specified array, false otherwise.
  */
-export function isInDateRangeArray (date: Date, dateRange: Date[]): boolean {
+export function isInDateRangeArray (date, dateRange) {
   for (const dateInRange of dateRange) {
     if (compareDates(date, dateInRange)) {
       return true
@@ -221,11 +222,11 @@ export function isInDateRangeArray (date: Date, dateRange: Date[]): boolean {
  * @return {weeksArray} The weeks number array for the current month.
  */
 export function getWeekNumbersInMonth (
-  weeksInMonth: number,
-  firstDayOfWeek: DayOfWeek,
-  firstWeekOfYear: FirstWeekOfYear,
-  navigatedDate: Date
-): number[] {
+  weeksInMonth,
+  firstDayOfWeek,
+  firstWeekOfYear,
+  navigatedDate
+) {
   const selectedYear = navigatedDate.getFullYear()
   const selectedMonth = navigatedDate.getMonth()
   let dayOfMonth = 1
@@ -238,6 +239,7 @@ export function getWeekNumbersInMonth (
   const weeksArray = []
   for (let i = 0; i < weeksInMonth; i++) {
     // Get week number for end of week
+    // @ts-ignore
     weeksArray.push(getWeekNumber(endOfWeekRange, firstDayOfWeek, firstWeekOfYear))
     dayOfMonth += TimeConstants.DaysInOneWeek
     endOfWeekRange = new Date(selectedYear, selectedMonth, dayOfMonth)
@@ -253,7 +255,7 @@ export function getWeekNumbersInMonth (
  * @param {firstWeekOfYear} firstWeekOfYear - The first week of the year (1-2)
  * @return {Number} The week's number in the year.
  */
-export function getWeekNumber (date: Date, firstDayOfWeek: DayOfWeek, firstWeekOfYear: FirstWeekOfYear): number {
+export function getWeekNumber (date, firstDayOfWeek, firstWeekOfYear) {
   // First four-day week of the year - minumum days count
   const fourDayWeek = 4
 
@@ -274,7 +276,7 @@ export function getWeekNumber (date: Date, firstDayOfWeek: DayOfWeek, firstWeekO
  * @param {Date} date - The origin date
  * @returns {Date} A new date with the time set to midnight
  */
-function getDatePart (date: Date): Date {
+function getDatePart (date) {
   return new Date(date.getFullYear(), date.getMonth(), date.getDate())
 }
 
@@ -284,7 +286,7 @@ function getDatePart (date: Date): Date {
  * @param {Date} date - The date to find the beginning of the week date for.
  * @return {Date} A new date object representing the first day of the week containing the input date.
  */
-function getStartDateOfWeek (date: Date, firstDayOfWeek: DayOfWeek): Date {
+function getStartDateOfWeek (date, firstDayOfWeek) {
   let daysOffset = firstDayOfWeek - date.getDay()
   if (daysOffset > 0) {
     // If first day of week is > date, go 1 week back, to ensure resulting date is in the past.
@@ -296,7 +298,7 @@ function getStartDateOfWeek (date: Date, firstDayOfWeek: DayOfWeek): Date {
 /**
  * Helper function to assist in date comparisons
  */
-function getDatePartHashValue (date: Date): number {
+function getDatePartHashValue (date) {
   // Generate date hash value created as sum of Date (up to 31 = 5 bits), Month (up to 11 = 4 bits) and Year.
   /* tslint:disable:no-bitwise */
   return date.getDate() + (date.getMonth() << 5) + (date.getFullYear() << 9)
@@ -311,7 +313,7 @@ function getDatePartHashValue (date: Date): number {
  * @param {numberOfFullDays} number - week settings.
  * @return {Number} The week's number in the year.
  */
-function getWeekOfYearFullDays (date: Date, firstDayOfWeek: DayOfWeek, numberOfFullDays: number): number {
+function getWeekOfYearFullDays (date, firstDayOfWeek, numberOfFullDays) {
   const dayOfYear = getDayOfYear(date) - 1
   let num = date.getDay() - (dayOfYear % TimeConstants.DaysInOneWeek)
 
@@ -344,7 +346,7 @@ function getWeekOfYearFullDays (date: Date, firstDayOfWeek: DayOfWeek, numberOfF
  * @param {firstDayOfWeek} DayOfWeek - The first day of week (0-6, Sunday = 0)
  * @return {Number} The week's number in the year.
  */
-function getFirstDayWeekOfYear (date: Date, firstDayOfWeek: number): number {
+function getFirstDayWeekOfYear (date, firstDayOfWeek) {
   const num = getDayOfYear(date) - 1
   const num2 = date.getDay() - (num % TimeConstants.DaysInOneWeek)
   const num3 = (num2 - firstDayOfWeek + 2 * TimeConstants.DaysInOneWeek) % TimeConstants.DaysInOneWeek
@@ -360,7 +362,7 @@ function getFirstDayWeekOfYear (date: Date, firstDayOfWeek: number): number {
  * @param {dateWeekDay} DayOfWeek - shifts number forward to 1 week in case passed as true
  * @return {DayOfWeek} The day of week adjusted to firstDayOfWeek. E.g. when FirstDyOfWeek is Monday (1), Sunday becomes = 7 (7 > 1).
  */
-function adjustWeekDay (firstDayOfWeek: DayOfWeek, dateWeekDay: DayOfWeek): number {
+function adjustWeekDay (firstDayOfWeek, dateWeekDay) {
   return firstDayOfWeek !== DayOfWeek.Sunday && dateWeekDay < firstDayOfWeek ? dateWeekDay + TimeConstants.DaysInOneWeek : dateWeekDay
 }
 
@@ -370,7 +372,7 @@ function adjustWeekDay (firstDayOfWeek: DayOfWeek, dateWeekDay: DayOfWeek): numb
  * @param {Date} date - A date to find the day number for.
  * @return {Number} The day's number in the year.
  */
-function getDayOfYear (date: Date): number {
+function getDayOfYear (date) {
   const month = date.getMonth()
   const year = date.getFullYear()
   let daysUntilDate = 0
@@ -390,6 +392,6 @@ function getDayOfYear (date: Date): number {
  * @param {number} year - The year to target.
  * @return {Number} The number of days in the month.
  */
-function daysInMonth (month: number, year: number): number {
+function daysInMonth (month, year) {
   return new Date(year, month, 0).getDate()
 }
