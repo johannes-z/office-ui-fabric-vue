@@ -3875,12 +3875,12 @@ PrimaryButton_component.options.__file = "PrimaryButton.vue"
 
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"c901b938-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Calendar/Calendar.vue?vue&type=template&id=6d7f25ff&
-var Calendarvue_type_template_id_6d7f25ff_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"ms-DatePicker root"},[_c('div',{staticClass:"ms-DatePicker-picker ms-DatePicker-picker--opened ms-DatePicker-picker--focused picker pickerIsOpened pickerIsFocused"},[_c('div',{staticClass:"ms-DatePicker-holder ms-slideDownIn10 holder"},[_c('div',{staticClass:"ms-DatePicker-frame frame"},[_c('CalendarDay',{attrs:{"today":_vm.today,"selected-date":_vm.value,"navigated-date":_vm.navigatedDate,"first-day-of-week":_vm.firstDayOfWeek,"first-week-of-year":_vm.firstWeekOfYear},on:{"update:navigatedDate":function($event){_vm.navigatedDate=$event},"update:selectedDate":function($event){_vm.$emit('input', $event)}},scopedSlots:_vm._u([_vm._l((Object.keys(_vm.$scopedSlots)),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})])},[_vm._l((Object.keys(_vm.$slots)),function(slot){return _vm._t(slot,null,{slot:slot})})],2)],1)])])])])}
-var Calendarvue_type_template_id_6d7f25ff_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"c901b938-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Calendar/Calendar.vue?vue&type=template&id=65e7ac95&
+var Calendarvue_type_template_id_65e7ac95_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"ms-DatePicker root"},[_c('div',{staticClass:"ms-DatePicker-picker ms-DatePicker-picker--opened ms-DatePicker-picker--focused picker pickerIsOpened pickerIsFocused"},[_c('div',{staticClass:"ms-DatePicker-holder ms-slideDownIn10 holder"},[_c('div',{staticClass:"ms-DatePicker-frame frame"},[_c('CalendarDay',{attrs:{"today":_vm.today,"selected-date":_vm.value,"navigated-date":_vm.navigatedDate,"first-day-of-week":_vm.firstDayOfWeek,"first-week-of-year":_vm.firstWeekOfYear,"min-date":_vm.minDate,"max-date":_vm.maxDate},on:{"update:navigatedDate":function($event){_vm.navigatedDate=$event},"update:selectedDate":function($event){_vm.$emit('input', $event)}},scopedSlots:_vm._u([_vm._l((Object.keys(_vm.$scopedSlots)),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})])},[_vm._l((Object.keys(_vm.$slots)),function(slot){return _vm._t(slot,null,{slot:slot})})],2)],1)])])])])}
+var Calendarvue_type_template_id_65e7ac95_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Calendar/Calendar.vue?vue&type=template&id=6d7f25ff&
+// CONCATENATED MODULE: ./src/components/Calendar/Calendar.vue?vue&type=template&id=65e7ac95&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom.iterable.js
 var web_dom_iterable = __webpack_require__("ac6a");
@@ -3891,14 +3891,14 @@ var es6_array_iterator = __webpack_require__("cadf");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es7.object.values.js
 var es7_object_values = __webpack_require__("8615");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"c901b938-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Calendar/CalendarDay.vue?vue&type=template&id=0e4c369c&
-var CalendarDayvue_type_template_id_0e4c369c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-DatePicker-wrap goTodaySpacing"},[_c('div',{staticClass:"ms-DatePicker-dayPicker dayPicker",attrs:{"id":"DatePickerDay-dayPicker26"}},[_c('div',{staticClass:"ms-DatePicker-header header"},[_c('div',{staticClass:"monthAndYear",attrs:{"id":"DatePickerDay-monthAndYear27"}},[_c('div',{staticClass:"ms-DatePicker-monthAndYear monthAndYear"},[_vm._t("monthAndYear",[_vm._v("\n            "+_vm._s(_vm.monthAndYear)+"\n          ")],{value:_vm.navigatedDate})],2)]),_c('div',{staticClass:"ms-DatePicker-monthComponents monthComponents"},[_c('div',{staticClass:"ms-DatePicker-navContainer"},[_c('button',{staticClass:"ms-DatePicker-prevMonth js-prevMonth prevMonth",on:{"click":function($event){$event.preventDefault();$event.stopPropagation();_vm.$emit('update:navigatedDate', _vm.addMonths(_vm.navigatedDate, -1))}}},[_c('v-icon',{attrs:{"icon-name":"Up"}})],1),_c('button',{staticClass:"ms-DatePicker-nextMonth js-nextMonth nextMonth",on:{"click":function($event){$event.preventDefault();$event.stopPropagation();_vm.$emit('update:navigatedDate', _vm.addMonths(_vm.navigatedDate, 1))}}},[_c('v-icon',{attrs:{"icon-name":"Down"}})],1)])])]),_c('div',{staticClass:"ms-FocusZone"},[_c('table',{staticClass:"ms-DatePicker-table table"},[_c('thead',[_c('tr',_vm._l((_vm.strings.shortDays),function(val,index){return _c('th',{key:index,staticClass:"ms-DatePicker-weekday weekday",attrs:{"title":_vm.strings.days[(index + _vm.firstDayOfWeek) % _vm.DAYS_IN_WEEK]}},[_vm._v("\n              "+_vm._s(_vm.strings.shortDays[(index + _vm.firstDayOfWeek) % _vm.DAYS_IN_WEEK])+"\n            ")])}))]),_c('tbody',_vm._l((_vm.weeks),function(week,weekIndex){return _c('tr',{key:week.key},_vm._l((week),function(day,dayIndex){return _c('td',{key:day.key,staticClass:"dayWrapper ms-DatePicker-day ms-DatePicker-dayBackground dayBackground ms-DatePicker-day--outfocus dayIsUnfocused daySelection",class:( _obj = {}, _obj['dayIsHighlighted'] = day.isSelected, _obj ),on:{"click":function($event){$event.preventDefault();$event.stopPropagation();_vm.$emit('update:selectedDate', day.originalDate)}}},[_c('button',{staticClass:"day ms-DatePicker-day-button",class:( _obj$1 = {}, _obj$1['dayIsToday'] = day.isToday, _obj$1 )},[_c('span',[_vm._v("\n                  "+_vm._s(day.originalDate.getDate())+"\n                ")])])])
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"c901b938-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Calendar/CalendarDay.vue?vue&type=template&id=7cb9040e&
+var CalendarDayvue_type_template_id_7cb9040e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-DatePicker-wrap goTodaySpacing"},[_c('div',{staticClass:"ms-DatePicker-dayPicker dayPicker",attrs:{"id":"DatePickerDay-dayPicker26"}},[_c('div',{staticClass:"ms-DatePicker-header header"},[_c('div',{staticClass:"monthAndYear",attrs:{"id":"DatePickerDay-monthAndYear27"}},[_c('div',{staticClass:"ms-DatePicker-monthAndYear monthAndYear"},[_vm._t("monthAndYear",[_vm._v("\n            "+_vm._s(_vm.monthAndYear)+"\n          ")],{value:_vm.navigatedDate})],2)]),_c('div',{staticClass:"ms-DatePicker-monthComponents monthComponents"},[_c('div',{staticClass:"ms-DatePicker-navContainer"},[_c('button',{staticClass:"ms-DatePicker-prevMonth js-prevMonth prevMonth",on:{"click":function($event){$event.preventDefault();$event.stopPropagation();_vm.$emit('update:navigatedDate', _vm.addMonths(_vm.navigatedDate, -1))}}},[_c('v-icon',{attrs:{"icon-name":"Up"}})],1),_c('button',{staticClass:"ms-DatePicker-nextMonth js-nextMonth nextMonth",on:{"click":function($event){$event.preventDefault();$event.stopPropagation();_vm.$emit('update:navigatedDate', _vm.addMonths(_vm.navigatedDate, 1))}}},[_c('v-icon',{attrs:{"icon-name":"Down"}})],1)])])]),_c('div',{staticClass:"ms-FocusZone"},[_c('table',{staticClass:"ms-DatePicker-table table"},[_c('thead',[_c('tr',_vm._l((_vm.strings.shortDays),function(val,index){return _c('th',{key:index,staticClass:"ms-DatePicker-weekday weekday",attrs:{"title":_vm.strings.days[(index + _vm.firstDayOfWeek) % _vm.DAYS_IN_WEEK]}},[_vm._v("\n              "+_vm._s(_vm.strings.shortDays[(index + _vm.firstDayOfWeek) % _vm.DAYS_IN_WEEK])+"\n            ")])}))]),_c('tbody',_vm._l((_vm.weeks),function(week,weekIndex){return _c('tr',{key:week.key},_vm._l((week),function(day,dayIndex){return _c('td',{key:day.key,staticClass:"dayWrapper ms-DatePicker-day ms-DatePicker-dayBackground dayBackground ms-DatePicker-day--outfocus dayIsUnfocused daySelection",class:( _obj = { dayIsDisabled: !day.isInBounds }, _obj['dayIsHighlighted'] = day.isSelected, _obj ),on:{"click":function($event){$event.preventDefault();$event.stopPropagation();_vm.$emit('update:selectedDate', day.originalDate)}}},[_c('button',{staticClass:"day ms-DatePicker-day-button",class:( _obj$1 = {}, _obj$1['dayIsToday'] = day.isToday, _obj$1 ),on:{"click":function($event){$event.preventDefault();}}},[_c('span',[_vm._v("\n                  "+_vm._s(day.originalDate.getDate())+"\n                ")])])])
 var _obj;
 var _obj$1;}))}))])])]),_c('button',{staticClass:"ms-DatePicker-goToday",class:{ goToTodayIsDisabled: _vm.goTodayEnabled },attrs:{"disabled":_vm.goTodayEnabled},on:{"click":function($event){_vm.$emit('update:navigatedDate', new Date(_vm.today))}}},[_vm._t("todayLabel",[_vm._v("Go to today")])],2)])}
-var CalendarDayvue_type_template_id_0e4c369c_staticRenderFns = []
+var CalendarDayvue_type_template_id_7cb9040e_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Calendar/CalendarDay.vue?vue&type=template&id=0e4c369c&
+// CONCATENATED MODULE: ./src/components/Calendar/CalendarDay.vue?vue&type=template&id=7cb9040e&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.to-string.js
 var es6_regexp_to_string = __webpack_require__("6b54");
@@ -4498,6 +4498,7 @@ function daysInMonth(month, year) {
 //
 //
 //
+//
 
 
 var DAYS_IN_WEEK = 7;
@@ -4532,6 +4533,14 @@ var DEFAULT_STRINGS = {
     firstWeekOfYear: {
       type: Number,
       required: true
+    },
+    minDate: {
+      type: Date,
+      default: null
+    },
+    maxDate: {
+      type: Date,
+      default: null
     }
   },
   data: function data() {
@@ -4565,8 +4574,8 @@ var DEFAULT_STRINGS = {
       var selectedDate = this.selectedDate;
       var navigatedDate = this.navigatedDate;
       var dateRangeType = DateRangeType.Day;
-      var minDate = null;
-      var maxDate = null;
+      var minDate = this.minDate;
+      var maxDate = this.maxDate;
       var workWeekDays = [DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday];
       var date = new Date(navigatedDate.getFullYear(), navigatedDate.getMonth(), 1);
       var todaysDate = today;
@@ -4663,8 +4672,8 @@ var CalendarDayvue_type_style_index_0_lang_css_ = __webpack_require__("9cb7");
 
 var CalendarDay_component = normalizeComponent(
   Calendar_CalendarDayvue_type_script_lang_js_,
-  CalendarDayvue_type_template_id_0e4c369c_render,
-  CalendarDayvue_type_template_id_0e4c369c_staticRenderFns,
+  CalendarDayvue_type_template_id_7cb9040e_render,
+  CalendarDayvue_type_template_id_7cb9040e_staticRenderFns,
   false,
   null,
   null,
@@ -4678,6 +4687,8 @@ CalendarDay_component.options.__file = "CalendarDay.vue"
 
 
 
+//
+//
 //
 //
 //
@@ -4786,8 +4797,8 @@ var Calendarvue_type_style_index_0_lang_scss_ = __webpack_require__("2da0");
 
 var Calendar_component = normalizeComponent(
   Calendar_Calendarvue_type_script_lang_js_,
-  Calendarvue_type_template_id_6d7f25ff_render,
-  Calendarvue_type_template_id_6d7f25ff_staticRenderFns,
+  Calendarvue_type_template_id_65e7ac95_render,
+  Calendarvue_type_template_id_65e7ac95_staticRenderFns,
   false,
   null,
   null,

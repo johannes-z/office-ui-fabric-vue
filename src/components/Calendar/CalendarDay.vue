@@ -57,11 +57,12 @@
 
               <td v-for="(day, dayIndex) in week"
                   :key="day.key"
-                  :class="{ ['dayIsHighlighted']: day.isSelected }"
+                  :class="{ ['dayIsHighlighted']: day.isSelected, dayIsDisabled: !day.isInBounds }"
                   class="dayWrapper ms-DatePicker-day ms-DatePicker-dayBackground dayBackground ms-DatePicker-day--outfocus dayIsUnfocused daySelection"
                   @click.prevent.stop="$emit('update:selectedDate', day.originalDate)">
                 <button :class="{ ['dayIsToday']: day.isToday }"
-                        class="day ms-DatePicker-day-button">
+                        class="day ms-DatePicker-day-button"
+                        @click.prevent>
                   <span>
                     {{ day.originalDate.getDate() }}
                   </span>
@@ -147,6 +148,14 @@ export default {
       type: Number,
       required: true,
     },
+    minDate: {
+      type: Date,
+      default: null,
+    },
+    maxDate: {
+      type: Date,
+      default: null,
+    },
   },
   data () {
     return {
@@ -184,8 +193,8 @@ export default {
       let selectedDate = this.selectedDate
       let navigatedDate = this.navigatedDate
       let dateRangeType = DateRangeType.Day
-      let minDate = null
-      let maxDate = null
+      let minDate = this.minDate
+      let maxDate = this.maxDate
       let workWeekDays = [
         DayOfWeek.Monday,
         DayOfWeek.Tuesday,
