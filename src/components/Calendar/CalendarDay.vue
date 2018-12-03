@@ -22,11 +22,11 @@
 
           <div class="ms-DatePicker-navContainer">
             <button class="ms-DatePicker-prevMonth js-prevMonth prevMonth"
-                    @click="$emit('update:navigatedDate', addMonths(navigatedDate, -1))">
+                    @click.prevent.stop="$emit('update:navigatedDate', addMonths(navigatedDate, -1))">
               <v-icon icon-name="Up" />
             </button>
             <button class="ms-DatePicker-nextMonth js-nextMonth nextMonth"
-                    @click="$emit('update:navigatedDate', addMonths(navigatedDate, 1))">
+                    @click.prevent.stop="$emit('update:navigatedDate', addMonths(navigatedDate, 1))">
               <v-icon icon-name="Down" />
             </button>
           </div>
