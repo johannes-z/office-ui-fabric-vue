@@ -21,7 +21,9 @@
                    type="text"
                    class="ms-TextField-field field"
                    aria-invalid="false"
-                   @input="$emit('input', $event.target.value || '')" />
+                   @input="$emit('input', $event.target.value || '')">
+          <template v-if="multiline">{{ value }}</template>
+        </component>
       </div>
     </div>
 
