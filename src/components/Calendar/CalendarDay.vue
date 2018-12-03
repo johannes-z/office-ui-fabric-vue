@@ -62,7 +62,7 @@
                   @click.prevent.stop="$emit('update:selectedDate', day.originalDate)">
                 <button :class="{ ['dayIsToday']: day.isToday }"
                         class="day ms-DatePicker-day-button"
-                        @click.prevent.stop>
+                        @click.prevent>
                   <span>
                     {{ day.originalDate.getDate() }}
                   </span>
@@ -78,7 +78,7 @@
     <button :disabled="goTodayEnabled"
             :class="{ goToTodayIsDisabled: goTodayEnabled }"
             class="ms-DatePicker-goToday"
-            @click="$emit('update:navigatedDate', new Date(today))">
+            @click.prevent.stop="$emit('update:navigatedDate', new Date(today))">
       <slot name="todayLabel">Go to today</slot>
     </button>
   </div>
