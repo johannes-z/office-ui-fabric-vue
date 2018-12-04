@@ -3,6 +3,10 @@
     <VDropdown :options="options"
                v-model="selected"
                label="Basic uncontrolled example" />
+    <VDropdown :options="options"
+               v-model="selected"
+               disabled
+               label="Basic uncontrolled example" />
   </div>
 </template>
 

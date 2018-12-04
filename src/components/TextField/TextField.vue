@@ -8,9 +8,9 @@
         {{ label }}
       </VLabel>
 
-      <div :class="{ 'invalid': errorMessage }"
+      <div :class="{ 'invalid': errorMessage, 'is-disabled': disabled }"
            class="ms-TextField-fieldGroup fieldGroup">
-        <component :value="value"
+        <component v-model="value"
                    :is="component"
                    :disabled="disabled"
                    :placeholder="placeholder"
@@ -19,9 +19,7 @@
                    v-bind="$attrs"
                    rows="4"
                    type="text"
-                   class="ms-TextField-field field"
-                   aria-invalid="false"
-                   @input="$emit('input', $event.target.value || '')" />
+                   class="ms-TextField-field field" />
       </div>
     </div>
 

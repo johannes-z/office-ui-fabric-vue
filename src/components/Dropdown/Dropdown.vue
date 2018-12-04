@@ -1,5 +1,6 @@
 <template>
-  <div class="ms-Dropdown-container">
+  <div :class="{ rootIsDisabled: disabled }"
+       class="ms-Dropdown-container">
     <!-- Label -->
     <VLabel v-if="label"
             class="ms-Dropdown-label">
@@ -8,6 +9,7 @@
 
     <!-- Dropdown input -->
     <div ref="dropdown"
+         :class="{ 'is-disabled': disabled }"
          tabindex="0"
          role="listbox"
          class="ms-Dropdown"
@@ -49,6 +51,7 @@
           <VActionButton v-for="(option, index) in options"
                          :key="'dropdownItem-' + index"
                          :title="option.title"
+                         :class="{ 'is-disabled': option.disabled }"
                          class="ms-Dropdown-item"
                          role="option"
                          @click.native="selectOption(option)">
@@ -81,6 +84,10 @@ export default {
       type: String,
       default: null,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   data () {
     return {
@@ -106,4 +113,11 @@ export default {
 
 <style lang="scss">
 @import "./Dropdown";
+
+.rootIsDisabled {
+  pointer-events: none;
+}
+.ms-Dropdown-item.is-disabled {
+  pointer-events: none;
+}
 </style>
