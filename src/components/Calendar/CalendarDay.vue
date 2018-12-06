@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div class="ms-DatePicker-wrap goTodaySpacing">
     <div id="DatePickerDay-dayPicker26"
          class="ms-DatePicker-dayPicker dayPicker">
 
@@ -10,7 +10,10 @@
              class="monthAndYear">
 
           <div class="ms-DatePicker-monthAndYear monthAndYear">
-            {{ monthAndYear }}
+            <slot :value="navigatedDate"
+                  name="monthAndYear">
+              {{ monthAndYear }}
+            </slot>
           </div>
 
         </div>
@@ -18,10 +21,12 @@
         <div class="ms-DatePicker-monthComponents monthComponents">
 
           <div class="ms-DatePicker-navContainer">
-            <button class="ms-DatePicker-prevMonth js-prevMonth prevMonth">
+            <button class="ms-DatePicker-prevMonth js-prevMonth prevMonth"
+                    @click="$emit('update:navigatedDate', addMonths(navigatedDate, -1))">
               <v-icon icon-name="Up" />
             </button>
-            <button class="ms-DatePicker-nextMonth js-nextMonth nextMonth">
+            <button class="ms-DatePicker-nextMonth js-nextMonth nextMonth"
+                    @click="$emit('update:navigatedDate', addMonths(navigatedDate, 1))">
               <v-icon icon-name="Down" />
             </button>
           </div>
@@ -50,21 +55,13 @@
             <tr v-for="(week, weekIndex) in weeks"
                 :key="week.key">
 
-              <!-- <th class="ms-DatePicker-weekNumbers ms-DatePicker-weekday">
-                <div class="ms-DatePicker-day">
-                  <span>
-                    {{ weekNumbers[weekIndex] }}
-                  </span>
-                </div>
-              </th> -->
-
               <td v-for="(day, dayIndex) in week"
                   :key="day.key"
                   :class="{ ['dayIsHighlighted']: day.isSelected }"
-                  class="dayWrapper ms-DatePicker-day ms-DatePicker-dayBackground dayBackground ms-DatePicker-day--outfocus dayIsUnfocused daySelection">
+                  class="dayWrapper ms-DatePicker-day ms-DatePicker-dayBackground dayBackground ms-DatePicker-day--outfocus dayIsUnfocused daySelection"
+                  @click.prevent.stop="$emit('update:selectedDate', day.originalDate)">
                 <button :class="{ ['dayIsToday']: day.isToday }"
-                        class="day ms-DatePicker-day-button"
-                        @click.prevent.stop="selectedDate = day.originalDate">
+                        class="day ms-DatePicker-day-button">
                   <span>
                     {{ day.originalDate.getDate() }}
                   </span>
@@ -77,6 +74,12 @@
       </div>
 
     </div>
+    <button :disabled="goTodayEnabled"
+            :class="{ goToTodayIsDisabled: goTodayEnabled }"
+            class="ms-DatePicker-goToday"
+            @click="$emit('update:navigatedDate', new Date(today))">
+      <slot name="todayLabel">Go to today</slot>
+    </button>
   </div>
 
 </template>
@@ -101,14 +104,12 @@ import {
   getWeekNumbersInMonth,
   getMonthStart,
   getMonthEnd,
-} from '@/utilities/dateMath/DateMath'
+} from '../../utilities/dateMath/DateMath'
 
 const DAYS_IN_WEEK = 7
 
 const today = new Date()
 
-let firstDayOfWeek = DayOfWeek.Sunday
-let firstWeekOfYear = FirstWeekOfYear.FirstDay
 let showWeekNumbers = true
 
 const DEFAULT_STRINGS = {
@@ -129,17 +130,45 @@ const DEFAULT_STRINGS = {
 }
 
 export default {
+  props: {
+    selectedDate: {
+      type: Date,
+      required: true,
+    },
+    navigatedDate: {
+      type: Date,
+      required: true,
+    },
+    firstDayOfWeek: {
+      type: Number,
+      required: true,
+    },
+    firstWeekOfYear: {
+      type: Number,
+      required: true,
+    },
+  },
   data () {
     return {
       DAYS_IN_WEEK,
-      firstDayOfWeek,
       today,
-      navigatedDate: new Date(),
-      selectedDate: new Date(),
       strings: DEFAULT_STRINGS,
     }
   },
   computed: {
+    goTodayEnabled () {
+      let showGoToToday = true
+      let goTodayEnabled = showGoToToday
+
+      if (goTodayEnabled && today) {
+        goTodayEnabled =
+          this.navigatedDate.getFullYear() !== today.getFullYear() ||
+          this.navigatedDate.getMonth() !== today.getMonth() ||
+          this.navigatedDate.getFullYear() !== today.getFullYear() ||
+          this.navigatedDate.getMonth() !== today.getMonth()
+      }
+      return !goTodayEnabled
+    },
     monthAndYear () {
       let month = DEFAULT_STRINGS.months[this.navigatedDate.getMonth()]
       let year = this.navigatedDate.getFullYear()
@@ -147,7 +176,7 @@ export default {
     },
     weekNumbers () {
       return showWeekNumbers
-        ? getWeekNumbersInMonth(this.weeks.length, firstDayOfWeek, firstWeekOfYear, this.navigatedDate)
+        ? getWeekNumbersInMonth(this.weeks.length, this.firstDayOfWeek, this.firstWeekOfYear, this.navigatedDate)
         : null
     },
     weeks () {
@@ -170,7 +199,7 @@ export default {
       const weeks = []
 
       // Cycle the date backwards to get to the first day of the week.
-      while (date.getDay() !== firstDayOfWeek) {
+      while (date.getDay() !== this.firstDayOfWeek) {
         date.setDate(date.getDate() - 1)
       }
 
@@ -179,11 +208,10 @@ export default {
 
       // in work week view we want to select the whole week
       const selectedDateRangeType = dateRangeType === DateRangeType.WorkWeek ? DateRangeType.Week : dateRangeType
-      let selectedDates = getDateRangeArray(selectedDate, selectedDateRangeType, firstDayOfWeek, workWeekDays)
+      let selectedDates = getDateRangeArray(selectedDate, selectedDateRangeType, this.firstDayOfWeek, workWeekDays)
       if (dateRangeType !== DateRangeType.Day) {
         selectedDates = this.getBoundedDateRange(selectedDates, minDate, maxDate)
       }
-      console.log(selectedDates)
 
       let shouldGetWeeks = true
 
@@ -227,6 +255,9 @@ export default {
 
   },
   methods: {
+    addMonths (date, months) {
+      return new Date(date.setMonth(date.getMonth() + months))
+    },
     getBoundedDateRange (dateRange, minDate, maxDate) {
       let boundedDateRange = [...dateRange]
       if (minDate) {

@@ -57,6 +57,7 @@ module.exports = {
           collapsable: false,
           children: [
             'content/activityitem',
+            'content/calendar',
             'content/icon',
             'content/persona',
           ],

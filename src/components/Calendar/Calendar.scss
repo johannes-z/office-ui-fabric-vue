@@ -6,7 +6,8 @@
 // Calendar styles
 $Calendar-day: 28px;
 $Calendar-dayPicker-margin: 10px;
-.root {
+
+.ms-DatePicker {
   @include ms-normalize;
 
   * {
@@ -15,7 +16,7 @@ $Calendar-dayPicker-margin: 10px;
 }
 
 // Base wrapper for the date picker.
-.picker {
+.ms-DatePicker-picker {
   color: $ms-color-black;
   font-size: $ms-font-size-m;
   position: relative;
@@ -23,14 +24,14 @@ $Calendar-dayPicker-margin: 10px;
 }
 
 // The holder is the only "scrollable" top-level container element.
-.holder {
+.ms-DatePicker-holder {
   -webkit-overflow-scrolling: touch;
   @include ms-borderBox;
   display: none;
 }
 
 // When the picker opens, reveal the content.
-.picker.pickerIsOpened .holder {
+.ms-DatePicker-picker.pickerIsOpened .ms-DatePicker-holder {
   @include ms-borderBox;
   display: inline-block;
 }
@@ -42,11 +43,11 @@ $Calendar-dayPicker-margin: 10px;
 
 // The frame and wrap work together to ensure that
 // clicks within the picker don’t reach the holder.
-.frame {
+.ms-DatePicker-frame {
   position: relative;
 }
 
-.wrap {
+.ms-DatePicker-wrap {
   &.goTodaySpacing {
     min-height: 228px;
   }
@@ -57,12 +58,12 @@ $Calendar-dayPicker-margin: 10px;
 }
 
 // Wrapper containing the calendar view to pick a specific date.
-.dayPicker {
+.ms-DatePicker-dayPicker {
   display: block;
 }
 
 // The header containing the month and year.
-.header {
+.ms-DatePicker-header {
   position: relative;
   display: inline-flex;
   height: $Calendar-day;
@@ -70,7 +71,7 @@ $Calendar-dayPicker-margin: 10px;
   width: 100%;
 }
 
-.divider {
+.ms-DatePicker-divider {
   top: 0;
   margin-top: -12px;
   margin-bottom: -12px;
@@ -96,7 +97,7 @@ $Calendar-dayPicker-margin: 10px;
 }
 
 // The calendar table of dates.
-.table {
+.ms-DatePicker-table {
   text-align: center;
   border-collapse: collapse;
   border-spacing: 0;
@@ -107,6 +108,30 @@ $Calendar-dayPicker-margin: 10px;
   td {
     margin: 0;
     padding: 0;
+  }
+
+  tr {
+    background: transparent;
+  }
+  tr,
+  th,
+  td {
+    border: 0;
+    outline: 0;
+  }
+}
+
+.ms-DatePicker {
+  .ms-DatePicker-table {
+    tr {
+      background: transparent;
+    }
+    tr,
+    th,
+    td {
+      border: 0;
+      outline: 0;
+    }
   }
 }
 
@@ -305,7 +330,7 @@ $Calendar-dayPicker-margin: 10px;
       }
     }
   }
-  .table {
+  .ms-DatePicker-table {
     .dayWrapper,
     .weekday {
       width: 30px;
@@ -326,7 +351,7 @@ $Calendar-dayPicker-margin: 10px;
       }
     }
   }
-  .table {
+  .ms-DatePicker-table {
     &:not(.weekNumbers) {
       margin-right: 30px;
     }
@@ -470,7 +495,7 @@ $Calendar-dayPicker-margin: 10px;
 }
 
 // Button to navigate to the current date.
-.goToday {
+.ms-DatePicker-goToday {
   bottom: 0;
   color: $ms-color-themePrimary;
   cursor: pointer;
@@ -509,12 +534,12 @@ $Calendar-dayPicker-margin: 10px;
 }
 
 // Additional 28px padding needed when "Go to today" button is visible
-.wrap.goTodaySpacing {
+.ms-DatePicker-wrap.goTodaySpacing {
   padding-bottom: 28px;
 }
 
 // State: The picker is showing the year components.
-.root.isPickingYears {
+.ms-DatePicker.isPickingYears {
   // Hide the day picking components.
   .dayPicker,
   .monthComponents {
@@ -534,7 +559,7 @@ $Calendar-dayPicker-margin: 10px;
 @media (min-device-width: 460px) {
   $Calendar-day: 28px;
   $Calendar-month: 40px;
-  .wrap {
+  .ms-DatePicker-wrap {
     padding: 12px;
   } // Update the spacing and text for the day and month pickers
   .dayPicker,
@@ -584,7 +609,7 @@ $Calendar-dayPicker-margin: 10px;
     @include ms-right(20px);
   }
   .showWeekNumbers {
-    .table {
+    .ms-DatePicker-table {
       .dayWrapper,
       .weekday {
         width: 28px;
@@ -592,7 +617,7 @@ $Calendar-dayPicker-margin: 10px;
     }
   } // week numbers style in right-to-left view
   .showWeekNumbersRTL {
-    .table {
+    .ms-DatePicker-table {
       .dayWrapper,
       .weekday {
         width: 28px;
@@ -600,7 +625,7 @@ $Calendar-dayPicker-margin: 10px;
     }
   } // Show month picker, if enabled
   .monthPickerVisible {
-    .wrap {
+    .ms-DatePicker-wrap {
       padding: 12px;
     } // Swap margin for padding so that the border extends the full height.
     .dayPicker {
@@ -671,13 +696,13 @@ $Calendar-dayPicker-margin: 10px;
     }
   }
   .calendarsInline {
-    .wrap {
+    .ms-DatePicker-wrap {
       padding: 12px;
     }
     .holder {
       height: auto;
     }
-    .table {
+    .ms-DatePicker-table {
       @include margin-right(12px);
     }
     .dayPicker {
@@ -698,12 +723,12 @@ $Calendar-dayPicker-margin: 10px;
     }
   } //when month picker is only visible
   .monthPickerOnly {
-    .wrap {
+    .ms-DatePicker-wrap {
       padding: 12px;
     }
   }
   .monthPickerAsOverlay {
-    .wrap {
+    .ms-DatePicker-wrap {
       padding-bottom: 28px;
       margin-bottom: 6px;
     }
@@ -913,4 +938,8 @@ $Calendar-dayPicker-margin: 10px;
       color: highlight;
     }
   }
+}
+
+.ms-DatePicker-day-button {
+  cursor: pointer;
 }

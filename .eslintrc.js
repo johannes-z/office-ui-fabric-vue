@@ -6,7 +6,6 @@ module.exports = {
   'extends': [
     'plugin:vue/recommended',
     '@vue/standard',
-    '@vue/typescript',
   ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -15,6 +14,6 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
   },
   parserOptions: {
-    parser: 'typescript-eslint-parser',
+    parser: 'babel-eslint',
   },
 }
