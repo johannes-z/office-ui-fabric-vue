@@ -117,6 +117,8 @@ lines of text. The text displays on the screen in a simple, uniform format.
 
 ### Properties
 
+All html attributes are passed to the `input` or `textarea` element.
+
 | Property     | Type      | Required | Default | Description                                                    |
 |--------------|-----------|----------|---------|----------------------------------------------------------------|
 | disabled     | `Boolean` | `false`  | `false` | Disabled state of the textfield.                               |

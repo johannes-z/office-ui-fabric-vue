@@ -17,7 +17,6 @@
                    :readonly="readOnly"
                    :required="required"
                    v-bind="$attrs"
-                   rows="4"
                    type="text"
                    class="ms-TextField-field field" />
       </div>
