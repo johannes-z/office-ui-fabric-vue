@@ -16,5 +16,9 @@ export default {
       type: Boolean,
       default: true,
     },
+    containerHeight: {
+      type: Number,
+      default: 0,
+    },
   },
 }

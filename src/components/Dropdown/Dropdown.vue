@@ -41,6 +41,7 @@
               :do-not-layer="false"
               :is-beak-visible="false"
               :target="$refs.dropdown"
+              :container-height="options.length * 32"
               @onBlur="showCallout = false">
 
       <!-- Dropdown Items -->

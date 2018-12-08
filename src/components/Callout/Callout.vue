@@ -6,7 +6,7 @@
 
   <VLayer v-else>
     <VCalloutContent v-bind="$props"
-                     @onBlur="$emit('onBlur', $event)" >
+                     @onBlur="$emit('onBlur', $event)">
       <slot />
     </VCalloutContent>
   </VLayer>
@@ -22,5 +22,8 @@ import propsMixin from './propsMixin.js'
 export default {
   components: { VLayer, VCalloutContent },
   mixins: [ propsMixin ],
+  created () {
+    console.log(this.$props)
+  },
 }
 </script>
