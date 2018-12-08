@@ -92,9 +92,6 @@ export default {
   data () {
     return {
       showCallout: false,
-      onBlur: () => {
-        this.showCallout = false
-      },
     }
   },
   computed: {
@@ -102,7 +99,16 @@ export default {
       return this.options.find(o => o.key === this.value)
     },
   },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.dismissOnScroll)
+  },
+  created () {
+    window.addEventListener('scroll', this.dismissOnScroll)
+  },
   methods: {
+    dismissOnScroll (ev) {
+      this.showCallout = false
+    },
     selectOption (option) {
       this.$emit('input', option.key || option.text)
       this.showCallout = false

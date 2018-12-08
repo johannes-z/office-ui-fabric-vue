@@ -35,6 +35,7 @@ module.exports = {
             'basic/button',
             'basic/checkbox',
             'basic/choicegroup',
+            'basic/dropdown',
             'basic/label',
             'basic/link',
             'basic/slider',
