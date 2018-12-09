@@ -20,7 +20,7 @@ const routes = [
       { name: 'Slider', path: '/Slider', component: () => import(`../docs/.vuepress/components/basics/Slider/Example1.vue`) },
       { name: 'Spinbutton', path: '/Spinbutton', component: () => import(`../docs/.vuepress/components/basics/Spinbutton/Example1.vue`) },
       { name: 'Tag', path: '/Tag', component: () => import(`../docs/.vuepress/components/basics/Tag/Example1.vue`) },
-      { name: 'Textfield', path: '/Textfield', component: () => import(`../docs/.vuepress/components/basics/Textfield/Example1.vue`) },
+      { name: 'Textfield', path: '/Textfield', component: () => import(`../docs/.vuepress/components/basics/Textfield/Example3.vue`) },
       { name: 'Toggle', path: '/Toggle', component: () => import(`../docs/.vuepress/components/basics/Toggle/Example1.vue`) },
     ],
   },

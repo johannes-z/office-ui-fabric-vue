@@ -8539,14 +8539,24 @@ TagContainer_component.options.__file = "TagContainer.vue"
 
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"c901b938-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/TextField/TextField.vue?vue&type=template&id=99bb1a48&
-var TextFieldvue_type_template_id_99bb1a48_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-TextField root",class:_vm.rootClass},[_c('div',{staticClass:"ms-TextField-wrapper wrapper"},[(_vm.label)?_c('VLabel',{attrs:{"required":_vm.required}},[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]):_vm._e(),_c('div',{staticClass:"ms-TextField-fieldGroup fieldGroup",class:{ 'invalid': _vm.errorMessage, 'is-disabled': _vm.disabled }},[_c(_vm.component,_vm._b({tag:"component",staticClass:"ms-TextField-field field",attrs:{"value":_vm.value,"disabled":_vm.disabled,"placeholder":_vm.placeholder,"readonly":_vm.readOnly,"required":_vm.required,"type":"text"},on:{"input":function($event){_vm.$emit('input', $event.target.value)}}},'component',_vm.$attrs,false))],1)],1),(_vm.errorMessage)?_c('span',[_c('div',{attrs:{"aria-live":"assertive"}},[_c('p',{staticClass:"ms-TextField-errorMessage errorMessage"},[_c('span',[_vm._v(_vm._s(_vm.errorMessage))])])])]):_vm._e()])}
-var TextFieldvue_type_template_id_99bb1a48_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"c901b938-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/TextField/TextField.vue?vue&type=template&id=1c7008c9&
+var TextFieldvue_type_template_id_1c7008c9_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-TextField root",class:_vm.rootClass},[_c('div',{staticClass:"ms-TextField-wrapper wrapper"},[(_vm.label)?_c('VLabel',{attrs:{"required":_vm.required}},[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]):_vm._e(),_c('div',{staticClass:"ms-TextField-fieldGroup fieldGroup",class:{ 'invalid': _vm.errorMessage, 'is-disabled': _vm.disabled }},[(_vm.multiline)?_c('textarea',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.computedValue),expression:"computedValue"}],staticClass:"ms-TextField-field field",attrs:{"disabled":_vm.disabled,"placeholder":_vm.placeholder,"readonly":_vm.readOnly,"required":_vm.required,"type":"text"},domProps:{"value":(_vm.computedValue)},on:{"input":function($event){if($event.target.composing){ return; }_vm.computedValue=$event.target.value}}},'textarea',_vm.$attrs,false)):_c('input',_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.computedValue),expression:"computedValue"}],staticClass:"ms-TextField-field field",attrs:{"disabled":_vm.disabled,"placeholder":_vm.placeholder,"readonly":_vm.readOnly,"required":_vm.required,"type":"text"},domProps:{"value":(_vm.computedValue)},on:{"input":function($event){if($event.target.composing){ return; }_vm.computedValue=$event.target.value}}},'input',_vm.$attrs,false))])],1),(_vm.errorMessage)?_c('span',[_c('div',{attrs:{"aria-live":"assertive"}},[_c('p',{staticClass:"ms-TextField-errorMessage errorMessage"},[_c('span',[_vm._v(_vm._s(_vm.errorMessage))])])])]):_vm._e()])}
+var TextFieldvue_type_template_id_1c7008c9_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/TextField/TextField.vue?vue&type=template&id=99bb1a48&
+// CONCATENATED MODULE: ./src/components/TextField/TextField.vue?vue&type=template&id=1c7008c9&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/@vue/cli-service/node_modules/thread-loader/dist/cjs.js!./node_modules/@vue/cli-plugin-babel/node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/TextField/TextField.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -8631,6 +8641,15 @@ var TextFieldvue_type_template_id_99bb1a48_staticRenderFns = []
     component: function component() {
       return this.multiline ? 'textarea' : 'input';
     },
+    computedValue: {
+      get: function get() {
+        return this.value;
+      },
+      set: function set(value) {
+        console.log(value);
+        this.$emit('input', value);
+      }
+    },
     rootClass: function rootClass() {
       return {
         'is-disabled': this.disabled,
@@ -8661,8 +8680,8 @@ var TextFieldvue_type_style_index_0_lang_scss_ = __webpack_require__("39e0");
 
 var TextField_component = normalizeComponent(
   TextField_TextFieldvue_type_script_lang_js_,
-  TextFieldvue_type_template_id_99bb1a48_render,
-  TextFieldvue_type_template_id_99bb1a48_staticRenderFns,
+  TextFieldvue_type_template_id_1c7008c9_render,
+  TextFieldvue_type_template_id_1c7008c9_staticRenderFns,
   false,
   null,
   null,

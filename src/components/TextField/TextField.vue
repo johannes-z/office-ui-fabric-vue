@@ -10,16 +10,26 @@
 
       <div :class="{ 'invalid': errorMessage, 'is-disabled': disabled }"
            class="ms-TextField-fieldGroup fieldGroup">
-        <component :value="value"
-                   :is="component"
-                   :disabled="disabled"
-                   :placeholder="placeholder"
-                   :readonly="readOnly"
-                   :required="required"
-                   v-bind="$attrs"
-                   type="text"
-                   class="ms-TextField-field field"
-                   @input="$emit('input', $event.target.value)" />
+
+        <textarea v-if="multiline"
+                  v-model="computedValue"
+                  :disabled="disabled"
+                  :placeholder="placeholder"
+                  :readonly="readOnly"
+                  :required="required"
+                  v-bind="$attrs"
+                  type="text"
+                  class="ms-TextField-field field" />
+
+        <input v-else
+               v-model="computedValue"
+               :disabled="disabled"
+               :placeholder="placeholder"
+               :readonly="readOnly"
+               :required="required"
+               v-bind="$attrs"
+               type="text"
+               class="ms-TextField-field field" >
       </div>
     </div>
 
@@ -81,6 +91,15 @@ export default {
   computed: {
     component () {
       return this.multiline ? 'textarea' : 'input'
+    },
+    computedValue: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        console.log(value)
+        this.$emit('input', value)
+      },
     },
     rootClass () {
       return {
