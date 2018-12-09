@@ -1,6 +1,7 @@
 <template>
   <div class="docs-TextFieldExample">
     <VTextField :multiline="true"
+                rows="10"
                 label="Standard" />
 
     <VTextField :multiline="true"

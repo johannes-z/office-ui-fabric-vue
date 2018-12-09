@@ -1,5 +1,6 @@
 <template>
-  <div class="ms-Dropdown-container">
+  <div :class="{ rootIsDisabled: disabled }"
+       class="ms-Dropdown-container">
     <!-- Label -->
     <VLabel v-if="label"
             class="ms-Dropdown-label">
@@ -8,6 +9,7 @@
 
     <!-- Dropdown input -->
     <div ref="dropdown"
+         :class="{ 'is-disabled': disabled }"
          tabindex="0"
          role="listbox"
          class="ms-Dropdown"
@@ -39,6 +41,7 @@
               :do-not-layer="false"
               :is-beak-visible="false"
               :target="$refs.dropdown"
+              :container-height="options.length * 32"
               @onBlur="showCallout = false">
 
       <!-- Dropdown Items -->
@@ -49,6 +52,7 @@
           <VActionButton v-for="(option, index) in options"
                          :key="'dropdownItem-' + index"
                          :title="option.title"
+                         :class="{ 'is-disabled': option.disabled }"
                          class="ms-Dropdown-item"
                          role="option"
                          @click.native="selectOption(option)">
@@ -81,13 +85,14 @@ export default {
       type: String,
       default: null,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   data () {
     return {
       showCallout: false,
-      onBlur: () => {
-        this.showCallout = false
-      },
     }
   },
   computed: {
@@ -95,7 +100,16 @@ export default {
       return this.options.find(o => o.key === this.value)
     },
   },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.dismissOnScroll)
+  },
+  created () {
+    window.addEventListener('scroll', this.dismissOnScroll)
+  },
   methods: {
+    dismissOnScroll (ev) {
+      this.showCallout = false
+    },
     selectOption (option) {
       this.$emit('input', option.key || option.text)
       this.showCallout = false
@@ -106,4 +120,11 @@ export default {
 
 <style lang="scss">
 @import "./Dropdown";
+
+.rootIsDisabled {
+  pointer-events: none;
+}
+.ms-Dropdown-item.is-disabled {
+  pointer-events: none;
+}
 </style>

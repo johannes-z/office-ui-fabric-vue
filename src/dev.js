@@ -40,6 +40,7 @@ const routes = [
   {
     name: 'Pickers',
     children: [
+      { name: 'ColorPicker', path: '/ColorPicker', component: () => import(`./pages/ColorPicker.vue`) },
       { name: 'DatePicker', path: '/DatePicker', component: () => import(`../docs/.vuepress/components/pickers/DatePicker/Example1.vue`) },
     ],
   },

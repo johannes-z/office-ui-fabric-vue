@@ -8,7 +8,7 @@
         {{ label }}
       </VLabel>
 
-      <div :class="{ 'invalid': errorMessage }"
+      <div :class="{ 'invalid': errorMessage, 'is-disabled': disabled }"
            class="ms-TextField-fieldGroup fieldGroup">
         <component :value="value"
                    :is="component"
@@ -17,13 +17,9 @@
                    :readonly="readOnly"
                    :required="required"
                    v-bind="$attrs"
-                   rows="4"
                    type="text"
                    class="ms-TextField-field field"
-                   aria-invalid="false"
-                   @input="$emit('input', $event.target.value || '')">
-          <template v-if="multiline">{{ value }}</template>
-        </component>
+                   @input="$emit('input', $event.target.value)" />
       </div>
     </div>
 
@@ -102,7 +98,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../common/common";
 @import "../../common/semanticSlots";
 

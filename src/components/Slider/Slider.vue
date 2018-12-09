@@ -208,6 +208,7 @@ export default {
 
 .ms-Slider {
   user-select: none;
+  position: relative;
 
   .ms-Slider-slideBox:hover {
     cursor: pointer;

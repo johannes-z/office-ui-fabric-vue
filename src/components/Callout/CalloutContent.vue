@@ -7,7 +7,9 @@
            class="ms-Callout-beak"
            style="left: 51.2344px; top: -8px;" />
       <div class="ms-Callout-beakCurtain" />
-      <div class="ms-Callout-main">
+      <div ref="main"
+           :style="mainStyle"
+           class="ms-Callout-main">
 
         <slot>
           <p class="ms-font-xl">All of your favorite people</p>
@@ -26,13 +28,59 @@ import propsMixin from './propsMixin.js'
 export default {
   mixins: [ propsMixin ],
   computed: {
+    mainStyle () {
+      // let containerHeight = this.containerHeight
+      // let innerHeight = window.innerHeight
+
+      const rect = this.target.getBoundingClientRect()
+      let top = rect.top
+      let bottom = window.innerHeight - (rect.top + rect.height)
+
+      // if (containerHeight > innerHeight) {
+      //   return {
+      //     'max-height': `${innerHeight - 16}px`,
+      //   }
+      // }
+
+      if (top > bottom) {
+        return {
+          'max-height': `${top - 8}px`,
+        }
+      } else {
+        return {
+          'max-height': `${bottom - 8}px`,
+        }
+      }
+
+      // return {
+      //   'max-height': `${window.innerHeight}px`,
+      // }
+    },
     styleContainer () {
       const rect = this.target.getBoundingClientRect()
-      return {
+      let top = rect.top
+      let bottom = window.innerHeight - (rect.top + rect.height)
+      let containerHeight = this.containerHeight
+
+      let obj = {
         width: `${rect.width}px`,
         left: `${rect.left}px`,
-        top: `${rect.top + rect.height}px`,
       }
+
+      console.log(rect.height)
+
+      if (containerHeight > top && containerHeight > bottom) {
+        // obj.top = `8px`
+        // obj.bottom = `-400px`
+        // return obj
+      }
+
+      if (top > bottom) {
+        obj.bottom = `${-top}px`
+      } else {
+        obj.top = `${rect.top + rect.height}px`
+      }
+      return obj
     },
   },
   beforeDestroy () {
@@ -60,10 +108,6 @@ export default {
   .ms-Callout {
     position: absolute;
     box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px 0px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: $ms-color-neutralLight;
     outline: transparent;
 
     .ms-Callout-beak {
@@ -91,6 +135,16 @@ export default {
       overflow-x: hidden;
       overflow-y: auto;
       position: relative;
+
+      font-size: 14px;
+      font-weight: 400;
+      box-sizing: border-box;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px;
+      outline: transparent;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(234, 234, 234);
+      border-image: initial;
     }
   }
 }
