@@ -76,7 +76,6 @@ export default {
         return this.alpha
       },
       set (value) {
-        console.log(Number.parseFloat(value))
         if (Number.parseFloat(value) > 100) value = '100'
         if (Number.parseFloat(value) < 0) value = '0'
         this.alpha = value
