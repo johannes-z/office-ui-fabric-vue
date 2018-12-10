@@ -154,12 +154,10 @@ export default {
         display: block;
         text-align: center;
         cursor: default;
-        vertical-align: top;
-        padding-top: 0px;
-        padding-right: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
+        padding: 0;
         width: 14px;
+        max-width: 14px;
+        min-width: 14px;
         height: 50%;
         background-color: transparent;
         color: rgb(51, 51, 51);
