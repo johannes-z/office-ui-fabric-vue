@@ -10,7 +10,7 @@
 
       <div :class="{ 'invalid': errorMessage, 'is-disabled': disabled }"
            class="ms-TextField-fieldGroup fieldGroup">
-        <component v-model="value"
+        <component :value="value"
                    :is="component"
                    :disabled="disabled"
                    :placeholder="placeholder"
@@ -18,7 +18,8 @@
                    :required="required"
                    v-bind="$attrs"
                    type="text"
-                   class="ms-TextField-field field" />
+                   class="ms-TextField-field field"
+                   @input="$emit('input', $event.target.value)" />
       </div>
     </div>
 
@@ -97,7 +98,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../common/common";
 @import "../../common/semanticSlots";
 
