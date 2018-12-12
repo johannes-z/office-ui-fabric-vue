@@ -67,8 +67,6 @@ export default {
         left: `${rect.left}px`,
       }
 
-      console.log(rect.height)
-
       if (containerHeight > top && containerHeight > bottom) {
         // obj.top = `8px`
         // obj.bottom = `-400px`

@@ -22,8 +22,5 @@ import propsMixin from './propsMixin.js'
 export default {
   components: { VLayer, VCalloutContent },
   mixins: [ propsMixin ],
-  created () {
-    console.log(this.$props)
-  },
 }
 </script>
