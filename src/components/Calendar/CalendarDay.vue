@@ -22,11 +22,11 @@
 
           <div class="ms-DatePicker-navContainer">
             <button class="ms-DatePicker-prevMonth js-prevMonth prevMonth"
-                    @click="$emit('update:navigatedDate', addMonths(navigatedDate, -1))">
+                    @click.prevent.stop="$emit('update:navigatedDate', addMonths(navigatedDate, -1))">
               <v-icon icon-name="Up" />
             </button>
             <button class="ms-DatePicker-nextMonth js-nextMonth nextMonth"
-                    @click="$emit('update:navigatedDate', addMonths(navigatedDate, 1))">
+                    @click.prevent.stop="$emit('update:navigatedDate', addMonths(navigatedDate, 1))">
               <v-icon icon-name="Down" />
             </button>
           </div>
@@ -57,11 +57,12 @@
 
               <td v-for="(day, dayIndex) in week"
                   :key="day.key"
-                  :class="{ ['dayIsHighlighted']: day.isSelected }"
+                  :class="{ ['dayIsHighlighted']: day.isSelected, dayIsDisabled: !day.isInBounds }"
                   class="dayWrapper ms-DatePicker-day ms-DatePicker-dayBackground dayBackground ms-DatePicker-day--outfocus dayIsUnfocused daySelection"
                   @click.prevent.stop="$emit('update:selectedDate', day.originalDate)">
                 <button :class="{ ['dayIsToday']: day.isToday }"
-                        class="day ms-DatePicker-day-button">
+                        class="day ms-DatePicker-day-button"
+                        @click.prevent>
                   <span>
                     {{ day.originalDate.getDate() }}
                   </span>
@@ -77,7 +78,7 @@
     <button :disabled="goTodayEnabled"
             :class="{ goToTodayIsDisabled: goTodayEnabled }"
             class="ms-DatePicker-goToday"
-            @click="$emit('update:navigatedDate', new Date(today))">
+            @click.prevent.stop="$emit('update:navigatedDate', new Date(today))">
       <slot name="todayLabel">Go to today</slot>
     </button>
   </div>
@@ -147,6 +148,14 @@ export default {
       type: Number,
       required: true,
     },
+    minDate: {
+      type: Date,
+      default: null,
+    },
+    maxDate: {
+      type: Date,
+      default: null,
+    },
   },
   data () {
     return {
@@ -184,8 +193,8 @@ export default {
       let selectedDate = this.selectedDate
       let navigatedDate = this.navigatedDate
       let dateRangeType = DateRangeType.Day
-      let minDate = null
-      let maxDate = null
+      let minDate = this.minDate
+      let maxDate = this.maxDate
       let workWeekDays = [
         DayOfWeek.Monday,
         DayOfWeek.Tuesday,

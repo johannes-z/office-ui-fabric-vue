@@ -31,6 +31,7 @@ $DropDown-item-height: 32px;
   position: relative;
   outline: 0;
   user-select: none;
+
   &:hover,
   &:focus,
   &:active {
@@ -169,6 +170,9 @@ $DropDown-item-height: 32px;
 
 .ms-Dropdown-items {
   display: block;
+
+  max-height: $DropDown-height * 10;
+  overflow-y: auto;
 }
 
 // Container for the dropdown items, displayed as a panel on small screens.

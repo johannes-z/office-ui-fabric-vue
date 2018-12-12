@@ -10,6 +10,8 @@
                          :navigated-date.sync="navigatedDate"
                          :first-day-of-week="firstDayOfWeek"
                          :first-week-of-year="firstWeekOfYear"
+                         :min-date="minDate"
+                         :max-date="maxDate"
                          @update:selectedDate="$emit('input', $event)">
               <!-- Pass on all named slots -->
               <slot v-for="slot in Object.keys($slots)"

@@ -10,16 +10,25 @@
 
       <div :class="{ 'invalid': errorMessage, 'is-disabled': disabled }"
            class="ms-TextField-fieldGroup fieldGroup">
-        <component :value="value"
-                   :is="component"
-                   :disabled="disabled"
-                   :placeholder="placeholder"
-                   :readonly="readOnly"
-                   :required="required"
-                   v-bind="$attrs"
-                   type="text"
-                   class="ms-TextField-field field"
-                   @input="$emit('input', $event.target.value)" />
+        <input v-if="component === 'input'"
+               v-model="value"
+               :disabled="disabled"
+               :placeholder="placeholder"
+               :readonly="readOnly"
+               :required="required"
+               v-bind="$attrs"
+               type="text"
+               class="ms-TextField-field field" >
+
+        <textarea v-else-if="component === 'textarea'"
+                  v-model="value"
+                  :disabled="disabled"
+                  :placeholder="placeholder"
+                  :readonly="readOnly"
+                  :required="required"
+                  v-bind="$attrs"
+                  type="text"
+                  class="ms-TextField-field field" />
       </div>
     </div>
 
