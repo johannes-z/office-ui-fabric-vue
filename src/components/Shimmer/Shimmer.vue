@@ -88,7 +88,7 @@ $BACKGROUND_OFF_SCREEN_POSITION: 1000%;
       rgb(234, 234, 234) 50%,
       rgb(244, 244, 244) 100%
     )
-    0px 0px / 90% 100% no-repeat rgb(244, 244, 244);
+    0px 0px / 90% 100% no-repeat rgb(244, 244, 244) !important;
   transition: opacity 200ms ease 0s;
 }
 </style>
