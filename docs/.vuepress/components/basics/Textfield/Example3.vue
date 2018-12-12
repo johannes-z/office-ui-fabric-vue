@@ -2,7 +2,8 @@
   <div class="docs-TextFieldExample">
     <VTextField :multiline="true"
                 rows="10"
-                label="Standard" />
+                label="Standard"
+                value="<div class='test'>Test</div>" />
 
     <VTextField :multiline="true"
                 :disabled="true"
