@@ -6096,12 +6096,12 @@ ColorPicker_component.options.__file = "ColorPicker.vue"
 // CONCATENATED MODULE: ./src/components/ColorPicker/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"00e99f25-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CommandBar/CommandBar.vue?vue&type=template&id=40767b29&
-var CommandBarvue_type_template_id_40767b29_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-FocusZone ms-CommandBar",attrs:{"role":"menubar"}},[_c('div',{staticClass:"ms-CommandBar-primaryCommands"},_vm._l((_vm.items),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem"},[_c('VActionButton',{class:item.classNames,attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){_vm.onClick($event, item)}}},[_vm._v("\n        "+_vm._s(item.name)+"\n      ")])],1)}),0),_c('div',{staticClass:"ms-CommandBar-secondaryCommand"},_vm._l((_vm.farItems),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem"},[_c('VActionButton',{class:item.classNames,attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){_vm.onClick($event, item)}}},[_vm._v("\n        "+_vm._s(item.name)+"\n      ")])],1)}),0)])}
-var CommandBarvue_type_template_id_40767b29_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"00e99f25-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CommandBar/CommandBar.vue?vue&type=template&id=0ec1653a&
+var CommandBarvue_type_template_id_0ec1653a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-FocusZone ms-CommandBar",attrs:{"role":"menubar"}},[_c('div',{staticClass:"ms-CommandBar-primaryCommands"},_vm._l((_vm.items),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem",class:item.className},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){_vm.onClick($event, item)}}},[_vm._v("\n        "+_vm._s(item.name)+"\n      ")])],1)}),0),_c('div',{staticClass:"ms-CommandBar-secondaryCommand"},_vm._l((_vm.farItems),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem"},[_c('VActionButton',{class:item.className,attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){_vm.onClick($event, item)}}},[_vm._v("\n        "+_vm._s(item.name)+"\n      ")])],1)}),0)])}
+var CommandBarvue_type_template_id_0ec1653a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/CommandBar/CommandBar.vue?vue&type=template&id=40767b29&
+// CONCATENATED MODULE: ./src/components/CommandBar/CommandBar.vue?vue&type=template&id=0ec1653a&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CommandBar/CommandBar.vue?vue&type=script&lang=js&
 //
@@ -6217,8 +6217,8 @@ var CommandBarvue_type_style_index_0_lang_scss_ = __webpack_require__("49a4");
 
 var CommandBar_component = normalizeComponent(
   CommandBar_CommandBarvue_type_script_lang_js_,
-  CommandBarvue_type_template_id_40767b29_render,
-  CommandBarvue_type_template_id_40767b29_staticRenderFns,
+  CommandBarvue_type_template_id_0ec1653a_render,
+  CommandBarvue_type_template_id_0ec1653a_staticRenderFns,
   false,
   null,
   null,

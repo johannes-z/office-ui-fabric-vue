@@ -17,10 +17,10 @@
     <div class="ms-CommandBar-primaryCommands">
       <div v-for="(item, index) in items"
            :key="item.key || index"
+           :class="item.className"
            class="ms-CommandBarItem">
         <VActionButton :icon-name="item.icon"
                        :disabled="item.disabled"
-                       :class="item.className"
                        @click.native="onClick($event, item)">
           {{ item.name }}
         </VActionButton>
