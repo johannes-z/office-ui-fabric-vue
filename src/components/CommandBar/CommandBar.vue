@@ -20,6 +20,7 @@
            class="ms-CommandBarItem">
         <VActionButton :icon-name="item.icon"
                        :disabled="item.disabled"
+                       :class="item.className"
                        @click.native="onClick($event, item)">
           {{ item.name }}
         </VActionButton>
@@ -34,6 +35,7 @@
            class="ms-CommandBarItem">
         <VActionButton :icon-name="item.icon"
                        :disabled="item.disabled"
+                       :class="item.className"
                        @click.native="onClick($event, item)">
           {{ item.name }}
         </VActionButton>
