@@ -1,6 +1,6 @@
 {
   "name": "@johannes-z/office-ui-fabric-vue",
-  "version": "0.2.17",
+  "version": "0.2.18",
   "main": "dist/office-ui-fabric-vue.umd.min.js",
   "scripts": {
     "dev": "vue-cli-service serve ./src/dev.js",
