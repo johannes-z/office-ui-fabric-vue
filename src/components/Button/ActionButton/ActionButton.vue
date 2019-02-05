@@ -24,10 +24,6 @@ export default {
       type: String,
       default: null,
     },
-    toolip: {
-      type: String,
-      default: null,
-    },
   },
 }
 </script>
