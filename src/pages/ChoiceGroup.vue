@@ -8,7 +8,7 @@
                   :options="options"
                   :label="label"
                   :required="required"
-                  @onChange="onChange"/>
+                  @onChange="onChange" />
 
     <h2 class="ms-font-xl">ChoiceGroup with dropdown</h2>
   </div>
@@ -45,12 +45,10 @@ export default {
   },
   methods: {
     onChange (option) {
-      console.log(option)
     },
   },
 }
 </script>
 
 <style>
-
 </style>

@@ -12,7 +12,7 @@
         <VActionButton :icon-name="item.icon"
                        :disabled="item.disabled"
                        @click.native="onClick($event, item)">
-          {{ item.name }}
+          <span v-if="item.name">{{ item.name }}</span>
         </VActionButton>
       </div>
     </div>
@@ -28,7 +28,7 @@
         <VActionButton :icon-name="item.icon"
                        :disabled="item.disabled"
                        @click.native="onClick($event, item)">
-          {{ item.name }}
+          <span v-if="item.name">{{ item.name }}</span>
         </VActionButton>
       </div>
     </div>
@@ -71,8 +71,6 @@ export default {
       type: String,
       default: 'Search...',
     },
-  },
-  created () {
   },
   methods: {
     onClick (event, item) {

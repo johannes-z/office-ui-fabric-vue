@@ -38,6 +38,7 @@
 
     <!-- Option Callout -->
     <VCallout v-if="showCallout"
+              :class="className"
               :do-not-layer="false"
               :is-beak-visible="false"
               :target="$refs.dropdown"
@@ -88,6 +89,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+    className: {
+      type: String,
+      default: '',
     },
   },
   data () {
