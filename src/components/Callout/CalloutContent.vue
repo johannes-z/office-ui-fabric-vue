@@ -89,7 +89,7 @@ export default {
   },
   methods: {
     onClick (event) {
-      var index = event.path.indexOf(this.$refs.container)
+      var index = event.path.indexOf(this.target)
       if (index > -1) return
       this.$emit('onBlur', event)
     },

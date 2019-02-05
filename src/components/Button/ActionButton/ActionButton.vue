@@ -4,7 +4,7 @@
     <VIcon v-if="iconName"
            :icon-name="iconName" />
     <div class="ms-Button-textContainer">
-      <div v-if="text"
+      <div v-if="($slots && $slots.default) || text"
            class="ms-Button-label">
         <slot>{{ text }}</slot>
       </div>
