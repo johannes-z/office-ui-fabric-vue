@@ -2,22 +2,12 @@
   <div role="menubar"
        class="ms-FocusZone ms-CommandBar">
 
-    <!-- search -->
-    <!-- <div v-if="isSearchBoxVisible"
-         class="ms-CommandBarSearch search">
-      <slot :searchPlaceholderText="searchPlaceholderText"
-            name="searchBox">
-        <SearchBox :underlined="true"
-                   style="display: inline-block; width: 208px; max-width: 208px;" />
-      </slot>
-    </div> -->
-    <!-- /search -->
-
     <!-- items -->
     <div class="ms-CommandBar-primaryCommands">
       <div v-for="(item, index) in items"
            :key="item.key || index"
            :class="item.className"
+           :title="!item.label ? item.title : null"
            class="ms-CommandBarItem">
         <VActionButton :icon-name="item.icon"
                        :disabled="item.disabled"
@@ -32,10 +22,11 @@
     <div class="ms-CommandBar-secondaryCommand">
       <div v-for="(item, index) in farItems"
            :key="item.key || index"
+           :class="item.className"
+           :title="!item.label ? item.title : null"
            class="ms-CommandBarItem">
         <VActionButton :icon-name="item.icon"
                        :disabled="item.disabled"
-                       :class="item.className"
                        @click.native="onClick($event, item)">
           {{ item.name }}
         </VActionButton>

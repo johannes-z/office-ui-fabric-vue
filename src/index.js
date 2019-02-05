@@ -13,4 +13,6 @@ const Fabric = {
   },
 }
 
+export * from './components.js'
+
 export default Fabric

@@ -27,6 +27,7 @@ const routes = [
   {
     name: 'Navigation',
     children: [
+      { name: 'CommandBar', path: '/CommandBar', component: () => import(`../docs/.vuepress/components/navigation/CommandBar/Example1.vue`) },
       { name: 'Searchbox', path: '/Searchbox', component: () => import(`../docs/.vuepress/components/navigation/Searchbox/Example1.vue`) },
     ],
   },

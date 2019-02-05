@@ -4,7 +4,8 @@
     <VIcon v-if="iconName"
            :icon-name="iconName" />
     <div class="ms-Button-textContainer">
-      <div class="ms-Button-label">
+      <div v-if="text"
+           class="ms-Button-label">
         <slot>{{ text }}</slot>
       </div>
     </div>
@@ -20,6 +21,10 @@ export default {
   extends: BaseButton,
   props: {
     iconName: {
+      type: String,
+      default: null,
+    },
+    toolip: {
       type: String,
       default: null,
     },

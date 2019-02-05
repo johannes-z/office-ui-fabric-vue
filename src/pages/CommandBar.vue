@@ -12,6 +12,7 @@ export default {
     return {
       items: [
         { icon: 'Add', name: 'New' },
+        { icon: 'Test', title: 'Test' },
         { icon: 'Edit', name: 'Edit', disabled: true },
       ],
       farItems: [
