@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vue-cli-service serve ./src/dev.js",
     "serve": "vuepress dev docs",
-    "build": "yarn build:lib",
+    "build": "npm run build:lib",
     "build:lib": "vue-cli-service build --target lib --name office-ui-fabric-vue ./src/index.js",
     "build:components": "cross-env UI_ENV=components vue-cli-service build --report --no-clean",
     "lint": "vue-cli-service lint",
