@@ -23,7 +23,7 @@ export default {
     },
     text: {
       type: String,
-      default: '',
+      default: null,
     },
     href: {
       type: String,
