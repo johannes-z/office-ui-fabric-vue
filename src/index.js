@@ -11,6 +11,7 @@ const Fabric = {
   Utilities: {
     setSSR,
   },
+  version: require('../package.json').version,
 }
 
 export * from './components.js'

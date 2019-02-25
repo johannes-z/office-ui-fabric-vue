@@ -2317,6 +2317,13 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 /***/ }),
 
+/***/ "9224":
+/***/ (function(module) {
+
+module.exports = {"name":"@johannes-z/office-ui-fabric-vue","version":"0.2.23","main":"dist/office-ui-fabric-vue.umd.min.js","scripts":{"dev":"vue-cli-service serve ./src/dev.js","serve":"vuepress dev docs","build":"npm run build:lib","build:lib":"vue-cli-service build --target lib --name office-ui-fabric-vue ./src/index.js","build:components":"cross-env UI_ENV=components vue-cli-service build --report --no-clean","lint":"vue-cli-service lint","docs:dev":"vuepress dev docs","docs:build":"vuepress build docs"},"sideEffects":["*.vue"],"keywords":["vue","vuejs","office","office-ui-fabric"],"repository":{"type":"git","url":"git+https://github.com/johannes-z/office-ui-fabric-vue.git"},"author":"@johannes-z","license":"MIT","bugs":{"url":"https://github.com/johannes-z/office-ui-fabric-vue/issues"},"homepage":"https://github.com/johannes-z/office-ui-fabric-vue#readme","dependencies":{"vue":"^2.6.7"},"devDependencies":{"@vue/cli-plugin-babel":"^3.4.1","@vue/cli-plugin-eslint":"^3.4.1","@vue/cli-service":"^3.4.1","@vue/eslint-config-standard":"^4.0.0","cross-env":"^5.2.0","node-sass":"^4.11.0","office-ui-fabric-core":"^9.6.1","sass-loader":"^7.1.0","vue-template-compiler":"^2.6.7","vuepress":"^1.0.0-alpha.9"}};
+
+/***/ }),
+
 /***/ "962a":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -9173,7 +9180,8 @@ var Fabric = {
   },
   Utilities: {
     setSSR: setSSR
-  }
+  },
+  version: __webpack_require__("9224").version
 };
 
 /* harmony default export */ var src = (Fabric);
