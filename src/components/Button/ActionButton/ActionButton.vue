@@ -3,9 +3,9 @@
               class="ms-Button--action ms-Button-command">
     <VIcon v-if="iconName"
            :icon-name="iconName" />
-    <div class="ms-Button-textContainer">
-      <div v-if="($slots && $slots.default) || text"
-           class="ms-Button-label">
+    <div v-if="($slots && $slots.default) || text"
+         class="ms-Button-textContainer">
+      <div class="ms-Button-label">
         <slot>{{ text }}</slot>
       </div>
     </div>

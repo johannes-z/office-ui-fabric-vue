@@ -14,7 +14,7 @@ export default {
         { icon: 'Add', name: 'New', disabled: true, className: 'test' },
         { icon: 'Edit', name: 'Edit', disabled: true },
         { icon: 'Edit', title: 'Test' },
-        { icon: 'Save', name: 'Save' },
+        { icon: 'Save' },
         { icon: 'Download', name: 'Load' },
         { icon: 'Refresh', name: 'Reload' },
         { icon: 'ArrowDownRight8', name: 'ArrowDownRight8' },

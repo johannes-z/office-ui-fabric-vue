@@ -115,6 +115,7 @@ export default {
   padding-bottom: 0px;
   padding-left: 16px;
   height: 40px;
+  overflow: hidden;
 
   .ms-Button.is-disabled {
     background-color: $ms-color-neutralLighter;
