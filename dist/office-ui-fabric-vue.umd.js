@@ -6096,12 +6096,12 @@ ColorPicker_component.options.__file = "ColorPicker.vue"
 // CONCATENATED MODULE: ./src/components/ColorPicker/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"061f5950-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CommandBar/CommandBar.vue?vue&type=template&id=6f4fec39&
-var CommandBarvue_type_template_id_6f4fec39_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"commandbar",staticClass:"ms-FocusZone ms-CommandBar",attrs:{"role":"menubar"}},[_c('div',{staticClass:"ms-CommandBar-primaryCommands"},[_vm._l((_vm.items),function(item,index){return _c('div',{directives:[{name:"show",rawName:"v-show",value:(index < _vm.overflowIndex),expression:"index < overflowIndex"}],key:item.key || index,ref:"items",refInFor:true,staticClass:"ms-CommandBarItem",class:item.className,attrs:{"title":!item.label ? item.title : null}},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){return _vm.onClick($event, item)}}},[(!_vm.hideLabels && item.name)?_c('span',[_vm._v(_vm._s(item.name))]):_vm._e()])],1)}),_c('div',{ref:"overflowButton",staticClass:"ms-CommandBarItem"},[_c('VActionButton',{directives:[{name:"show",rawName:"v-show",value:(_vm.hasOverflow),expression:"hasOverflow"}],attrs:{"icon-name":"More"},nativeOn:{"click":function($event){_vm.showCallout = !_vm.showCallout}}})],1)],2),_c('div',{ref:"secondary",staticClass:"ms-CommandBar-secondaryCommand"},_vm._l((_vm.farItems),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem",class:item.className,attrs:{"title":!item.label ? item.title : null}},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){return _vm.onClick($event, item)}}},[(!_vm.hideLabels && item.name)?_c('span',[_vm._v(_vm._s(item.name))]):_vm._e()])],1)}),0),(_vm.showCallout)?_c('VCallout',{attrs:{"do-not-layer":false,"is-beak-visible":false,"target":_vm.$refs.overflowButton,"container-height":_vm.overflowItems.length * 32,"width":"auto"},on:{"onBlur":function($event){_vm.showCallout = false}}},[_c('div',{staticClass:"ms-Dropdown-dropdownItemsWrapper"},[_c('div',{staticClass:"ms-FocusZone ms-Dropdown-items",attrs:{"role":"listbox"}},_vm._l((_vm.overflowItems),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem",class:item.className,attrs:{"title":!item.label ? item.title : null}},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){return _vm.onClick($event, item)}}},[(!_vm.hideLabels && item.name)?_c('span',[_vm._v(_vm._s(item.name))]):_vm._e()])],1)}),0)])]):_vm._e()],1)}
-var CommandBarvue_type_template_id_6f4fec39_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"061f5950-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CommandBar/CommandBar.vue?vue&type=template&id=785402ec&
+var CommandBarvue_type_template_id_785402ec_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"commandbar",staticClass:"ms-FocusZone ms-CommandBar",attrs:{"role":"menubar"}},[_c('div',{staticClass:"ms-CommandBar-primaryCommands"},[_vm._l((_vm.items),function(item,index){return _c('div',{directives:[{name:"show",rawName:"v-show",value:(index < _vm.overflowIndex),expression:"index < overflowIndex"}],key:item.key || index,ref:"items",refInFor:true,staticClass:"ms-CommandBarItem",class:item.className,attrs:{"title":!item.label ? item.title : null}},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){return _vm.onClick($event, item)}}},[(!_vm.hideLabels && item.name)?_c('span',[_vm._v(_vm._s(item.name))]):_vm._e()])],1)}),_c('div',{ref:"overflowButton",staticClass:"ms-CommandBarItem"},[_c('VActionButton',{directives:[{name:"show",rawName:"v-show",value:(_vm.hasOverflow),expression:"hasOverflow"}],attrs:{"icon-name":"More"},nativeOn:{"click":function($event){_vm.showCallout = !_vm.showCallout}}})],1)],2),_c('div',{ref:"secondary",staticClass:"ms-CommandBar-secondaryCommand"},_vm._l((_vm.farItems),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem",class:item.className,attrs:{"title":!item.label ? item.title : null}},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){return _vm.onClick($event, item)}}},[(!_vm.hideLabels && item.name)?_c('span',[_vm._v(_vm._s(item.name))]):_vm._e()])],1)}),0),(_vm.showCallout)?_c('VCallout',{attrs:{"do-not-layer":false,"is-beak-visible":false,"target":_vm.$refs.overflowButton,"container-height":_vm.overflowItems.length * 32,"width":"auto"},on:{"onBlur":function($event){_vm.showCallout = false}}},[_c('div',{staticClass:"ms-Dropdown-dropdownItemsWrapper"},[_c('div',{staticClass:"ms-FocusZone ms-Dropdown-items",attrs:{"role":"listbox"}},_vm._l((_vm.overflowItems),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem",class:item.className,attrs:{"title":!item.label ? item.title : null}},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){return _vm.onClick($event, item)}}},[(!_vm.hideLabels && item.name)?_c('span',[_vm._v(_vm._s(item.name))]):_vm._e()])],1)}),0)])]):_vm._e()],1)}
+var CommandBarvue_type_template_id_785402ec_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/CommandBar/CommandBar.vue?vue&type=template&id=6f4fec39&
+// CONCATENATED MODULE: ./src/components/CommandBar/CommandBar.vue?vue&type=template&id=785402ec&
 
 // CONCATENATED MODULE: ./src/utilities/throttle.js
 function throttle(callback, wait) {
@@ -6276,19 +6276,38 @@ var itemPadding = 4;
       return this.overflowItems.length > 0;
     }
   },
+  watch: {
+    items: {
+      deep: true,
+      handler: function handler() {
+        this.cacheItemWidth();
+      }
+    },
+    farItems: {
+      deep: true,
+      handler: function handler() {
+        this.updateSecondaryWidth();
+      }
+    }
+  },
   beforeDestroy: function beforeDestroy() {
     // this.$refs.commandbar.$off('resize', this.onResize)
     window.removeEventListener('resize', this.onResize);
   },
   mounted: function mounted() {
-    this.secondaryWidth = this.$refs.secondary.offsetWidth + this.farItems.length * itemPadding;
     this.overflowWidth = this.$refs.overflowButton.offsetWidth;
-    window.addEventListener('resize', throttle(this.onResize, 33));
+    this.updateSecondaryWidth();
     this.cacheItemWidth();
     this.collapseItems();
+    window.addEventListener('resize', throttle(this.onResize, 33));
   },
   methods: {
+    updateSecondaryWidth: function updateSecondaryWidth() {
+      if (!this.$refs.secondary) return;
+      this.secondaryWidth = this.$refs.secondary.offsetWidth + this.farItems.length * itemPadding;
+    },
     cacheItemWidth: function cacheItemWidth() {
+      if (!this.$refs.items) return;
       this.itemWidth = [];
       var items = this.$refs.items;
 
@@ -6340,8 +6359,8 @@ var CommandBarvue_type_style_index_0_lang_scss_ = __webpack_require__("49a4");
 
 var CommandBar_component = normalizeComponent(
   CommandBar_CommandBarvue_type_script_lang_js_,
-  CommandBarvue_type_template_id_6f4fec39_render,
-  CommandBarvue_type_template_id_6f4fec39_staticRenderFns,
+  CommandBarvue_type_template_id_785402ec_render,
+  CommandBarvue_type_template_id_785402ec_staticRenderFns,
   false,
   null,
   null,

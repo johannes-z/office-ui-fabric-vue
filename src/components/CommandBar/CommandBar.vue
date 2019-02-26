@@ -140,21 +140,40 @@ export default {
       return this.overflowItems.length > 0
     },
   },
+  watch: {
+    items: {
+      deep: true,
+      handler () {
+        this.cacheItemWidth()
+      },
+    },
+    farItems: {
+      deep: true,
+      handler () {
+        this.updateSecondaryWidth()
+      },
+    },
+  },
   beforeDestroy () {
     // this.$refs.commandbar.$off('resize', this.onResize)
     window.removeEventListener('resize', this.onResize)
   },
   mounted () {
-    this.secondaryWidth = this.$refs.secondary.offsetWidth + this.farItems.length * itemPadding
     this.overflowWidth = this.$refs.overflowButton.offsetWidth
 
-    window.addEventListener('resize', throttle(this.onResize, 33))
-
+    this.updateSecondaryWidth()
     this.cacheItemWidth()
     this.collapseItems()
+
+    window.addEventListener('resize', throttle(this.onResize, 33))
   },
   methods: {
+    updateSecondaryWidth () {
+      if (!this.$refs.secondary) return
+      this.secondaryWidth = this.$refs.secondary.offsetWidth + this.farItems.length * itemPadding
+    },
     cacheItemWidth () {
+      if (!this.$refs.items) return
       this.itemWidth = []
       let items = this.$refs.items
       for (let i = 0; i < items.length; i++) {
