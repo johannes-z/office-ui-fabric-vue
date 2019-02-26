@@ -30,6 +30,41 @@
       </div>
     </div>
 
+    <h2 class="ms-font-xl">Action Button (Link)</h2>
+    <div class="ms-Grid"
+         dir="ltr">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
+          <VLabel>Default</VLabel>
+          <VActionButton href="https://www.google.at"
+                         icon-name="Cloud"
+                         text="Google" />
+        </div>
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
+          <VLabel>Primary</VLabel>
+          <VActionButton :primary="true"
+                         href="https://www.google.at"
+                         icon-name="Cloud"
+                         text="Google" />
+        </div>
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
+          <VLabel>Disabled Standard</VLabel>
+          <VActionButton :disabled="true"
+                         href="https://www.google.at"
+                         icon-name="Cloud"
+                         text="Google" />
+        </div>
+        <div class="ms-Grid-col ms-sm6 ms-lg3">
+          <VLabel>Disabled Primary</VLabel>
+          <VActionButton :disabled="true"
+                         :primary="true"
+                         href="https://www.google.at"
+                         icon-name="Cloud"
+                         text="Google" />
+        </div>
+      </div>
+    </div>
+
     <h2 class="ms-font-xl">Compound Button</h2>
 
     <div class="ms-Grid"

@@ -2329,7 +2329,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 /***/ "9224":
 /***/ (function(module) {
 
-module.exports = {"name":"@johannes-z/office-ui-fabric-vue","version":"0.2.23","main":"dist/office-ui-fabric-vue.umd.min.js","scripts":{"dev":"vue-cli-service serve ./src/dev.js","serve":"vuepress dev docs","build":"npm run build:lib","build:lib":"vue-cli-service build --target lib --name office-ui-fabric-vue ./src/index.js","build:components":"cross-env UI_ENV=components vue-cli-service build --report --no-clean","lint":"vue-cli-service lint","docs:dev":"vuepress dev docs","docs:build":"vuepress build docs"},"sideEffects":["*.vue"],"keywords":["vue","vuejs","office","office-ui-fabric"],"repository":{"type":"git","url":"git+https://github.com/johannes-z/office-ui-fabric-vue.git"},"author":"@johannes-z","license":"MIT","bugs":{"url":"https://github.com/johannes-z/office-ui-fabric-vue/issues"},"homepage":"https://github.com/johannes-z/office-ui-fabric-vue#readme","dependencies":{"vue":"^2.6.7"},"devDependencies":{"@vue/cli-plugin-babel":"^3.4.1","@vue/cli-plugin-eslint":"^3.4.1","@vue/cli-service":"^3.4.1","@vue/eslint-config-standard":"^4.0.0","cross-env":"^5.2.0","node-sass":"^4.11.0","office-ui-fabric-core":"^9.6.1","sass-loader":"^7.1.0","vue-template-compiler":"^2.6.7","vuepress":"^1.0.0-alpha.9"}};
+module.exports = {"name":"@johannes-z/office-ui-fabric-vue","version":"0.2.25","main":"dist/office-ui-fabric-vue.umd.min.js","scripts":{"dev":"vue-cli-service serve ./src/dev.js","serve":"vuepress dev docs","build":"npm run build:lib","build:lib":"vue-cli-service build --target lib --name office-ui-fabric-vue ./src/index.js","build:components":"cross-env UI_ENV=components vue-cli-service build --report --no-clean","lint":"vue-cli-service lint","docs:dev":"vuepress dev docs","docs:build":"vuepress build docs"},"sideEffects":["*.vue"],"keywords":["vue","vuejs","office","office-ui-fabric"],"repository":{"type":"git","url":"git+https://github.com/johannes-z/office-ui-fabric-vue.git"},"author":"@johannes-z","license":"MIT","bugs":{"url":"https://github.com/johannes-z/office-ui-fabric-vue/issues"},"homepage":"https://github.com/johannes-z/office-ui-fabric-vue#readme","dependencies":{"vue":"^2.6.7"},"devDependencies":{"@vue/cli-plugin-babel":"^3.4.1","@vue/cli-plugin-eslint":"^3.4.1","@vue/cli-service":"^3.4.1","@vue/eslint-config-standard":"^4.0.0","cross-env":"^5.2.0","node-sass":"^4.11.0","office-ui-fabric-core":"^9.6.1","sass-loader":"^7.1.0","vue-template-compiler":"^2.6.7","vuepress":"^1.0.0-alpha.9"}};
 
 /***/ }),
 
@@ -3622,14 +3622,15 @@ var IconButtonvue_type_template_id_42b83325_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/Button/IconButton/IconButton.vue?vue&type=template&id=42b83325&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"061f5950-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/BaseButton.vue?vue&type=template&id=5ea9e0a8&
-var BaseButtonvue_type_template_id_5ea9e0a8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c(_vm.href ? 'a' : 'button',{tag:"component",staticClass:"ms-Button",class:_vm.classObj,attrs:{"disabled":_vm.disabled,"type":"button"}},[_c('div',{staticClass:"ms-Button-flexContainer"},[_vm._t("default")],2)])}
-var BaseButtonvue_type_template_id_5ea9e0a8_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"061f5950-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/BaseButton.vue?vue&type=template&id=6621921c&
+var BaseButtonvue_type_template_id_6621921c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c(_vm.href ? 'a' : 'button',{tag:"component",staticClass:"ms-Button",class:_vm.classObj,attrs:{"disabled":_vm.disabled,"href":_vm.href,"type":"button"}},[_c('div',{staticClass:"ms-Button-flexContainer"},[_vm._t("default")],2)])}
+var BaseButtonvue_type_template_id_6621921c_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Button/BaseButton.vue?vue&type=template&id=5ea9e0a8&
+// CONCATENATED MODULE: ./src/components/Button/BaseButton.vue?vue&type=template&id=6621921c&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/@vue/cli-plugin-babel/node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/BaseButton.vue?vue&type=script&lang=js&
+//
 //
 //
 //
@@ -3686,8 +3687,8 @@ var BaseButtonvue_type_style_index_0_lang_scss_ = __webpack_require__("a8c6");
 
 var BaseButton_component = normalizeComponent(
   Button_BaseButtonvue_type_script_lang_js_,
-  BaseButtonvue_type_template_id_5ea9e0a8_render,
-  BaseButtonvue_type_template_id_5ea9e0a8_staticRenderFns,
+  BaseButtonvue_type_template_id_6621921c_render,
+  BaseButtonvue_type_template_id_6621921c_staticRenderFns,
   false,
   null,
   null,

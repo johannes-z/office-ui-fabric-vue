@@ -2,6 +2,7 @@
   <component :is="href ? 'a' : 'button'"
              :class="classObj"
              :disabled="disabled"
+             :href="href"
              class="ms-Button"
              type="button">
     <div class="ms-Button-flexContainer">
