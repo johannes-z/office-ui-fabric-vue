@@ -54,6 +54,11 @@ export default {
 
   .ms-Button-label {
     font-weight: $ms-font-weight-regular;
+    text-align: left;
+  }
+
+  .ms-Button-flexContainer {
+    justify-content: left;
   }
 }
 </style>

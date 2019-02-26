@@ -64,6 +64,7 @@ const routes = [
   {
     name: 'Utilities',
     children: [
+      { name: 'OverflowSet', path: '/OverflowSet', component: () => import(`./pages/OverflowSet.vue`) },
       { name: 'ResizeGroup', path: '/ResizeGroup', component: () => import(`../docs/.vuepress/components/utilities/ResizeGroup/Example1.vue`) },
     ],
   },

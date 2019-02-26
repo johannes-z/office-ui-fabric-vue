@@ -1,5 +1,9 @@
 export default {
   props: {
+    width: {
+      type: String,
+      default: null,
+    },
     calloutMaxHeight: {
       type: Number,
       default: null,

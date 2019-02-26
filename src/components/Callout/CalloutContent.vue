@@ -63,7 +63,7 @@ export default {
       let containerHeight = this.containerHeight
 
       let obj = {
-        width: `${rect.width}px`,
+        width: this.width || `${rect.width}px`,
         left: `${rect.left}px`,
       }
 

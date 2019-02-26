@@ -1,10 +1,13 @@
 <template>
-  <div role="menubar"
+  <div ref="commandbar"
+       role="menubar"
        class="ms-FocusZone ms-CommandBar">
 
     <!-- items -->
     <div class="ms-CommandBar-primaryCommands">
       <div v-for="(item, index) in items"
+           v-show="index < overflowIndex"
+           ref="items"
            :key="item.key || index"
            :class="item.className"
            :title="!item.label ? item.title : null"
@@ -12,14 +15,22 @@
         <VActionButton :icon-name="item.icon"
                        :disabled="item.disabled"
                        @click.native="onClick($event, item)">
-          <span v-if="item.name">{{ item.name }}</span>
+          <span v-if="!hideLabels && item.name">{{ item.name }}</span>
         </VActionButton>
+      </div>
+
+      <div ref="overflowButton"
+           class="ms-CommandBarItem">
+        <VActionButton v-show="hasOverflow"
+                       icon-name="More"
+                       @click.native="showCallout = !showCallout" />
       </div>
     </div>
     <!-- /items -->
 
     <!-- farItems -->
-    <div class="ms-CommandBar-secondaryCommand">
+    <div ref="secondary"
+         class="ms-CommandBar-secondaryCommand">
       <div v-for="(item, index) in farItems"
            :key="item.key || index"
            :class="item.className"
@@ -28,16 +39,51 @@
         <VActionButton :icon-name="item.icon"
                        :disabled="item.disabled"
                        @click.native="onClick($event, item)">
-          <span v-if="item.name">{{ item.name }}</span>
+          <span v-if="!hideLabels && item.name">{{ item.name }}</span>
         </VActionButton>
       </div>
     </div>
     <!-- /farItems -->
 
+    <!-- Option Callout -->
+    <VCallout v-if="showCallout"
+              :do-not-layer="false"
+              :is-beak-visible="false"
+              :target="$refs.overflowButton"
+              :container-height="overflowItems.length * 32"
+              width="auto"
+              @onBlur="showCallout = false">
+
+      <!-- Dropdown Items -->
+      <div class="ms-Dropdown-dropdownItemsWrapper">
+        <div role="listbox"
+             class="ms-FocusZone ms-Dropdown-items">
+          <div v-for="(item, index) in overflowItems"
+               :key="item.key || index"
+               :class="item.className"
+               :title="!item.label ? item.title : null"
+               class="ms-CommandBarItem">
+            <VActionButton :icon-name="item.icon"
+                           :disabled="item.disabled"
+                           @click.native="onClick($event, item)">
+              <span v-if="!hideLabels && item.name">{{ item.name }}</span>
+            </VActionButton>
+          </div>
+
+        </div>
+      </div>
+
+    </VCallout>
+
   </div>
 </template>
 
 <script>
+import throttle from '@/utilities/throttle'
+
+const padding = 16
+const itemPadding = 4
+
 export default {
   props: {
     items: {
@@ -72,7 +118,71 @@ export default {
       default: 'Search...',
     },
   },
+  data () {
+    return {
+      secondaryWidth: 0,
+      hideLabels: false,
+      overflowWidth: 0,
+      overflowSet: [],
+      overflowIndex: this.items.length,
+      itemWidth: [],
+      showCallout: false,
+    }
+  },
+  computed: {
+    primaryItems () {
+      return this.items.slice(0, this.overflowIndex)
+    },
+    overflowItems () {
+      return this.items.slice(this.overflowIndex, this.items.length)
+    },
+    hasOverflow () {
+      return this.overflowItems.length > 0
+    },
+  },
+  beforeDestroy () {
+    // this.$refs.commandbar.$off('resize', this.onResize)
+    window.removeEventListener('resize', this.onResize)
+  },
+  mounted () {
+    this.secondaryWidth = this.$refs.secondary.offsetWidth + this.farItems.length * itemPadding
+    this.overflowWidth = this.$refs.overflowButton.offsetWidth
+
+    window.addEventListener('resize', throttle(this.onResize, 33))
+
+    this.cacheItemWidth()
+    this.collapseItems()
+  },
   methods: {
+    cacheItemWidth () {
+      this.itemWidth = []
+      let items = this.$refs.items
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i]
+        this.itemWidth.push(item.offsetWidth + itemPadding)
+      }
+    },
+    collapseItems () {
+      let spaceLeft = this.$refs.commandbar.offsetWidth -
+        padding * 2 -
+        this.secondaryWidth
+      this.hideLabels = spaceLeft < 0
+
+      let itemWidth = this.itemWidth
+      let i
+      for (i = 0; i < itemWidth.length; i++) {
+        const width = itemWidth[i]
+        spaceLeft -= width
+        if (spaceLeft <= 0) {
+          this.overflowIndex = i
+          return
+        }
+      }
+      this.overflowIndex = this.items.length
+    },
+    onResize () {
+      this.collapseItems()
+    },
     onClick (event, item) {
       if (!item.onClick) return
       item.onClick(event)
@@ -136,5 +246,9 @@ export default {
       min-width: 0;
     }
   }
+}
+
+.ms-Callout .ms-Button--action.ms-Button-command {
+  width: 100%;
 }
 </style>
