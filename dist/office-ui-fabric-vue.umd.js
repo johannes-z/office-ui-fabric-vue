@@ -2329,7 +2329,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 /***/ "9224":
 /***/ (function(module) {
 
-module.exports = {"name":"@johannes-z/office-ui-fabric-vue","version":"0.2.25","main":"dist/office-ui-fabric-vue.umd.min.js","scripts":{"dev":"vue-cli-service serve ./src/dev.js","serve":"vuepress dev docs","build":"npm run build:lib","build:lib":"vue-cli-service build --target lib --name office-ui-fabric-vue ./src/index.js","build:components":"cross-env UI_ENV=components vue-cli-service build --report --no-clean","lint":"vue-cli-service lint","docs:dev":"vuepress dev docs","docs:build":"vuepress build docs"},"sideEffects":["*.vue"],"keywords":["vue","vuejs","office","office-ui-fabric"],"repository":{"type":"git","url":"git+https://github.com/johannes-z/office-ui-fabric-vue.git"},"author":"@johannes-z","license":"MIT","bugs":{"url":"https://github.com/johannes-z/office-ui-fabric-vue/issues"},"homepage":"https://github.com/johannes-z/office-ui-fabric-vue#readme","dependencies":{"vue":"^2.6.7"},"devDependencies":{"@vue/cli-plugin-babel":"^3.4.1","@vue/cli-plugin-eslint":"^3.4.1","@vue/cli-service":"^3.4.1","@vue/eslint-config-standard":"^4.0.0","cross-env":"^5.2.0","node-sass":"^4.11.0","office-ui-fabric-core":"^9.6.1","sass-loader":"^7.1.0","vue-template-compiler":"^2.6.7","vuepress":"^1.0.0-alpha.9"}};
+module.exports = {"name":"@johannes-z/office-ui-fabric-vue","version":"0.2.26","main":"dist/office-ui-fabric-vue.umd.min.js","scripts":{"dev":"vue-cli-service serve ./src/dev.js","serve":"vuepress dev docs","build":"npm run build:lib","build:lib":"vue-cli-service build --target lib --name office-ui-fabric-vue ./src/index.js","build:components":"cross-env UI_ENV=components vue-cli-service build --report --no-clean","lint":"vue-cli-service lint","docs:dev":"vuepress dev docs","docs:build":"vuepress build docs"},"sideEffects":["*.vue"],"keywords":["vue","vuejs","office","office-ui-fabric"],"repository":{"type":"git","url":"git+https://github.com/johannes-z/office-ui-fabric-vue.git"},"author":"@johannes-z","license":"MIT","bugs":{"url":"https://github.com/johannes-z/office-ui-fabric-vue/issues"},"homepage":"https://github.com/johannes-z/office-ui-fabric-vue#readme","dependencies":{"vue":"^2.6.7"},"devDependencies":{"@vue/cli-plugin-babel":"^3.4.1","@vue/cli-plugin-eslint":"^3.4.1","@vue/cli-service":"^3.4.1","@vue/eslint-config-standard":"^4.0.0","cross-env":"^5.2.0","node-sass":"^4.11.0","office-ui-fabric-core":"^9.6.1","sass-loader":"^7.1.0","vue-template-compiler":"^2.6.7","vuepress":"^1.0.0-alpha.9"}};
 
 /***/ }),
 
@@ -4039,12 +4039,12 @@ var DefaultButton_component = normalizeComponent(
 
 DefaultButton_component.options.__file = "DefaultButton.vue"
 /* harmony default export */ var DefaultButton = (DefaultButton_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"061f5950-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/ActionButton/ActionButton.vue?vue&type=template&id=0ccb60a0&
-var ActionButtonvue_type_template_id_0ccb60a0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('BaseButton',_vm._b({staticClass:"ms-Button--action ms-Button-command"},'BaseButton',_vm.$props,false),[(_vm.iconName)?_c('VIcon',{attrs:{"icon-name":_vm.iconName}}):_vm._e(),((_vm.$slots && _vm.$slots.default) || _vm.text)?_c('div',{staticClass:"ms-Button-textContainer"},[_c('div',{staticClass:"ms-Button-label"},[_vm._t("default",[_vm._v(_vm._s(_vm.text))])],2)]):_vm._e()],1)}
-var ActionButtonvue_type_template_id_0ccb60a0_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"061f5950-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/ActionButton/ActionButton.vue?vue&type=template&id=1ed000e4&
+var ActionButtonvue_type_template_id_1ed000e4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('BaseButton',_vm._b({staticClass:"ms-Button--action ms-Button-command"},'BaseButton',_vm.$props,false),[(_vm.iconName)?_c('VIcon',{attrs:{"icon-name":_vm.iconName}}):_vm._e(),((_vm.$slots && _vm.$slots.default) || _vm.text)?_c('div',{staticClass:"ms-Button-textContainer"},[_c('div',{staticClass:"ms-Button-label"},[_vm._t("default",[_vm._v(_vm._s(_vm.text))])],2)]):_vm._e()],1)}
+var ActionButtonvue_type_template_id_1ed000e4_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Button/ActionButton/ActionButton.vue?vue&type=template&id=0ccb60a0&
+// CONCATENATED MODULE: ./src/components/Button/ActionButton/ActionButton.vue?vue&type=template&id=1ed000e4&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/@vue/cli-plugin-babel/node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button/ActionButton/ActionButton.vue?vue&type=script&lang=js&
 //
@@ -4092,8 +4092,8 @@ var ActionButtonvue_type_style_index_0_lang_scss_ = __webpack_require__("f968");
 
 var ActionButton_component = normalizeComponent(
   ActionButton_ActionButtonvue_type_script_lang_js_,
-  ActionButtonvue_type_template_id_0ccb60a0_render,
-  ActionButtonvue_type_template_id_0ccb60a0_staticRenderFns,
+  ActionButtonvue_type_template_id_1ed000e4_render,
+  ActionButtonvue_type_template_id_1ed000e4_staticRenderFns,
   false,
   null,
   null,
@@ -5395,17 +5395,21 @@ var Layer_component = normalizeComponent(
 
 Layer_component.options.__file = "Layer.vue"
 /* harmony default export */ var Layer = (Layer_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"061f5950-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Callout/CalloutContent.vue?vue&type=template&id=b66f87ac&
-var CalloutContentvue_type_template_id_b66f87ac_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"container",staticClass:"ms-Callout-container"},[_c('div',{staticClass:"ms-Callout",style:(_vm.styleContainer)},[(_vm.isBeakVisible)?_c('div',{staticClass:"ms-Callout-beak",staticStyle:{"left":"51.2344px","top":"-8px"}}):_vm._e(),_c('div',{staticClass:"ms-Callout-beakCurtain"}),_c('div',{ref:"main",staticClass:"ms-Callout-main",style:(_vm.mainStyle)},[_vm._t("default",[_c('p',{staticClass:"ms-font-xl"},[_vm._v("All of your favorite people")]),_c('p',[_vm._v("Message body is optional. If help documentation is available, consider adding a link to learn more at the bottom.")])])],2)])])}
-var CalloutContentvue_type_template_id_b66f87ac_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"061f5950-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Callout/CalloutContent.vue?vue&type=template&id=b4c06dc0&
+var CalloutContentvue_type_template_id_b4c06dc0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"container",staticClass:"ms-Callout-container"},[_c('div',{staticClass:"ms-Callout",style:(_vm.styleContainer)},[(_vm.isBeakVisible)?_c('div',{staticClass:"ms-Callout-beak",staticStyle:{"left":"51.2344px","top":"-8px"}}):_vm._e(),_c('div',{staticClass:"ms-Callout-beakCurtain"}),_c('div',{ref:"main",staticClass:"ms-Callout-main",style:(_vm.mainStyle)},[_vm._t("default",[_c('p',{staticClass:"ms-font-xl"},[_vm._v("All of your favorite people")]),_c('p',[_vm._v("Message body is optional. If help documentation is available, consider adding a link to learn more at the bottom.")])])],2)])])}
+var CalloutContentvue_type_template_id_b4c06dc0_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Callout/CalloutContent.vue?vue&type=template&id=b66f87ac&
+// CONCATENATED MODULE: ./src/components/Callout/CalloutContent.vue?vue&type=template&id=b4c06dc0&
 
 // CONCATENATED MODULE: ./src/components/Callout/propsMixin.js
 
 /* harmony default export */ var propsMixin = ({
   props: {
+    width: {
+      type: String,
+      default: null
+    },
     calloutMaxHeight: {
       type: Number,
       default: null
@@ -5487,7 +5491,7 @@ var CalloutContentvue_type_template_id_b66f87ac_staticRenderFns = []
       var bottom = window.innerHeight - (rect.top + rect.height);
       var containerHeight = this.containerHeight;
       var obj = {
-        width: "".concat(rect.width, "px"),
+        width: this.width || "".concat(rect.width, "px"),
         left: "".concat(rect.left, "px")
       };
 
@@ -5535,8 +5539,8 @@ var CalloutContentvue_type_style_index_0_lang_scss_ = __webpack_require__("07f3"
 
 var CalloutContent_component = normalizeComponent(
   Callout_CalloutContentvue_type_script_lang_js_,
-  CalloutContentvue_type_template_id_b66f87ac_render,
-  CalloutContentvue_type_template_id_b66f87ac_staticRenderFns,
+  CalloutContentvue_type_template_id_b4c06dc0_render,
+  CalloutContentvue_type_template_id_b4c06dc0_staticRenderFns,
   false,
   null,
   null,
@@ -6092,13 +6096,39 @@ ColorPicker_component.options.__file = "ColorPicker.vue"
 // CONCATENATED MODULE: ./src/components/ColorPicker/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"061f5950-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CommandBar/CommandBar.vue?vue&type=template&id=4f8198da&
-var CommandBarvue_type_template_id_4f8198da_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ms-FocusZone ms-CommandBar",attrs:{"role":"menubar"}},[_c('div',{staticClass:"ms-CommandBar-primaryCommands"},_vm._l((_vm.items),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem",class:item.className,attrs:{"title":!item.label ? item.title : null}},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){return _vm.onClick($event, item)}}},[(item.name)?_c('span',[_vm._v(_vm._s(item.name))]):_vm._e()])],1)}),0),_c('div',{staticClass:"ms-CommandBar-secondaryCommand"},_vm._l((_vm.farItems),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem",class:item.className,attrs:{"title":!item.label ? item.title : null}},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){return _vm.onClick($event, item)}}},[(item.name)?_c('span',[_vm._v(_vm._s(item.name))]):_vm._e()])],1)}),0)])}
-var CommandBarvue_type_template_id_4f8198da_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"061f5950-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CommandBar/CommandBar.vue?vue&type=template&id=6f4fec39&
+var CommandBarvue_type_template_id_6f4fec39_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"commandbar",staticClass:"ms-FocusZone ms-CommandBar",attrs:{"role":"menubar"}},[_c('div',{staticClass:"ms-CommandBar-primaryCommands"},[_vm._l((_vm.items),function(item,index){return _c('div',{directives:[{name:"show",rawName:"v-show",value:(index < _vm.overflowIndex),expression:"index < overflowIndex"}],key:item.key || index,ref:"items",refInFor:true,staticClass:"ms-CommandBarItem",class:item.className,attrs:{"title":!item.label ? item.title : null}},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){return _vm.onClick($event, item)}}},[(!_vm.hideLabels && item.name)?_c('span',[_vm._v(_vm._s(item.name))]):_vm._e()])],1)}),_c('div',{ref:"overflowButton",staticClass:"ms-CommandBarItem"},[_c('VActionButton',{directives:[{name:"show",rawName:"v-show",value:(_vm.hasOverflow),expression:"hasOverflow"}],attrs:{"icon-name":"More"},nativeOn:{"click":function($event){_vm.showCallout = !_vm.showCallout}}})],1)],2),_c('div',{ref:"secondary",staticClass:"ms-CommandBar-secondaryCommand"},_vm._l((_vm.farItems),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem",class:item.className,attrs:{"title":!item.label ? item.title : null}},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){return _vm.onClick($event, item)}}},[(!_vm.hideLabels && item.name)?_c('span',[_vm._v(_vm._s(item.name))]):_vm._e()])],1)}),0),(_vm.showCallout)?_c('VCallout',{attrs:{"do-not-layer":false,"is-beak-visible":false,"target":_vm.$refs.overflowButton,"container-height":_vm.overflowItems.length * 32,"width":"auto"},on:{"onBlur":function($event){_vm.showCallout = false}}},[_c('div',{staticClass:"ms-Dropdown-dropdownItemsWrapper"},[_c('div',{staticClass:"ms-FocusZone ms-Dropdown-items",attrs:{"role":"listbox"}},_vm._l((_vm.overflowItems),function(item,index){return _c('div',{key:item.key || index,staticClass:"ms-CommandBarItem",class:item.className,attrs:{"title":!item.label ? item.title : null}},[_c('VActionButton',{attrs:{"icon-name":item.icon,"disabled":item.disabled},nativeOn:{"click":function($event){return _vm.onClick($event, item)}}},[(!_vm.hideLabels && item.name)?_c('span',[_vm._v(_vm._s(item.name))]):_vm._e()])],1)}),0)])]):_vm._e()],1)}
+var CommandBarvue_type_template_id_6f4fec39_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/CommandBar/CommandBar.vue?vue&type=template&id=4f8198da&
+// CONCATENATED MODULE: ./src/components/CommandBar/CommandBar.vue?vue&type=template&id=6f4fec39&
 
+// CONCATENATED MODULE: ./src/utilities/throttle.js
+function throttle(callback, wait) {
+  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  var timeout = null;
+  var initialCall = true;
+  return function () {
+    var _this = this,
+        _arguments = arguments;
+
+    var callNow = immediate && initialCall;
+
+    var next = function next() {
+      callback.apply(_this, _arguments);
+      timeout = null;
+    };
+
+    if (callNow) {
+      initialCall = false;
+      next();
+    }
+
+    if (!timeout) {
+      timeout = setTimeout(next, wait);
+    }
+  };
+}
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/@vue/cli-plugin-babel/node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/CommandBar/CommandBar.vue?vue&type=script&lang=js&
 //
 //
@@ -6139,6 +6169,50 @@ var CommandBarvue_type_template_id_4f8198da_staticRenderFns = []
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var padding = 16;
+var itemPadding = 4;
 /* harmony default export */ var CommandBarvue_type_script_lang_js_ = ({
   props: {
     items: {
@@ -6180,7 +6254,70 @@ var CommandBarvue_type_template_id_4f8198da_staticRenderFns = []
       default: 'Search...'
     }
   },
+  data: function data() {
+    return {
+      secondaryWidth: 0,
+      hideLabels: false,
+      overflowWidth: 0,
+      overflowSet: [],
+      overflowIndex: this.items.length,
+      itemWidth: [],
+      showCallout: false
+    };
+  },
+  computed: {
+    primaryItems: function primaryItems() {
+      return this.items.slice(0, this.overflowIndex);
+    },
+    overflowItems: function overflowItems() {
+      return this.items.slice(this.overflowIndex, this.items.length);
+    },
+    hasOverflow: function hasOverflow() {
+      return this.overflowItems.length > 0;
+    }
+  },
+  beforeDestroy: function beforeDestroy() {
+    // this.$refs.commandbar.$off('resize', this.onResize)
+    window.removeEventListener('resize', this.onResize);
+  },
+  mounted: function mounted() {
+    this.secondaryWidth = this.$refs.secondary.offsetWidth + this.farItems.length * itemPadding;
+    this.overflowWidth = this.$refs.overflowButton.offsetWidth;
+    window.addEventListener('resize', throttle(this.onResize, 33));
+    this.cacheItemWidth();
+    this.collapseItems();
+  },
   methods: {
+    cacheItemWidth: function cacheItemWidth() {
+      this.itemWidth = [];
+      var items = this.$refs.items;
+
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        this.itemWidth.push(item.offsetWidth + itemPadding);
+      }
+    },
+    collapseItems: function collapseItems() {
+      var spaceLeft = this.$refs.commandbar.offsetWidth - padding * 2 - this.secondaryWidth;
+      this.hideLabels = spaceLeft < 0;
+      var itemWidth = this.itemWidth;
+      var i;
+
+      for (i = 0; i < itemWidth.length; i++) {
+        var width = itemWidth[i];
+        spaceLeft -= width;
+
+        if (spaceLeft <= 0) {
+          this.overflowIndex = i;
+          return;
+        }
+      }
+
+      this.overflowIndex = this.items.length;
+    },
+    onResize: function onResize() {
+      this.collapseItems();
+    },
     onClick: function onClick(event, item) {
       if (!item.onClick) return;
       item.onClick(event);
@@ -6203,8 +6340,8 @@ var CommandBarvue_type_style_index_0_lang_scss_ = __webpack_require__("49a4");
 
 var CommandBar_component = normalizeComponent(
   CommandBar_CommandBarvue_type_script_lang_js_,
-  CommandBarvue_type_template_id_4f8198da_render,
-  CommandBarvue_type_template_id_4f8198da_staticRenderFns,
+  CommandBarvue_type_template_id_6f4fec39_render,
+  CommandBarvue_type_template_id_6f4fec39_staticRenderFns,
   false,
   null,
   null,
