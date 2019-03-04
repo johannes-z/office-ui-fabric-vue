@@ -15,10 +15,15 @@ export default {
         { icon: 'Test', title: 'Test' },
         { icon: 'Edit', name: 'Edit', disabled: true },
       ],
-      farItems: [
-        { icon: 'Cancel', name: 'Close', onClick: () => console.log('Close') },
-      ],
+      farItems: [],
     }
+  },
+  mounted () {
+    window.setTimeout(() => {
+      this.farItems = [
+        { icon: 'Cancel', name: 'Close', onClick: () => console.log('Close') },
+      ]
+    }, 1000)
   },
 }
 </script>

@@ -10,7 +10,21 @@
 export default {
   data () {
     return {
-      items: [
+      items: [],
+      farItems: [],
+    }
+  },
+  mounted () {
+    window.setTimeout(() => {
+      this.farItems = [
+        { icon: 'Cancel', name: 'Close', onClick: () => console.log('Close') },
+        { icon: 'BlockContact', name: 'BlockContact' },
+        { icon: 'BIDashboard', name: 'BIDashboard' },
+        { icon: 'BacklogBoard', name: 'BacklogBoard' },
+      ]
+    }, 1000)
+    window.setTimeout(() => {
+      this.items = [
         { icon: 'Add', name: 'New', disabled: true, className: 'test' },
         { icon: 'Edit', name: 'Edit', disabled: true },
         { icon: 'Edit', title: 'Test' },
@@ -20,14 +34,8 @@ export default {
         { icon: 'ArrowDownRight8', name: 'ArrowDownRight8' },
         { icon: 'ArrowDownRightMirrored8', name: 'ArrowDownRightMirrored8' },
         { icon: 'ATPLogo', name: 'ATPLogo' },
-      ],
-      farItems: [
-        { icon: 'Cancel', name: 'Close', onClick: () => console.log('Close') },
-        { icon: 'BlockContact', name: 'BlockContact' },
-        { icon: 'BIDashboard', name: 'BIDashboard' },
-        { icon: 'BacklogBoard', name: 'BacklogBoard' },
-      ],
-    }
+      ]
+    }, 2000)
   },
 }
 </script>

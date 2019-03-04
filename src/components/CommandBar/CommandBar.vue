@@ -21,7 +21,7 @@
 
       <div ref="overflowButton"
            class="ms-CommandBarItem">
-        <VActionButton v-show="hasOverflow"
+        <VActionButton :style="{ visibility: hasOverflow ? 'visible' : 'hidden' }"
                        icon-name="More"
                        @click.native="showCallout = !showCallout" />
       </div>
@@ -137,20 +137,27 @@ export default {
       return this.items.slice(this.overflowIndex, this.items.length)
     },
     hasOverflow () {
-      return this.overflowItems.length > 0
+      return this.overflowIndex < this.items.length
     },
   },
   watch: {
     items: {
       deep: true,
-      handler () {
-        this.cacheItemWidth()
+      handler (newVal) {
+        this.overflowIndex = newVal.length
+        this.$nextTick(() => {
+          this.cacheItemWidth()
+          this.collapseItems()
+        })
       },
     },
     farItems: {
       deep: true,
-      handler () {
-        this.updateSecondaryWidth()
+      handler (newVal) {
+        this.$nextTick(() => {
+          this.updateSecondaryWidth()
+          this.collapseItems()
+        })
       },
     },
   },
@@ -170,7 +177,9 @@ export default {
   methods: {
     updateSecondaryWidth () {
       if (!this.$refs.secondary) return
-      this.secondaryWidth = this.$refs.secondary.offsetWidth + this.farItems.length * itemPadding
+      let width = this.$refs.secondary.offsetWidth
+      if (width === 0) return
+      this.secondaryWidth = width + this.farItems.length * itemPadding
     },
     cacheItemWidth () {
       if (!this.$refs.items) return
