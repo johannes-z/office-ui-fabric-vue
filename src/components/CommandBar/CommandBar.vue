@@ -5,19 +5,21 @@
 
     <!-- items -->
     <div class="ms-CommandBar-primaryCommands">
-      <div v-for="(item, index) in items"
-           v-show="index < overflowIndex"
-           ref="items"
-           :key="item.key || index"
-           :class="item.className"
-           :title="!item.label ? item.title : null"
-           class="ms-CommandBarItem">
-        <VActionButton :icon-name="item.icon"
-                       :disabled="item.disabled"
-                       @click.native="onClick($event, item)">
-          <span v-if="!hideLabels && item.name">{{ item.name }}</span>
-        </VActionButton>
-      </div>
+      <slot name="primary">
+        <div v-for="(item, index) in items"
+             v-show="index < overflowIndex"
+             ref="items"
+             :key="item.key || index"
+             :class="item.className"
+             :title="!item.label ? item.title : null"
+             class="ms-CommandBarItem">
+          <VActionButton :icon-name="item.icon"
+                         :disabled="item.disabled"
+                         @click.native="onClick($event, item)">
+            <span v-if="!hideLabels && item.name">{{ item.name }}</span>
+          </VActionButton>
+        </div>
+      </slot>
 
       <div ref="overflowButton"
            class="ms-CommandBarItem">
@@ -31,17 +33,19 @@
     <!-- farItems -->
     <div ref="secondary"
          class="ms-CommandBar-secondaryCommand">
-      <div v-for="(item, index) in farItems"
-           :key="item.key || index"
-           :class="item.className"
-           :title="!item.label ? item.title : null"
-           class="ms-CommandBarItem">
-        <VActionButton :icon-name="item.icon"
-                       :disabled="item.disabled"
-                       @click.native="onClick($event, item)">
-          <span v-if="!hideLabels && item.name">{{ item.name }}</span>
-        </VActionButton>
-      </div>
+      <slot name="secondary">
+        <div v-for="(item, index) in farItems"
+             :key="item.key || index"
+             :class="item.className"
+             :title="!item.label ? item.title : null"
+             class="ms-CommandBarItem">
+          <VActionButton :icon-name="item.icon"
+                         :disabled="item.disabled"
+                         @click.native="onClick($event, item)">
+            <span v-if="!hideLabels && item.name">{{ item.name }}</span>
+          </VActionButton>
+        </div>
+      </slot>
     </div>
     <!-- /farItems -->
 
@@ -58,17 +62,19 @@
       <div class="ms-Dropdown-dropdownItemsWrapper">
         <div role="listbox"
              class="ms-FocusZone ms-Dropdown-items">
-          <div v-for="(item, index) in overflowItems"
-               :key="item.key || index"
-               :class="item.className"
-               :title="!item.label ? item.title : null"
-               class="ms-CommandBarItem">
-            <VActionButton :icon-name="item.icon"
-                           :disabled="item.disabled"
-                           @click.native="onClick($event, item)">
-              <span v-if="!hideLabels && item.name">{{ item.name }}</span>
-            </VActionButton>
-          </div>
+          <slot name="overflow">
+            <div v-for="(item, index) in overflowItems"
+                 :key="item.key || index"
+                 :class="item.className"
+                 :title="!item.label ? item.title : null"
+                 class="ms-CommandBarItem">
+              <VActionButton :icon-name="item.icon"
+                             :disabled="item.disabled"
+                             @click.native="onClick($event, item)">
+                <span v-if="!hideLabels && item.name">{{ item.name }}</span>
+              </VActionButton>
+            </div>
+          </slot>
 
         </div>
       </div>
