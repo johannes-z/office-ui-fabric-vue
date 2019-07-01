@@ -1,11 +1,8 @@
 <template>
   <div :class="customClasses"
        class="ms-Breadcrumb">
-
     <ol class="ms-Breadcrumb-list">
-
       <template v-for="(item, index) in renderedItems">
-
         <li v-if="hasOverflowItems && index === overflowIndex"
             :key="'overflow' + index"
             class="ms-Breadcrumb-listItem">
@@ -17,7 +14,6 @@
 
         <li :key="item.key"
             class="ms-Breadcrumb-listItem">
-
           <VLink class="ms-Breadcrumb-itemLink">
             {{ item.text }}
           </VLink>
@@ -26,10 +22,8 @@
                  icon-name="ChevronRight"
                  class="ms-Breadcrumb-chevron" />
         </li>
-
       </template>
     </ol>
-
   </div>
 </template>
 

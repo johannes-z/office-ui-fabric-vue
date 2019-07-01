@@ -1,7 +1,6 @@
 <template>
   <div :class="classObj"
        class="ms-Toggle root">
-
     <VLabel v-if="label || $slots.default"
             :for="id">
       <slot>{{ label }}</slot>
@@ -16,15 +15,16 @@
 
       <VLabel :for="id"
               class="ms-Toggle-stateText text">
-        <slot v-if="value" name="onText">
+        <slot v-if="value"
+              name="onText">
           {{ onText }}
         </slot>
-        <slot v-else name="offText">
+        <slot v-else
+              name="offText">
           {{ offText }}
         </slot>
       </VLabel>
     </div>
-
   </div>
 </template>
 

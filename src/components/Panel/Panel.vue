@@ -14,7 +14,9 @@
         <div class="ms-Panel-contentInner">
           <div class="ms-Panel-header">
             <div class="ms-Panel-headerText">
-              <slot name="header">{{ headerText }}</slot>
+              <slot name="header">
+                {{ headerText }}
+              </slot>
             </div>
           </div>
           <div class="ms-Panel-content">

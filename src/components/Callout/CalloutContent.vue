@@ -10,13 +10,13 @@
       <div ref="main"
            :style="mainStyle"
            class="ms-Callout-main">
-
         <slot>
-          <p class="ms-font-xl">All of your favorite people</p>
+          <p class="ms-font-xl">
+            All of your favorite people
+          </p>
 
           <p>Message body is optional. If help documentation is available, consider adding a link to learn more at the bottom.</p>
         </slot>
-
       </div>
     </div>
   </div>

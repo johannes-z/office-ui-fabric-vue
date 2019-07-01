@@ -6,7 +6,6 @@
            class="ms-Label titleLabel root">
       <slot>{{ label }}</slot>
     </label>
-
     <div class="ms-Slider-container container">
       <button :id="id"
               class="ms-Slider-slideBox slideBox ms-Slider-showValue ms-Slider-showTransitions showTransitions"
@@ -25,7 +24,7 @@
         <div ref="sliderLine"
              class="ms-Slider-line line">
           <span :style="thumbStyle"
-                class="ms-Slider-thumb thumb"/>
+                class="ms-Slider-thumb thumb" />
           <span :style="activeStyle"
                 class="ms-Slider-active lineContainer activeSection" />
           <span :style="inactiveStyle"
@@ -94,11 +93,11 @@ export default {
     rootClass () {
       var obj = {
         'ms-Slider-row': !this.vertical,
-        'rootIsHorizontal': !this.vertical,
+        rootIsHorizontal: !this.vertical,
         'ms-Slider-column': this.vertical,
-        'rootIsVertical': this.vertical,
-        'rootIsEnabled': !this.disabled,
-        'rootIsDisabled': this.disabled,
+        rootIsVertical: this.vertical,
+        rootIsEnabled: !this.disabled,
+        rootIsDisabled: this.disabled,
       }
       return obj
     },
@@ -109,12 +108,13 @@ export default {
     },
     inactiveStyle () {
       var obj = {}
-      obj[this.vertical ? 'height' : 'width'] = (100 - this.thumbOffsetPercent) + '%'
+      obj[this.vertical ? 'height' : 'width'] =
+        100 - this.thumbOffsetPercent + '%'
       return obj
     },
     thumbOffsetPercent () {
       var value = this.isDragging ? this.renderedValue : this.value
-      return (value - this.min) / (this.max - this.min) * 100
+      return ((value - this.min) / (this.max - this.min)) * 100
     },
     thumbStyle () {
       var obj = {}
@@ -148,7 +148,9 @@ export default {
     onMove (event) {
       const steps = (this.max - this.min) / this.step
       const sliderPositionRect = this.$refs.sliderLine.getBoundingClientRect()
-      const sliderLength = !this.vertical ? sliderPositionRect.width : sliderPositionRect.height
+      const sliderLength = !this.vertical
+        ? sliderPositionRect.width
+        : sliderPositionRect.height
       const stepLength = sliderLength / steps
       let currentSteps
       let distance
@@ -177,7 +179,9 @@ export default {
 
       this.renderedValue = renderedValue
 
-      this.$emit('input', currentValue)
+      if (this.value !== currentValue) {
+        this.$emit('input', currentValue)
+      }
 
       event.preventDefault()
       event.stopPropagation()
@@ -191,7 +195,9 @@ export default {
           break
         case 'touchstart':
         case 'touchmove':
-          currentPosition = !this.vertical ? event.touches[0].clientX : event.touches[0].clientY
+          currentPosition = !this.vertical
+            ? event.touches[0].clientX
+            : event.touches[0].clientY
           break
       }
       return currentPosition
@@ -205,7 +211,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .ms-Slider {
   user-select: none;
   position: relative;

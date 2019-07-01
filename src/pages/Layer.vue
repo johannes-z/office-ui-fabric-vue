@@ -1,8 +1,12 @@
 <template>
   <div>
-    <h1 class="ms-font-xxl">Layer</h1>
+    <h1 class="ms-font-xxl">
+      Layer
+    </h1>
 
-    <h2 class="ms-font-xl">Basic layered content</h2>
+    <h2 class="ms-font-xl">
+      Basic layered content
+    </h2>
 
     <p>
       <VCheckbox :checked="showLayer"
@@ -23,10 +27,14 @@
       This is example layer content.
     </div>
 
-    <h2 class="ms-font-xl">Using LayerHost to control projection</h2>
+    <h2 class="ms-font-xl">
+      Using LayerHost to control projection
+    </h2>
 
     <p>
-      <VToggle :checked.sync="showHost">Show host</VToggle>
+      <VToggle :checked.sync="showHost">
+        Show host
+      </VToggle>
     </p>
 
     <div v-show="showHost"
@@ -70,7 +78,6 @@
          class="LayerExample">
       This is example layer content.
     </div>
-
   </div>
 </template>
 

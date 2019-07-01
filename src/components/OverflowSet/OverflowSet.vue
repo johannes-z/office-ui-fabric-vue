@@ -5,7 +5,9 @@
            :key="item.key"
            class="ms-OverflowSet-item">
         <VLink :href="item.href"
-               class="overflowLinks">{{ item.name }}</VLink>
+               class="overflowLinks">
+          {{ item.name }}
+        </VLink>
       </div>
     </slot>
 

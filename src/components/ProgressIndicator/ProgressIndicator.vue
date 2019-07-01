@@ -5,14 +5,16 @@
     </div>
 
     <div class="ms-ProgressIndicator-itemProgress">
-      <div class="ms-ProgressIndicator-progressTrack"/>
+      <div class="ms-ProgressIndicator-progressTrack" />
       <div :class="classObj"
            :style="{ width: `${percentComplete < 0 ? 0 : percentComplete}%` }"
-           class="ms-ProgressIndicator-progressBar"/>
+           class="ms-ProgressIndicator-progressBar" />
     </div>
 
     <div class="ms-ProgressIndicator-itemDescription">
-      <slot name="description">{{ description }}</slot>
+      <slot name="description">
+        {{ description }}
+      </slot>
     </div>
   </div>
 </template>

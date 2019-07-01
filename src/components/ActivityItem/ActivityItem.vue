@@ -25,7 +25,6 @@
         <slot name="timestamp" />
       </div>
     </div>
-
   </div>
 </template>
 

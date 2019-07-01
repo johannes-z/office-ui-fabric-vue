@@ -2,7 +2,7 @@
   <div :class="{ ['ms-Layer--fixed']: !hostId }"
        class="ms-Layer">
     <div class="ms-Fabric ms-Layer-content">
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>

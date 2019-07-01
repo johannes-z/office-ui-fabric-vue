@@ -1,5 +1,6 @@
 <template>
-  <div :class="{ rootIsDisabled: disabled }"
+  <div ref="container"
+       :class="{ rootIsDisabled: disabled }"
        class="ms-Dropdown-container">
     <!-- Label -->
     <VLabel v-if="label"
@@ -14,9 +15,8 @@
          role="listbox"
          class="ms-Dropdown"
          @click="showCallout = !showCallout">
-
       <!-- Placeholder -->
-      <span v-if="!selectedOption"
+      <span v-if="!selectedOptions || selectedOptions.length === 0"
             class="ms-Dropdown-title ms-Dropdown-titleIsPlaceHolder ms-Dropdown-title">
         <span>Select an option</span>
       </span>
@@ -26,7 +26,7 @@
             class="ms-Dropdown-title"
             role="option">
         <span>
-          {{ selectedOption.text }}
+          {{ selectedOptions.map(o => o.text).join(multiSelectDelimiter) }}
         </span>
       </span>
 
@@ -38,33 +38,31 @@
 
     <!-- Option Callout -->
     <VCallout v-if="showCallout"
+              ref="callout"
               :class="className"
               :do-not-layer="false"
               :is-beak-visible="false"
               :target="$refs.dropdown"
-              :container-height="options.length * 32"
-              @onBlur="showCallout = false">
-
+              :container-height="options.length * 32">
       <!-- Dropdown Items -->
       <div class="ms-Dropdown-dropdownItemsWrapper">
         <div role="listbox"
              class="ms-FocusZone ms-Dropdown-items">
-
-          <VActionButton v-for="(option, index) in options"
-                         :key="'dropdownItem-' + index"
-                         :title="option.title"
-                         :class="{ 'is-disabled': option.disabled }"
-                         class="ms-Dropdown-item"
-                         role="option"
-                         @click.native="selectOption(option)">
+          <component v-for="(option, index) in options"
+                     :is="multiSelect ? 'VCheckbox' : 'VActionButton'"
+                     :key="'dropdownItem-' + index"
+                     :title="option.title"
+                     :class="{ 'is-disabled': option.disabled }"
+                     :value="!!selectedOptions.find(o => o.key === option.key)"
+                     class="ms-Dropdown-item"
+                     role="option"
+                     @click.stop.prevent.native="selectOption(option)">
             <span class="ms-Dropdown-optionText">
               {{ option.text }}
             </span>
-          </VActionButton>
-
+          </component>
         </div>
       </div>
-
     </VCallout>
   </div>
 </template>
@@ -83,8 +81,8 @@ export default {
       },
     },
     value: {
-      type: String,
-      default: null,
+      type: Array,
+      default: () => [],
     },
     disabled: {
       type: Boolean,
@@ -94,30 +92,60 @@ export default {
       type: String,
       default: '',
     },
+    multiSelect: {
+      type: Boolean,
+      default: false,
+    },
+    multiSelectDelimiter: {
+      type: String,
+      default: ',',
+    },
   },
   data () {
     return {
       showCallout: false,
+      selectedOptions: [],
     }
-  },
-  computed: {
-    selectedOption () {
-      return this.options.find(o => o.key === this.value)
-    },
   },
   beforeDestroy () {
     window.removeEventListener('scroll', this.dismissOnScroll)
+    window.removeEventListener('click', this.onGlobalClick)
   },
   created () {
     window.addEventListener('scroll', this.dismissOnScroll)
+    window.addEventListener('click', this.onGlobalClick)
+    this.selectedOptions = [...this.value]
   },
   methods: {
+    onGlobalClick (ev) {
+      const container = this.$refs.container
+      const callout = this.$refs.callout ? this.$refs.callout.$el : null
+      let target = ev.target
+
+      while (target.parentNode !== document) {
+        const parent = target.parentNode
+        if (parent === container || parent === callout) return
+        target = target.parentNode
+      }
+      this.showCallout = false
+    },
     dismissOnScroll (ev) {
       this.showCallout = false
     },
     selectOption (option) {
-      this.$emit('input', option.key || option.text)
-      this.showCallout = false
+      if (!this.multiSelect) {
+        this.selectedOptions = [option]
+        // dismiss on single select after selection
+        this.showCallout = false
+      } else {
+        const index = this.selectedOptions.findIndex(o => o.key === option.key)
+        if (index > -1) {
+          this.selectedOptions.splice(index, 1)
+        } else {
+          this.selectedOptions.push(option)
+        }
+      }
+      this.$emit('input', this.selectedOptions.sort((a, b) => (a.text || a.key).localeCompare((b.text || b.key), 'en', { numeric: true })))
     },
   },
 }
@@ -131,5 +159,11 @@ export default {
 }
 .ms-Dropdown-item.is-disabled {
   pointer-events: none;
+}
+
+.ms-Dropdown-item {
+  .ms-Label.ms-Checkbox-label {
+    padding: 0;
+  }
 }
 </style>

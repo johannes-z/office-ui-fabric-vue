@@ -1,7 +1,6 @@
 <template>
   <div class="ms-ColorPicker">
     <div class="ms-ColorPicker-panel">
-
       <div class="ms-ColorPicker-colorRect"
            style="min-width: 220px; min-height: 220px; background-color: rgb(255, 0, 0);">
         <div class="ms-ColorPicker-light" />
@@ -28,7 +27,9 @@
       <table class="ms-ColorPicker-table">
         <thead>
           <tr class="tableHeader">
-            <td style="width: 25%">Hex</td>
+            <td style="width: 25%">
+              Hex
+            </td>
             <td>Red</td>
             <td>Green</td>
             <td>Blue</td>

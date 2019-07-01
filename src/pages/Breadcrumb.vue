@@ -1,17 +1,27 @@
 <template>
   <div>
-    <h1 class="ms-font-xxl">Breadcrumb</h1>
+    <h1 class="ms-font-xxl">
+      Breadcrumb
+    </h1>
 
-    <h2 class="ms-font-xl">Default Breadcrumb</h2>
+    <h2 class="ms-font-xl">
+      Default Breadcrumb
+    </h2>
 
-    <VLabel style="margin-top: 24px;">With no maxDisplayedItems</VLabel>
+    <VLabel style="margin-top: 24px;">
+      With no maxDisplayedItems
+    </VLabel>
     <VBreadcrumb :items="items" />
 
-    <VLabel style="margin-top: 24px;">With Custom Divider Icon</VLabel>
+    <VLabel style="margin-top: 24px;">
+      With Custom Divider Icon
+    </VLabel>
     <VBreadcrumb :items="items"
                  :divider-as="getCustomDivider" />
 
-    <VLabel style="margin-top: 24px;">With maxDisplayedItems set to two and overflowIndex set to 1 (second element)</VLabel>
+    <VLabel style="margin-top: 24px;">
+      With maxDisplayedItems set to two and overflowIndex set to 1 (second element)
+    </VLabel>
     <VBreadcrumb :items="items"
                  :divider-as="getCustomDivider"
                  :max-displayed-items="2"

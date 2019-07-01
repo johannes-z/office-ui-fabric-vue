@@ -1,25 +1,20 @@
 <template>
   <div :size="size"
        class="ms-Persona">
-
     <VPersonaCoin :size="size"
                   :presence="presence"
                   :image-url="imageUrl"
                   :text="text" />
 
     <div class="ms-Persona-details">
-
       <slot name="details">
-
         <div class="ms-Persona-primaryText">
           <span>{{ text }}</span>
         </div>
         <div class="ms-Persona-secondaryText">
           <span>{{ secondaryText }}</span>
         </div>
-
       </slot>
-
     </div>
   </div>
 </template>

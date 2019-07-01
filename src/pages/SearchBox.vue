@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1 class="ms-font-xxl">SearchBox</h1>
+    <h1 class="ms-font-xxl">
+      SearchBox
+    </h1>
 
     <Label>Default SearchBox</Label>
     <search-box />
@@ -13,8 +15,8 @@
     <Label>Disabled SearchBoxes</Label>
     <search-box disabled />
     <br>
-    <search-box :underlined="true" disabled />
-
+    <search-box :underlined="true"
+                disabled />
   </div>
 </template>
 

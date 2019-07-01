@@ -7,7 +7,6 @@
     </VLabel>
 
     <div class="ms-SpinButton-container">
-
       <input :value="value"
              type="text"
              class="ms-SpinButton-input"
@@ -21,7 +20,6 @@
                      icon-name="ChevronDownSmall"
                      @click.native="onDecrement" />
       </div>
-
     </div>
   </div>
 </template>

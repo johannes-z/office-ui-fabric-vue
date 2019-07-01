@@ -1,7 +1,5 @@
 <template>
-
   <VCalendar />
-
 </template>
 
 <script>

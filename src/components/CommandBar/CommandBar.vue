@@ -2,7 +2,6 @@
   <div ref="commandbar"
        role="menubar"
        class="ms-FocusZone ms-CommandBar">
-
     <!-- items -->
     <div class="ms-CommandBar-primaryCommands">
       <div v-for="(item, index) in items"
@@ -53,7 +52,6 @@
               :container-height="overflowItems.length * 32"
               width="auto"
               @onBlur="showCallout = false">
-
       <!-- Dropdown Items -->
       <div class="ms-Dropdown-dropdownItemsWrapper">
         <div role="listbox"
@@ -69,12 +67,9 @@
               <span v-if="!hideLabels && item.name">{{ item.name }}</span>
             </VActionButton>
           </div>
-
         </div>
       </div>
-
     </VCallout>
-
   </div>
 </template>
 

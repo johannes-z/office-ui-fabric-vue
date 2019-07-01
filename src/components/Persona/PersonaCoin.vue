@@ -1,16 +1,13 @@
 <template>
   <div :data-size="size"
        class="ms-Persona-coin">
-
     <slot name="coin">
-
       <i v-if="size === 9"
          class="ms-Icon ms-Icon--Contact"
          aria-hidden="true" />
 
       <div v-else
            class="ms-Persona-imageArea">
-
         <div v-if="presence"
              class="ms-Persona-presence">
              <!-- TODO: add presence icon -->
@@ -26,9 +23,7 @@
                alt="">
         </div>
       </div>
-
     </slot>
-
   </div>
 </template>
 

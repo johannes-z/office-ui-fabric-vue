@@ -32,18 +32,20 @@
   },
   "homepage": "https://github.com/johannes-z/office-ui-fabric-vue#readme",
   "dependencies": {
-    "vue": "^2.6.7"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.4.1",
-    "@vue/cli-plugin-eslint": "^3.4.1",
-    "@vue/cli-service": "^3.4.1",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.4",
     "@vue/eslint-config-standard": "^4.0.0",
     "cross-env": "^5.2.0",
-    "node-sass": "^4.11.0",
-    "office-ui-fabric-core": "^9.6.1",
+    "node-sass": "^4.12.0",
+    "office-ui-fabric-core": "^10.1.0",
+    "sass": "^1.22.1",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.7",
-    "vuepress": "^1.0.0-alpha.9"
+    "vue-server-renderer": "^2.6.10",
+    "vue-template-compiler": "^2.6.10",
+    "vuepress": "^1.0.2"
   }
 }

@@ -1,9 +1,12 @@
 <template>
   <div>
+    <h1 class="ms-font-xxl">
+      Toggle
+    </h1>
 
-    <h1 class="ms-font-xxl">Toggle</h1>
-
-    <h2 class="ms-font-xl">Default Toggles</h2>
+    <h2 class="ms-font-xl">
+      Default Toggles
+    </h2>
 
     <VToggle v-model="toggle1"
              label="Enabled and checked"
@@ -24,7 +27,6 @@
              label="Disabled and unchecked"
              on-text="On"
              off-text="Off" />
-
   </div>
 </template>
 

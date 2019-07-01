@@ -1,8 +1,7 @@
 <template>
   <div class="ms-SearchBox-container">
-
-    <div :class="classObj" class="ms-SearchBox root">
-
+    <div :class="classObj"
+         class="ms-SearchBox root">
       <div class="ms-SearchBox-iconContainer iconContainer">
         <VIcon icon-name="Search" />
       </div>
@@ -23,10 +22,9 @@
         <VIcon icon-name="Clear" />
       </div>
 
-      <div v-if="clear" style="clear: both;"/>
-
+      <div v-if="clear"
+           style="clear: both;" />
     </div>
-
   </div>
 </template>
 

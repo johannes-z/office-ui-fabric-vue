@@ -1,6 +1,8 @@
 <template>
   <div style="max-width: 300px;">
-    <h1 class="ms-font-xxl">Spinner</h1>
+    <h1 class="ms-font-xxl">
+      Spinner
+    </h1>
 
     <VLabel>Extra Small Spinner</VLabel>
     <Spinner :size="0" />
@@ -12,13 +14,14 @@
     <Spinner />
 
     <VLabel>Large Spinner</VLabel>
-    <Spinner :size="3"/>
+    <Spinner :size="3" />
 
     <VLabel>Spinner with Label</VLabel>
     <Spinner label="I am definitely loading..." />
 
     <VLabel>Large Spinner with Label</VLabel>
-    <Spinner :size="3" label="Seriously, still loading..." />
+    <Spinner :size="3"
+             label="Seriously, still loading..." />
   </div>
 </template>
 

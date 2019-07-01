@@ -1,7 +1,7 @@
 <template>
   <div :style="style"
        class="ms-ShimmerElementsGroup-root">
-    <slot/>
+    <slot />
   </div>
 </template>
 

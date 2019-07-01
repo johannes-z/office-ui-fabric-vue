@@ -1,25 +1,19 @@
 <template>
-
   <div class="ms-DatePicker-wrap goTodaySpacing">
     <div id="DatePickerDay-dayPicker26"
          class="ms-DatePicker-dayPicker dayPicker">
-
       <div class="ms-DatePicker-header header">
-
         <div id="DatePickerDay-monthAndYear27"
              class="monthAndYear">
-
           <div class="ms-DatePicker-monthAndYear monthAndYear">
             <slot :value="navigatedDate"
                   name="monthAndYear">
               {{ monthAndYear }}
             </slot>
           </div>
-
         </div>
 
         <div class="ms-DatePicker-monthComponents monthComponents">
-
           <div class="ms-DatePicker-navContainer">
             <button class="ms-DatePicker-prevMonth js-prevMonth prevMonth"
                     @click.prevent.stop="$emit('update:navigatedDate', addMonths(navigatedDate, -1))">
@@ -30,13 +24,10 @@
               <v-icon icon-name="Down" />
             </button>
           </div>
-
         </div>
-
       </div>
 
       <div class="ms-FocusZone">
-
         <table class="ms-DatePicker-table table">
           <thead>
             <tr>
@@ -54,7 +45,6 @@
           <tbody>
             <tr v-for="(week, weekIndex) in weeks"
                 :key="week.key">
-
               <td v-for="(day, dayIndex) in week"
                   :key="day.key"
                   :class="{ ['dayIsHighlighted']: day.isSelected, dayIsDisabled: !day.isInBounds }"
@@ -71,18 +61,17 @@
             </tr>
           </tbody>
         </table>
-
       </div>
-
     </div>
     <button :disabled="goTodayEnabled"
             :class="{ goToTodayIsDisabled: goTodayEnabled }"
             class="ms-DatePicker-goToday"
             @click.prevent.stop="$emit('update:navigatedDate', new Date(today))">
-      <slot name="todayLabel">Go to today</slot>
+      <slot name="todayLabel">
+        Go to today
+      </slot>
     </button>
   </div>
-
 </template>
 
 <script>

@@ -8,8 +8,8 @@
     <div class="ms-ChoiceFieldGroup-flexContainer">
       <VChoiceField v-for="(option, index) in options"
                     :key="index"
-                    :index="index"
                     v-model="selectedIndex"
+                    :index="index"
                     :option="option"
                     @input="onChange" />
     </div>
@@ -63,5 +63,9 @@ export default {
   font-size: 14px;
   font-weight: 400;
   display: block;
+
+  .ms-Label {
+    padding: 0;
+  }
 }
 </style>

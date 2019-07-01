@@ -6,6 +6,11 @@
     <VDropdown :options="options"
                v-model="value"
                disabled />
+
+    <VDropdown v-model="value"
+               :options="options"
+               label="Multiselect uncontrolled example"
+               multi-select />
   </div>
 </template>
 
@@ -13,7 +18,7 @@
 export default {
   data () {
     return {
-      value: '',
+      value: [],
       options: [
         { title: 'Entry #0', text: 'Entry #0', key: 'Entry #0' },
         { title: 'Entry #1', text: 'Entry #1', key: 'Entry #1' },

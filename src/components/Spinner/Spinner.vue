@@ -2,9 +2,10 @@
   <div class="ms-Spinner">
     <div :class="classObj"
          :style="styleObj"
-         class="ms-Spinner-circle"/>
+         class="ms-Spinner-circle" />
 
-    <div v-if="size >= 2" class="ms-Spinner-label">
+    <div v-if="size >= 2"
+         class="ms-Spinner-label">
       <slot>{{ label }}</slot>
     </div>
   </div>

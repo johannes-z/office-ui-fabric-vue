@@ -5,7 +5,6 @@
           type="button"
           class="ms-Checkbox"
           @click.prevent.stop="toggleChecked">
-
     <VLabel :for="id"
             class="ms-Checkbox-label">
       <span v-if="boxSide === 'end'"
@@ -23,7 +22,6 @@
         <slot>{{ label }}</slot>
       </span>
     </VLabel>
-
   </button>
 </template>
 

@@ -1,13 +1,11 @@
 <template>
   <div class="ms-Shimmer-container">
-
     <slot v-if="isDataLoaded"
           name="content" />
 
     <div v-else
          :style="widthStyle"
          class="ms-Shimmer-shimmerWrapper">
-
       <slot name="groups">
         <VShimmerElementsGroup>
           <slot>
@@ -15,9 +13,7 @@
           </slot>
         </VShimmerElementsGroup>
       </slot>
-
     </div>
-
   </div>
 </template>
 

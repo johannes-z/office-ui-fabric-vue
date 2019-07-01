@@ -1,7 +1,6 @@
 <template>
   <div :class="rootClass"
        class="ms-TextField root">
-
     <div class="ms-TextField-wrapper wrapper">
       <VLabel v-if="label"
               :required="required">
@@ -10,7 +9,6 @@
 
       <div :class="{ 'invalid': errorMessage, 'is-disabled': disabled }"
            class="ms-TextField-fieldGroup fieldGroup">
-
         <textarea v-if="multiline"
                   v-model="computedValue"
                   :disabled="disabled"
@@ -29,7 +27,7 @@
                :required="required"
                v-bind="$attrs"
                type="text"
-               class="ms-TextField-field field" >
+               class="ms-TextField-field field">
       </div>
     </div>
 
@@ -40,7 +38,6 @@
         </p>
       </div>
     </span>
-
   </div>
 </template>
 

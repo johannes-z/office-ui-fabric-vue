@@ -1,5 +1,4 @@
 <template>
-
   <div>
     <div class="ms-DatePicker root">
       <div class="ms-DatePicker-picker ms-DatePicker-picker--opened ms-DatePicker-picker--focused picker pickerIsOpened pickerIsFocused">
@@ -15,8 +14,8 @@
                          @update:selectedDate="$emit('input', $event)">
               <!-- Pass on all named slots -->
               <slot v-for="slot in Object.keys($slots)"
-                    :name="slot"
-                    :slot="slot" />
+                    :slot="slot"
+                    :name="slot" />
 
               <!-- Pass on all scoped slots -->
               <template v-for="slot in Object.keys($scopedSlots)"
@@ -25,14 +24,12 @@
                 <slot :name="slot"
                       v-bind="scope" />
               </template>
-
             </CalendarDay>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </template>
 
 <script>

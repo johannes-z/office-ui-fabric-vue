@@ -1,8 +1,12 @@
 <template>
   <div>
-    <h1 class="ms-font-xxl">ChoiceGroup</h1>
+    <h1 class="ms-font-xxl">
+      ChoiceGroup
+    </h1>
 
-    <h2 class="ms-font-xl">Default ChoiceGroup</h2>
+    <h2 class="ms-font-xl">
+      Default ChoiceGroup
+    </h2>
 
     <VChoiceGroup v-model="selected"
                   :options="options"
@@ -10,7 +14,9 @@
                   :required="required"
                   @onChange="onChange" />
 
-    <h2 class="ms-font-xl">ChoiceGroup with dropdown</h2>
+    <h2 class="ms-font-xl">
+      ChoiceGroup with dropdown
+    </h2>
   </div>
 </template>
 

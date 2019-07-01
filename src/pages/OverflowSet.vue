@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <v-overflow-set :items="[
                       {
                         key: 'item1',

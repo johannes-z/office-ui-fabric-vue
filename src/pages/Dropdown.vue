@@ -1,12 +1,16 @@
 <template>
   <div class="docs-DropdownExample">
-    <VDropdown :options="options"
-               v-model="selected"
+    <VDropdown v-model="selected"
+               :options="options"
                label="Basic uncontrolled example" />
-    <VDropdown :options="options"
-               v-model="selected"
+    <VDropdown v-model="selected"
+               :options="options"
                disabled
                label="Basic uncontrolled example" />
+    <VDropdown v-model="selected"
+               :options="options"
+               label="Multiselect uncontrolled example"
+               multi-select />
   </div>
 </template>
 
@@ -14,7 +18,7 @@
 export default {
   data () {
     return {
-      selected: '',
+      selected: [],
       options: [
         { key: 'A', text: 'Option a', title: 'I am option a.' },
         { key: 'B', text: 'Option b' },

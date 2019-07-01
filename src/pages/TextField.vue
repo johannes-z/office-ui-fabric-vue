@@ -1,10 +1,15 @@
 <template>
   <div class="docs-TextFieldExample">
-    <h1 class="ms-font-xxl">TextField</h1>
+    <h1 class="ms-font-xxl">
+      TextField
+    </h1>
 
-    <h2 class="ms-font-l">Default TextField with Label</h2>
+    <h2 class="ms-font-l">
+      Default TextField with Label
+    </h2>
 
-    <VTextField v-model="text1" label="Standard" />
+    <VTextField v-model="text1"
+                label="Standard" />
 
     <VTextField :disabled="true"
                 label="Disabled" />
@@ -18,7 +23,9 @@
     <VTextField error-message="Error message"
                 label="With error message" />
 
-    <h2 class="ms-font-l">TextField with Placeholder</h2>
+    <h2 class="ms-font-l">
+      TextField with Placeholder
+    </h2>
 
     <div style="max-width: 300px;">
       <VTextField label="Standard"
@@ -41,7 +48,9 @@
                   placeholder="I have an error message." />
     </div>
 
-    <h2 class="ms-font-l">Multiline TextField</h2>
+    <h2 class="ms-font-l">
+      Multiline TextField
+    </h2>
 
     <VTextField :multiline="true"
                 label="Standard" />
@@ -63,7 +72,9 @@
                 error-message="Error message"
                 label="With error message" />
 
-    <h2 class="ms-font-l">Underlined TextField</h2>
+    <h2 class="ms-font-l">
+      Underlined TextField
+    </h2>
 
     <VTextField :underlined="true"
                 label="Standard:" />

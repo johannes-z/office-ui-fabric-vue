@@ -2,7 +2,7 @@
   <div>
     <VContextualMenuItem v-for="item in items"
                          :key="item.key"
-                         :text="item.text"/>
+                         :text="item.text" />
   </div>
 </template>
 

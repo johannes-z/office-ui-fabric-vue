@@ -1,13 +1,16 @@
 <template>
   <div>
-    <h1 class="ms-font-xxl">Button</h1>
+    <h1 class="ms-font-xxl">
+      Button
+    </h1>
 
-    <h2 class="ms-font-xl">Default Button</h2>
+    <h2 class="ms-font-xl">
+      Default Button
+    </h2>
     <div class="ms-Grid"
          dir="ltr">
       <div class="ms-Grid-row">
         <div class="ms-Grid-col ms-sm6 ms-lg3">
-
           <VLabel>Standard</VLabel>
           <VDefaultButton text="Button" />
         </div>
@@ -30,7 +33,9 @@
       </div>
     </div>
 
-    <h2 class="ms-font-xl">Action Button (Link)</h2>
+    <h2 class="ms-font-xl">
+      Action Button (Link)
+    </h2>
     <div class="ms-Grid"
          dir="ltr">
       <div class="ms-Grid-row">
@@ -65,7 +70,9 @@
       </div>
     </div>
 
-    <h2 class="ms-font-xl">Compound Button</h2>
+    <h2 class="ms-font-xl">
+      Compound Button
+    </h2>
 
     <div class="ms-Grid"
          dir="ltr">
@@ -97,19 +104,33 @@
       </div>
     </div>
 
-    <h2 class="ms-font-xl">Command Bar Button</h2>
-    <h2 class="ms-font-xl">Split Button</h2>
+    <h2 class="ms-font-xl">
+      Command Bar Button
+    </h2>
+    <h2 class="ms-font-xl">
+      Split Button
+    </h2>
 
-    <h2 class="ms-font-xl">Icon Button</h2>
+    <h2 class="ms-font-xl">
+      Icon Button
+    </h2>
     <VIconButton icon-name="Emoji2" />
 
-    <h2 class="ms-font-xl">Contextual Menu Button</h2>
+    <h2 class="ms-font-xl">
+      Contextual Menu Button
+    </h2>
 
-    <h2 class="ms-font-xl">Action Button</h2>
+    <h2 class="ms-font-xl">
+      Action Button
+    </h2>
     <VActionButton :primary="true"
-                   icon-name="AddFriend">Create account</VActionButton>
+                   icon-name="AddFriend">
+      Create account
+    </VActionButton>
 
-    <VActionButton icon-name="AddFriend">Create account</VActionButton>
+    <VActionButton icon-name="AddFriend">
+      Create account
+    </VActionButton>
   </div>
 </template>
 

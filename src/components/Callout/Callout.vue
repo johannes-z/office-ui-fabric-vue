@@ -1,5 +1,4 @@
 <template>
-
   <VCalloutContent v-if="doNotLayer"
                    v-bind="$props"
                    @onBlur="$emit('onBlur', $event)" />
@@ -10,7 +9,6 @@
       <slot />
     </VCalloutContent>
   </VLayer>
-
 </template>
 
 <script>
