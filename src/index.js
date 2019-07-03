@@ -4,7 +4,7 @@ import { setSSR } from './utilities/dom.js'
 const Fabric = {
   install: function (Vue, options) {
     for (const key in components) {
-      if (!components[key].__file) continue
+      if (!components[key]._compiled) continue
       Vue.component(key, components[key])
     }
   },
