@@ -35,14 +35,14 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.8.0",
-    "@vue/cli-plugin-eslint": "^3.8.0",
-    "@vue/cli-service": "^3.8.4",
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-plugin-eslint": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "cross-env": "^5.2.0",
     "node-sass": "^4.12.0",
     "office-ui-fabric-core": "^10.1.0",
-    "sass": "^1.22.1",
+    "sass": "^1.22.2",
     "sass-loader": "^7.1.0",
     "vue-server-renderer": "^2.6.10",
     "vue-template-compiler": "^2.6.10",
