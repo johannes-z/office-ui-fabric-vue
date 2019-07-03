@@ -1,5 +1,5 @@
-import SearchBox from './SearchBox.vue'
+import VSearchBox from './SearchBox.vue'
 
 export {
-  SearchBox,
+  VSearchBox,
 }
