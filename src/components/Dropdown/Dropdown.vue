@@ -107,6 +107,15 @@ export default {
       selectedOptions: [],
     }
   },
+  watch: {
+    value: {
+      deep: true,
+      immediate: true,
+      handler (newVal) {
+        this.selectedOptions = [...newVal]
+      },
+    },
+  },
   beforeDestroy () {
     window.removeEventListener('scroll', this.dismissOnScroll)
     window.removeEventListener('click', this.onGlobalClick)
@@ -114,7 +123,6 @@ export default {
   created () {
     window.addEventListener('scroll', this.dismissOnScroll)
     window.addEventListener('click', this.onGlobalClick)
-    this.selectedOptions = [...this.value]
   },
   methods: {
     onGlobalClick (ev) {
