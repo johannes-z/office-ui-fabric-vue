@@ -5122,7 +5122,7 @@ __webpack_require__.d(components_namespaceObject, "VCallout", function() { retur
 __webpack_require__.d(components_namespaceObject, "VCheckbox", function() { return Checkbox; });
 __webpack_require__.d(components_namespaceObject, "VChoiceGroup", function() { return ChoiceGroup; });
 __webpack_require__.d(components_namespaceObject, "VColorPicker", function() { return ColorPicker; });
-__webpack_require__.d(components_namespaceObject, "CommandBar", function() { return CommandBar; });
+__webpack_require__.d(components_namespaceObject, "VCommandBar", function() { return CommandBar; });
 __webpack_require__.d(components_namespaceObject, "VContextualMenu", function() { return ContextualMenu; });
 __webpack_require__.d(components_namespaceObject, "VContextualMenuItem", function() { return ContextualMenuItem; });
 __webpack_require__.d(components_namespaceObject, "VDatePicker", function() { return DatePicker; });
@@ -11132,7 +11132,7 @@ var Fabric = {
 /* concated harmony reexport VCheckbox */__webpack_require__.d(__webpack_exports__, "VCheckbox", function() { return Checkbox; });
 /* concated harmony reexport VChoiceGroup */__webpack_require__.d(__webpack_exports__, "VChoiceGroup", function() { return ChoiceGroup; });
 /* concated harmony reexport VColorPicker */__webpack_require__.d(__webpack_exports__, "VColorPicker", function() { return ColorPicker; });
-/* concated harmony reexport CommandBar */__webpack_require__.d(__webpack_exports__, "CommandBar", function() { return CommandBar; });
+/* concated harmony reexport VCommandBar */__webpack_require__.d(__webpack_exports__, "VCommandBar", function() { return CommandBar; });
 /* concated harmony reexport VContextualMenu */__webpack_require__.d(__webpack_exports__, "VContextualMenu", function() { return ContextualMenu; });
 /* concated harmony reexport VContextualMenuItem */__webpack_require__.d(__webpack_exports__, "VContextualMenuItem", function() { return ContextualMenuItem; });
 /* concated harmony reexport VDatePicker */__webpack_require__.d(__webpack_exports__, "VDatePicker", function() { return DatePicker; });

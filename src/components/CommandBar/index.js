@@ -1,5 +1,5 @@
-import CommandBar from './CommandBar.vue'
+import VCommandBar from './CommandBar.vue'
 
 export {
-  CommandBar,
+  VCommandBar,
 }
