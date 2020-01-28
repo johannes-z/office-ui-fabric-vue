@@ -1,9 +1,5 @@
-# office-ui-fabric-vue
-
-> Office UI Fabric (https://github.com/OfficeDev/office-ui-fabric)
-> implementation for Vue.js
-
-This is a **WIP**!
+# office-ui-fabric-vue `DEPRECATED`
+Please consider contributing to [https://github.com/johannes-z/office-fabric](https://github.com/johannes-z/office-fabric). `office-fabric` borrows as much code as possible from `office-ui-fabric-react`, which results in better maintainability, feature parity, and less work overall.
 
 ## Browser support
 
